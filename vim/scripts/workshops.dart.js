@@ -13599,7 +13599,7 @@ k=l.e.a
 k.F(p,["theme","darkpad"])
 k.F(p,["mode","dart"])
 r=window.localStorage.getItem("codemirror_keymap")
-l.sfO(r==null?"default":r)
+l.sfO(r==null?"vim":r)
 k.F(p,["lineNumbers",!0])
 A.b8(q.e,o)
 q.e=l

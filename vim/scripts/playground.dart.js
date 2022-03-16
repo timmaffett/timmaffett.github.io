@@ -12794,7 +12794,7 @@ r=a.e.a
 r.w(f,["theme","darkpad"])
 r.w(f,["mode","dart"])
 p=window.localStorage.getItem("codemirror_keymap")
-a.sfi(p==null?"default":p)
+a.sfi(p==null?"vim":p)
 r.w(f,["lineNumbers",!0])
 A.j3(i.e,e)
 i.e=a

@@ -12003,7 +12003,7 @@ j=k.e.a
 j.w(a4,["theme",g])
 j.w(a4,["mode","dart"])
 i=window.localStorage.getItem("codemirror_keymap")
-k.sf3(i==null?"default":i)
+k.sf3(i==null?"vim":i)
 j.w(a4,["lineNumbers",!0])
 A.am(b.e,"editor")
 b.e=k
