@@ -12018,7 +12018,7 @@ j.e=A.t(a0)
 j.lC()
 k=String(l.a(window.location))
 k.toString
-k=A.a0(k).ga_().i(0,"theme")==="dark"?"../scripts/frame_dark.html":"../scripts/frame.html"
+k=A.a0(k).ga_().i(0,"theme")==="dark"?"/clearconsole/scripts/frame_dark.html":"/clearconsole/scripts/frame.html"
 B.bN.sjC(j.d,k)
 j.e=k
 A.aa(a3.r,b2)
@@ -12602,7 +12602,7 @@ $1(a){var s=this.a,r=s.gex()==="dart"||s.gex()==="html",q=t.Q
 if(r){q.a(A.ah().a5(B.i)).bP("main","install-dart")
 s=s.ghl()
 s.toString
-J.vw(J.vq(s),"https://dart.dev/get-dart")}else{q.a(A.ah().a5(B.i)).bP("main","install-flutter")
+J.vw(J.vq(s),"http/clearconsoles://dart.dev/get-dart")}else{q.a(A.ah().a5(B.i)).bP("main","install-flutter")
 s=s.ghl()
 s.toString
 J.vw(J.vq(s),"https://flutter.dev/get-started/install")}return null},
