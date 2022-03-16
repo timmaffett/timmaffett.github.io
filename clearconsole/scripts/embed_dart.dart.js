@@ -12018,7 +12018,7 @@ j.e=A.t(a0)
 j.lC()
 k=String(l.a(window.location))
 k.toString
-k=A.a0(k).ga_().i(0,"theme")==="dark"?"../scripts/frame_dark.html":"../scripts/frame.html"
+k=A.a0(k).ga_().i(0,"theme")==="dark"?"/clearconsole/scripts/frame_dark.html":"/clearconsole/scripts/frame.html"
 B.bO.sjC(j.d,k)
 j.e=k
 A.aa(a3.r,b2)
