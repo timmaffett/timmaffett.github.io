@@ -2850,7 +2850,7 @@ if(a==="https")return"https"
 if(a==="package")return"package"
 return a},
 xJ(a,b,c){if(a==null)return""
-return A.iQ(a,b,c,B.ca,!1)},
+return A.iQ(a,b,c,B.cb,!1)},
 xH(a,b,c,d,e,f){var s,r,q=e==="file",p=q||f
 if(a==null){if(d==null)return q?"/":""
 s=A.K(d)
@@ -9011,7 +9011,7 @@ s=A.j([],t.s)
 for(r=q;r<p;++r)if(B.a.J(o,r)===47){B.b.m(s,B.a.p(o,q,r))
 q=r+1}B.b.m(s,B.a.p(o,q,p))
 return A.f1(s,t.N)},
-ga_(){if(this.f>=this.r)return B.cq
+ga_(){if(this.f>=this.r)return B.cr
 return new A.cf(A.xd(this.gbx()),t.hL)},
 hx(a){var s=this.d+1
 return s+a.length===this.e&&B.a.ac(this.a,a,s)},
@@ -9319,7 +9319,7 @@ $.d6.body.appendChild(q).toString}s="createContextualFragment" in window.Range.p
 s.toString
 if(s){s=a.tagName
 s.toString
-s=!B.b.C(B.c7,s)}else s=!1
+s=!B.b.C(B.c8,s)}else s=!1
 if(s){$.uI.selectNodeContents(q)
 s=$.uI
 s.toString
@@ -10149,7 +10149,7 @@ $1(a){return this.a.$1(t.B.a(a))},
 $S:1}
 A.et.prototype={
 kF(a){var s
-if($.il.gL($.il)){for(s=0;s<262;++s)$.il.k(0,B.bX[s],A.Es())
+if($.il.gL($.il)){for(s=0;s<262;++s)$.il.k(0,B.bY[s],A.Es())
 for(s=0;s<12;++s)$.il.k(0,B.a7[s],A.Et())}},
 bG(a){return $.zr().C(0,A.h5(a))},
 bd(a,b,c){var s=$.il.i(0,A.h5(a)+"::"+b)
@@ -11679,7 +11679,7 @@ l.children.toString
 r=m.createElement("span")
 r.toString
 B.b1.sR(r,a.a.a8(0))
-q=B.cl.i(0,a.a.a8(0))
+q=B.cm.i(0,a.a.a8(0))
 q.toString
 A.v4(r,s.a(q))
 l.appendChild(r).toString
@@ -11958,7 +11958,7 @@ A.an(a2.go,a4)
 a2.go=new A.nL(a2.x,new A.pE(r),new A.bf(a3,a3,t.da),q)
 r=a2.Q.a
 q=r===B.a2
-p=q?B.bW:B.c6
+p=q?B.bW:B.c7
 for(o=p.length,n=0;n<o;++n){m=p[n]
 l=m==="editor"?"dart":m
 k=A.i(a2.go,a4)
@@ -12065,7 +12065,7 @@ f=A.a2(h).ga_().i(0,"theme")==="dark"?"darkpad":"dartpad"
 h=a2.x1
 g=s.querySelector("#user-code-editor")
 g.toString
-g=A.Au(g,B.cr)
+g=A.Au(g,B.cs)
 e=new A.c2(g,A.O(t.N,t.m))
 $.n1.k(0,g,e)
 A.n2("goLineLeft",h.glH())
@@ -12275,9 +12275,9 @@ g=A.a2(g).ga_().i(0,"id")
 if((A.eE(g)?g:"").length===0)A.i(l.fr,"openInDartPadButton").a.setAttribute(h,"")
 l.scI(!1)},
 cM(){var s,r=this,q=t.lk
-q.a(A.a8().a0(B.l)).bf(B.c_,new A.o9(r),"Completion")
-q.a(A.a8().a0(B.l)).bf(B.c1,new A.oa(r),"Quick fix")
-q.a(A.a8().a0(B.l)).bf(B.bY,new A.ob(r),"Format")
+q.a(A.a8().a0(B.l)).bf(B.c0,new A.o9(r),"Completion")
+q.a(A.a8().a0(B.l)).bf(B.c2,new A.oa(r),"Quick fix")
+q.a(A.a8().a0(B.l)).bf(B.bZ,new A.ob(r),"Format")
 q=document
 q.toString
 s=t.hm.a(r.glz())
@@ -12759,7 +12759,7 @@ $S:27}
 A.o0.prototype={
 $1(a){var s=A.tC(window.parent)
 s.toString
-J.vZ(s,B.cn,"*")
+J.vZ(s,B.co,"*")
 return null},
 $S:27}
 A.nO.prototype={
@@ -12975,7 +12975,7 @@ r.sn0(t.i.a(B.o.aA(0,s)))}q.a.k(0,B.cL,r)
 return A.hd(null,m)}}
 A.ky.prototype={
 ba(a,b){var s,r
-for(s=b.r,r=0;r<21;++r)s.P(0,B.c0[r])
+for(s=b.r,r=0;r<21;++r)s.P(0,B.c1[r])
 s.k(0,"Content-Type","text/plain; charset=utf-8")
 return this.jX(0,b)}}
 A.jv.prototype={
@@ -14601,7 +14601,7 @@ return r},
 lt(a,b){var s,r
 b.h("Y<0>").a(a)
 s=this.f
-if(!A.bF(s)||s)return new A.cr(B.c8,A.mo(),b.h("cr<0>"))
+if(!A.bF(s)||s)return new A.cr(B.c9,A.mo(),b.h("cr<0>"))
 s=this.a
 A.mm(b,A.k(a).h("Y.T"),"S","_createRepeatedFieldWithType")
 r=s.f2(a.d,b.h("Y<0>").a(a),b)
@@ -17664,58 +17664,58 @@ B.bU=new A.de("INFO",800)
 B.bV=new A.de("SEVERE",1000)
 B.bW=A.j(s(["editor","html","css","solution","test"]),t.s)
 B.M=A.j(s([0,0,32776,33792,1,10240,0,0]),t.t)
-B.bX=A.j(s(["*::class","*::dir","*::draggable","*::hidden","*::id","*::inert","*::itemprop","*::itemref","*::itemscope","*::lang","*::spellcheck","*::title","*::translate","A::accesskey","A::coords","A::hreflang","A::name","A::shape","A::tabindex","A::target","A::type","AREA::accesskey","AREA::alt","AREA::coords","AREA::nohref","AREA::shape","AREA::tabindex","AREA::target","AUDIO::controls","AUDIO::loop","AUDIO::mediagroup","AUDIO::muted","AUDIO::preload","BDO::dir","BODY::alink","BODY::bgcolor","BODY::link","BODY::text","BODY::vlink","BR::clear","BUTTON::accesskey","BUTTON::disabled","BUTTON::name","BUTTON::tabindex","BUTTON::type","BUTTON::value","CANVAS::height","CANVAS::width","CAPTION::align","COL::align","COL::char","COL::charoff","COL::span","COL::valign","COL::width","COLGROUP::align","COLGROUP::char","COLGROUP::charoff","COLGROUP::span","COLGROUP::valign","COLGROUP::width","COMMAND::checked","COMMAND::command","COMMAND::disabled","COMMAND::label","COMMAND::radiogroup","COMMAND::type","DATA::value","DEL::datetime","DETAILS::open","DIR::compact","DIV::align","DL::compact","FIELDSET::disabled","FONT::color","FONT::face","FONT::size","FORM::accept","FORM::autocomplete","FORM::enctype","FORM::method","FORM::name","FORM::novalidate","FORM::target","FRAME::name","H1::align","H2::align","H3::align","H4::align","H5::align","H6::align","HR::align","HR::noshade","HR::size","HR::width","HTML::version","IFRAME::align","IFRAME::frameborder","IFRAME::height","IFRAME::marginheight","IFRAME::marginwidth","IFRAME::width","IMG::align","IMG::alt","IMG::border","IMG::height","IMG::hspace","IMG::ismap","IMG::name","IMG::usemap","IMG::vspace","IMG::width","INPUT::accept","INPUT::accesskey","INPUT::align","INPUT::alt","INPUT::autocomplete","INPUT::autofocus","INPUT::checked","INPUT::disabled","INPUT::inputmode","INPUT::ismap","INPUT::list","INPUT::max","INPUT::maxlength","INPUT::min","INPUT::multiple","INPUT::name","INPUT::placeholder","INPUT::readonly","INPUT::required","INPUT::size","INPUT::step","INPUT::tabindex","INPUT::type","INPUT::usemap","INPUT::value","INS::datetime","KEYGEN::disabled","KEYGEN::keytype","KEYGEN::name","LABEL::accesskey","LABEL::for","LEGEND::accesskey","LEGEND::align","LI::type","LI::value","LINK::sizes","MAP::name","MENU::compact","MENU::label","MENU::type","METER::high","METER::low","METER::max","METER::min","METER::value","OBJECT::typemustmatch","OL::compact","OL::reversed","OL::start","OL::type","OPTGROUP::disabled","OPTGROUP::label","OPTION::disabled","OPTION::label","OPTION::selected","OPTION::value","OUTPUT::for","OUTPUT::name","P::align","PRE::width","PROGRESS::max","PROGRESS::min","PROGRESS::value","SELECT::autocomplete","SELECT::disabled","SELECT::multiple","SELECT::name","SELECT::required","SELECT::size","SELECT::tabindex","SOURCE::type","TABLE::align","TABLE::bgcolor","TABLE::border","TABLE::cellpadding","TABLE::cellspacing","TABLE::frame","TABLE::rules","TABLE::summary","TABLE::width","TBODY::align","TBODY::char","TBODY::charoff","TBODY::valign","TD::abbr","TD::align","TD::axis","TD::bgcolor","TD::char","TD::charoff","TD::colspan","TD::headers","TD::height","TD::nowrap","TD::rowspan","TD::scope","TD::valign","TD::width","TEXTAREA::accesskey","TEXTAREA::autocomplete","TEXTAREA::cols","TEXTAREA::disabled","TEXTAREA::inputmode","TEXTAREA::name","TEXTAREA::placeholder","TEXTAREA::readonly","TEXTAREA::required","TEXTAREA::rows","TEXTAREA::tabindex","TEXTAREA::wrap","TFOOT::align","TFOOT::char","TFOOT::charoff","TFOOT::valign","TH::abbr","TH::align","TH::axis","TH::bgcolor","TH::char","TH::charoff","TH::colspan","TH::headers","TH::height","TH::nowrap","TH::rowspan","TH::scope","TH::valign","TH::width","THEAD::align","THEAD::char","THEAD::charoff","THEAD::valign","TR::align","TR::bgcolor","TR::char","TR::charoff","TR::valign","TRACK::default","TRACK::kind","TRACK::label","TRACK::srclang","UL::compact","UL::type","VIDEO::controls","VIDEO::height","VIDEO::loop","VIDEO::mediagroup","VIDEO::muted","VIDEO::preload","VIDEO::width"]),t.s)
-B.bY=A.j(s(["shift-ctrl-f","shift-macctrl-f"]),t.s)
+B.bY=A.j(s(["*::class","*::dir","*::draggable","*::hidden","*::id","*::inert","*::itemprop","*::itemref","*::itemscope","*::lang","*::spellcheck","*::title","*::translate","A::accesskey","A::coords","A::hreflang","A::name","A::shape","A::tabindex","A::target","A::type","AREA::accesskey","AREA::alt","AREA::coords","AREA::nohref","AREA::shape","AREA::tabindex","AREA::target","AUDIO::controls","AUDIO::loop","AUDIO::mediagroup","AUDIO::muted","AUDIO::preload","BDO::dir","BODY::alink","BODY::bgcolor","BODY::link","BODY::text","BODY::vlink","BR::clear","BUTTON::accesskey","BUTTON::disabled","BUTTON::name","BUTTON::tabindex","BUTTON::type","BUTTON::value","CANVAS::height","CANVAS::width","CAPTION::align","COL::align","COL::char","COL::charoff","COL::span","COL::valign","COL::width","COLGROUP::align","COLGROUP::char","COLGROUP::charoff","COLGROUP::span","COLGROUP::valign","COLGROUP::width","COMMAND::checked","COMMAND::command","COMMAND::disabled","COMMAND::label","COMMAND::radiogroup","COMMAND::type","DATA::value","DEL::datetime","DETAILS::open","DIR::compact","DIV::align","DL::compact","FIELDSET::disabled","FONT::color","FONT::face","FONT::size","FORM::accept","FORM::autocomplete","FORM::enctype","FORM::method","FORM::name","FORM::novalidate","FORM::target","FRAME::name","H1::align","H2::align","H3::align","H4::align","H5::align","H6::align","HR::align","HR::noshade","HR::size","HR::width","HTML::version","IFRAME::align","IFRAME::frameborder","IFRAME::height","IFRAME::marginheight","IFRAME::marginwidth","IFRAME::width","IMG::align","IMG::alt","IMG::border","IMG::height","IMG::hspace","IMG::ismap","IMG::name","IMG::usemap","IMG::vspace","IMG::width","INPUT::accept","INPUT::accesskey","INPUT::align","INPUT::alt","INPUT::autocomplete","INPUT::autofocus","INPUT::checked","INPUT::disabled","INPUT::inputmode","INPUT::ismap","INPUT::list","INPUT::max","INPUT::maxlength","INPUT::min","INPUT::multiple","INPUT::name","INPUT::placeholder","INPUT::readonly","INPUT::required","INPUT::size","INPUT::step","INPUT::tabindex","INPUT::type","INPUT::usemap","INPUT::value","INS::datetime","KEYGEN::disabled","KEYGEN::keytype","KEYGEN::name","LABEL::accesskey","LABEL::for","LEGEND::accesskey","LEGEND::align","LI::type","LI::value","LINK::sizes","MAP::name","MENU::compact","MENU::label","MENU::type","METER::high","METER::low","METER::max","METER::min","METER::value","OBJECT::typemustmatch","OL::compact","OL::reversed","OL::start","OL::type","OPTGROUP::disabled","OPTGROUP::label","OPTION::disabled","OPTION::label","OPTION::selected","OPTION::value","OUTPUT::for","OUTPUT::name","P::align","PRE::width","PROGRESS::max","PROGRESS::min","PROGRESS::value","SELECT::autocomplete","SELECT::disabled","SELECT::multiple","SELECT::name","SELECT::required","SELECT::size","SELECT::tabindex","SOURCE::type","TABLE::align","TABLE::bgcolor","TABLE::border","TABLE::cellpadding","TABLE::cellspacing","TABLE::frame","TABLE::rules","TABLE::summary","TABLE::width","TBODY::align","TBODY::char","TBODY::charoff","TBODY::valign","TD::abbr","TD::align","TD::axis","TD::bgcolor","TD::char","TD::charoff","TD::colspan","TD::headers","TD::height","TD::nowrap","TD::rowspan","TD::scope","TD::valign","TD::width","TEXTAREA::accesskey","TEXTAREA::autocomplete","TEXTAREA::cols","TEXTAREA::disabled","TEXTAREA::inputmode","TEXTAREA::name","TEXTAREA::placeholder","TEXTAREA::readonly","TEXTAREA::required","TEXTAREA::rows","TEXTAREA::tabindex","TEXTAREA::wrap","TFOOT::align","TFOOT::char","TFOOT::charoff","TFOOT::valign","TH::abbr","TH::align","TH::axis","TH::bgcolor","TH::char","TH::charoff","TH::colspan","TH::headers","TH::height","TH::nowrap","TH::rowspan","TH::scope","TH::valign","TH::width","THEAD::align","THEAD::char","THEAD::charoff","THEAD::valign","TR::align","TR::bgcolor","TR::char","TR::charoff","TR::valign","TRACK::default","TRACK::kind","TRACK::label","TRACK::srclang","UL::compact","UL::type","VIDEO::controls","VIDEO::height","VIDEO::loop","VIDEO::mediagroup","VIDEO::muted","VIDEO::preload","VIDEO::width"]),t.s)
+B.bZ=A.j(s(["shift-ctrl-f","shift-macctrl-f"]),t.s)
 B.N=A.j(s([0,0,65490,45055,65535,34815,65534,18431]),t.t)
-B.c_=A.j(s(["ctrl-space","macctrl-space"]),t.s)
-B.c0=A.j(s(["accept-charset","accept-encoding","access-control-request-headers","access-control-request-method","connection","content-length","cookie","cookie2","date","dnt","expect","host","keep-alive","origin","referer","te","trailer","transfer-encoding","upgrade","user-agent","via"]),t.s)
+B.c0=A.j(s(["ctrl-space","macctrl-space"]),t.s)
+B.c1=A.j(s(["accept-charset","accept-encoding","access-control-request-headers","access-control-request-method","connection","content-length","cookie","cookie2","date","dnt","expect","host","keep-alive","origin","referer","te","trailer","transfer-encoding","upgrade","user-agent","via"]),t.s)
 B.O=A.j(s([0,0,26624,1023,65534,2047,65534,2047]),t.t)
-B.c1=A.j(s(["alt-enter"]),t.s)
+B.c2=A.j(s(["alt-enter"]),t.s)
 B.aP=A.j(s([0,0,1048576,531441,1048576,390625,279936,823543,262144,531441,1e6,161051,248832,371293,537824,759375,1048576,83521,104976,130321,16e4,194481,234256,279841,331776,390625,456976,531441,614656,707281,81e4,923521,1048576,35937,39304,42875,46656]),t.t)
-B.c6=A.j(s(["editor","solution","test"]),t.s)
-B.c7=A.j(s(["HEAD","AREA","BASE","BASEFONT","BR","COL","COLGROUP","EMBED","FRAME","FRAMESET","HR","IMAGE","IMG","INPUT","ISINDEX","LINK","META","PARAM","SOURCE","STYLE","TITLE","WBR"]),t.s)
+B.c7=A.j(s(["editor","solution","test"]),t.s)
+B.c8=A.j(s(["HEAD","AREA","BASE","BASEFONT","BR","COL","COLGROUP","EMBED","FRAME","FRAMESET","HR","IMAGE","IMG","INPUT","ISINDEX","LINK","META","PARAM","SOURCE","STYLE","TITLE","WBR"]),t.s)
 B.aQ=A.j(s([]),A.ax("E<dk>"))
-B.c8=A.j(s([]),A.ax("E<0&>"))
+B.c9=A.j(s([]),A.ax("E<0&>"))
 B.a6=A.j(s([]),t.zz)
-B.ca=A.j(s([0,0,32722,12287,65534,34815,65534,18431]),t.t)
+B.cb=A.j(s([0,0,32722,12287,65534,34815,65534,18431]),t.t)
 B.w=A.j(s([0,0,24576,1023,65534,34815,65534,18431]),t.t)
 B.aR=A.j(s([0,0,32754,11263,65534,34815,65534,18431]),t.t)
 B.ch=A.j(s([0,0,32722,12287,65535,34815,65534,18431]),t.t)
 B.aS=A.j(s([0,0,65490,12287,65535,34815,65534,18431]),t.t)
 B.aT=A.j(s(["bind","if","ref","repeat","syntax"]),t.s)
 B.a7=A.j(s(["A::href","AREA::href","BLOCKQUOTE::cite","BODY::background","COMMAND::icon","DEL::cite","FORM::action","IMG::src","INPUT::src","INS::cite","Q::cite","VIDEO::poster"]),t.s)
-B.cc=A.j(s(["info","warning","error"]),t.s)
-B.ce=A.j(s(["issuelabel","info"]),t.s)
-B.cf=A.j(s(["issuelabel","warning"]),t.s)
-B.cd=A.j(s(["issuelabel","error"]),t.s)
-B.cl=new A.ap(3,{info:B.ce,warning:B.cf,error:B.cd},B.cc,A.ax("ap<b,f<b>>"))
+B.cd=A.j(s(["info","warning","error"]),t.s)
+B.cf=A.j(s(["issuelabel","info"]),t.s)
+B.cg=A.j(s(["issuelabel","warning"]),t.s)
+B.ce=A.j(s(["issuelabel","error"]),t.s)
+B.cm=new A.ap(3,{info:B.cf,warning:B.cg,error:B.ce},B.cd,A.ax("ap<b,f<b>>"))
 B.ci=A.j(s(["sender","type"]),t.s)
-B.cn=new A.ap(2,{sender:"frame",type:"ready"},B.ci,t.hD)
+B.co=new A.ap(2,{sender:"frame",type:"ready"},B.ci,t.hD)
 B.aU=new A.dZ([48,"0",49,"1",50,"2",51,"3",52,"4",53,"5",54,"6",55,"7",56,"8",57,"9",65,"a",66,"b",67,"c",68,"d",69,"e",70,"f",71,"g",72,"h",73,"i",74,"j",75,"k",76,"l",77,"m",78,"n",79,"o",80,"p",81,"q",82,"r",83,"s",84,"t",85,"u",86,"v",87,"w",88,"x",89,"y",90,"z",112,"f1",113,"f2",114,"f3",115,"f4",116,"f5",117,"f6",118,"f7",119,"f8",120,"f9",121,"f10",122,"f11",123,"f12",190,".",188,",",191,"/",220,"\\",186,";",189,"-",187,"=",192,"`",222,"'",13,"enter",32,"space",9,"tab",219,"[",221,"]",37,"left",39,"right",38,"up",40,"down",8,"backsapce",20,"caps_lock",46,"delete",35,"end",27,"esc",36,"home",45,"insert",144,"numlock",34,"page_down",33,"page_up",19,"pause",44,"print_screen",17,"",91,"",16,""],A.ax("dZ<@,@>"))
-B.c2=A.j(s(["macctrl","alt","shift","ctrl","esc","left","enter","right","caps_lock","tab","up","space"]),t.zz)
-B.aV=new A.ap(12,{macctrl:"\u2303",alt:"\u2325",shift:"\u21e7",ctrl:"\u2318",esc:"\u238b",left:"\u2190",enter:"\u21a9",right:"\u2192",caps_lock:"\u21ea",tab:"\u21e5",up:"\u2191",space:"Space"},B.c2,A.ax("ap<@,@>"))
-B.cq=new A.ap(0,{},B.D,t.hD)
-B.c9=A.j(s([]),A.ax("E<ek>"))
-B.aW=new A.ap(0,{},B.c9,A.ax("ap<ek,@>"))
+B.c3=A.j(s(["macctrl","alt","shift","ctrl","esc","left","enter","right","caps_lock","tab","up","space"]),t.zz)
+B.aV=new A.ap(12,{macctrl:"\u2303",alt:"\u2325",shift:"\u21e7",ctrl:"\u2318",esc:"\u238b",left:"\u2190",enter:"\u21a9",right:"\u2192",caps_lock:"\u21ea",tab:"\u21e5",up:"\u2191",space:"Space"},B.c3,A.ax("ap<@,@>"))
+B.cr=new A.ap(0,{},B.D,t.hD)
+B.ca=A.j(s([]),A.ax("E<ek>"))
+B.aW=new A.ap(0,{},B.ca,A.ax("ap<ek,@>"))
 B.cj=A.j(s(["stable","beta","old","dev"]),t.s)
 B.a8=new A.ap(4,{stable:"https://stable.api.dartpad.dev/",beta:"https://beta.api.dartpad.dev/",old:"https://old.api.dartpad.dev/",dev:"https://dev.api.dartpad.dev/"},B.cj,t.hD)
-B.cb=A.j(s(["continueComments","autofocus","autoCloseTags","autoCloseBrackets","matchBrackets","tabSize","lineWrapping","indentUnit","cursorHeight","viewportMargin","extraKeys","highlightSelectionMatches","hintOptions","scrollbarStyle"]),t.s)
-B.c4=A.j(s(["continueLineComment"]),t.s)
-B.cm=new A.ap(1,{continueLineComment:!1},B.c4,t.y5)
-B.bZ=A.j(s(["whenOpening","whenClosing","indentTags"]),t.s)
-B.co=new A.ap(3,{whenOpening:!0,whenClosing:!0,indentTags:B.a6},B.bZ,t.gU)
-B.cg=A.j(s(["Cmd-/","Ctrl-/","Shift-Tab","Tab","Ctrl-F","Ctrl-H","F4","Shift-F4"]),t.s)
-B.cs=new A.ap(8,{"Cmd-/":"toggleComment","Ctrl-/":"toggleComment","Shift-Tab":"indentLess",Tab:u.m,"Ctrl-F":"weHandleElsewhere","Ctrl-H":"weHandleElsewhere",F4:"weHandleElsewhere","Shift-F4":"weHandleElsewhere"},B.cg,t.hD)
+B.cc=A.j(s(["continueComments","autofocus","autoCloseTags","autoCloseBrackets","matchBrackets","tabSize","lineWrapping","indentUnit","cursorHeight","viewportMargin","extraKeys","highlightSelectionMatches","hintOptions","scrollbarStyle"]),t.s)
+B.c5=A.j(s(["continueLineComment"]),t.s)
+B.cn=new A.ap(1,{continueLineComment:!1},B.c5,t.y5)
+B.c_=A.j(s(["whenOpening","whenClosing","indentTags"]),t.s)
+B.cp=new A.ap(3,{whenOpening:!0,whenClosing:!0,indentTags:B.a6},B.c_,t.gU)
+B.bX=A.j(s(["Cmd-/","Ctrl-/","Shift-Tab","Tab","Cmd-F","Cmd-H","Ctrl-F","Ctrl-H","F4","Shift-F4"]),t.s)
+B.cl=new A.ap(10,{"Cmd-/":"toggleComment","Ctrl-/":"toggleComment","Shift-Tab":"indentLess",Tab:u.m,"Cmd-F":"weHandleElsewhere","Cmd-H":"weHandleElsewhere","Ctrl-F":"weHandleElsewhere","Ctrl-H":"weHandleElsewhere",F4:"weHandleElsewhere","Shift-F4":"weHandleElsewhere"},B.bX,t.hD)
 B.ck=A.j(s(["style","showToken","annotateScrollbar"]),t.s)
-B.cp=new A.ap(3,{style:"highlight-selection-matches",showToken:!1,annotateScrollbar:!0},B.ck,t.gU)
-B.c3=A.j(s(["completeSingle"]),t.s)
-B.ct=new A.ap(1,{completeSingle:!1},B.c3,t.y5)
-B.cr=new A.ap(14,{continueComments:B.cm,autofocus:!1,autoCloseTags:B.co,autoCloseBrackets:!0,matchBrackets:!0,tabSize:2,lineWrapping:!1,indentUnit:2,cursorHeight:0.85,viewportMargin:100,extraKeys:B.cs,highlightSelectionMatches:B.cp,hintOptions:B.ct,scrollbarStyle:"simple"},B.cb,t.gU)
-B.c5=A.j(s(["dart","html","flutter"]),t.s)
+B.cq=new A.ap(3,{style:"highlight-selection-matches",showToken:!1,annotateScrollbar:!0},B.ck,t.gU)
+B.c4=A.j(s(["completeSingle"]),t.s)
+B.ct=new A.ap(1,{completeSingle:!1},B.c4,t.y5)
+B.cs=new A.ap(14,{continueComments:B.cn,autofocus:!1,autoCloseTags:B.cp,autoCloseBrackets:!0,matchBrackets:!0,tabSize:2,lineWrapping:!1,indentUnit:2,cursorHeight:0.85,viewportMargin:100,extraKeys:B.cl,highlightSelectionMatches:B.cq,hintOptions:B.ct,scrollbarStyle:"simple"},B.cc,t.gU)
+B.c6=A.j(s(["dart","html","flutter"]),t.s)
 B.bH=new A.eU("dart")
 B.bI=new A.eU("html")
 B.bJ=new A.eU("flutter")
-B.aX=new A.ap(3,{dart:B.bH,html:B.bI,flutter:B.bJ},B.c5,A.ax("ap<b,eU>"))
+B.aX=new A.ap(3,{dart:B.bH,html:B.bI,flutter:B.bJ},B.c6,A.ax("ap<b,eU>"))
 B.bK=new A.eX("error")
 B.a9=new A.dZ([B.aH,"flash-warn",B.bK,"flash-error",B.aI,"flash-success"],A.ax("dZ<eX,b>"))
 B.d2=new A.ki("")
