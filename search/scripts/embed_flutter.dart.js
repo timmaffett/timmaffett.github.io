@@ -12091,7 +12091,7 @@ d.e=A.t(b)
 d.lP()
 g=String(i.a(window.location))
 g.toString
-g=A.a2(g).ga_().i(0,"theme")==="dark"?"../scripts/frame_dark.html":"../scripts/frame.html"
+g=A.a2(g).ga_().i(0,"theme")==="dark"?"/search/scripts/frame_dark.html":"/search/scripts/frame.html"
 B.bN.sjP(d.d,g)
 d.e=g
 A.an(a2.r,a9)
