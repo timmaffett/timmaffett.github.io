@@ -13067,12 +13067,7 @@ c=i.substring(e)
 f=d+"..."+c}B.t.sH(h,f)
 b=a0.ia(A.f([h],m))
 l.toString
-n.appendChild(b).toString
-window.toString
-h="Added starred item "+i
-f=typeof console!="undefined"
-f.toString
-if(f)window.console.log(h)}}r=A.jq(q,null,null)
+n.appendChild(b).toString}}r=A.jq(q,null,null)
 a=new A.dw(r)
 q=J.x(r)
 q.ca(r,mdc.menuSurface.Corner.BOTTOM_LEFT)
