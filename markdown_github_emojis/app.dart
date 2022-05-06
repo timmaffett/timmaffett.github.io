@@ -13,11 +13,8 @@ final htmlDiv = querySelector('#html') as DivElement;
 final versionSpan = querySelector('.version') as SpanElement;
 
 final nullSanitizer = NullTreeSanitizer();
-const typing = Duration(milliseconds: 10 /*150*/);
-final introText = '''
-## All GitHub Emoji Shortcodes
-
-:-1:
+const typing = Duration(milliseconds: 150);
+final introText = ''':-1:
 :100:
 :1234:
 :1st_place_medal:
@@ -1911,8 +1908,7 @@ final introText = '''
 :zombie:
 :zombie_man:
 :zombie_woman:
-:zzz:
-''';
+:zzz:''';
 
 // Flavor support.
 final basicRadio = querySelector('#basic-radio') as HtmlElement;
@@ -1932,15 +1928,15 @@ void main() {
 
   final savedMarkdown = window.localStorage['markdown'];
 
-  if (savedMarkdown != null &&
-      savedMarkdown.isNotEmpty &&
-      savedMarkdown != introText) {
-    markdownInput.value = savedMarkdown;
-    markdownInput.focus();
-    _renderMarkdown();
-  } else {
-    _typeItOut(introText, introText.length);  // get it all there instantly
-  }
+  // if (savedMarkdown != null &&
+  //     savedMarkdown.isNotEmpty &&
+  //     savedMarkdown != introText) {
+  //   markdownInput.value = savedMarkdown;
+  //   markdownInput.focus();
+  //   _renderMarkdown();
+  // } else {
+    _typeItOut(introText, introText.length);
+  //}
 
   // GitHub is the default extension set.
   gfmRadio.attributes['checked'] = '';
