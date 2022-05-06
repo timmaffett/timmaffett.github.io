@@ -1492,7 +1492,7 @@
       return value;
     },
     _Cell: function _Cell(t0) {
-      this._name = t0;
+      this.__late_helper$_name = t0;
       this._value = null;
     },
     _checkValidIndex(index, list, $length) {
@@ -3658,7 +3658,7 @@
     Encoding: function Encoding() {
     },
     HtmlEscapeMode: function HtmlEscapeMode(t0, t1) {
-      this._convert$_name = t0;
+      this._name = t0;
       this.escapeQuot = t1;
     },
     HtmlEscape: function HtmlEscape(t0) {
@@ -4543,36 +4543,29 @@
       this._startCharacter = t2;
     },
     main() {
-      var t1, t2, savedMarkdown, t3,
-        _s532_ = "## GFM color chips/swatches\n-------------------------------------------------------\n- `#F00`\n- `#F00A`\n- `#FF0000`\n- `#FF0000AA`\n- `#00ffff99`\n- `RGB(0,255,0)`\n- `RGB(0%,100%,0%)`\n- `RGBA(0,255,0,0.3)`\n- `HSL(540,70%,50%)`\n- `HSLA(540,70%,50%,0.3)`\n\n## GFM style checkbox task list\n---------------------------------------------------\n\n- [x]      Completed task\n- [ ] Incomplete task\n  - [ ] Sub-task 1\n  - [x] Sub-task 2\n  - [ ] Sub-task 3\n\n\n1. [x]   Completed task\n1. [ ] Incomplete task\n   1. [ ] Sub-task 1\n   1. [x] Sub-task 2\n\n",
-        _s5_ = "click";
+      var t1, t2, t3, _s5_ = "click";
       B.SpanElement_methods.set$text($.$get$versionSpan(), "v6.0.0-dev");
       t1 = $.$get$markdownInput();
       t2 = type$._ElementEventStreamImpl_KeyboardEvent;
       t2._eval$1("~(1)?")._as(A.app___renderMarkdown$closure());
       type$.nullable_void_Function._as(null);
       A._EventStreamSubscription$(t1, "keyup", A.app___renderMarkdown$closure(), false, t2._precomputed1);
-      savedMarkdown = window.localStorage.getItem("markdown");
-      if (savedMarkdown != null && savedMarkdown.length !== 0 && savedMarkdown !== _s532_) {
-        B.TextAreaElement_methods.set$value(t1, savedMarkdown);
-        t1.focus();
-        A._renderMarkdown(null);
-      } else
-        A._typeItOut(_s532_, 532);
-      t1 = $.$get$gfmRadio();
-      t1.setAttribute("checked", "");
-      t2 = t1.querySelector(".glyph");
-      t2.toString;
-      J.set$text$x(t2, "radio_button_checked");
-      $.extensionSet = $.$get$extensionSets().$index(0, t1.id);
+      window.localStorage.getItem("markdown");
+      A._typeItOut("## GFM style checkbox task list\n---------------------------------------------------\n\n- [x]      Completed task\n- [ ] Incomplete task\n  - [ ] Sub-task 1\n  - [x] Sub-task 2\n  - [ ] Sub-task 3\n\n\n1. [x]   Completed task\n1. [ ] Incomplete task\n   1. [ ] Sub-task 1\n   1. [x] Sub-task 2\n   \n## GFM color chips/swatches\n-------------------------------------------------------\n- `#F00`\n- `#F00A`\n- `#FF0000`\n- `#FF0000AA`\n- `#00ffff99`\n- `RGB(0,255,0)`\n- `RGB(0%,100%,0%)`\n- `RGBA(0,255,0,0.3)`\n- `HSL(540,70%,50%)`\n- `HSLA(540,70%,50%,0.3)`\n", 534);
+      t2 = $.$get$gfmRadio();
+      t2.setAttribute("checked", "");
+      t1 = t2.querySelector(".glyph");
+      t1.toString;
+      J.set$text$x(t1, "radio_button_checked");
+      $.extensionSet = $.$get$extensionSets().$index(0, t2.id);
       A._renderMarkdown(null);
-      t2 = $.$get$basicRadio();
+      t1 = $.$get$basicRadio();
       t3 = type$._ElementEventStreamImpl_MouseEvent;
       t3._eval$1("~(1)?")._as(A.app___switchFlavor$closure());
       t3 = t3._precomputed1;
-      A._EventStreamSubscription$(t2, _s5_, A.app___switchFlavor$closure(), false, t3);
-      A._EventStreamSubscription$($.$get$commonmarkRadio(), _s5_, A.app___switchFlavor$closure(), false, t3);
       A._EventStreamSubscription$(t1, _s5_, A.app___switchFlavor$closure(), false, t3);
+      A._EventStreamSubscription$($.$get$commonmarkRadio(), _s5_, A.app___switchFlavor$closure(), false, t3);
+      A._EventStreamSubscription$(t2, _s5_, A.app___switchFlavor$closure(), false, t3);
     },
     _renderMarkdown($event) {
       var block, e, t2, t3, t4, exception,
@@ -6108,10 +6101,10 @@
       t1._rest[1]._as(value);
       if (typeof key == "string") {
         strings = _this._strings;
-        _this._addHashTableEntry$3(strings == null ? _this._strings = _this._newHashTable$0() : strings, key, value);
+        _this.__js_helper$_addHashTableEntry$3(strings == null ? _this._strings = _this._newHashTable$0() : strings, key, value);
       } else if (typeof key == "number" && (key & 0x3ffffff) === key) {
         nums = _this._nums;
-        _this._addHashTableEntry$3(nums == null ? _this._nums = _this._newHashTable$0() : nums, key, value);
+        _this.__js_helper$_addHashTableEntry$3(nums == null ? _this._nums = _this._newHashTable$0() : nums, key, value);
       } else
         _this.internalSet$2(key, value);
     },
@@ -6126,13 +6119,13 @@
       hash = _this.internalComputeHashCode$1(key);
       bucket = _this._getTableBucket$2(rest, hash);
       if (bucket == null)
-        _this._setTableEntry$3(rest, hash, [_this._newLinkedCell$2(key, value)]);
+        _this._setTableEntry$3(rest, hash, [_this.__js_helper$_newLinkedCell$2(key, value)]);
       else {
         index = _this.internalFindBucketIndex$2(bucket, key);
         if (index >= 0)
           bucket[index].hashMapCellValue = value;
         else
-          bucket.push(_this._newLinkedCell$2(key, value));
+          bucket.push(_this.__js_helper$_newLinkedCell$2(key, value));
       }
     },
     putIfAbsent$2(_, key, ifAbsent) {
@@ -6158,21 +6151,21 @@
         cell = cell._next;
       }
     },
-    _addHashTableEntry$3(table, key, value) {
+    __js_helper$_addHashTableEntry$3(table, key, value) {
       var cell, _this = this,
         t1 = A._instanceType(_this);
       t1._precomputed1._as(key);
       t1._rest[1]._as(value);
       cell = _this._getTableCell$2(table, key);
       if (cell == null)
-        _this._setTableEntry$3(table, key, _this._newLinkedCell$2(key, value));
+        _this._setTableEntry$3(table, key, _this.__js_helper$_newLinkedCell$2(key, value));
       else
         cell.hashMapCellValue = value;
     },
     _modified$0() {
       this._modifications = this._modifications + 1 & 67108863;
     },
-    _newLinkedCell$2(key, value) {
+    __js_helper$_newLinkedCell$2(key, value) {
       var _this = this,
         t1 = A._instanceType(_this),
         cell = new A.LinkedHashMapCell(t1._precomputed1._as(key), t1._rest[1]._as(value));
@@ -6365,7 +6358,7 @@
     _readLocal$0() {
       var t1 = this._value;
       if (t1 === this)
-        throw A.wrapException(new A.LateError("Local '" + this._name + "' has not been initialized."));
+        throw A.wrapException(new A.LateError("Local '" + this.__late_helper$_name + "' has not been initialized."));
       return t1;
     }
   };
@@ -6965,10 +6958,10 @@
       A._instanceType(_this)._precomputed1._as(element);
       if (typeof element == "string" && element !== "__proto__") {
         strings = _this._collection$_strings;
-        return _this._collection$_addHashTableEntry$2(strings == null ? _this._collection$_strings = A._LinkedHashSet__newHashTable() : strings, element);
+        return _this._addHashTableEntry$2(strings == null ? _this._collection$_strings = A._LinkedHashSet__newHashTable() : strings, element);
       } else if (typeof element == "number" && (element & 1073741823) === element) {
         nums = _this._collection$_nums;
-        return _this._collection$_addHashTableEntry$2(nums == null ? _this._collection$_nums = A._LinkedHashSet__newHashTable() : nums, element);
+        return _this._addHashTableEntry$2(nums == null ? _this._collection$_nums = A._LinkedHashSet__newHashTable() : nums, element);
       } else
         return _this._add$1(element);
     },
@@ -6981,22 +6974,22 @@
       hash = _this._computeHashCode$1(element);
       bucket = rest[hash];
       if (bucket == null)
-        rest[hash] = [_this._collection$_newLinkedCell$1(element)];
+        rest[hash] = [_this._newLinkedCell$1(element)];
       else {
         if (_this._findBucketIndex$2(bucket, element) >= 0)
           return false;
-        bucket.push(_this._collection$_newLinkedCell$1(element));
+        bucket.push(_this._newLinkedCell$1(element));
       }
       return true;
     },
-    _collection$_addHashTableEntry$2(table, element) {
+    _addHashTableEntry$2(table, element) {
       A._instanceType(this)._precomputed1._as(element);
       if (type$.nullable__LinkedHashSetCell._as(table[element]) != null)
         return false;
-      table[element] = this._collection$_newLinkedCell$1(element);
+      table[element] = this._newLinkedCell$1(element);
       return true;
     },
-    _collection$_newLinkedCell$1(element) {
+    _newLinkedCell$1(element) {
       var _this = this,
         cell = new A._LinkedHashSetCell(A._instanceType(_this)._precomputed1._as(element));
       if (_this._collection$_first == null)
@@ -7268,7 +7261,7 @@
   A.Encoding.prototype = {};
   A.HtmlEscapeMode.prototype = {
     toString$0(_) {
-      return this._convert$_name;
+      return this._name;
     }
   };
   A.HtmlEscape.prototype = {
@@ -8830,7 +8823,7 @@
       endItem = new A.ListSyntax_parse_endItem(_box_0, items);
       match = A._Cell$named("match");
       tryMatch = new A.ListSyntax_parse_tryMatch(match, parser);
-      for (t1 = parser.lines, t2 = match._name, t3 = type$.Pattern, startNumber = _null, indent = startNumber, listMarker = indent; t4 = parser._pos, t5 = t1.length, t4 < t5;) {
+      for (t1 = parser.lines, t2 = match.__late_helper$_name, t3 = type$.Pattern, startNumber = _null, indent = startNumber, listMarker = indent; t4 = parser._pos, t5 = t1.length, t4 < t5;) {
         t6 = $.$get$ListSyntax__whitespaceRe();
         if (!(t4 < t5))
           return A.ioore(t1, t4);

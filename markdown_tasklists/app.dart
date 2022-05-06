@@ -15,19 +15,6 @@ final versionSpan = querySelector('.version') as SpanElement;
 final nullSanitizer = NullTreeSanitizer();
 const typing = Duration(milliseconds: 150);
 final introText = '''
-## GFM color chips/swatches
--------------------------------------------------------
-- `#F00`
-- `#F00A`
-- `#FF0000`
-- `#FF0000AA`
-- `#00ffff99`
-- `RGB(0,255,0)`
-- `RGB(0%,100%,0%)`
-- `RGBA(0,255,0,0.3)`
-- `HSL(540,70%,50%)`
-- `HSLA(540,70%,50%,0.3)`
-
 ## GFM style checkbox task list
 ---------------------------------------------------
 
@@ -42,7 +29,19 @@ final introText = '''
 1. [ ] Incomplete task
    1. [ ] Sub-task 1
    1. [x] Sub-task 2
-
+   
+## GFM color chips/swatches
+-------------------------------------------------------
+- `#F00`
+- `#F00A`
+- `#FF0000`
+- `#FF0000AA`
+- `#00ffff99`
+- `RGB(0,255,0)`
+- `RGB(0%,100%,0%)`
+- `RGBA(0,255,0,0.3)`
+- `HSL(540,70%,50%)`
+- `HSLA(540,70%,50%,0.3)`
 ''';
 
 // Flavor support.
@@ -63,15 +62,15 @@ void main() {
 
   final savedMarkdown = window.localStorage['markdown'];
 
-  if (savedMarkdown != null &&
-      savedMarkdown.isNotEmpty &&
-      savedMarkdown != introText) {
-    markdownInput.value = savedMarkdown;
-    markdownInput.focus();
-    _renderMarkdown();
-  } else {
+  // if (savedMarkdown != null &&
+  //     savedMarkdown.isNotEmpty &&
+  //     savedMarkdown != introText) {
+  //   markdownInput.value = savedMarkdown;
+  //   markdownInput.focus();
+  //   _renderMarkdown();
+  // } else {
     _typeItOut(introText, introText.length);
-  }
+  //}
 
   // GitHub is the default extension set.
   gfmRadio.attributes['checked'] = '';
