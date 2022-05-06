@@ -1492,7 +1492,7 @@
       return value;
     },
     _Cell: function _Cell(t0) {
-      this._name = t0;
+      this.__late_helper$_name = t0;
       this._value = null;
     },
     _checkValidIndex(index, list, $length) {
@@ -3658,7 +3658,7 @@
     Encoding: function Encoding() {
     },
     HtmlEscapeMode: function HtmlEscapeMode(t0, t1) {
-      this._convert$_name = t0;
+      this._name = t0;
       this.escapeQuot = t1;
     },
     HtmlEscape: function HtmlEscape(t0) {
@@ -4543,9 +4543,7 @@
     Config: function Config() {
     },
     main() {
-      var t1, t2, savedMarkdown, t3,
-        _s4346_ = '# :merman: Mermaid :mermaid: Diagram Types\n\n## Here are examples of various mermaid diagram types\n\n-------------------------------------------------------------------\n\n[Flowchart](http://mermaid-js.github.io/mermaid/#/./flowchart?id=flowcharts-basic-syntax)\n-----------\n```mermaid\n\n\ngraph TD;\n    A-->B;\n    A-->C;\n    B-->D;\n    C-->D;\n```\n--------------------------------------------------------------\n## [Sequence Diagram](http://mermaid-js.github.io/mermaid/#/./sequenceDiagram)\n\n```mermaid\nsequenceDiagram\n    participant Alice\n    participant Bob\n    Alice->>John: Hello John, how are you?\n    loop Healthcheck\n        John->>John: Fight against hypochondria\n    end\n    Note right of John: Rational thoughts <br/>prevail!\n    John-->>Alice: Great!\n    John->>Bob: How about you?\n    Bob-->>John: Jolly good!\n```\n--------------------------------------------------------------\n## [Gantt Diagram](http://mermaid-js.github.io/mermaid/#/./gantt)\n\n```mermaid\ngantt\ndateFormat  YYYY-MM-DD\ntitle Adding GANTT diagram to mermaid\nexcludes weekdays 2014-01-10\n\nsection A section\nCompleted task            :done,    des1, 2014-01-06,2014-01-08\nActive task               :active,  des2, 2014-01-09, 3d\nFuture task               :         des3, after des2, 5d\nFuture task2               :         des4, after des3, 5d\n```\n--------------------------------------------------------------\n## [Class Diagram](http://mermaid-js.github.io/mermaid/#/./classDiagram)\n\n```mermaid\nclassDiagram\nClass01 <|-- AveryLongClass : Cool\nClass03 *-- Class04\nClass05 o-- Class06\nClass07 .. Class08\nClass09 --> C2 : Where am i?\nClass09 --* C3\nClass09 --|> Class07\nClass07 : equals()\nClass07 : Object[] elementData\nClass01 : size()\nClass01 : int chimp\nClass01 : int gorilla\nClass08 <--> C2: Cool label\n```\n--------------------------------------------------------------\n## [User Journey Diagram](http://mermaid-js.github.io/mermaid/#/./user-journey)\n\n```mermaid\njourney\n    title My working day\n    section Go to work\n      Make tea: 5: Me\n      Go upstairs: 3: Me\n      Do work: 1: Me, Cat\n    section Go home\n      Go downstairs: 5: Me\n      Sit down: 5: Me\n```\n--------------------------------------------------------------\n## [Pie Chart Diagram](http://mermaid-js.github.io/mermaid/#/pie?id=pie-chart-diagrams)\n\n```mermaid\npie showData\n    title Key elements in Product X\n    "Calcium" : 42.96\n    "Potassium" : 50.05\n    "Magnesium" : 10.01\n    "Iron" :  5\n```\n--------------------------------------------------------------\n## [State diagram](http://mermaid-js.github.io/mermaid/#/stateDiagram?id=state-diagrams)\n\n```mermaid\nstateDiagram-v2\n    [*] --> Still\n    Still --> [*]\n\n    Still --> Moving\n    Moving --> Still\n    Moving --> Crash\n    Crash --> [*]\n```\n--------------------------------------------------------------\n## [Entity Relationship Diagram](http://mermaid-js.github.io/mermaid/#/entityRelationshipDiagram?id=entity-relationship-diagrams)\n\n```mermaid\nerDiagram\n    CUSTOMER ||--o{ ORDER : places\n    ORDER ||--|{ LINE-ITEM : contains\n    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses\n```\n--------------------------------------------------------------\n## [Requirement Diagram](http://mermaid-js.github.io/mermaid/#/requirementDiagram?id=requirement-diagram)\n```mermaid\nrequirementDiagram\n\n    requirement test_req {\n    id: 1\n    text: the test text.\n    risk: high\nverifymethod: test\n    }\n\n    element test_entity {\n    type: simulation\n    }\n\n    test_entity - satisfies -> test_req\n```\n--------------------------------------------------------------\n## [Gitgraph Diagrams](http://mermaid-js.github.io/mermaid/#/gitgraph?id=gitgraph-diagrams)\n\n```mermaid\n       gitGraph\n       commit\n       branch develop\n       commit tag:"v1.0.0"\n       commit\n       checkout main\n       commit type: HIGHLIGHT\n       commit\n       merge develop\n       commit\n       branch featureA\n       commit\n```\n--------------------------------------------------------------\n\n```mermaid\ngraph TB\n\n  SubGraph1 --> SubGraph1Flow\n  subgraph "SubGraph 1 Flow"\n  SubGraph1Flow(SubNode 1)\n  SubGraph1Flow -- Choice1 --> DoChoice1\n  SubGraph1Flow -- Choice2 --> DoChoice2\n  end\n\n  subgraph "Main Graph"\n  Node1[Node 1] --> Node2[Node 2]\n  Node2 --> SubGraph1[Jump to SubGraph1]\n  SubGraph1 --> FinalThing[Final Thing]\nend\n```\n\n--------------------------------------------------------------\n',
-        _s5_ = "click";
+      var t1, t2, t3, _s5_ = "click";
       mermaid.initialize({securityLevel: "strict", theme: "forest", logLevel: 4, startOnLoad: false, arrowMarkerAbsolute: true, flowchart: {htmlLabels: true}, sequence: {}, gnatt: {}});
       B.SpanElement_methods.set$text($.$get$versionSpan(), "v6.0.0-dev");
       t1 = $.$get$markdownInput();
@@ -4553,27 +4551,22 @@
       t2._eval$1("~(1)?")._as(A.app___renderMarkdown$closure());
       type$.nullable_void_Function._as(null);
       A._EventStreamSubscription$(t1, "keyup", A.app___renderMarkdown$closure(), false, t2._precomputed1);
-      savedMarkdown = window.localStorage.getItem("markdown");
-      if (savedMarkdown != null && savedMarkdown.length !== 0 && savedMarkdown !== _s4346_) {
-        B.TextAreaElement_methods.set$value(t1, savedMarkdown);
-        t1.focus();
-        A._renderMarkdown(null);
-      } else
-        A._typeItOut(_s4346_, 4346);
-      t1 = $.$get$gfmRadio();
-      t1.setAttribute("checked", "");
-      t2 = t1.querySelector(".glyph");
-      t2.toString;
-      J.set$text$x(t2, "radio_button_checked");
-      $.extensionSet = $.$get$extensionSets().$index(0, t1.id);
+      window.localStorage.getItem("markdown");
+      A._typeItOut('# :merman: Mermaid :mermaid: Diagram Types\n\n## Here are examples of various mermaid diagram types\n\n-------------------------------------------------------------------\n\n[Flowchart](http://mermaid-js.github.io/mermaid/#/./flowchart?id=flowcharts-basic-syntax)\n-----------\n```mermaid\n\n\ngraph TD;\n    A-->B;\n    A-->C;\n    B-->D;\n    C-->D;\n```\n--------------------------------------------------------------\n## [Sequence Diagram](http://mermaid-js.github.io/mermaid/#/./sequenceDiagram)\n\n```mermaid\nsequenceDiagram\n    participant Alice\n    participant Bob\n    Alice->>John: Hello John, how are you?\n    loop Healthcheck\n        John->>John: Fight against hypochondria\n    end\n    Note right of John: Rational thoughts <br/>prevail!\n    John-->>Alice: Great!\n    John->>Bob: How about you?\n    Bob-->>John: Jolly good!\n```\n--------------------------------------------------------------\n## [Gantt Diagram](http://mermaid-js.github.io/mermaid/#/./gantt)\n\n```mermaid\ngantt\ndateFormat  YYYY-MM-DD\ntitle Adding GANTT diagram to mermaid\nexcludes weekdays 2014-01-10\n\nsection A section\nCompleted task            :done,    des1, 2014-01-06,2014-01-08\nActive task               :active,  des2, 2014-01-09, 3d\nFuture task               :         des3, after des2, 5d\nFuture task2               :         des4, after des3, 5d\n```\n--------------------------------------------------------------\n## [Class Diagram](http://mermaid-js.github.io/mermaid/#/./classDiagram)\n\n```mermaid\nclassDiagram\nClass01 <|-- AveryLongClass : Cool\nClass03 *-- Class04\nClass05 o-- Class06\nClass07 .. Class08\nClass09 --> C2 : Where am i?\nClass09 --* C3\nClass09 --|> Class07\nClass07 : equals()\nClass07 : Object[] elementData\nClass01 : size()\nClass01 : int chimp\nClass01 : int gorilla\nClass08 <--> C2: Cool label\n```\n--------------------------------------------------------------\n## [User Journey Diagram](http://mermaid-js.github.io/mermaid/#/./user-journey)\n\n```mermaid\njourney\n    title My working day\n    section Go to work\n      Make tea: 5: Me\n      Go upstairs: 3: Me\n      Do work: 1: Me, Cat\n    section Go home\n      Go downstairs: 5: Me\n      Sit down: 5: Me\n```\n--------------------------------------------------------------\n## [Pie Chart Diagram](http://mermaid-js.github.io/mermaid/#/pie?id=pie-chart-diagrams)\n\n```mermaid\npie showData\n    title Key elements in Product X\n    "Calcium" : 42.96\n    "Potassium" : 50.05\n    "Magnesium" : 10.01\n    "Iron" :  5\n```\n--------------------------------------------------------------\n## [State diagram](http://mermaid-js.github.io/mermaid/#/stateDiagram?id=state-diagrams)\n\n```mermaid\nstateDiagram-v2\n    [*] --> Still\n    Still --> [*]\n\n    Still --> Moving\n    Moving --> Still\n    Moving --> Crash\n    Crash --> [*]\n```\n--------------------------------------------------------------\n## [Entity Relationship Diagram](http://mermaid-js.github.io/mermaid/#/entityRelationshipDiagram?id=entity-relationship-diagrams)\n\n```mermaid\nerDiagram\n    CUSTOMER ||--o{ ORDER : places\n    ORDER ||--|{ LINE-ITEM : contains\n    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses\n```\n--------------------------------------------------------------\n## [Requirement Diagram](http://mermaid-js.github.io/mermaid/#/requirementDiagram?id=requirement-diagram)\n```mermaid\nrequirementDiagram\n\n    requirement test_req {\n    id: 1\n    text: the test text.\n    risk: high\nverifymethod: test\n    }\n\n    element test_entity {\n    type: simulation\n    }\n\n    test_entity - satisfies -> test_req\n```\n--------------------------------------------------------------\n## [Gitgraph Diagrams](http://mermaid-js.github.io/mermaid/#/gitgraph?id=gitgraph-diagrams)\n\n```mermaid\n       gitGraph\n       commit\n       branch develop\n       commit tag:"v1.0.0"\n       commit\n       checkout main\n       commit type: HIGHLIGHT\n       commit\n       merge develop\n       commit\n       branch featureA\n       commit\n```\n--------------------------------------------------------------\n\n```mermaid\ngraph TB\n\n  SubGraph1 --> SubGraph1Flow\n  subgraph "SubGraph 1 Flow"\n  SubGraph1Flow(SubNode 1)\n  SubGraph1Flow -- Choice1 --> DoChoice1\n  SubGraph1Flow -- Choice2 --> DoChoice2\n  end\n\n  subgraph "Main Graph"\n  Node1[Node 1] --> Node2[Node 2]\n  Node2 --> SubGraph1[Jump to SubGraph1]\n  SubGraph1 --> FinalThing[Final Thing]\nend\n```\n\n--------------------------------------------------------------\n', 4346);
+      t2 = $.$get$gfmRadio();
+      t2.setAttribute("checked", "");
+      t1 = t2.querySelector(".glyph");
+      t1.toString;
+      J.set$text$x(t1, "radio_button_checked");
+      $.extensionSet = $.$get$extensionSets().$index(0, t2.id);
       A._renderMarkdown(null);
-      t2 = $.$get$basicRadio();
+      t1 = $.$get$basicRadio();
       t3 = type$._ElementEventStreamImpl_MouseEvent;
       t3._eval$1("~(1)?")._as(A.app___switchFlavor$closure());
       t3 = t3._precomputed1;
-      A._EventStreamSubscription$(t2, _s5_, A.app___switchFlavor$closure(), false, t3);
-      A._EventStreamSubscription$($.$get$commonmarkRadio(), _s5_, A.app___switchFlavor$closure(), false, t3);
       A._EventStreamSubscription$(t1, _s5_, A.app___switchFlavor$closure(), false, t3);
+      A._EventStreamSubscription$($.$get$commonmarkRadio(), _s5_, A.app___switchFlavor$closure(), false, t3);
+      A._EventStreamSubscription$(t2, _s5_, A.app___switchFlavor$closure(), false, t3);
     },
     _renderMarkdown($event) {
       var block, e, t2, t3, t4, exception,
@@ -6110,10 +6103,10 @@
       t1._rest[1]._as(value);
       if (typeof key == "string") {
         strings = _this._strings;
-        _this._addHashTableEntry$3(strings == null ? _this._strings = _this._newHashTable$0() : strings, key, value);
+        _this.__js_helper$_addHashTableEntry$3(strings == null ? _this._strings = _this._newHashTable$0() : strings, key, value);
       } else if (typeof key == "number" && (key & 0x3ffffff) === key) {
         nums = _this._nums;
-        _this._addHashTableEntry$3(nums == null ? _this._nums = _this._newHashTable$0() : nums, key, value);
+        _this.__js_helper$_addHashTableEntry$3(nums == null ? _this._nums = _this._newHashTable$0() : nums, key, value);
       } else
         _this.internalSet$2(key, value);
     },
@@ -6128,13 +6121,13 @@
       hash = _this.internalComputeHashCode$1(key);
       bucket = _this._getTableBucket$2(rest, hash);
       if (bucket == null)
-        _this._setTableEntry$3(rest, hash, [_this._newLinkedCell$2(key, value)]);
+        _this._setTableEntry$3(rest, hash, [_this.__js_helper$_newLinkedCell$2(key, value)]);
       else {
         index = _this.internalFindBucketIndex$2(bucket, key);
         if (index >= 0)
           bucket[index].hashMapCellValue = value;
         else
-          bucket.push(_this._newLinkedCell$2(key, value));
+          bucket.push(_this.__js_helper$_newLinkedCell$2(key, value));
       }
     },
     putIfAbsent$2(_, key, ifAbsent) {
@@ -6160,21 +6153,21 @@
         cell = cell._next;
       }
     },
-    _addHashTableEntry$3(table, key, value) {
+    __js_helper$_addHashTableEntry$3(table, key, value) {
       var cell, _this = this,
         t1 = A._instanceType(_this);
       t1._precomputed1._as(key);
       t1._rest[1]._as(value);
       cell = _this._getTableCell$2(table, key);
       if (cell == null)
-        _this._setTableEntry$3(table, key, _this._newLinkedCell$2(key, value));
+        _this._setTableEntry$3(table, key, _this.__js_helper$_newLinkedCell$2(key, value));
       else
         cell.hashMapCellValue = value;
     },
     _modified$0() {
       this._modifications = this._modifications + 1 & 67108863;
     },
-    _newLinkedCell$2(key, value) {
+    __js_helper$_newLinkedCell$2(key, value) {
       var _this = this,
         t1 = A._instanceType(_this),
         cell = new A.LinkedHashMapCell(t1._precomputed1._as(key), t1._rest[1]._as(value));
@@ -6367,7 +6360,7 @@
     _readLocal$0() {
       var t1 = this._value;
       if (t1 === this)
-        throw A.wrapException(new A.LateError("Local '" + this._name + "' has not been initialized."));
+        throw A.wrapException(new A.LateError("Local '" + this.__late_helper$_name + "' has not been initialized."));
       return t1;
     }
   };
@@ -6967,10 +6960,10 @@
       A._instanceType(_this)._precomputed1._as(element);
       if (typeof element == "string" && element !== "__proto__") {
         strings = _this._collection$_strings;
-        return _this._collection$_addHashTableEntry$2(strings == null ? _this._collection$_strings = A._LinkedHashSet__newHashTable() : strings, element);
+        return _this._addHashTableEntry$2(strings == null ? _this._collection$_strings = A._LinkedHashSet__newHashTable() : strings, element);
       } else if (typeof element == "number" && (element & 1073741823) === element) {
         nums = _this._collection$_nums;
-        return _this._collection$_addHashTableEntry$2(nums == null ? _this._collection$_nums = A._LinkedHashSet__newHashTable() : nums, element);
+        return _this._addHashTableEntry$2(nums == null ? _this._collection$_nums = A._LinkedHashSet__newHashTable() : nums, element);
       } else
         return _this._add$1(element);
     },
@@ -6983,22 +6976,22 @@
       hash = _this._computeHashCode$1(element);
       bucket = rest[hash];
       if (bucket == null)
-        rest[hash] = [_this._collection$_newLinkedCell$1(element)];
+        rest[hash] = [_this._newLinkedCell$1(element)];
       else {
         if (_this._findBucketIndex$2(bucket, element) >= 0)
           return false;
-        bucket.push(_this._collection$_newLinkedCell$1(element));
+        bucket.push(_this._newLinkedCell$1(element));
       }
       return true;
     },
-    _collection$_addHashTableEntry$2(table, element) {
+    _addHashTableEntry$2(table, element) {
       A._instanceType(this)._precomputed1._as(element);
       if (type$.nullable__LinkedHashSetCell._as(table[element]) != null)
         return false;
-      table[element] = this._collection$_newLinkedCell$1(element);
+      table[element] = this._newLinkedCell$1(element);
       return true;
     },
-    _collection$_newLinkedCell$1(element) {
+    _newLinkedCell$1(element) {
       var _this = this,
         cell = new A._LinkedHashSetCell(A._instanceType(_this)._precomputed1._as(element));
       if (_this._collection$_first == null)
@@ -7270,7 +7263,7 @@
   A.Encoding.prototype = {};
   A.HtmlEscapeMode.prototype = {
     toString$0(_) {
-      return this._convert$_name;
+      return this._name;
     }
   };
   A.HtmlEscape.prototype = {
@@ -8824,7 +8817,7 @@
       endItem = new A.ListSyntax_parse_endItem(_box_0, items);
       match = A._Cell$named("match");
       tryMatch = new A.ListSyntax_parse_tryMatch(match, parser);
-      for (t1 = parser.lines, t2 = match._name, t3 = type$.Pattern, listMarker = null, indent = null, startNumber = null; t4 = parser._pos, t5 = t1.length, t4 < t5;) {
+      for (t1 = parser.lines, t2 = match.__late_helper$_name, t3 = type$.Pattern, listMarker = null, indent = null, startNumber = null; t4 = parser._pos, t5 = t1.length, t4 < t5;) {
         t6 = $.$get$ListSyntax__whitespaceRe();
         if (!(t4 < t5))
           return A.ioore(t1, t4);

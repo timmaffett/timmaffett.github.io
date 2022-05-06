@@ -215,15 +215,15 @@ void main() {
 
   final savedMarkdown = window.localStorage['markdown'];
 
-  if (savedMarkdown != null &&
-      savedMarkdown.isNotEmpty &&
-      savedMarkdown != introText) {
-    markdownInput.value = savedMarkdown;
-    markdownInput.focus();
-    _renderMarkdown();
-  } else {
+  // if (savedMarkdown != null &&
+  //     savedMarkdown.isNotEmpty &&
+  //     savedMarkdown != introText) {
+  //   markdownInput.value = savedMarkdown;
+  //   markdownInput.focus();
+  //   _renderMarkdown();
+  // } else {
     _typeItOut(introText, introText.length);
-  }
+  //}
 
   // GitHub is the default extension set.
   gfmRadio.attributes['checked'] = '';
