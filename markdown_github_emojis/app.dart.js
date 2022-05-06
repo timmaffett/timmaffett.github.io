@@ -4550,7 +4550,7 @@
         t1.focus();
         A._renderMarkdown(null);
       } else
-        A._typeItOut(_s24959_, 82);
+        A._typeItOut(_s24959_, 20082);
       t1 = $.$get$gfmRadio();
       t1.setAttribute("checked", "");
       t2 = t1.querySelector(".glyph");
@@ -4601,7 +4601,7 @@
       t4 = t3._eval$1("~(1)?")._as(new A._typeItOut_closure(timer));
       type$.nullable_void_Function._as(null);
       A._EventStreamSubscription$(t2, "keyup", t4, false, t3._precomputed1);
-      timer._value = A.Timer_Timer(B.Duration_150000, new A._typeItOut_addCharacter(t1, msg, timer));
+      timer._value = A.Timer_Timer(B.Duration_10000, new A._typeItOut_addCharacter(t1, msg, timer));
     },
     _switchFlavor(e) {
       var _s6_ = ".glyph",
@@ -10494,7 +10494,7 @@
       t4.focus();
       A._renderMarkdown(null);
       ++t1.pos;
-      _this.timer._value = A.Timer_Timer(B.Duration_150000, _this);
+      _this.timer._value = A.Timer_Timer(B.Duration_10000, _this);
     },
     $signature: 0
   };
@@ -10890,7 +10890,7 @@
     B.C__RootZone = new A._RootZone();
     B.C__StringStackTrace = new A._StringStackTrace();
     B.Duration_0 = new A.Duration(0);
-    B.Duration_150000 = new A.Duration(150000);
+    B.Duration_10000 = new A.Duration(10000);
     B.HtmlEscapeMode_attribute_true = new A.HtmlEscapeMode("attribute", true);
     B.HtmlEscape_HtmlEscapeMode_attribute_true = new A.HtmlEscape(B.HtmlEscapeMode_attribute_true);
     B.HtmlEscapeMode_element_false = new A.HtmlEscapeMode("element", false);

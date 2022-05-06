@@ -13,7 +13,7 @@ final htmlDiv = querySelector('#html') as DivElement;
 final versionSpan = querySelector('.version') as SpanElement;
 
 final nullSanitizer = NullTreeSanitizer();
-const typing = Duration(milliseconds: 150);
+const typing = Duration(milliseconds: 10 /*150*/);
 final introText = '''
 ## All GitHub Emoji Shortcodes
 
@@ -1939,7 +1939,7 @@ void main() {
     markdownInput.focus();
     _renderMarkdown();
   } else {
-    _typeItOut(introText, 82);
+    _typeItOut(introText, 20082);  // get it all there instantly
   }
 
   // GitHub is the default extension set.
