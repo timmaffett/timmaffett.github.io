@@ -4550,7 +4550,7 @@
         t1.focus();
         A._renderMarkdown(null);
       } else
-        A._typeItOut(_s24959_, 40082);
+        A._typeItOut(_s24959_, 24959);
       t1 = $.$get$gfmRadio();
       t1.setAttribute("checked", "");
       t2 = t1.querySelector(".glyph");

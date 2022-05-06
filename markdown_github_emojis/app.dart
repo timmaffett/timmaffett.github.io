@@ -1939,7 +1939,7 @@ void main() {
     markdownInput.focus();
     _renderMarkdown();
   } else {
-    _typeItOut(introText, 40082);  // get it all there instantly
+    _typeItOut(introText, introText.length);  // get it all there instantly
   }
 
   // GitHub is the default extension set.
