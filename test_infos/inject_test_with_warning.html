@@ -1,0 +1,3438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Basic Flutter layout concepts | Flutter</title>
+    <link rel="icon" href="/assets/images/shared/brand/flutter/icon/64.png" />
+    <link rel="apple-touch-icon" href="/assets/images/shared/brand/flutter/logo/flutter-logomark-320px.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+
+
+    <meta name="description" content="A codelab that teaches basic Flutter layout concepts through DartPad examples and exercises.">
+    <meta name="keywords" content="">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@flutterdev">
+
+    <meta property="og:title" content="Basic Flutter layout concepts">
+    <meta property="og:url" content="https://docs.flutter.dev/codelabs/layout-basics">
+    <meta property="og:description" content="A codelab that teaches basic Flutter layout concepts through DartPad examples and exercises.">
+    <meta property="og:image" content="">
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+
+    <script>
+      window.__CALLBACKS = [];
+    </script>
+
+  </head>
+  <body >
+  
+
+
+
+<main class="site-content col-12 col-md-9 offset-md-3 col-xl-8 offset-xl-2 col-xxl-8 offset-xxl-2" role="main">
+      <div class="container">
+
+        
+
+        
+
+        <header class="site-content__title">
+         
+          <h1>Basic Flutter layout concepts</h1>
+          </header>
+        
+        <div
+  id="site-toc--inline"
+  class="site-toc site-toc--inline "
+  
+>
+  <header class="site-toc__title">
+    Contents
+    </header>
+  <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#row-and-column-classes">Row and Column classes</a></li>
+<li class="toc-entry toc-h2"><a href="#axis-size-and-alignment">Axis size and alignment</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#mainaxissize-property">mainAxisSize property</a></li>
+<li class="toc-entry toc-h3"><a href="#mainaxisalignment-property">mainAxisAlignment property</a></li>
+<li class="toc-entry toc-h3"><a href="#crossaxisalignment-property">crossAxisAlignment property</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#flexible-widget">Flexible widget</a></li>
+<li class="toc-entry toc-h2"><a href="#expanded-widget">Expanded widget</a></li>
+<li class="toc-entry toc-h2"><a href="#sizedbox-widget">SizedBox widget</a></li>
+<li class="toc-entry toc-h2"><a href="#spacer-widget">Spacer widget</a></li>
+<li class="toc-entry toc-h2"><a href="#text-widget">Text widget</a></li>
+<li class="toc-entry toc-h2"><a href="#icon-widget">Icon widget</a></li>
+<li class="toc-entry toc-h2"><a href="#image-widget">Image widget</a></li>
+<li class="toc-entry toc-h2"><a href="#putting-it-all-together">Putting it all together</a></li>
+<li class="toc-entry toc-h2"><a href="#whats-next">What’s next?</a></li>
+</ul>
+</div>
+<p>Welcome to the Flutter layout codelab,
+where you learn how to build a Flutter UI without
+downloading and installing Flutter or Dart!</p>
+
+<aside class="alert alert-warning" role="alert">
+  <p><i class="fas fa-exclamation-circle"></i> <strong>Important:</strong>
+  This codelab covers basic Flutter layout concepts using an
+  experimental code editor called DartPad.
+  DartPad hasn’t been fully tested on all browsers.
+  If you experience any difficulties while using DartPad
+  on a specific browser, please create a <a href="https://github.com/dart-lang/dart-pad/issues/new">DartPad issue</a>
+  and specify which browser you’re using in the issue title.</p>
+</aside>
+
+<p>Flutter is different from other frameworks because its UI
+is built in code, not (for example) in an XML file or similar.
+Widgets are the basic building blocks of a Flutter UI.
+As you progress through this codelab,
+you’ll learn that almost everything in Flutter is a widget.
+A widget is an immutable object that describes a specific part of a UI.
+You’ll also learn that Flutter widgets are composable, meaning
+that you can combine existing widgets to make more sophisticated widgets.
+At the end of this codelab,
+you’ll get to apply what you’ve learned
+into building a Flutter UI that displays a business card.</p>
+
+<p><strong>Estimated time to complete this codelab: 45-60 minutes.</strong></p>
+
+<h2 id="row-and-column-classes">
+<a class="anchor" href="#row-and-column-classes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Row and Column classes</h2>
+<p><code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code> are classes that contain and lay out widgets.
+Widgets inside of a <code class="language-plaintext highlighter-rouge">Row</code> or <code class="language-plaintext highlighter-rouge">Column</code> are called <em>children</em>,
+and <code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code> are referred to as <em>parents</em>.
+<code class="language-plaintext highlighter-rouge">Row</code> lays out its widgets horizontally,
+and <code class="language-plaintext highlighter-rouge">Column</code> lays out its widgets vertically.</p>
+
+<h4 class="no_toc" id="example-creating-a-column">Example: Creating a Column</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p class="no_toc">The following example displays the differences between
+  a <code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code>.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> In the code, change the <code class="language-plaintext highlighter-rouge">Row</code> to a <code class="language-plaintext highlighter-rouge">Column</code>, and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        BlueBox(),
+        BlueBox(),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+  
+  runApp(MyApp());
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final columns = controller.widgetList(find.byType(Column));
+
+  if (columns.isEmpty) {
+    _result(false, ['The Row contains three BlueBox widgets and lays them out horizontally.']);
+    return;
+  }
+
+  if (columns.length &gt; 1) {
+    _result(false, ['Found ${columns.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final column = columns.first as Column;
+
+  if (column.children.length != 3 || column.children.any((w) =&gt; w is! BlueBox)) {
+    _result(false, ['Row/Column should contain three children, all BlueBox widgets.']);
+    return;
+  }
+
+  _result(true, ['The Column contains three BlueBox widgets and lays them out vertically.']);
+}
+{$ end test.dart $}
+</code></pre>
+
+<h2 id="axis-size-and-alignment">
+<a class="anchor" href="#axis-size-and-alignment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Axis size and alignment</h2>
+
+<p>So far, the <code class="language-plaintext highlighter-rouge">BlueBox</code> widgets have been squished together
+(either to the left or at the top of the UI Output).
+You can change how the <code class="language-plaintext highlighter-rouge">BlueBox</code> widgets are spaced
+out using the axis size and alignment properties.</p>
+
+<h3 id="mainaxissize-property">
+<a class="anchor" href="#mainaxissize-property" aria-hidden="true"><span class="octicon octicon-link"></span></a>mainAxisSize property</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code> occupy different main axes.
+A <code class="language-plaintext highlighter-rouge">Row</code>’s main axis is horizontal,
+and a <code class="language-plaintext highlighter-rouge">Column</code>’s main axis is vertical.
+The <code class="language-plaintext highlighter-rouge">mainAxisSize</code> property determines how much
+space a <code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code> can occupy on their main axes.
+The <code class="language-plaintext highlighter-rouge">mainAxisSize</code> property has two possible values:</p>
+
+<dl>
+  <dt><code class="language-plaintext highlighter-rouge">MainAxisSize.max</code></dt>
+  <dd>
+<code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code> occupy all of the space on their main axes.
+If the combined width of their children is
+less than the total space on their main axes,
+their children are laid out with extra space.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">MainAxisSize.min</code></dt>
+  <dd>
+<code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code> only occupy enough space on their main axes
+for their children. Their children are laid out without extra space
+and at the middle of their main axes.</dd>
+</dl>
+
+<aside class="alert alert-success" role="alert">
+  <p><i class="far fa-lightbulb"></i> <strong>Tip:</strong>
+  <code class="language-plaintext highlighter-rouge">MainAxisSize.max</code> is the <code class="language-plaintext highlighter-rouge">mainAxisSize</code> property’s default value.
+  If you don’t specify another value,
+  the default value is used,
+  as shown in the previous example.</p>
+</aside>
+
+<h4 class="no_toc" id="example-modifying-axis-size">Example: Modifying axis size</h4>
+<aside class="alert alert-secondary" role="alert">
+
+  <p>The following example explicitly sets <code class="language-plaintext highlighter-rouge">mainAxisSize</code>
+  to its default value, <code class="language-plaintext highlighter-rouge">MainAxisSize.max</code>.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Change <code class="language-plaintext highlighter-rouge">MainAxisSize.max</code> to <code class="language-plaintext highlighter-rouge">MainAxisSize.min</code>,
+         and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        BlueBox(),
+        BlueBox(),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.mainAxisSize != MainAxisSize.min) {
+    _result(false, ['Row lays out the BlueBox widgets with extra space. Change MainAxisSize.max to MainAxisSize.min']);
+    return;
+  }
+
+  if (row.children.length != 3 || row.children.any((w) =&gt; w is! BlueBox)) {
+    _result(false, ['There should only be three children, all BlueBox widgets.']);
+    return;
+  }
+
+  _result(true, ['Row lays out the BlueBox widgets without extra space, and the BlueBox widgets are positioned at the middle of Row\'s main axis.']);
+}
+{$ end test.dart $}
+</code></pre>
+
+<h3 id="mainaxisalignment-property">
+<a class="anchor" href="#mainaxisalignment-property" aria-hidden="true"><span class="octicon octicon-link"></span></a>mainAxisAlignment property</h3>
+
+<p>When <code class="language-plaintext highlighter-rouge">mainAxisSize</code> is set to <code class="language-plaintext highlighter-rouge">MainAxisSize.max</code>,
+<code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code> might lay out their children with extra space.
+The <code class="language-plaintext highlighter-rouge">mainAxisAlignment</code> property determines how <code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code>
+can position their children in that extra space.
+<code class="language-plaintext highlighter-rouge">mainAxisAlignment</code> has six possible values:</p>
+
+<dl>
+  <dt><code class="language-plaintext highlighter-rouge">MainAxisAlignment.start</code></dt>
+  <dd>Positions children near the beginning of the main axis.
+(Left for <code class="language-plaintext highlighter-rouge">Row</code>, top for <code class="language-plaintext highlighter-rouge">Column</code>)</dd>
+  <dt><code class="language-plaintext highlighter-rouge">MainAxisAlignment.end</code></dt>
+  <dd>Positions children near the end of the main axis.
+(Right for <code class="language-plaintext highlighter-rouge">Row</code>, bottom for <code class="language-plaintext highlighter-rouge">Column</code>)</dd>
+  <dt><code class="language-plaintext highlighter-rouge">MainAxisAlignment.center</code></dt>
+  <dd>Positions children at the middle of the main axis.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">MainAxisAlignment.spaceBetween</code></dt>
+  <dd>Divides the extra space evenly between children.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">MainAxisAlignment.spaceEvenly</code></dt>
+  <dd>Divides the extra space evenly between children
+and before and after the children.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">MainAxisAlignment.spaceAround</code></dt>
+  <dd>Similar to <code class="language-plaintext highlighter-rouge">MainAxisAlignment.spaceEvenly</code>,
+but reduces half of the space before the first
+child and after the last child
+to half of the width between the children.</dd>
+</dl>
+
+<h4 class="no_toc" id="example-modifying-main-axis-alignment">Example: Modifying main axis alignment</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>The following example explicitly sets
+  <code class="language-plaintext highlighter-rouge">mainAxisAlignment</code> to its default value,
+  <code class="language-plaintext highlighter-rouge">MainAxisAlignment.start</code>.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Change <code class="language-plaintext highlighter-rouge">MainAxisAlignment.start</code> to
+         <code class="language-plaintext highlighter-rouge">MainAxisAlignment.end</code>, and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        BlueBox(),
+        BlueBox(),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+
+  await completer.future;
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.mainAxisSize != MainAxisSize.max) {
+    _result(false, ['It\'s best to leave the mainAxisSize set to MainAxisSize.max, so there\'s space for the alignments to take effect.']);
+    return;
+  }
+
+  if (row.children.length != 3 || row.children.any((w) =&gt; w is! BlueBox)) {
+    _result(false, ['The Row should have three children, all BlueBox widgets.']);
+    return;
+  }
+
+  if (row.mainAxisAlignment == MainAxisAlignment.start) {
+    _result(false, ['MainAxisAlignment.start positions the BlueBox widgets on the left of the main axis. Change the value to MainAxisAlignment.end.']);
+  } else if (row.mainAxisAlignment == MainAxisAlignment.end) {
+    _result(true, ['MainAxisAlignment.end positions the BlueBox widgets on the right of the main axis.']);
+  } else if (row.mainAxisAlignment == MainAxisAlignment.center) {
+    _result(true, ['MainAxisAlignment.center positions the BlueBox widgets at the middle of the main axis.']);
+  } else if (row.mainAxisAlignment == MainAxisAlignment.spaceBetween) {
+    _result(true, ['The extra space is divided between the BlueBox widgets.']);
+  } else if (row.mainAxisAlignment == MainAxisAlignment.spaceEvenly) {
+    _result(true, ['The extra space is divided evenly between the BlueBox widgets and before and after them.']);
+  } else if (row.mainAxisAlignment == MainAxisAlignment.spaceAround) {
+    _result(true, ['Similar to MainAxisAlignment.spaceEvenly, but reduces half of the space before the first BlueBox widget and after the last BlueBox widget to half of the width between the BlueBox widgets.']);
+  }
+}
+{$ end test.dart $}
+</code></pre>
+<aside class="alert alert-success" role="alert">
+  <p><i class="far fa-lightbulb"></i> <strong>Tip:</strong>
+  Before moving to the next section,
+  change <code class="language-plaintext highlighter-rouge">MainAxisAlignment.end</code> to another value.</p>
+</aside>
+
+<h3 id="crossaxisalignment-property">
+<a class="anchor" href="#crossaxisalignment-property" aria-hidden="true"><span class="octicon octicon-link"></span></a>crossAxisAlignment property</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">crossAxisAlignment</code> property determines
+how <code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code> can position their children
+on their cross axes.
+A <code class="language-plaintext highlighter-rouge">Row</code>’s cross axis is vertical,
+and a <code class="language-plaintext highlighter-rouge">Column</code>’s cross axis is horizontal.
+The <code class="language-plaintext highlighter-rouge">crossAxisAlignment</code> property has five possible values:</p>
+
+<dl>
+  <dt><code class="language-plaintext highlighter-rouge">CrossAxisAlignment.start</code></dt>
+  <dd>Positions children near the start of the cross axis. (Top for <code class="language-plaintext highlighter-rouge">Row</code>, Left for <code class="language-plaintext highlighter-rouge">Column</code>)</dd>
+  <dt><code class="language-plaintext highlighter-rouge">CrossAxisAlignment.end</code></dt>
+  <dd>Positions children near the end of the cross axis. (Bottom for <code class="language-plaintext highlighter-rouge">Row</code>, Right for <code class="language-plaintext highlighter-rouge">Column</code>)</dd>
+  <dt><code class="language-plaintext highlighter-rouge">CrossAxisAlignment.center</code></dt>
+  <dd>Positions children at the middle of the cross axis. (Middle for <code class="language-plaintext highlighter-rouge">Row</code>, Center for <code class="language-plaintext highlighter-rouge">Column</code>)</dd>
+  <dt><code class="language-plaintext highlighter-rouge">CrossAxisAlignment.stretch</code></dt>
+  <dd>Stretches children across the cross axis.
+(Top-to-bottom for <code class="language-plaintext highlighter-rouge">Row</code>, left-to-right for <code class="language-plaintext highlighter-rouge">Column</code>)</dd>
+  <dt><code class="language-plaintext highlighter-rouge">CrossAxisAlignment.baseline</code></dt>
+  <dd>Aligns children by their character baselines.
+(<code class="language-plaintext highlighter-rouge">Text</code> class only, and requires that the
+<code class="language-plaintext highlighter-rouge">textBaseline</code> property is set to
+<code class="language-plaintext highlighter-rouge">TextBaseline.alphabetic</code>.  See the
+<a href="#text-widget">Text widget</a> section for an example.)</dd>
+</dl>
+
+<h4 class="no_toc" id="example-modifying-cross-axis-alignment">Example: Modifying cross axis alignment</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>The following example explicitly sets <code class="language-plaintext highlighter-rouge">crossAxisAlignment</code>
+  to its default value, <code class="language-plaintext highlighter-rouge">CrossAxisAlignment.center</code>.</p>
+
+  <p>To demonstrate cross axis alignment,
+  <code class="language-plaintext highlighter-rouge">mainAxisAlignment</code> is set to
+ <code class="language-plaintext highlighter-rouge">MainAxisAlignment.spaceAround</code>,
+  and <code class="language-plaintext highlighter-rouge">Row</code> now contains a <code class="language-plaintext highlighter-rouge">BiggerBlueBox</code> widget
+  that is taller than the <code class="language-plaintext highlighter-rouge">BlueBox</code> widgets.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Change <code class="language-plaintext highlighter-rouge">CrossAxisAlignment.center</code> to
+         <code class="language-plaintext highlighter-rouge">CrossAxisAlignment.start</code>, and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        BlueBox(),
+        BiggerBlueBox(),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+
+class BiggerBlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 100,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.children.length != 3 || row.children.any((w) =&gt; w is! BlueBox &amp;&amp; w is! BiggerBlueBox)) {
+    _result(false, ['The Row should have three children, all BlueBox or BiggerBlueBox widgets.']);
+    return;
+  }
+
+  if (row.crossAxisAlignment == CrossAxisAlignment.start) {
+    _result(true, ['The BlueBox and BiggerBlueBox widgets are positioned at the top of the cross axis.']);
+  } else if (row.crossAxisAlignment == CrossAxisAlignment.end) {
+    _result(true, ['The BlueBox and BiggerBlueBox widgets are positioned at the bottom of the cross axis']);
+  } else if (row.crossAxisAlignment == CrossAxisAlignment.center) {
+    _result(false, ['The widgets are positioned at the middle of the cross axis. Change CrossAxisAlignment.center to CrossAxisAlignment.start.']);
+  } else if (row.crossAxisAlignment == CrossAxisAlignment.stretch) {
+    _result(true, ['The BlueBox and BiggerBlueBox widgets are stretched across the cross axis. Change the Row to a Column, and run again.']);
+  } else if(row.crossAxisAlignment == CrossAxisAlignment.baseline) {
+    _result(false, ['Couldn\t find a text class.']);
+  }
+}
+{$ end test.dart $}
+</code></pre>
+<aside class="alert alert-success" role="alert">
+  <p><i class="far fa-lightbulb"></i> <strong>Tip:</strong>
+  Before moving to the next section,
+  change <code class="language-plaintext highlighter-rouge">CrossAxisAlignment.start</code> to another value.</p>
+</aside>
+
+<h2 id="flexible-widget">
+<a class="anchor" href="#flexible-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flexible widget</h2>
+
+<p>As you’ve seen, the <code class="language-plaintext highlighter-rouge">mainAxisAlignment</code> and
+<code class="language-plaintext highlighter-rouge">crossAxisAlignment</code> properties determine
+how <code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code> position widgets along both axes.
+<code class="language-plaintext highlighter-rouge">Row</code> and <code class="language-plaintext highlighter-rouge">Column</code> first lay out widgets of a fixed size.
+Fixed size widgets are considered <em>inflexible</em> because
+they can’t resize themselves after they’ve been laid out.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Flexible</code> widget wraps a widget,
+so the widget becomes resizable.
+When the <code class="language-plaintext highlighter-rouge">Flexible</code> widget wraps a widget,
+the widget becomes the <code class="language-plaintext highlighter-rouge">Flexible</code> widget’s child
+and is considered <em>flexible</em>.
+After inflexible widgets are laid out,
+the widgets are resized according to their
+<code class="language-plaintext highlighter-rouge">flex</code> and <code class="language-plaintext highlighter-rouge">fit</code> properties.:</p>
+
+<dl>
+  <dt><code class="language-plaintext highlighter-rouge">flex</code></dt>
+  <dd>Compares itself against other <code class="language-plaintext highlighter-rouge">flex</code>
+properties before determining what fraction of the
+total remaining space each <code class="language-plaintext highlighter-rouge">Flexible</code> widget receives.</dd>
+  <dt><code class="language-plaintext highlighter-rouge">fit</code></dt>
+  <dd>Determines whether a <code class="language-plaintext highlighter-rouge">Flexible</code> widget
+fills all of its extra space.</dd>
+</dl>
+
+<h4 class="no_toc" id="example-changing-fit-properties">Example: Changing fit properties</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>The following example demonstrates the <code class="language-plaintext highlighter-rouge">fit</code> property,
+  which can have one of two values:</p>
+
+  <dl>
+    <dt><code class="language-plaintext highlighter-rouge">FlexFit.loose</code></dt>
+    <dd>The widget’s preferred size is used. (Default)</dd>
+    <dt><code class="language-plaintext highlighter-rouge">FlexFit.tight</code></dt>
+    <dd>Forces the widget to fill all of its extra space.</dd>
+  </dl>
+
+  <p>In this example, change the <code class="language-plaintext highlighter-rouge">fit</code> properties to
+  make the <code class="language-plaintext highlighter-rouge">Flexible</code> widgets fill the extra space.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Change both <code class="language-plaintext highlighter-rouge">fit</code> values to <code class="language-plaintext highlighter-rouge">FlexFit.tight</code>,
+         and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        BlueBox(),
+        Flexible(
+          fit: FlexFit.loose,
+          flex: 1,
+          child: BlueBox(),
+        ),
+        Flexible(
+          fit: FlexFit.loose,
+          flex: 1,
+          child: BlueBox(),
+        ),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.mainAxisSize != MainAxisSize.max) {
+    _result(false, ['It\'s best to leave the mainAxisSize set to MainAxisSize.max, so there\'s space for the alignments to take effect.']);
+    return;
+  }
+  
+  if (row.children.length != 3) {
+    _result(false, ['The Row should have three children, all BlueBox or Flexible widgets.']);
+    return;
+  }
+
+  if (row.children[0] is! BlueBox) {
+    _result(false, ['Row\'s first child should be a BlueBox.']);
+    return;
+  }
+
+  if (row.children[1] is! Flexible) {
+    _result(false, ['Row\'s second child should be a Flexible class.']);
+    return;
+  }
+
+  if (row.children[2] is! Flexible) {
+    _result(false, ['Row\'s third child should be a Flexible class.']);
+    return;
+  }
+
+  final flexibleWidget = row.children[2] as Flexible;
+  
+  if (flexibleWidget.child is! BlueBox) {
+    _result(false, ['The Flexible classes should have BlueBox widgets as their children.']);
+    return;
+  }
+
+  if (flexibleWidget.fit != FlexFit.tight) {
+    _result(false, ['The fit properties set the Flexible widgets to their preferred size. Change both fit values to FlexFit.tight.']);
+    return;
+  }
+
+  _result(true, ['The Flexible widgets now occupy the space determined by their flex values.']);
+}
+{$ end test.dart $}
+</code></pre>
+
+<h4 class="no_toc" id="example-testing-flex-values">Example: Testing flex values</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>In the following example,
+  <code class="language-plaintext highlighter-rouge">Row</code> contains one <code class="language-plaintext highlighter-rouge">BlueBox</code> widget
+  and two <code class="language-plaintext highlighter-rouge">Flexible</code> widgets that wrap two
+  <code class="language-plaintext highlighter-rouge">BlueBox</code> widgets.  The <code class="language-plaintext highlighter-rouge">Flexible</code> widgets
+  contain <code class="language-plaintext highlighter-rouge">flex</code> properties with <code class="language-plaintext highlighter-rouge">flex</code>
+  values set to 1 (the default value).</p>
+
+  <p>When <code class="language-plaintext highlighter-rouge">flex</code> properties are compared against one another,
+  the ratio between their <code class="language-plaintext highlighter-rouge">flex</code> values determines
+  what fraction of the total remaining space each
+  <code class="language-plaintext highlighter-rouge">Flexible</code> widget receives.</p>
+
+  <p><!-- skip --></p>
+  <div class="language-dart highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="n">remainingSpace</span> <span class="o">*</span> <span class="o">(</span><span class="n">flex</span> <span class="o">/</span> <span class="n">totalOfAllFlexValues</span><span class="o">)</span>
+</code></pre></div>  </div>
+
+  <p>In this example, the sum of the <code class="language-plaintext highlighter-rouge">flex</code> values (2),
+  determines that both <code class="language-plaintext highlighter-rouge">Flexible</code> widgets receive
+  half of the total remaining space.
+  The <code class="language-plaintext highlighter-rouge">BlueBox</code> widget (or fixed-size widget)
+  remains the same size.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        BlueBox(),
+        Flexible(
+          fit: FlexFit.tight,
+          flex: 1,
+          child: BlueBox(),
+        ),
+        Flexible(
+          fit: FlexFit.tight,
+          flex: 1,
+          child: BlueBox(),
+        ),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.children.length != 3) {
+    _result(false, ['The Row should have three children, all BlueBlox or Flexible widgets.']);
+    return;
+  }
+
+  if (row.children[0] is! BlueBox) {
+    _result(false, ['The Row\'s first child should be a BlueBox widget.']);
+    return;
+  }
+
+  if (row.children[1] is! Flexible) {
+    _result(false, ['The Row\'s second child should be a Flexible widget.']);
+    return;
+  }
+
+  if (row.children[2] is! Flexible) {
+    _result(false, ['The Row\'s third child should be a Flexible widget.']);
+    return;
+  }
+
+  final flexibleWidget = row.children[1] as Flexible;
+  
+  if (flexibleWidget.child is! BlueBox) {
+    _result(false, ['The Flexible should have a BlueBox widget as its child.']);
+    return;
+  }
+
+  if (flexibleWidget.flex != 1) {
+    _result(false, ['Notice how the flex properties divide the extra space between the two Flexible widgets.']);
+    return;
+  }
+
+  _result(true, ['Both Flexible widgets receive half of the total remaining space.']);
+}
+{$ end test.dart $}
+</code></pre>
+<aside class="alert alert-success" role="alert">
+  <p><i class="far fa-lightbulb"></i> <strong>Tip:</strong>
+  Before moving to the next example,
+  try changing the <code class="language-plaintext highlighter-rouge">flex</code> properties to other values,
+  such as 2 and 1.</p>
+</aside>
+
+<h2 id="expanded-widget">
+<a class="anchor" href="#expanded-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expanded widget</h2>
+
+<p>Similar to <code class="language-plaintext highlighter-rouge">Flexible</code>, the <code class="language-plaintext highlighter-rouge">Expanded</code> widget can
+wrap a widget and force the widget to fill extra space.</p>
+
+<aside class="alert alert-success" role="alert">
+  <p><i class="far fa-lightbulb"></i> <strong>Tip:</strong>
+  <strong>What’s the difference between Flexible and Expanded?</strong>
+  Use <code class="language-plaintext highlighter-rouge">Flexible</code> to resize widgets in a <code class="language-plaintext highlighter-rouge">Row</code> or <code class="language-plaintext highlighter-rouge">Column</code>.
+  That way, you can adjust a child widget’s spacing
+  while keeping its size in relation to its parent widget.
+  <code class="language-plaintext highlighter-rouge">Expanded</code> changes the constraints of a child widget,
+  so it fills any empty space.</p>
+</aside>
+
+<h4 class="no_toc" id="example-filling-extra-space">Example: Filling extra space</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>The following example demonstrates how the
+  <code class="language-plaintext highlighter-rouge">Expanded</code> widget forces its child widget to
+  fill extra space.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Wrap the second <code class="language-plaintext highlighter-rouge">BlueBox</code> widget in an <code class="language-plaintext highlighter-rouge">Expanded</code> widget.</p>
+
+  <p>For example:</p>
+
+  <p><!-- skip --></p>
+  <div class="language-dart highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  <span class="n">Expanded</span><span class="o">(</span><span class="nl">child:</span> <span class="n">BlueBox</span><span class="o">(),),</span>
+</code></pre></div>  </div>
+  <p><strong>3.</strong> Select the <strong>Format</strong> button to properly format the code,
+         and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        BlueBox(),
+        BlueBox(),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+  
+  if (row.children.length != 3) {
+    _result(false, ['The Row should have three children, all BlueBox widgets.']);
+    return;
+  }
+
+   if (row.children[0] is! BlueBox) {
+    _result(false, ['The Row\'s first child should be a BlueBox widget.']);
+    return;
+  }
+
+  if (row.children[1] is! Expanded) {
+    _result(false, ['Notice how Row contains extra space on its main axis. Wrap the second BlueBox widget in an Expanded widget.']);
+    return;
+  }
+
+  if (row.children[2] is! BlueBox) {
+    _result(false, ['The Row\'s third child should be a Flexible widget.']);
+    return;
+  }
+  
+  _result(true, ['Expanded forces second BlueBox widget to fill the extra space.']);
+}
+{$ end test.dart $}
+</code></pre>
+
+<h2 id="sizedbox-widget">
+<a class="anchor" href="#sizedbox-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>SizedBox widget</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">SizedBox</code> widget can be used in one of two ways when
+creating exact dimensions.
+When <code class="language-plaintext highlighter-rouge">SizedBox</code> wraps a widget, it resizes the widget
+using the <code class="language-plaintext highlighter-rouge">height</code> and <code class="language-plaintext highlighter-rouge">width</code> properties.
+When it doesn’t wrap a widget,
+it uses the <code class="language-plaintext highlighter-rouge">height</code> and <code class="language-plaintext highlighter-rouge">width</code> properties to
+create empty space.</p>
+
+<h4 class="no_toc" id="example-resizing-a-widget">Example: Resizing a widget</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>The following example wraps the middle <code class="language-plaintext highlighter-rouge">BlueBox</code> widget inside of a
+  <code class="language-plaintext highlighter-rouge">SizedBox</code> widget and sets the <code class="language-plaintext highlighter-rouge">BlueBox</code>’s width to 100 logical pixels.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Add a <code class="language-plaintext highlighter-rouge">height</code> property equal to 100 logical pixels
+         inside the <code class="language-plaintext highlighter-rouge">SizedBox</code> widget, and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        BlueBox(),
+        SizedBox(
+          width: 100,
+          child: BlueBox(),
+        ),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.mainAxisSize != MainAxisSize.max) {
+    _result(false, ['It\'s best to leave the mainAxisSize set to MainAxisSize.max, so there\'s space for the alignments to take effect.']);
+    return;
+  }
+  
+  
+  if (row.children.length != 3) {
+    _result(false, ['The Row should end up with three children.']);
+    return;
+  }
+
+  if (row.children[0] is! BlueBox) {
+    _result(false, ['The Row\'s first child should be a BlueBox widget.']);
+    return;
+  }
+
+  if (row.children[1] is! SizedBox) {
+    _result(false, ['The Row\'s second child should be a SizedBox widget.']);
+    return;
+  }
+
+  if (row.children[2] is! BlueBox) {
+    _result(false, ['The Row\'s third child should be a BlueBox widget.']);
+    return;
+  }
+
+  final sizedBox = row.children[1] as SizedBox;
+  
+  if (sizedBox.width != 100) {
+    _result(false, ['The SizedBox should have a width of 100.']);
+    return;
+  }
+  
+  if (sizedBox.height != 100) {
+    _result(false, ['The SizedBox widget resizes the BlueBox widget to 100 logical pixels wide. Add a height property inside SizedBox equal to 100 logical pixels.']);
+    return;
+  }
+  
+  _result(true, ['The SizedBox widget resizes the BlueBox widget to 100 logical pixels wide and tall.']);
+}
+{$ end test.dart $}
+</code></pre>
+
+<h4 class="no_toc" id="example-creating-space">Example: Creating space</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>The following example contains three <code class="language-plaintext highlighter-rouge">BlueBox</code> widgets
+  and one <code class="language-plaintext highlighter-rouge">SizedBox</code> widget that separates the first
+  and second <code class="language-plaintext highlighter-rouge">BlueBox</code> widgets. The <code class="language-plaintext highlighter-rouge">SizedBox</code> widget
+  contains a <code class="language-plaintext highlighter-rouge">width</code> property equal to 50 logical pixels.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Create more space by adding another
+         <code class="language-plaintext highlighter-rouge">SizedBox</code> widget (25 logical pixels wide)
+         between the second and third <code class="language-plaintext highlighter-rouge">BlueBox</code> widgets,
+         and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        BlueBox(),
+        SizedBox(width: 50),
+        BlueBox(),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.mainAxisSize != MainAxisSize.max) {
+    _result(false, ['It\'s best to leave the mainAxisSize set to MainAxisSize.max, so there\'s space for the alignments to take effect.']);
+    return;
+  }
+  
+  if (row.mainAxisAlignment == MainAxisAlignment.spaceAround 
+      || row.mainAxisAlignment == MainAxisAlignment.spaceBetween 
+      || row.mainAxisAlignment == MainAxisAlignment.spaceEvenly) {
+    _result(false, ['It\'s best to use MainAxisAlignment.start, MainAxisAlignment.end, or MainAxisAlignment.center to see how the SizedBox widgets work in a Row.']);
+    return;
+  }
+  
+  if (row.children.length != 5) {
+    _result(false, ['The SizedBox widget creates space at 50 logical pixels wide. Add another SizedBox class between the second and third BlueBox widgets with a width property equal to 25 logical pixels.']);
+    return;
+  }
+
+  if (row.children[0] is! BlueBox) {
+    _result(false, ['The Row\'s first child should be a BlueBox widget.']);
+    return;
+  }
+
+  if (row.children[1] is! SizedBox) {
+    _result(false, ['The Row\'s second child should be a SizedBox widget.']);
+    return;
+  }
+
+  if (row.children[2] is! BlueBox) {
+    _result(false, ['The Row\'s third child should be a BlueBox widget.']);
+    return;
+  }
+
+  if (row.children[3] is! SizedBox) {
+    _result(false, ['The Row\'s fourth child should be a SizedBox widget.']);
+    return;  
+  }
+  
+   if (row.children[4] is! BlueBox) {
+    _result(false, ['The Row\'s fifth child should be a BlueBox widget.']);
+    return;
+  }
+  
+  final sizedBox = row.children[1] as SizedBox;
+  
+  if (sizedBox.width != 50) {
+    _result(false, ['The SizedBox should have a width of 50.']);
+    return;
+  }
+  
+  final sizedBox2 = row.children[3] as SizedBox;
+  
+  if (sizedBox2.width != 25) {
+    _result(false, ['SizedBox should have a width of 25.']);
+    return;
+  }
+  
+  _result(true, ['The SizedBox widgets create space between the BlueBox widgets, one space at 50 logical pixels and one at 25 logical pixels.']);
+}
+{$ end test.dart $}
+</code></pre>
+
+<h2 id="spacer-widget">
+<a class="anchor" href="#spacer-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spacer widget</h2>
+
+<p>Similar to <code class="language-plaintext highlighter-rouge">SizedBox</code>, the <code class="language-plaintext highlighter-rouge">Spacer</code> widget also
+can create space between widgets.</p>
+
+<aside class="alert alert-success" role="alert">
+  <p><i class="far fa-lightbulb"></i> <strong>Tip:</strong>
+  <strong>What’s the difference between SizedBox and Spacer?</strong>
+  Use <code class="language-plaintext highlighter-rouge">Spacer</code> when you want to create space using a <code class="language-plaintext highlighter-rouge">flex</code> property.
+  Use <code class="language-plaintext highlighter-rouge">SizedBox</code> when you want to create space
+  using a specific number of logical pixels.</p>
+</aside>
+
+<h4 class="no_toc" id="example-creating-more-space">Example: Creating more space</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>The following example separates the first two
+  <code class="language-plaintext highlighter-rouge">BlueBox</code> widgets using a <code class="language-plaintext highlighter-rouge">Spacer</code> widget with
+  a <code class="language-plaintext highlighter-rouge">flex</code> value of 1.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Add another <code class="language-plaintext highlighter-rouge">Spacer</code> widget (also with a <code class="language-plaintext highlighter-rouge">flex</code> value of 1)
+         between the second and third <code class="language-plaintext highlighter-rouge">BlueBox</code> widgets.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        BlueBox(),
+        Spacer(flex: 1),
+        BlueBox(),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.mainAxisSize != MainAxisSize.max) {
+    _result(false, ['It\'s best to leave the mainAxisSize set to MainAxisSize.max, so there\'s space for the alignments to take effect.']);
+    return;
+  }
+  
+  if (row.mainAxisAlignment == MainAxisAlignment.spaceAround 
+      || row.mainAxisAlignment == MainAxisAlignment.spaceBetween 
+      || row.mainAxisAlignment == MainAxisAlignment.spaceEvenly) {
+    _result(false, ['It\'s best to use MainAxisAlignment.start, MainAxisAlignment.end, or MainAxisAlignment.center to see how the SizedBox widgets work in a Row.']);
+    return;
+  }
+  
+  if (row.children.length != 5) {
+    _result(false, ['What do you think would happen if you added another Spacer widget with a flex value of 1 between the second and third BlueBox widgets?']);
+    return;
+  }
+
+  if (row.children[0] is! BlueBox ||
+     row.children[1] is! Spacer ||
+     row.children[2] is! BlueBox ||
+     row.children[3] is! Spacer ||
+     row.children[4] is! BlueBox) {
+    _result(false, ['Not quite. Row should contain five children in this order: BlueBox, Spacer, BlueBox, Spacer, BlueBox.']);
+    return;
+  }
+  
+    final spacer = row.children[3] as Spacer;
+  
+    if (spacer.flex != 1) {
+    _result(false, ['The Spacer class should have a flex equal to 1.']);
+    return;
+  }
+  
+  _result(true, ['Both Spacer widgets create equal amounts of space between all three BlueBox widgets.']);
+}
+{$ end test.dart $}
+</code></pre>
+
+<h2 id="text-widget">
+<a class="anchor" href="#text-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Text widget</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">Text</code> widget displays text and can be configured
+for different fonts, sizes, and colors.</p>
+
+<h4 class="no_toc" id="example-aligning-text">Example: Aligning text</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>The following example displays “Hey!” three times,
+  but at different font sizes and in different colors.
+  <code class="language-plaintext highlighter-rouge">Row</code> specifies the <code class="language-plaintext highlighter-rouge">crossAxisAlignment</code>
+  and <code class="language-plaintext highlighter-rouge">textBaseline</code> properties.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Change <code class="language-plaintext highlighter-rouge">CrossAxisAlignment.center</code> to
+         <code class="language-plaintext highlighter-rouge">CrossAxisAlignment.baseline</code>, and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      textBaseline: TextBaseline.alphabetic,
+      children: [
+        Text(
+          'Hey!',
+          style: TextStyle(
+            fontSize: 30,
+            fontFamily: 'Futura',
+            color: Colors.blue,
+          ),
+        ),
+        Text(
+          'Hey!',
+          style: TextStyle(
+            fontSize: 50,
+            fontFamily: 'Futura',
+            color: Colors.green,
+          ),
+        ),
+        Text(
+          'Hey!',
+          style: TextStyle(
+            fontSize: 40,
+            fontFamily: 'Futura',
+            color: Colors.red,
+          ),
+        ),
+      ],
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.mainAxisSize != MainAxisSize.max) {
+    _result(false, ['It\'s best to leave the mainAxisSize set to MainAxisSize.max, so there\'s space for the alignments to take effect.']);
+    return;
+  }
+  
+  if (row.children.length != 3 || row.children.any((w) =&gt; w is! Text)) {
+    _result(false, ['The Row should have three children, all Text widgets.']);
+    return;
+  }
+
+  if (row.textBaseline == null) {
+    _result(false, ['To use CrossAxisAlignment.baseline, you need to set the Row\'s textBaseline property.']);
+    return;
+  } 
+  
+  if (row.crossAxisAlignment != CrossAxisAlignment.baseline) {
+    _result(false, ['The Text widgets are positioned at the middle of the cross axis. Change CrossAxisAlignment.center to CrossAxisAlignment.baseline.']);
+		return;
+  }  
+
+  _result(true, ['The Text widgets are now aligned by their character baselines.']);
+  
+}
+{$ end test.dart $}
+</code></pre>
+
+<h2 id="icon-widget">
+<a class="anchor" href="#icon-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Icon widget</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">Icon</code> widget displays a graphical symbol
+that represents an aspect of the UI.
+Flutter is preloaded with icon packages for
+<a href="https://api.flutter.dev/flutter/material/MaterialApp-class.html">Material</a> and <a href="https://api.flutter.dev/flutter/cupertino/CupertinoApp-class.html">Cupertino</a> applications.</p>
+
+<h4 class="no_toc" id="example-creating-an-icon">Example: Creating an Icon</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>The following example displays the widget <code class="language-plaintext highlighter-rouge">Icons.widget</code>
+  from the <a href="https://api.flutter.dev/flutter/material/Icons-class.html">Material Icon library</a> in red and blue.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Add another <code class="language-plaintext highlighter-rouge">Icon</code> from the
+         <a href="https://api.flutter.dev/flutter/material/Icons-class.html">Material Icon library</a>
+         with a size of 50.</p>
+
+  <p><strong>3.</strong> Give the <code class="language-plaintext highlighter-rouge">Icon</code> a color of <code class="language-plaintext highlighter-rouge">Colors.amber</code> from the
+         <a href="https://api.flutter.dev/flutter/material/Colors-class.html">Material Color palette</a>, and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      textBaseline: TextBaseline.alphabetic,
+      children: [
+        Icon(
+          Icons.widgets,
+          size: 50,
+          color: Colors.blue,
+        ),
+        Icon(
+          Icons.widgets,
+          size: 50,
+          color: Colors.red,
+        ),
+      ],
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.mainAxisSize != MainAxisSize.max) {
+    _result(false, ['It\'s best to leave the mainAxisSize set to MainAxisSize.max, so there\'s space for the alignments to       take effect.']);
+    return;
+  }
+  
+    if (row.children.length != 3 || row.children.any((w) =&gt; w is! Icon)) {
+    _result(false, ['Row should have three children, all Icon widgets.']);
+    return;
+  }
+
+    final icon = row.children[2] as Icon;
+  
+  if (icon.color != Colors.amber) {
+    _result(false, ['Add a third Icon. Give the Icon a size of 50 and a color of Colors.amber.']);
+    return;
+  }
+  
+  _result(true, ['The code displays three Icons in blue, red, and amber.']);
+  
+}
+{$ end test.dart $}
+</code></pre>
+
+<h2 id="image-widget">
+<a class="anchor" href="#image-widget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image widget</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">Image</code> widget displays an image.
+You either can reference images using a URL,
+or you can include images inside your app package.
+Since DartPad can’t package an image,
+the following example uses an image from the network.</p>
+
+<h4 class="no_toc" id="example-displaying-an-image">Example: Displaying an image</h4>
+<aside class="alert alert-secondary" role="alert">
+  <p>The following example displays an image that’s
+  stored remotely on <a href="https://github.com/flutter/website/tree/main/examples/layout/sizing/images">GitHub</a>.
+  The <code class="language-plaintext highlighter-rouge">Image.network</code> method takes a string
+  parameter that contains an image’s URL.</p>
+
+  <p>In this example, <code class="language-plaintext highlighter-rouge">Image.network</code> contains a non-working URL.</p>
+
+  <p><strong>1.</strong> Click the <strong>Run</strong> button.</p>
+
+  <p><strong>2.</strong> Change the non-working URL to the actual URL:</p>
+
+  <p><code class="language-plaintext highlighter-rouge">https://raw.githubusercontent.com/flutter/website/main/examples/layout/sizing/images/pic1.jpg</code></p>
+
+  <p><strong>3.</strong> Then change <code class="language-plaintext highlighter-rouge">pic1.jpg</code> to <code class="language-plaintext highlighter-rouge">pic2.jpg</code> or <code class="language-plaintext highlighter-rouge">pic3.jpg</code>,
+         and run again.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.network('[Place an image link here!]'),
+      ],
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Container(
+        color: const Color(0xffeeeeee),
+        child: Center(
+          child: Container(
+            child: MyWidget(),
+            color: const Color(0xffcccccc),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  final rows = controller.widgetList(find.byType(Row));
+
+  if (rows.isEmpty) {
+    _result(false, ['Couldn\'t find a Row!']);
+    return;
+  }
+
+  if (rows.length &gt; 1) {
+    _result(false, ['Found ${rows.length} Rows, rather than just one.']);
+    return;
+  }
+
+  final row = rows.first as Row;
+
+  if (row.mainAxisSize != MainAxisSize.max) {
+    _result(false, ['It\'s best to leave the mainAxisSize set to MainAxisSize.max, so there\'s space for the alignments to take effect.']);
+    return;
+  }
+ 
+}
+{$ end test.dart $}
+</code></pre>
+
+<h2 id="putting-it-all-together">
+<a class="anchor" href="#putting-it-all-together" aria-hidden="true"><span class="octicon octicon-link"></span></a>Putting it all together</h2>
+
+<p>You’re almost at the end of this codelab.
+If you’d like to test your knowledge of the
+techniques that you’ve learned, why not apply
+those skills into building a Flutter UI that
+displays a business card!</p>
+
+<p><img src="https://docs.flutter.dev/assets/images/docs/codelab/layout/businesscarddisplay1.png" alt="Completed business card" width="400px" class="text-center"></p>
+
+<p>You’ll break down Flutter’s layout into parts,
+which is how you’d create a Flutter UI in the real world.</p>
+
+<p>In <a href="#part-1">Part 1</a>,
+you’ll implement a <code class="language-plaintext highlighter-rouge">Column</code> that contains the name and title.
+Then you’ll wrap the <code class="language-plaintext highlighter-rouge">Column</code> in a <code class="language-plaintext highlighter-rouge">Row</code> that contains the icon,
+which is positioned to the left of the name and title.</p>
+
+<p><img src="https://docs.flutter.dev/assets/images/docs/codelab/layout/businesscarddisplay2.png" alt="Completed business card" width="400px" class="text-center"></p>
+
+<p>In <a href="#part-2">Part 2</a>, you’ll wrap the <code class="language-plaintext highlighter-rouge">Row</code> in a <code class="language-plaintext highlighter-rouge">Column</code>,
+so the code contains a <code class="language-plaintext highlighter-rouge">Column</code> within a <code class="language-plaintext highlighter-rouge">Row</code> within a <code class="language-plaintext highlighter-rouge">Column</code>.
+Then you’ll tweak the outermost <code class="language-plaintext highlighter-rouge">Column</code>’s layout,
+so it looks nice.
+Finally, you’ll add the contact information
+to the outermost <code class="language-plaintext highlighter-rouge">Column</code>’s list of children,
+so it’s displayed below the name, title, and icon.</p>
+
+<p><img src="https://docs.flutter.dev/assets/images/docs/codelab/layout/businesscarddisplay3.png" alt="Completed business card" width="400px" class="text-center"></p>
+
+<p>In <a href="#part-3">Part 3</a>, you’ll finish building
+the business card display by adding four more icons,
+which are positioned below the contact information.</p>
+
+<p><img src="https://docs.flutter.dev/assets/images/docs/codelab/layout/businesscarddisplay4.png" alt="Completed business card" width="400px" class="text-center"></p>
+
+<h3 class="no_toc" id="part-1">Part 1</h3>
+
+<h4 class="no_toc" id="exercise-create-the-name-and-title">Exercise: Create the name and title</h4>
+<aside class="alert alert-secondary" role="alert">
+
+  <p>Implement a <code class="language-plaintext highlighter-rouge">Column</code> that contains two text widgets:</p>
+
+  <ul>
+  <li>
+      <p>The first <code class="language-plaintext highlighter-rouge">Text</code> widget has the name <code class="language-plaintext highlighter-rouge">Flutter McFlutter</code> and
+  the <code class="language-plaintext highlighter-rouge">style</code> property set to <code class="language-plaintext highlighter-rouge">Theme.of(context).textTheme.headline5</code>.</p>
+    </li>
+  <li>
+      <p>The second <code class="language-plaintext highlighter-rouge">Text</code> widget contains the title <code class="language-plaintext highlighter-rouge">Experienced App Developer</code>.</p>
+    </li>
+</ul>
+
+  <p>For the <code class="language-plaintext highlighter-rouge">Column</code>,
+  set <code class="language-plaintext highlighter-rouge">mainAxisSize</code> to <code class="language-plaintext highlighter-rouge">MainAxisSize.min</code>
+  and <code class="language-plaintext highlighter-rouge">crossAxisAlignment</code> to <code class="language-plaintext highlighter-rouge">CrossAxisAlignment.start</code>.</p>
+</aside>
+
+<!-- skip -->
+<pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    TODO('Begin implementing the Column here.');
+  }
+}
+{$ end main.dart $}
+{$ begin solution.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Flutter McFlutter', 
+          style: Theme.of(context).textTheme.headline5,
+        ),
+        const Text('Experienced App Developer'),
+      ],
+    );
+  }
+}
+{$ end solution.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xffeeeeee),
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(
+            fontSize: 16,
+          ),
+        ),
+      ),
+      home: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Center(
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color(0xffffffff),
+                border: Border.all(),
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 10,
+                    color: Color(0x80000000),
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.all(8.0),
+              child: MyWidget(),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  // Check MyWidget starts with one Column
+
+  final myWidgetElement = controller.element(find.byType(MyWidget));
+
+  final myWidgetChildElements = &lt;Element&gt;[];
+  myWidgetElement.visitChildElements((e) =&gt; myWidgetChildElements.add(e));
+
+  if (myWidgetChildElements.length != 1 ||
+      myWidgetChildElements[0].widget is! Column) {
+    _result(false, ['The root widget in MyWidget\'s build method should be a Column.']);
+    return;
+  }
+
+  // Check Column has correct properties
+
+  final innerColumnElement = myWidgetChildElements[0];
+  final innerColumnWidget = innerColumnElement.widget as Column;
+
+  if (innerColumnWidget.crossAxisAlignment != CrossAxisAlignment.start) {
+    _result(false, ['The Column that contains the name and title should use CrossAxisAlignment.start as its CrossAxisAlignment value.']);
+    return;
+  }
+
+  if (innerColumnWidget.mainAxisSize != MainAxisSize.min) {
+    _result(false, ['The Column that contains the name and title should use MainAxisSize.min as its MainAxisSize value.']);
+    return;
+  }
+
+  // Check inner Column has two Text children
+
+  if (innerColumnWidget.children.any((w) =&gt; w is! Text)) {
+    _result(false, ['The Column that contains the name and title should have two children, both Text widgets.']);
+    return;
+  }
+
+  // Check first Text has headline style
+
+  final nameText = innerColumnWidget.children[0] as Text;
+
+  if (nameText.style?.fontSize != 24) {
+    _result(false, ['The Text widget for the name should use the "headline5" textStyle.']);
+    return;
+  }
+
+  _result(true);
+}
+{$ end test.dart $}
+</code></pre>
+
+<h4 class="no_toc" id="exercise-wrap-the-column-in-a-row">Exercise: Wrap the Column in a Row</h4>
+<aside class="alert alert-secondary" role="alert">
+
+  <p>Wrap the <code class="language-plaintext highlighter-rouge">Column</code> you implemented in a
+  <code class="language-plaintext highlighter-rouge">Row</code> that contains the following widgets:</p>
+
+  <ul>
+  <li>
+      <p>An <code class="language-plaintext highlighter-rouge">Icon</code> widget set to <code class="language-plaintext highlighter-rouge">Icons.account_circle</code>
+  and with a size of 50 pixels.</p>
+
+    </li>
+  <li>
+      <p>A <code class="language-plaintext highlighter-rouge">Padding</code> widget that creates a space of 8
+  pixels around the <code class="language-plaintext highlighter-rouge">Icon</code> widget.</p>
+
+      <p>To do this, you can specify <code class="language-plaintext highlighter-rouge">const EdgeInsets.all(8.0)</code>
+  for the <code class="language-plaintext highlighter-rouge">padding</code> property.</p>
+
+      <p>The <code class="language-plaintext highlighter-rouge">Row</code> should look like this:</p>
+    </li>
+</ul>
+
+  <p><!-- skip --></p>
+  <div class="language-dart highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>     <span class="n">Row</span><span class="o">(</span>
+       <span class="nl">children:</span> <span class="o">[</span>
+        <span class="n">Padding</span><span class="o">(</span>
+          <span class="nl">padding:</span> <span class="kd">const</span> <span class="n">EdgeInsets</span><span class="o">.</span><span class="na">all</span><span class="o">(</span><span class="mf">8.0</span><span class="o">),</span>
+          <span class="nl">child:</span> <span class="n">Icon</span><span class="o">(</span><span class="n">Icons</span><span class="o">.</span><span class="na">account_circle</span><span class="o">,</span> <span class="nl">size:</span> <span class="mi">50</span><span class="o">),</span>
+        <span class="o">),</span>
+        <span class="n">Column</span><span class="o">(</span> <span class="o">...</span> <span class="o">),</span> <span class="c1">// &lt;--- The Column you first implemented</span>
+      <span class="o">],</span>
+     <span class="o">);</span>
+</code></pre></div>  </div>
+
+  <!-- skip -->
+  <pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Flutter McFlutter',
+          style: Theme.of(context).textTheme.headline5,
+        ),
+        const Text('Experienced App Developer'),
+      ],
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin solution.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Icon(Icons.account_circle, size: 50),
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Flutter McFlutter',
+              style: Theme.of(context).textTheme.headline5,
+            ),
+            const Text('Experienced App Developer'),
+          ],
+        ),
+      ],
+    );
+  }
+}
+{$ end solution.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xffeeeeee),
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(
+            fontSize: 16,
+          ),
+        ),
+      ),
+      home: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Center(
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color(0xffffffff),
+                border: Border.all(),
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 10,
+                    color: Color(0x80000000),
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.all(8.0),
+              child: MyWidget(),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  // Check MyWidget starts with one Column
+
+  final myWidgetElement = controller.element(find.byType(MyWidget));
+
+  final myWidgetChildElements = &lt;Element&gt;[];
+  myWidgetElement.visitChildElements((e) =&gt; myWidgetChildElements.add(e));
+
+  if (myWidgetChildElements.length != 1 ||
+      myWidgetChildElements[0].widget is! Row) {
+    _result(false, ['The root widget in MyWidget\'s build method should be a Column.']);
+    return;
+  }
+
+  // Check first Row has two children: Padding and Column
+
+  final firstRowElement = myWidgetChildElements[0];
+
+  final firstRowChildElements = &lt;Element&gt;[];
+  firstRowElement.visitChildElements((e) =&gt; firstRowChildElements.add(e));
+
+  if (firstRowChildElements.length != 2 ||
+      firstRowChildElements[0].widget is! Padding ||
+      firstRowChildElements[1].widget is! Column) {
+    _result(false, ['The first Row should have two children: first a Padding, and then a Column.']);
+    return;
+  }
+
+  // Check Padding has correct padding
+
+  final paddingElement = firstRowChildElements[0];
+
+  if ((paddingElement.widget as Padding).padding != const EdgeInsets.all(8)) {
+    _result(false, ['The Padding widget in the first Row should have a padding of 8.']);
+    return;
+  }
+
+  // Check Padding has an Icon as its child
+
+  final paddingChildren = &lt;Element&gt;[];
+  paddingElement.visitChildElements((e) =&gt; paddingChildren.add(e));
+
+  if (paddingChildren.length != 1 || paddingChildren[0].widget is! Icon) {
+    _result(false, ['The Padding widget in the first Row should have an Icon as its child.']);
+    return;
+  }
+
+  // Check icon has a size of 50
+
+  if ((paddingChildren[0].widget as Icon).size != 50) {
+    _result(false, ['The Icon in the top-left corner should have a size of 50.']);
+    return;
+  }
+
+  // Check inner Column has correct properties
+
+  final innerColumnElement = firstRowChildElements[1];
+  final innerColumnWidget = innerColumnElement.widget as Column;
+
+  if (innerColumnWidget.crossAxisAlignment != CrossAxisAlignment.start) {
+    _result(false, ['The Column for the name and title should use CrossAxisAlignment.start as its crosAxisAlignment.']);
+    return;
+  }
+
+  if (innerColumnWidget.mainAxisSize != MainAxisSize.min) {
+    _result(false, ['The Column for the name and title should use MainAxisSize.min as its mainAxisSize.']);
+    return;
+  }
+
+  // Check inner Column has two Text children
+
+  if (innerColumnWidget.children.any((w) =&gt; w is! Text)) {
+    _result(false, ['The Column for the name and title should have two children, both Text widgets.']);
+    return;
+  }
+
+  // Check first Text has headline style
+
+  final nameText = innerColumnWidget.children[0] as Text;
+
+  if (nameText.style?.fontSize != 24) {
+    _result(false, ['The Text widget for the name should use the "headline" textStyle.']);
+    return;
+  }
+
+  _result(true);
+}
+{$ end test.dart $}
+</code></pre>
+
+  <h3 class="no_toc" id="part-2">Part 2</h3>
+
+  <h4 class="no_toc" id="exercise-tweak-the-layout">Exercise: Tweak the layout</h4>
+  <aside class="alert alert-secondary" role="alert">
+
+    <p>Wrap the <code class="language-plaintext highlighter-rouge">Row</code> in a <code class="language-plaintext highlighter-rouge">Column</code> that has a <code class="language-plaintext highlighter-rouge">mainAxisSize</code>
+  property set to <code class="language-plaintext highlighter-rouge">MainAxisSize.min</code> and a
+  <code class="language-plaintext highlighter-rouge">crossAxisAlignment</code> property set to <code class="language-plaintext highlighter-rouge">CrossAxisAlignment.stretch</code>.
+  The <code class="language-plaintext highlighter-rouge">Column</code> contains the following widgets:</p>
+
+    <ul>
+      <li>
+        <p>A <code class="language-plaintext highlighter-rouge">SizedBox</code> widget with a height of 8.</p>
+      </li>
+      <li>
+        <p>An empty <code class="language-plaintext highlighter-rouge">Row</code> where you’ll add the contact information in
+a later step.</p>
+      </li>
+      <li>
+        <p>A second <code class="language-plaintext highlighter-rouge">SizedBox</code> widget with a height of 16.</p>
+      </li>
+      <li>
+        <p>A second empty <code class="language-plaintext highlighter-rouge">Row</code> where you’ll add
+four icons (Part 3).</p>
+      </li>
+    </ul>
+
+    <p>The <code class="language-plaintext highlighter-rouge">Column</code>’s list of widgets should be formatted as follows,
+  so the contact information and icons are displayed below the
+  name and title:</p>
+
+    <p><!-- skip --></p>
+    <div class="language-dart highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>
+     <span class="o">],</span>
+    <span class="o">),</span> <span class="c1">// &lt;--- Closing parenthesis for the Row</span>
+    <span class="n">SizedBox</span><span class="o">(),</span>
+    <span class="n">Row</span><span class="o">(),</span> <span class="c1">// First empty Row</span>
+    <span class="n">SizedBox</span><span class="o">(),</span>
+    <span class="n">Row</span><span class="o">(),</span> <span class="c1">// Second empty Row</span>
+   <span class="o">],</span>
+  <span class="o">);</span> <span class="c1">// &lt;--- Closing parenthesis for the Column that wraps the Row</span>
+
+</code></pre></div>    </div>
+
+  </aside>
+
+  <!-- skip -->
+  <pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Icon(Icons.account_circle, size: 50),
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Flutter McFlutter',
+              style: Theme.of(context).textTheme.headline5,
+            ),
+            const Text('Experienced App Developer'),
+          ],
+        ),
+      ],
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin solution.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Icon(Icons.account_circle, size: 50),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'Flutter McFlutter',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+                const Text('Experienced App Developer'),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Row(),
+        const SizedBox(height: 16),
+        Row(),
+      ],
+    );
+  }
+}
+{$ end solution.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xffeeeeee),
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(
+            fontSize: 16,
+          ),
+        ),
+      ),
+      home: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Center(
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color(0xffffffff),
+                border: Border.all(),
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 10,
+                    color: Color(0x80000000),
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.all(8.0),
+              child: MyWidget(),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  // Check MyWidget starts with one Column
+
+  final myWidgetElement = controller.element(find.byType(MyWidget));
+
+  final myWidgetChildElements = &lt;Element&gt;[];
+  myWidgetElement.visitChildElements((e) =&gt; myWidgetChildElements.add(e));
+
+  if (myWidgetChildElements.length != 1 ||
+      myWidgetChildElements[0].widget is! Column) {
+    _result(false, ['The root widget in MyWidget\'s build method should be a Column.']);
+    return;
+  }
+
+  // Check outermost Column has 5 correct children.
+
+  final outerColumnElement = myWidgetChildElements[0];
+  final outerColumnChildWidgets =
+      (outerColumnElement.widget as Column).children;
+  final outerColumnChildElements = &lt;Element&gt;[];
+  outerColumnElement.visitChildElements((e) =&gt; outerColumnChildElements.add(e));
+
+  if (outerColumnChildWidgets.length != 5 ||
+      outerColumnChildWidgets[0] is! Row ||
+      outerColumnChildWidgets[1] is! SizedBox ||
+      outerColumnChildWidgets[2] is! Row ||
+      outerColumnChildWidgets[3] is! SizedBox ||
+      outerColumnChildWidgets[4] is! Row) {
+    _result(false, ['The children of the outermost Column should be [Row, SizedBox, Row, SizedBox, Row] in that order.']);
+    return;
+  }
+
+  // Check outermost Column's properties
+
+  if ((outerColumnElement.widget as Column).mainAxisSize != MainAxisSize.min) {
+    _result(false, ['The outermost Column should use MainAxisSize.min for its mainAxisSize.']);
+    return;
+  }
+
+  if ((outerColumnElement.widget as Column).crossAxisAlignment !=
+      CrossAxisAlignment.stretch) {
+    _result(false, ['The outermost Column should use CrossAxisAlignment.stretch for its crossAxisAlignment.']);
+    return;
+  }
+
+  // Check first Row has two children: Padding and Column
+
+  final firstRowElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[0]);
+
+  final firstRowChildElements = &lt;Element&gt;[];
+  firstRowElement.visitChildElements((e) =&gt; firstRowChildElements.add(e));
+
+  if (firstRowChildElements.length != 2 ||
+      firstRowChildElements[0].widget is! Padding ||
+      firstRowChildElements[1].widget is! Column) {
+    _result(false, ['The first Row should have two children: first a Padding, and then a Column.']);
+    return;
+  }
+
+  // Check Padding has correct padding
+
+  final paddingElement = firstRowChildElements[0];
+
+  if ((paddingElement.widget as Padding).padding != const EdgeInsets.all(8)) {
+    _result(false, ['The Padding widget in the first Row should have a padding of 8.']);
+    return;
+  }
+
+  // Check Padding has an Icon as its child
+
+  final paddingChildren = &lt;Element&gt;[];
+  paddingElement.visitChildElements((e) =&gt; paddingChildren.add(e));
+
+  if (paddingChildren.length != 1 || paddingChildren[0].widget is! Icon) {
+    _result(false, ['The Padding widget in the first Row should have an Icon as its child.']);
+    return;
+  }
+
+  // Check icon has a size of 50
+
+  if ((paddingChildren[0].widget as Icon).size != 50) {
+    _result(false, ['The Icon in the top-left corner should have a size of 50.']);
+    return;
+  }
+
+  // Check inner Column has correct properties
+
+  final innerColumnElement = firstRowChildElements[1];
+  final innerColumnWidget = innerColumnElement.widget as Column;
+
+  if (innerColumnWidget.crossAxisAlignment != CrossAxisAlignment.start) {
+    _result(false, ['The Column for the name and title should use CrossAxisAlignment.start as its crosAxisAlignment.']);
+    return;
+  }
+
+  if (innerColumnWidget.mainAxisSize != MainAxisSize.min) {
+    _result(false, ['The Column for the name and title should use MainAxisSize.min as its mainAxisSize.']);
+    return;
+  }
+
+  // Check inner Column has two Text children
+
+  if (innerColumnWidget.children.any((w) =&gt; w is! Text)) {
+    _result(false, ['The Column for the name and title should have two children, both Text widgets.']);
+    return;
+  }
+
+  // Check first Text has headline style
+
+  final nameText = innerColumnWidget.children[0] as Text;
+
+  if (nameText.style?.fontSize != 24) {
+    _result(false, ['The Text widget for the name should use the "headline" textStyle.']);
+    return;
+  }
+
+  // Check first SizedBox has correct properties
+
+  final firstSizedBoxElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[1]);
+
+  if ((firstSizedBoxElement.widget as SizedBox).height != 8) {
+    _result(false, ['The SizedBox before the first empty Row should have a height of 8.']);
+    return;
+  }
+
+  // Check second SizedBox has correct properties
+
+  final secondSizedBoxElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[3]);
+
+  if ((secondSizedBoxElement.widget as SizedBox).height != 16) {
+    _result(false, ['The SizedBox between the first and second empty Rows should have a height of 16.']);
+    return;
+  }
+
+  _result(true);
+}
+{$ end test.dart $}
+</code></pre>
+
+  <h4 class="no_toc" id="exercise-enter-contact-information">Exercise: Enter contact information</h4>
+  <aside class="alert alert-secondary" role="alert">
+    <p>Enter two <code class="language-plaintext highlighter-rouge">Text</code> widgets inside the first empty <code class="language-plaintext highlighter-rouge">Row</code> :</p>
+
+    <ul>
+  <li>
+        <p>The first <code class="language-plaintext highlighter-rouge">Text</code> widget contains the address <code class="language-plaintext highlighter-rouge">123 Main Street</code>.</p>
+      </li>
+  <li>
+        <p>The second <code class="language-plaintext highlighter-rouge">Text</code> widget contains the phone number <code class="language-plaintext highlighter-rouge">(415) 555-0198</code>.</p>
+      </li>
+</ul>
+
+    <p>For the first empty <code class="language-plaintext highlighter-rouge">Row</code>,
+  set the <code class="language-plaintext highlighter-rouge">mainAxisAlignment</code> property to
+  <code class="language-plaintext highlighter-rouge">MainAxisAlignment.spaceBetween</code>.</p>
+  </aside>
+
+  <!-- skip -->
+  <pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          children: [
+            const Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(Icons.account_circle, size: 50),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'Flutter McFlutter',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+                const Text('Experienced App Developer'),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Row(
+          children: const [],
+        ),
+        const SizedBox(height: 16),
+        Row(
+          children: const [],
+        ),
+      ],
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin solution.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Icon(Icons.account_circle, size: 50),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'Flutter McFlutter',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+                const Text('Experienced App Developer'),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: const [
+            Text(
+              '123 Main Street',
+            ),
+            Text(
+              '(415) 555-0198',
+            ),
+          ],
+        ),
+        const SizedBox(height: 16),
+        Row(
+          children: const [],
+        ),
+      ],
+    );
+  }
+}
+{$ end solution.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xffeeeeee),
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(
+            fontSize: 16,
+          ),
+        ),
+      ),
+      home: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Center(
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color(0xffffffff),
+                border: Border.all(),
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 10,
+                    color: Color(0x80000000),
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.all(8.0),
+              child: MyWidget(),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  // Check MyWidget starts with one Column
+
+  final myWidgetElement = controller.element(find.byType(MyWidget));
+
+  final myWidgetChildElements = &lt;Element&gt;[];
+  myWidgetElement.visitChildElements((e) =&gt; myWidgetChildElements.add(e));
+
+  if (myWidgetChildElements.length != 1 ||
+      myWidgetChildElements[0].widget is! Column) {
+    _result(false, ['The root widget in MyWidget\'s build method should be a Column.']);
+    return;
+  }
+
+  // Check outermost Column has 5 correct children.
+
+  final outerColumnElement = myWidgetChildElements[0];
+  final outerColumnChildWidgets =
+      (outerColumnElement.widget as Column).children;
+  final outerColumnChildElements = &lt;Element&gt;[];
+  outerColumnElement.visitChildElements((e) =&gt; outerColumnChildElements.add(e));
+
+  if (outerColumnChildWidgets.length != 5 ||
+      outerColumnChildWidgets[0] is! Row ||
+      outerColumnChildWidgets[1] is! SizedBox ||
+      outerColumnChildWidgets[2] is! Row ||
+      outerColumnChildWidgets[3] is! SizedBox ||
+      outerColumnChildWidgets[4] is! Row) {
+    _result(false, ['The children of the outermost Column should be [Row, SizedBox, Row, SizedBox, Row] in that order.']);
+    return;
+  }
+
+  // Check outermost Column's properties
+
+  if ((outerColumnElement.widget as Column).mainAxisSize != MainAxisSize.min) {
+    _result(false, ['The outermost Column should use MainAxisSize.min for its mainAxisSize.']);
+    return;
+  }
+
+  if ((outerColumnElement.widget as Column).crossAxisAlignment !=
+      CrossAxisAlignment.stretch) {
+    _result(false, ['The outermost Column should use CrossAxisAlignment.stretch for its crossAxisAlignment.']);
+    return;
+  }
+
+  // Check first Row has two children: Padding and Column
+
+  final firstRowElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[0]);
+
+  final firstRowChildElements = &lt;Element&gt;[];
+  firstRowElement.visitChildElements((e) =&gt; firstRowChildElements.add(e));
+
+  if (firstRowChildElements.length != 2 ||
+      firstRowChildElements[0].widget is! Padding ||
+      firstRowChildElements[1].widget is! Column) {
+    _result(false, ['The first Row should have two children: first a Padding, and then a Column.']);
+    return;
+  }
+
+  // Check Padding has correct padding
+
+  final paddingElement = firstRowChildElements[0];
+
+  if ((paddingElement.widget as Padding).padding != const EdgeInsets.all(8)) {
+    _result(false, ['The Padding widget in the first Row should have a padding of 8.']);
+    return;
+  }
+
+  // Check Padding has an Icon as its child
+
+  final paddingChildren = &lt;Element&gt;[];
+  paddingElement.visitChildElements((e) =&gt; paddingChildren.add(e));
+
+  if (paddingChildren.length != 1 || paddingChildren[0].widget is! Icon) {
+    _result(false, ['The Padding widget in the first Row should have an Icon as its child.']);
+    return;
+  }
+
+  // Check icon has a size of 50
+
+  if ((paddingChildren[0].widget as Icon).size != 50) {
+    _result(false, ['The Icon in the top-left corner should have a size of 50.']);
+    return;
+  }
+
+  // Check inner Column has correct properties
+
+  final innerColumnElement = firstRowChildElements[1];
+  final innerColumnWidget = innerColumnElement.widget as Column;
+
+  if (innerColumnWidget.crossAxisAlignment != CrossAxisAlignment.start) {
+    _result(false, ['The Column for the name and title should use CrossAxisAlignment.start as its crosAxisAlignment.']);
+    return;
+  }
+
+  if (innerColumnWidget.mainAxisSize != MainAxisSize.min) {
+    _result(false, ['The Column for the name and title should use MainAxisSize.min as its mainAxisSize.']);
+    return;
+  }
+
+  // Check inner Column has two Text children
+
+  if (innerColumnWidget.children.any((w) =&gt; w is! Text)) {
+    _result(false, ['The Column for the name and title should have two children, both Text widgets.']);
+    return;
+  }
+
+  // Check first Text has headline style
+
+  final nameText = innerColumnWidget.children[0] as Text;
+
+  if (nameText.style?.fontSize != 24) {
+    _result(false, ['The Text widget for the name should use the "headline" textStyle.']);
+    return;
+  }
+
+  // Check first SizedBox has correct properties
+
+  final firstSizedBoxElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[1]);
+
+  if ((firstSizedBoxElement.widget as SizedBox).height != 8) {
+    _result(false, ['The SizedBox before the first empty Row widget should have a height of 8.']);
+    return;
+  }
+
+  // Check second Row has two Text children
+
+  final secondRowElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[2]);
+
+  final secondRowChildElements = &lt;Element&gt;[];
+  secondRowElement.visitChildElements((e) =&gt; secondRowChildElements.add(e));
+
+  if (secondRowChildElements.length != 2 ||
+      secondRowChildElements.any((e) =&gt; e.widget is! Text)) {
+    _result(false, ['The first empty Row widget should have two children, both Text widgets.']);
+    return;
+  }
+
+  // Check second Row has correct properties
+
+  if ((secondRowElement.widget as Row).mainAxisAlignment !=
+      MainAxisAlignment.spaceBetween) {
+    _result(false, ['The first empty Row widget should use MainAxisAlignment.spaceBetween as its MainAxisAlignment value.']);
+    return;
+  }
+
+  // Check second SizedBox has correct properties
+
+  final secondSizedBoxElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[3]);
+
+  if ((secondSizedBoxElement.widget as SizedBox).height != 16) {
+    _result(false, ['The SizedBox between the first and second empty Row widgets should have a height of 16.']);
+    return;
+  }
+
+  _result(true);
+}
+{$ end test.dart $}
+</code></pre>
+
+  <h3 class="no_toc" id="part-3">Part 3</h3>
+  <h4 class="no_toc" id="exercise-add-four-icons">Exercise: Add four icons</h4>
+  <aside class="alert alert-secondary" role="alert">
+    <p>Enter the following <code class="language-plaintext highlighter-rouge">Icon</code> widgets inside the second empty <code class="language-plaintext highlighter-rouge">Row</code>:</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Icons.accessibility</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Icons.timer</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Icons.phone_android</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Icons.phone_iphone</code></li>
+    </ul>
+
+    <p>For the second empty <code class="language-plaintext highlighter-rouge">Row</code>,
+  set the <code class="language-plaintext highlighter-rouge">mainAxisAlignment</code> property to
+  <code class="language-plaintext highlighter-rouge">MainAxisAlignment.spaceAround</code>.</p>
+  </aside>
+
+  <!-- skip -->
+  <pre><code class="language-run-dartpad:theme-dark:mode-flutter:width-100%:height-400px:split-60">{$ begin main.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Icon(Icons.account_circle, size: 50),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'Flutter McFlutter',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+                const Text('Experienced App Developer'),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: const [
+            Text('123 Main Street'),
+            Text('415-555-0198'),
+          ],
+        ),
+        const SizedBox(height: 16),
+        Row(
+          children: const [],
+        ),
+      ],
+    );
+  }
+}
+{$ end main.dart $}
+{$ begin solution.dart $}
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Icon(Icons.account_circle, size: 50),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'Flutter McFlutter',
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+                const Text('Experienced App Developer'),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: const [
+            Text(
+              '123 Main Street',
+            ),
+            Text(
+              '(415) 555-0198',
+            ),
+          ],
+        ),
+        const SizedBox(height: 16),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: const [
+            Icon(Icons.accessibility),
+            Icon(Icons.timer),
+            Icon(Icons.phone_android),
+            Icon(Icons.phone_iphone),
+          ],
+        ),
+      ],
+    );
+  }
+}
+{$ end solution.dart $}
+{$ begin test.dart $}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xffeeeeee),
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(
+            fontSize: 16,
+          ),
+        ),
+      ),
+      home: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Center(
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color(0xffffffff),
+                border: Border.all(),
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 10,
+                    color: Color(0x80000000),
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.all(8.0),
+              child: MyWidget(),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Future&lt;void&gt; main() async {
+  final completer = Completer&lt;void&gt;();
+  
+  runApp(MyApp());
+
+  WidgetsFlutterBinding.ensureInitialized()
+      .addPostFrameCallback((timestamp) async {
+    completer.complete();
+  });
+  
+  await completer.future;
+
+  final controller = LiveWidgetController(WidgetsBinding.instance!);
+
+  // Check MyWidget starts with one Column
+
+  final myWidgetElement = controller.element(find.byType(MyWidget));
+
+  final myWidgetChildElements = &lt;Element&gt;[];
+  myWidgetElement.visitChildElements((e) =&gt; myWidgetChildElements.add(e));
+
+  if (myWidgetChildElements.length != 1 ||
+      myWidgetChildElements[0].widget is! Column) {
+    _result(false, ['The root widget in MyWidget\'s build method should be a Column.']);
+    return;
+  }
+
+  // Check outermost Column has 5 correct children.
+
+  final outerColumnElement = myWidgetChildElements[0];
+  final outerColumnChildWidgets =
+      (outerColumnElement.widget as Column).children;
+  final outerColumnChildElements = &lt;Element&gt;[];
+  outerColumnElement.visitChildElements((e) =&gt; outerColumnChildElements.add(e));
+
+  if (outerColumnChildWidgets.length != 5 ||
+      outerColumnChildWidgets[0] is! Row ||
+      outerColumnChildWidgets[1] is! SizedBox ||
+      outerColumnChildWidgets[2] is! Row ||
+      outerColumnChildWidgets[3] is! SizedBox ||
+      outerColumnChildWidgets[4] is! Row) {
+    _result(false, ['The children of the outermost Column should be [Row, SizedBox, Row, SizedBox, Row] in that order.']);
+    return;
+  }
+
+  // Check outermost Column's properties
+
+  if ((outerColumnElement.widget as Column).mainAxisSize != MainAxisSize.min) {
+    _result(false, ['The outermost Column should use MainAxisSize.min for its mainAxisSize.']);
+    return;
+  }
+
+  if ((outerColumnElement.widget as Column).crossAxisAlignment !=
+      CrossAxisAlignment.stretch) {
+    _result(false, ['The outermost Column should use CrossAxisAlignment.stretch for its crossAxisAlignment.']);
+    return;
+  }
+
+  // Check first Row has two children: Padding and Column
+
+  final firstRowElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[0]);
+
+  final firstRowChildElements = &lt;Element&gt;[];
+  firstRowElement.visitChildElements((e) =&gt; firstRowChildElements.add(e));
+
+  if (firstRowChildElements.length != 2 ||
+      firstRowChildElements[0].widget is! Padding ||
+      firstRowChildElements[1].widget is! Column) {
+    _result(false, ['The first Row should have two children: first a Padding, and then a Column.']);
+    return;
+  }
+
+  // Check Padding has correct padding
+
+  final paddingElement = firstRowChildElements[0];
+
+  if ((paddingElement.widget as Padding).padding != const EdgeInsets.all(8)) {
+    _result(false, ['The Padding widget in the first Row should have a padding of 8.']);
+    return;
+  }
+
+  // Check Padding has an Icon as its child
+
+  final paddingChildren = &lt;Element&gt;[];
+  paddingElement.visitChildElements((e) =&gt; paddingChildren.add(e));
+
+  if (paddingChildren.length != 1 || paddingChildren[0].widget is! Icon) {
+    _result(false, ['The Padding widget in the first Row should have an Icon as its child.']);
+    return;
+  }
+
+  // Check icon has a size of 50
+
+  if ((paddingChildren[0].widget as Icon).size != 50) {
+    _result(false, ['The Icon in the top-left corner should have a size of 50.']);
+    return;
+  }
+
+  // Check inner Column has correct properties
+
+  final innerColumnElement = firstRowChildElements[1];
+  final innerColumnWidget = innerColumnElement.widget as Column;
+
+  if (innerColumnWidget.crossAxisAlignment != CrossAxisAlignment.start) {
+    _result(false, ['The Column for the name and title should use CrossAxisAlignment.start as its crosAxisAlignment.']);
+    return;
+  }
+
+  // Check inner Column has two Text children
+
+  if (innerColumnWidget.children.any((w) =&gt; w is! Text)) {
+    _result(false, ['The Column for the name and title should have two children, both Text widgets.']);
+    return;
+  }
+
+  if (innerColumnWidget.mainAxisSize != MainAxisSize.min) {
+    _result(false, ['The Column for the name and title should use MainAxisSize.min as its mainAxisSize.']);
+    return;
+  }
+
+  // Check first Text has headline style
+
+  final nameText = innerColumnWidget.children[0] as Text;
+
+  if (nameText.style?.fontSize != 24) {
+    _result(false, ['The Text widget for the name should use the "headline" textStyle.']);
+    return;
+  }
+
+  // Check first SizedBox has correct properties
+
+  final firstSizedBoxElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[1]);
+
+  if ((firstSizedBoxElement.widget as SizedBox).height != 8) {
+    _result(false, ['The SizedBox before the first empty Row widget should have a height of 8.']);
+    return;
+  }
+
+  // Check second Row has two Text children
+
+  final secondRowElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[2]);
+
+  final secondRowChildElements = &lt;Element&gt;[];
+  secondRowElement.visitChildElements((e) =&gt; secondRowChildElements.add(e));
+
+  if (secondRowChildElements.length != 2 ||
+      secondRowChildElements.any((e) =&gt; e.widget is! Text)) {
+    _result(false, ['The first Row widget should have two children, both Text widgets.']);
+    return;
+  }
+
+  // Check second Row has correct properties
+
+  if ((secondRowElement.widget as Row).mainAxisAlignment !=
+      MainAxisAlignment.spaceBetween) {
+    _result(false, ['The first Row widget should use MainAxisAlignment.spaceBetween as its mainAxisAlignment.']);
+    return;
+  }
+
+  // Check second SizedBox has correct properties
+
+  final secondSizedBoxElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[3]);
+
+  if ((secondSizedBoxElement.widget as SizedBox).height != 16) {
+    _result(false, ['The SizedBox between the first and second Row widgets should have a height of 16.']);
+    return;
+  }
+
+  // Check second empty Row has four Icon children
+
+  final thirdRowElement = outerColumnChildElements
+      .firstWhere((e) =&gt; e.widget == outerColumnChildWidgets[4]);
+
+  final thirdRowChildElements = &lt;Element&gt;[];
+  thirdRowElement.visitChildElements((e) =&gt; thirdRowChildElements.add(e));
+
+  if (thirdRowChildElements.length != 4 ||
+      thirdRowChildElements.any((e) =&gt; e.widget is! Icon)) {
+    _result(false, ['The second empty Row widget should have four children, all Icon widgets.']);
+    return;
+  }
+
+  // Check second empty Row has correct properties
+
+  if ((thirdRowElement.widget as Row).mainAxisAlignment !=
+      MainAxisAlignment.spaceAround) {
+    _result(false, ['The second empty Row widget should use MainAxisAlignment.spaceAround as its MainAxisAligment value.']);
+    return;
+  }
+
+  _result(true);
+}
+{$ end test.dart $}
+</code></pre>
+
+  <h2 id="whats-next">
+<a class="anchor" href="#whats-next" aria-hidden="true"><span class="octicon octicon-link"></span></a>What’s next?</h2>
+
+  <p>Congratulations, you’ve finished this codelab!
+If you’d like to know more about Flutter,
+here are a few suggestions for resources worth exploring:</p>
+
+  <ul>
+    <li>Learn more about layouts in Flutter by
+visiting the <a href="https://docs.flutter.dev/development/ui/layout">Building layouts</a> page.</li>
+    <li>Check out the <a href="https://github.com/flutter/samples">sample apps</a>.</li>
+    <li>Visit <a href="https://youtube.com/channel/UCwXdFgeE9KYzlDdR7TG9cMw">Flutter’s YouTube channel</a>,
+where you can watch a variety videos from
+videos that focus on individual widgets
+to videos of developers building apps.</li>
+  </ul>
+
+  <p>You can download Flutter from the <a href="https://docs.flutter.dev/get-started/install">install</a> page.</p>
+
+</aside>
+
+
+        
+
+      </div>
+    </main>
+  </div>
+</div>
+
+
+    
+<script src="inject_embed.dart.js" defer></script>
+    
+
+  </body>
+</html>
