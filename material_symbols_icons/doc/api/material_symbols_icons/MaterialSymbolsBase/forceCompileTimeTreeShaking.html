@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the forceCompileTimeTreeShaking method from the MaterialSymbolsBase class, for the Dart programming language.">
+  <title>forceCompileTimeTreeShaking method - MaterialSymbolsBase class - material_symbols_icons library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">material_symbols_icons</a></li>
+    <li><a href="../../material_symbols_icons/material_symbols_icons-library.html">material_symbols_icons</a></li>
+    <li><a href="../../material_symbols_icons/MaterialSymbolsBase-class.html">MaterialSymbolsBase</a></li>
+    <li class="self-crumb">forceCompileTimeTreeShaking static method</li>
+  </ol>
+  <div class="self-name">forceCompileTimeTreeShaking</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-method">forceCompileTimeTreeShaking</span> static method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype">void</span>
+<span class="name ">forceCompileTimeTreeShaking</span>(<wbr>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>This routine exists to FORCE TREE SHAKING of the icon fonts that may not be referenced
+at all within the application.  This is required because the Material Symbols Icons
+have 3 font varieties and it is very likely only one will be used.
+Tree shaking DOES NOT OCCUR for fonts that are never referenced, so having a this
+method FORCES a reference to the fonts - and invokes tree shaking for
+each of the three fonts.  In this way any unused fonts are reduced to around 2k, which
+the icon tree shake will report as 100.0% reduction.
+(Tree shaking occurs when a <em>const</em> declaration to an IconData() class occurs.)</p>
+<p>NOTE: VERY IMPORTANT - the <code>@pargma('vm:entry-point')</code> annotation is REQUIRED
+and it is being used to force the dart compilation process to believe that this
+method is required and that it CAN NOT tree-shake this method when it never
+finds a call to it in the dart source code.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@pragma(&#39;vm:entry-point&#39;)
+static void forceCompileTimeTreeShaking() {
+  &#47;&#47; these variables must be declared as var to trigger tree shaking, when declared as const
+  &#47;&#47; then the tree shaking is not triggered.  These are references to the &#39;check_indeterminate_small&#39;
+  &#47;&#47; icon in each of the fonts (one of the smallest glyphs we can include).
+  &#47;&#47; ignore: unused_local_variable
+  var forceOutlinedTreeShake = const IconData(0xf88a,
+      fontFamily: &#39;MaterialSymbolsOutlined&#39;,
+      fontPackage: &#39;material_symbols_icons&#39;);
+  &#47;&#47; ignore: unused_local_variable
+  var forceRoundedTreeShake = const IconData(0xf88a,
+      fontFamily: &#39;MaterialSymbolsRounded&#39;,
+      fontPackage: &#39;material_symbols_icons&#39;);
+  &#47;&#47; ignore: unused_local_variable
+  var forceSharpTreeShake = const IconData(0xf88a,
+      fontFamily: &#39;MaterialSymbolsSharp&#39;,
+      fontPackage: &#39;material_symbols_icons&#39;);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../../index.html">material_symbols_icons</a></li>
+  <li><a href="../../material_symbols_icons/material_symbols_icons-library.html">material_symbols_icons</a></li>
+  <li><a href="../../material_symbols_icons/MaterialSymbolsBase-class.html">MaterialSymbolsBase</a></li>
+  <li class="self-crumb">forceCompileTimeTreeShaking static method</li>
+</ol>
+
+
+    <h5>MaterialSymbolsBase class</h5>
+    <ol>
+
+        <li class="section-title"><a href="../../material_symbols_icons/MaterialSymbolsBase-class.html#constructors">Constructors</a></li>
+          <li><a href="../../material_symbols_icons/MaterialSymbolsBase/MaterialSymbolsBase.html">MaterialSymbolsBase</a></li>
+
+
+        <li class="section-title inherited">
+          <a href="../../material_symbols_icons/MaterialSymbolsBase-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title inherited"><a href="../../material_symbols_icons/MaterialSymbolsBase-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+
+        <li class="section-title inherited"><a href="../../material_symbols_icons/MaterialSymbolsBase-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+        <li class="section-title"><a href="../../material_symbols_icons/MaterialSymbolsBase-class.html#static-properties">Static properties</a></li>
+          <li><a href="../../material_symbols_icons/MaterialSymbolsBase/globalIconVariationDefaults.html">globalIconVariationDefaults</a></li>
+
+        <li class="section-title"><a href="../../material_symbols_icons/MaterialSymbolsBase-class.html#static-methods">Static methods</a></li>
+          <li><a href="../../material_symbols_icons/MaterialSymbolsBase/forceCompileTimeTreeShaking.html">forceCompileTimeTreeShaking</a></li>
+          <li><a href="../../material_symbols_icons/MaterialSymbolsBase/setIconVariationDefaultsByFontFamily.html">setIconVariationDefaultsByFontFamily</a></li>
+          <li><a href="../../material_symbols_icons/MaterialSymbolsBase/setOutlinedVariationDefaults.html">setOutlinedVariationDefaults</a></li>
+          <li><a href="../../material_symbols_icons/MaterialSymbolsBase/setRoundedVariationDefaults.html">setRoundedVariationDefaults</a></li>
+          <li><a href="../../material_symbols_icons/MaterialSymbolsBase/setSharpVariationDefaults.html">setSharpVariationDefaults</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    material_symbols_icons
+      4.39.3
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

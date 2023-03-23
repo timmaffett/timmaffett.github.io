@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 6.2.0">
+  <meta name="description" content="material_symbols_icons API docs, for the Dart programming language.">
+  <title>material_symbols_icons - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/timmaffett/material_symbols_icons">material_symbols_icons package</a></li>
+  </ol>
+  <div class="self-name">material_symbols_icons</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="material-symbols-icons-for-flutter">Material Symbols Icons for Flutter</h1>
+<img src="https://github.com/timmaffett/material_symbols_icons/raw/master/media/example.png" width="100%">
+<h3 id="with-full-variation-support-and-automatic-code-generation-capability-for-updating-icon-definition-files">(with full variation support and automatic code generation capability for updating icon definition files)</h3>
+<p>These icons also support the complete set of icon variation parameters defined for the Material Symbols Icons.  This includes setting fill/not filled, various weights, grades and optical sizes.</p>
+<p>This package contains a code generation dart file which automatically downloads the latest versions of the Material Symbols Icon font files from <a href="https://github.com/google/material-design-icons">https://github.com/google/material-design-icons</a> and generates updated dart files containing all of the latest defined icons.  No more missing icons
+when google updates the material symbols icon fonts!</p>
+<p>Why another version of material symbols icons for flutter ? Because every other package for material symbols icons is either out of date, and/or has <em>INCORRECT</em> and <em>MISSING</em> icon definitions.</p>
+<h2 id="live-flutter-web-example-with-material-symbols-icons-style-and-variation-customizationhttpstimmaffettgithubiomaterial_symbols_icons"><a href="https://timmaffett.github.io/material_symbols_icons">Live Flutter Web Example with Material Symbols Icons style and variation customization</a></h2>
+<p>Here is a <a href="https://timmaffett.github.io/material_symbols_icons">live example</a> of the current version of this package where you can test any Material Symbols icon name to verify it's availability.  The example also allows playing with all of the font variation options to explore further customizing the look of our Material Symbols.</p>
+<p>This package includes an automatic generator program so that the user has the option of regenerating the package at any time with the most current Material Symbols Icons definitions.  This program downloads the latest Material Symbols fonts from the github repository <a href="https://github.com/google/material-design-icons">https://github.com/google/material-design-icons</a>, and their corresponding codepoint definition files.  It will then automatically create the material_symbols_icons.dart definition source file.    This automatic generations allows this package to use Github CI routines to ensure that it is always up to date and in-sync with the latet Material Symbols defintions.</p>
+<p>(For users of the previous Flutter alternatives for Material Symbols Icons support - No more finding an icon on <a href="https://fonts.google.com/icons?icon.style=Outlined">google's material symbols icon browser</a> and then trying to use it's name, and then discovering that it is missing, or worse yet having the incorrect icon appear!)</p>
+<p>There are several options with how you reference the icons within your flutter program:</p>
+<ol>
+<li>
+<p>If you are using icons from a single style (outlined, rounded or sharp) then you can import:</p>
+<ul>
+<li>A) <code>package material_symbols_icons\outlined.dart</code> and using <code>MaterialSymbols.iconname</code> to reference outlined style icons.</li>
+<li>B) <code>package material_symbols_icons\outlined_suffix.dart</code> and using <code>MaterialSymbolsOutlined.iconname</code> to reference outlined style icons</li>
+<li>C) <code>package material_symbols_icons\rounded.dart</code> and using <code>MaterialSymbols.iconname</code> to reference rounded style icons.</li>
+<li>D) <code>package material_symbols_icons\rounded_suffix.dart</code> and using <code>MaterialSymbolsRounded.iconname</code> to reference rounded style icons.</li>
+<li>E) <code>package material_symbols_icons\sharp.dart</code> and using <code>MaterialSymbols.iconname</code> to reference sharp style icons.</li>
+<li>F) <code>package material_symbols_icons\sharp_suffix.dart</code> and using <code>MaterialSymbolsSharp.iconname</code> to reference sharp style icons.</li>
+</ul>
+<p>Importing the A), C) or E) (<code>outlined.dart</code>, <code>rounded.dart</code> or <code>sharp.dart</code>) versions allows you to easily swap any style out for an alternate, with changing the <code>import</code> statement being the only change in your code that is needed to switch to the alternate style.  (This is becsause these files all use <code>MaterialSymbols</code> as the class and the identical icon names (with no suffix) for each icon).</p>
+<p>Options B), D) and F) (<code>outlined_suffix.dart</code>, <code>rounded_suffix.dart</code> or <code>sharp_suffix.dart</code>) have the style name as a suffix to the <code>MaterialSymbols</code> class name (<code>MaterialSymbolsOutlinded</code>, <code>MaterialSymbolsRounded</code> and <code>MaterialSymbolsSharp</code> respectively), thus allowing more than one of them to be used simultaneously without name collisions. (ie. you could use <code>MaterialSymbolsRounded.developer_mode</code> in one place and <code>MaterialSymbolsSharp.check_box</code> in another if you prefered the rounded look for the <code>developer_mode</code> icon and the sharp look for the <code>check_box</code> icon).</p>
+</li>
+<li>
+<p>Alternatitely if you use icons from more than one of the styles, (or are coming from one of the previous Material Symbols Icon package) then importing <code>package material_symbols_icons\universal.dart</code> and using <code>MaterialSymbols.</code> as the base class.  This class contains outlined, rounded and sharp versions of every icon.  You access them using <code>MaterialSymbols.iconname_outlined</code>, <code>MaterialSymbols.iconname_rounded</code> or <code>MaterialSymbols.iconname_sharp</code>
+This is the largest of the options as it includes all 3 versions of the Material Symbols variable fonts (outlined, rounded and sharp).  I would imagine that most users will pick the style of the icons they prefer and use one of the specific classes from #1.  This option is included primarily for users coming from one of the pre-existing packages.</p>
+</li>
+</ol>
+<hr>
+<p>All icon names that start with a number (like <code>360</code> or <code>9M</code>) but have their icon names prefixed with a <code>$</code> to make the names valid dart class member names.
+For example if you want to access the icon with the name <code>360</code> you use <code>MaterialSymbols.$360</code> instead.</p>
+<p>Additionally the iconnames <code>class</code>, <code>switch</code> and <code>try</code> have also been renamed with a leading <code>$</code> (<code>$class</code>, <code>$switch</code> and <code>$try</code>) as these are dart language reserved words.</p>
+<hr>
+<p>The Material Symbols Icon fonts are variable fonts, so it is possible to further modify (or animate!) the icons by specifying your own parameters for fill, weight, grade, and optical size when creating your icons.</p>
+<pre class="language-dart"><code class="language-dart">    
+final myIcon = Icon( MaterialSymbols.settings,
+                        fill: 1, weight: 700, grade: 0.25, opticalSize: 48 );
+
+</code></pre>
+<p>]You can also set application wide defaults using your <code>IconThemeData</code> within your Theme.</p>
+<pre class="language-dart"><code class="language-dart">class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    /*
+      Set default IconThemeData() for ALL icons
+    */
+    return MaterialApp(
+      title: 'Material Symbols Icons For Flutter',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        useMaterial3: true,
+        fontFamily: 'Roboto',
+        iconTheme: const IconThemeData(color: Colors.black,
+                                       fill: 0,
+                                       weight: 100,
+                                       opticalSize: 48),
+      ),
+      home: const MyHomePage(title: 'Material Symbols Icons For Flutter'),
+    );
+  }
+}
+</code></pre>
+<p>If you find yourself using more than one of the styles simultaneously this package has a method of specifying default variations on a <em>per</em> style basis using:</p>
+<pre class="language-dart"><code class="language-dart">    MaterialSymbolsBase.setOutlinedVariationDefaults(
+        color: Colors.red,
+        fill: 1,
+        weight: 300,
+        grade: 0,
+        opticalSize: 40.0);
+    MaterialSymbolsBase.setRoundedVariationDefaults(
+        color: Colors.blue,
+        fill: 0,
+        weight: 400,
+        grade: 200,
+        opticalSize: 48.0);
+    MaterialSymbolsBase.setSharpVariationDefaults(
+        color: Colors.teal,
+        fill: 0,
+        weight: 600,
+        grade: 0.25,
+        opticalSize: 20.0);
+
+    // then use VariedIcon.varied() to create your icons - instead of Icon() directly
+    Icon example = VariedIcon.varied( MaterialSymbols.developer );
+
+</code></pre>
+<p>If the <code>setOutlinedVariationDefaults</code>, <code>setRoundedVariationDefaults</code> or <code>setSharpVariationDefaults</code>  methods are used then the icons need to be
+created using <code>VariedIcon.varied()</code> call instead of <code>Icon()</code> directly.</p>
+<hr>
+<img src="https://github.com/timmaffett/material_symbols_icons/raw/master/media/google_icon_fonts.png" width="100%">
+<hr>
+<h2 id="material-symbols-icons---googles-replacement-to-the-original-material-design-icons">Material Symbols Icons - Google's replacement to the original material design icons</h2>
+<p>Following background information info from <a href="https://github.com/google/material-design-icons/raw/master/README.md">google's material design icon repo</a>.</p>
+<p>These newer icons can be browsed in a more user-friendly way at <a href="https://fonts.google.com/icons?icon.style=Outlined">google's material symbols icon browser</a>. Use the popdown menu near top left to choose between the two sets; Material Symbols is the default.</p>
+<p>These icons were built/designed as variable fonts first (based on the 24 px designs from Material Icons). There are three separate Material Symbols variable fonts, which also have static icons available (but those do not have all the variations available, as that would be hundreds of styles):</p>
+<ul>
+<li>Outlined</li>
+<li>Rounded</li>
+<li>Sharp</li>
+<li>Note that although there is no separate Filled font, the Fill axis allows access to filled styles—in all three fonts.</li>
+</ul>
+<p>Each of the fonts has these design axes, which can be varied in CSS, or in many more modern design apps:</p>
+<ul>
+<li>Optical Size (opsz) from 20 to 48 px. The default is 24.</li>
+<li>Weight from 100 (Thin) to 700 (Bold). Regular is 400.</li>
+<li>Grade from -50 to 200. The default is 0 (zero).</li>
+<li>Fill from 0 to 100. The default is 0 (zero).</li>
+</ul>
+<p>What is currently <em>not</em> available in Material Symbols?</p>
+<ul>
+<li>only the 20 and 24 px versions are designed with perfect pixel-grid alignment</li>
+<li>the only pre-made fonts are the variable fonts</li>
+<li>there are no two-tone icons</li>
+</ul>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <h3>BaseClass</h3>
+            <dt id="material_symbols_icons">
+  <span class="name"><a href="material_symbols_icons/material_symbols_icons-library.html">material_symbols_icons</a></span> 
+
+</dt>
+<dd>Material Symbols Icons library base class which contains method to force proper icon tree-shaking,
+and utility methods providing alternate method of icon variation defaults to be defined
+by icon style (implemented using font family names to differentiate icon styles).
+</dd>
+
+          <h3>CombinedUniversal</h3>
+            <dt id="combined_universal">
+  <span class="name"><a href="combined_universal/combined_universal-library.html">combined_universal</a></span> 
+
+</dt>
+<dd>Combined verions of all three styles within <a href="combined_universal/MaterialSymbols-class.html">MaterialSymbols</a> - all icon names have the style as a suffix to the icon name.
+Accessed via <code>MaterialSymbols.iconname_style</code>, for example <code>MaterialSymbols.circle_outlined</code> or
+<code>MaterialSymbols.circle_sharp</code>.<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</dd>
+
+          <h3>Outlined</h3>
+            <dt id="outlined">
+  <span class="name"><a href="outlined/outlined-library.html">outlined</a></span> 
+
+</dt>
+<dd>Outlined style version of icons.  Accessed via <a href="outlined/MaterialSymbols-class.html">MaterialSymbols</a><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+by using the icon name<code>MaterialSymbols.iconname</code>, for example <code>MaterialSymbols.circle</code> or <code>MaterialSymbols.square</code>.
+</dd>
+
+          <h3>Outlined_Suffix</h3>
+            <dt id="outlined_suffix">
+  <span class="name"><a href="outlined_suffix/outlined_suffix-library.html">outlined_suffix</a></span> 
+
+</dt>
+<dd>Outlined_suffix style version of icons.  Accessed via <a href="outlined_suffix/MaterialSymbolsOutlined-class.html">MaterialSymbolsOutlined</a> (with style as suffix appended to the class name)<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+by using the icon name<code>MaterialSymbolsOutlined.iconname</code>, for example <code>MaterialSymbolsOutlined.circle</code> or <code>MaterialSymbolsOutlined.square</code>.
+</dd>
+
+          <h3>Rounded</h3>
+            <dt id="rounded">
+  <span class="name"><a href="rounded/rounded-library.html">rounded</a></span> 
+
+</dt>
+<dd>Rounded style version of icons.  Accessed via <a href="rounded/MaterialSymbols-class.html">MaterialSymbols</a><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+by using the icon name<code>MaterialSymbols.iconname</code>, for example <code>MaterialSymbols.circle</code> or <code>MaterialSymbols.square</code>.
+</dd>
+
+          <h3>Rounded_Suffix</h3>
+            <dt id="rounded_suffix">
+  <span class="name"><a href="rounded_suffix/rounded_suffix-library.html">rounded_suffix</a></span> 
+
+</dt>
+<dd>Rounded_suffix style version of icons.  Accessed via <a href="rounded_suffix/MaterialSymbolsRounded-class.html">MaterialSymbolsRounded</a> (with style as suffix appended to the class name)<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+by using the icon name<code>MaterialSymbolsRounded.iconname</code>, for example <code>MaterialSymbolsRounded.circle</code> or <code>MaterialSymbolsRounded.square</code>.
+</dd>
+
+          <h3>Sharp</h3>
+            <dt id="sharp">
+  <span class="name"><a href="sharp/sharp-library.html">sharp</a></span> 
+
+</dt>
+<dd>Sharp style version of icons.  Accessed via <a href="sharp/MaterialSymbols-class.html">MaterialSymbols</a><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+by using the icon name<code>MaterialSymbols.iconname</code>, for example <code>MaterialSymbols.circle</code> or <code>MaterialSymbols.square</code>.
+</dd>
+
+          <h3>Sharp_Suffix</h3>
+            <dt id="sharp_suffix">
+  <span class="name"><a href="sharp_suffix/sharp_suffix-library.html">sharp_suffix</a></span> 
+
+</dt>
+<dd>Sharp_suffix style version of icons.  Accessed via <a href="sharp_suffix/MaterialSymbolsSharp-class.html">MaterialSymbolsSharp</a> (with style as suffix appended to the class name)<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+by using the icon name<code>MaterialSymbolsSharp.iconname</code>, for example <code>MaterialSymbolsSharp.circle</code> or <code>MaterialSymbolsSharp.square</code>.
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="https://github.com/timmaffett/material_symbols_icons">material_symbols_icons package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">material_symbols_icons</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li class="section-subtitle">BaseClass</li>
+        <li class="section-subitem"><a href="material_symbols_icons/material_symbols_icons-library.html">material_symbols_icons</a></li>
+      <li class="section-subtitle">CombinedUniversal</li>
+        <li class="section-subitem"><a href="combined_universal/combined_universal-library.html">combined_universal</a></li>
+      <li class="section-subtitle">Outlined</li>
+        <li class="section-subitem"><a href="outlined/outlined-library.html">outlined</a></li>
+      <li class="section-subtitle">Outlined_Suffix</li>
+        <li class="section-subitem"><a href="outlined_suffix/outlined_suffix-library.html">outlined_suffix</a></li>
+      <li class="section-subtitle">Rounded</li>
+        <li class="section-subitem"><a href="rounded/rounded-library.html">rounded</a></li>
+      <li class="section-subtitle">Rounded_Suffix</li>
+        <li class="section-subitem"><a href="rounded_suffix/rounded_suffix-library.html">rounded_suffix</a></li>
+      <li class="section-subtitle">Sharp</li>
+        <li class="section-subitem"><a href="sharp/sharp-library.html">sharp</a></li>
+      <li class="section-subtitle">Sharp_Suffix</li>
+        <li class="section-subitem"><a href="sharp_suffix/sharp_suffix-library.html">sharp_suffix</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    material_symbols_icons
+      4.39.3
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
