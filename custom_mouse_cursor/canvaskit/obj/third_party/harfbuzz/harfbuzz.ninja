@@ -1,0 +1,8 @@
+defines = -DUSE_OPENSSL=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -D_DEBUG
+include_dirs = -I../.. -Icanvaskit/gen -I../../third_party/harfbuzz/src
+root_out_dir = canvaskit
+target_out_dir = canvaskit/obj/third_party/harfbuzz
+target_output_name = harfbuzz
+
+
+build canvaskit/obj/third_party/harfbuzz/harfbuzz.stamp: canvaskit_stamp || canvaskit/obj/third_party/harfbuzz/harfbuzz_sources.stamp canvaskit/obj/third_party/freetype2/libfreetype2.a canvaskit/obj/third_party/libpng/libpng.stamp canvaskit/obj/third_party/zlib/zlib.stamp canvaskit/obj/third_party/icu/icuuc_private.stamp canvaskit/obj/third_party/icu/icuuc_public.stamp

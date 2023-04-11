@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FE07E658-82D2-1A23-113A-F5964DAD103E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gpu</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\canvaskit/obj/third_party/skia/gpu.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../..;../../../../../../out/host_debug_unopt/canvaskit/gen;../../../../../../third_party/skia;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-strict-aliasing -fcolor-diagnostics -fvisibility-inlines-hidden -std=c++17 -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -fno-rtti -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_OPENSSL=1;_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS;_DEBUG;SK_ENABLE_DUMP_GPU;SK_DISABLE_AAA;SK_LEGACY_IGNORE_DRAW_VERTICES_BLEND_WITH_NO_SHADER;SK_DISABLE_LEGACY_SHADERCONTEXT;SK_DISABLE_LOWP_RASTER_PIPELINE;SK_FORCE_RASTER_PIPELINE_BLITTER;SK_METAL_WAIT_UNTIL_SCHEDULED;SK_DISABLE_EFFECT_DESERIALIZATION;SK_ENABLE_SKSL;SK_ENABLE_PRECOMPILE;SKNX_NO_SIMD;SK_FORCE_AAA;SK_FORCE_8_BYTE_ALIGNMENT;SK_GANESH;SK_LEGACY_LAYER_BOUNDS_EXPANSION;SK_GAMMA_APPLY_TO_A8;SKIA_IMPLEMENTATION=1;SK_GL;SK_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrContext_Base.h" />
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrGLTypesPriv.h" />
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrImageContext.h" />
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrMockTypesPriv.h" />
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrMtlTypesPriv.h" />
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrTypesPriv.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ClipStack.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.ClipStack.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.ClipStack.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ClipStack.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/Device.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.Device.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.Device.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/Device_drawTexture.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.Device_drawTexture.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.Device_drawTexture.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/Device_v1.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAHardwareBufferImageGenerator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrAHardwareBufferImageGenerator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrAHardwareBufferImageGenerator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAHardwareBufferImageGenerator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAHardwareBufferUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrAHardwareBufferUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrAHardwareBufferUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAHardwareBufferUtils_impl.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAppliedClip.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAttachment.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrAttachment.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrAttachment.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAttachment.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAuditTrail.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrAuditTrail.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrAuditTrail.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAuditTrail.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAutoLocaleSetter.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendSemaphore.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBackendSemaphore.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBackendSemaphore.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendSurface.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBackendSurface.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBackendSurface.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendTextureImageGenerator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBackendTextureImageGenerator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBackendTextureImageGenerator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendTextureImageGenerator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBackendUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBackendUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendUtils.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBaseContextPriv.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBlurUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBlurUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBlurUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBlurUtils.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBuffer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferAllocPool.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBufferAllocPool.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBufferAllocPool.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferAllocPool.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferTransferRenderTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBufferTransferRenderTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBufferTransferRenderTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferTransferRenderTask.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferUpdateRenderTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBufferUpdateRenderTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrBufferUpdateRenderTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferUpdateRenderTask.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrCaps.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrCaps.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrCaps.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrCaps.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrClientMappedBufferManager.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrClientMappedBufferManager.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrClientMappedBufferManager.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrClientMappedBufferManager.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrClip.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrColor.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrColorInfo.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrColorInfo.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrColorInfo.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrColorInfo.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrColorSpaceXform.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrColorSpaceXform.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrColorSpaceXform.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrColorSpaceXform.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrContextThreadSafeProxy.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrContextThreadSafeProxy.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrContextThreadSafeProxy.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrContextThreadSafeProxyPriv.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrContext_Base.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrContext_Base.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrContext_Base.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrCopyRenderTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrCopyRenderTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrCopyRenderTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrCopyRenderTask.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrCpuBuffer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDDLContext.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDDLContext.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDDLContext.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDDLTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDDLTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDDLTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDDLTask.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDataUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDataUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDataUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDataUtils.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDefaultGeoProcFactory.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDefaultGeoProcFactory.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDefaultGeoProcFactory.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDefaultGeoProcFactory.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDeferredProxyUploader.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDeferredUpload.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDirectContext.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDirectContext.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDirectContext.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDirectContextPriv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDirectContextPriv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDirectContextPriv.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDirectContextPriv.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDistanceFieldGenFromVector.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDistanceFieldGenFromVector.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDistanceFieldGenFromVector.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDistanceFieldGenFromVector.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawIndirectCommand.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawOpAtlas.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDrawOpAtlas.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDrawOpAtlas.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawOpAtlas.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawOpTest.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDrawOpTest.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDrawOpTest.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawOpTest.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawingManager.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDrawingManager.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDrawingManager.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawingManager.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDriverBugWorkarounds.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDriverBugWorkarounds.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDriverBugWorkarounds.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDstProxyView.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDynamicAtlas.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDynamicAtlas.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrDynamicAtlas.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDynamicAtlas.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrEagerVertexAllocator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrEagerVertexAllocator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrEagerVertexAllocator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrEagerVertexAllocator.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFPArgs.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFinishCallbacks.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrFinishCallbacks.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrFinishCallbacks.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFinishCallbacks.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFixedClip.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrFixedClip.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrFixedClip.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFixedClip.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFragmentProcessor.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrFragmentProcessor.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrFragmentProcessor.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFragmentProcessor.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGeometryProcessor.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrGeometryProcessor.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrGeometryProcessor.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGeometryProcessor.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpu.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrGpu.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrGpu.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpu.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuBuffer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrGpuBuffer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrGpuBuffer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuBuffer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuResource.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrGpuResource.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrGpuResource.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuResource.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuResourceCacheAccess.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuResourcePriv.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrHashMapWithCache.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrImageContext.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrImageContext.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrImageContext.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrImageContextPriv.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrImageInfo.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrImageInfo.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrImageInfo.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrImageInfo.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrManagedResource.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrManagedResource.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrManagedResource.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrManagedResource.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrMemoryPool.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrMemoryPool.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrMemoryPool.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrMemoryPool.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrMeshDrawTarget.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrMeshDrawTarget.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrMeshDrawTarget.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrMeshDrawTarget.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrNativeRect.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrNonAtomicRef.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOnFlushResourceProvider.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrOnFlushResourceProvider.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrOnFlushResourceProvider.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOnFlushResourceProvider.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOpFlushState.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrOpFlushState.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrOpFlushState.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOpFlushState.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOpsRenderPass.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrOpsRenderPass.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrOpsRenderPass.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOpsRenderPass.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOpsTypes.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPaint.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrPaint.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrPaint.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPaint.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPersistentCacheUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrPersistentCacheUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrPersistentCacheUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPersistentCacheUtils.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPipeline.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrPipeline.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrPipeline.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPipeline.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPixmap.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessor.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProcessor.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProcessor.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessor.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorAnalysis.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProcessorAnalysis.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProcessorAnalysis.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorAnalysis.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorSet.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProcessorSet.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProcessorSet.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorSet.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorUnitTest.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProcessorUnitTest.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProcessorUnitTest.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorUnitTest.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProgramDesc.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProgramDesc.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProgramDesc.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProgramDesc.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProgramInfo.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProgramInfo.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProgramInfo.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProgramInfo.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProxyProvider.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProxyProvider.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrProxyProvider.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProxyProvider.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRecordingContext.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRecordingContext.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRecordingContext.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRecordingContextPriv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRecordingContextPriv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRecordingContextPriv.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRecordingContextPriv.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRefCnt.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTarget.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRenderTarget.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRenderTarget.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTarget.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTargetProxy.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRenderTargetProxy.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRenderTargetProxy.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTargetProxy.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRenderTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRenderTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTask.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTaskCluster.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRenderTaskCluster.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRenderTaskCluster.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTaskCluster.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceAllocator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrResourceAllocator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrResourceAllocator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceAllocator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceCache.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrResourceCache.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrResourceCache.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceCache.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceHandle.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceProvider.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrResourceProvider.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrResourceProvider.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceProvider.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceProviderPriv.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRingBuffer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRingBuffer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrRingBuffer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRingBuffer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSPIRVUniformHandler.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSPIRVUniformHandler.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSPIRVUniformHandler.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSPIRVUniformHandler.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSPIRVVaryingHandler.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSPIRVVaryingHandler.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSPIRVVaryingHandler.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSPIRVVaryingHandler.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSWMaskHelper.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSWMaskHelper.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSWMaskHelper.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSWMaskHelper.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSamplerState.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrScissorState.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSemaphore.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrShaderCaps.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrShaderCaps.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrShaderCaps.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrShaderCaps.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrShaderVar.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrShaderVar.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrShaderVar.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrShaderVar.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSimpleMesh.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStagingBufferManager.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrStagingBufferManager.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrStagingBufferManager.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStagingBufferManager.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStencilSettings.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrStencilSettings.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrStencilSettings.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStencilSettings.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStyle.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrStyle.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrStyle.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStyle.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurface.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSurface.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSurface.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurface.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceInfo.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSurfaceInfo.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSurfaceInfo.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceProxy.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSurfaceProxy.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSurfaceProxy.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceProxy.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceProxyPriv.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceProxyView.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSurfaceProxyView.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrSurfaceProxyView.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceProxyView.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTTopoSort.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTestUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTestUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTestUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTestUtils.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTexture.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTexture.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTexture.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTexture.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureProxy.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTextureProxy.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTextureProxy.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureProxy.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureProxyCacheAccess.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureProxyPriv.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureRenderTargetProxy.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTextureRenderTargetProxy.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTextureRenderTargetProxy.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureRenderTargetProxy.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureResolveManager.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureResolveRenderTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTextureResolveRenderTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTextureResolveRenderTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureResolveRenderTask.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrThreadSafeCache.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrThreadSafeCache.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrThreadSafeCache.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrThreadSafeCache.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrThreadSafePipelineBuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrThreadSafePipelineBuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrThreadSafePipelineBuilder.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrThreadSafePipelineBuilder.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTracing.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTransferFromRenderTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTransferFromRenderTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrTransferFromRenderTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTransferFromRenderTask.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrUniformDataManager.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrUniformDataManager.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrUniformDataManager.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrUniformDataManager.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrUserStencilSettings.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrUtil.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrUtil.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrUtil.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrUtil.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrVertexChunkArray.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrVertexChunkArray.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrVertexChunkArray.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrVertexChunkArray.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWaitRenderTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrWaitRenderTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrWaitRenderTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWaitRenderTask.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWindowRectangles.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWindowRectsState.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWritePixelsRenderTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrWritePixelsRenderTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrWritePixelsRenderTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWritePixelsRenderTask.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrXferProcessor.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrXferProcessor.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrXferProcessor.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrXferProcessor.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrYUVABackendTextures.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrYUVABackendTextures.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrYUVABackendTextures.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrYUVATextureProxies.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrYUVATextureProxies.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.GrYUVATextureProxies.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrYUVATextureProxies.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/PathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.PathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.PathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/PathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/PathRendererChain.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.PathRendererChain.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.PathRendererChain.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/PathRendererChain.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/SkGr.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.SkGr.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.SkGr.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/SkGr.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/StencilClip.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/StencilMaskHelper.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.StencilMaskHelper.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.StencilMaskHelper.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/StencilMaskHelper.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceContext.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.SurfaceContext.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.SurfaceContext.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceContext.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceDrawContext.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.SurfaceDrawContext.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.SurfaceDrawContext.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceDrawContext.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceFillContext.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.SurfaceFillContext.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gpu.SurfaceFillContext.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceFillContext.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/TestFormatColorTypeCombination.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrAtlasedShaderHelpers.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBezierEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrBezierEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrBezierEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBezierEffect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBicubicEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrBicubicEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrBicubicEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBicubicEffect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBitmapTextGeoProc.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrBitmapTextGeoProc.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrBitmapTextGeoProc.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBitmapTextGeoProc.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBlendFragmentProcessor.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrBlendFragmentProcessor.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrBlendFragmentProcessor.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBlendFragmentProcessor.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrConvexPolyEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrConvexPolyEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrConvexPolyEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrConvexPolyEffect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrCoverageSetOpXP.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrCoverageSetOpXP.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrCoverageSetOpXP.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrCoverageSetOpXP.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrCustomXfermode.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrCustomXfermode.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrCustomXfermode.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrCustomXfermode.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrDisableColorXP.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrDisableColorXP.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrDisableColorXP.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrDisableColorXP.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrDistanceFieldGeoProc.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrDistanceFieldGeoProc.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrDistanceFieldGeoProc.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrDistanceFieldGeoProc.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrGaussianConvolutionFragmentProcessor.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrGaussianConvolutionFragmentProcessor.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrGaussianConvolutionFragmentProcessor.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrGaussianConvolutionFragmentProcessor.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrMatrixConvolutionEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrMatrixConvolutionEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrMatrixConvolutionEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrMatrixConvolutionEffect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrMatrixEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrMatrixEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrMatrixEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrMatrixEffect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrModulateAtlasCoverageEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrModulateAtlasCoverageEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrModulateAtlasCoverageEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrModulateAtlasCoverageEffect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrOvalEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrOvalEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrOvalEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrOvalEffect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrPorterDuffXferProcessor.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrPorterDuffXferProcessor.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrPorterDuffXferProcessor.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrPorterDuffXferProcessor.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrRRectEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrRRectEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrRRectEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrRRectEffect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrShadowGeoProc.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrShadowGeoProc.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrShadowGeoProc.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrShadowGeoProc.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrSkSLFP.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrSkSLFP.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrSkSLFP.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrSkSLFP.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrTextureEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrTextureEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrTextureEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrTextureEffect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrYUVtoRGBEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrYUVtoRGBEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/effects/gpu.GrYUVtoRGBEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrYUVtoRGBEffect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrAAConvexTessellator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrAAConvexTessellator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrAAConvexTessellator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrAAConvexTessellator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrAATriangulator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrAATriangulator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrAATriangulator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrAATriangulator.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrInnerFanTriangulator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrPathUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrPathUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrPathUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrPathUtils.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrQuad.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrQuad.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrQuad.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrQuad.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrQuadBuffer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrQuadUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrQuadUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrQuadUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrQuadUtils.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrRect.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrShape.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrShape.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrShape.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrShape.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrStyledShape.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrStyledShape.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrStyledShape.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrStyledShape.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrTriangulator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrTriangulator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/geometry/gpu.GrTriangulator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrTriangulator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLBlend.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLBlend.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLBlend.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLBlend.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLColorSpaceXformHelper.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLFragmentShaderBuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLFragmentShaderBuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLFragmentShaderBuilder.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLFragmentShaderBuilder.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLProgramBuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLProgramBuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLProgramBuilder.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLProgramBuilder.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLProgramDataManager.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLProgramDataManager.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLProgramDataManager.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLProgramDataManager.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLShaderBuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLShaderBuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLShaderBuilder.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLShaderBuilder.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLUniformHandler.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLUniformHandler.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLUniformHandler.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLUniformHandler.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLVarying.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLVarying.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLVarying.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLVarying.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLVertexGeoBuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLVertexGeoBuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/glsl/gpu.GrGLSLVertexGeoBuilder.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLVertexGeoBuilder.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gradients/GrGradientBitmapCache.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gradients/gpu.GrGradientBitmapCache.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gradients/gpu.GrGradientBitmapCache.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gradients/GrGradientBitmapCache.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gradients/GrGradientShader.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gradients/gpu.GrGradientShader.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gradients/gpu.GrGradientShader.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gradients/GrGradientShader.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/GrImageUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.GrImageUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.GrImageUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/image/GrImageUtils.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/GrPinnableImage.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.GrPinnableImage.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.GrPinnableImage.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_Ganesh.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.SkImage_Ganesh.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.SkImage_Ganesh.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_Ganesh.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_GaneshBase.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.SkImage_GaneshBase.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.SkImage_GaneshBase.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_GaneshBase.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_GaneshFactories.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.SkImage_GaneshFactories.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.SkImage_GaneshFactories.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_GaneshYUVA.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.SkImage_GaneshYUVA.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/image/gpu.SkImage_GaneshYUVA.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_GaneshYUVA.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockAttachment.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockBuffer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockCaps.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/mock/gpu.GrMockCaps.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/mock/gpu.GrMockCaps.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockCaps.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockGpu.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/mock/gpu.GrMockGpu.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/mock/gpu.GrMockGpu.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockGpu.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockOpsRenderPass.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockRenderTask.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockSurfaceProxy.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockTexture.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockTypes.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/mock/gpu.GrMockTypes.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/mock/gpu.GrMockTypes.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AAConvexPathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AAConvexPathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AAConvexPathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AAConvexPathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AAHairLinePathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AAHairLinePathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AAHairLinePathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AAHairLinePathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AALinearizingConvexPathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AALinearizingConvexPathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AALinearizingConvexPathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AALinearizingConvexPathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasInstancedHelper.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AtlasInstancedHelper.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AtlasInstancedHelper.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasInstancedHelper.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasPathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AtlasPathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AtlasPathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasPathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasRenderTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AtlasRenderTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AtlasRenderTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasRenderTask.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasTextOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AtlasTextOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.AtlasTextOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasTextOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/ClearOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.ClearOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.ClearOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/ClearOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DashLinePathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DashLinePathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DashLinePathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DashLinePathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DashOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DashOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DashOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DashOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DefaultPathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DefaultPathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DefaultPathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DefaultPathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawAtlasOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DrawAtlasOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DrawAtlasOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawAtlasOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawAtlasPathOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DrawAtlasPathOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DrawAtlasPathOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawAtlasPathOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawMeshOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DrawMeshOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DrawMeshOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawMeshOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawableOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DrawableOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.DrawableOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawableOp.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/FillPathFlags.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/FillRRectOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.FillRRectOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.FillRRectOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/FillRRectOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/FillRectOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.FillRectOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.FillRectOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/FillRectOp.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrDrawOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrMeshDrawOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.GrMeshDrawOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.GrMeshDrawOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrMeshDrawOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.GrOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.GrOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrOvalOpFactory.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.GrOvalOpFactory.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.GrOvalOpFactory.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrOvalOpFactory.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrPathStencilSettings.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrSimpleMeshDrawOpHelper.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.GrSimpleMeshDrawOpHelper.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.GrSimpleMeshDrawOpHelper.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrSimpleMeshDrawOpHelper.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrSimpleMeshDrawOpHelperWithStencil.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.GrSimpleMeshDrawOpHelperWithStencil.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.GrSimpleMeshDrawOpHelperWithStencil.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrSimpleMeshDrawOpHelperWithStencil.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/LatticeOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.LatticeOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.LatticeOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/LatticeOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/OpsTask.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.OpsTask.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.OpsTask.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/OpsTask.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathInnerTriangulateOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.PathInnerTriangulateOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.PathInnerTriangulateOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathInnerTriangulateOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathStencilCoverOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.PathStencilCoverOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.PathStencilCoverOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathStencilCoverOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathTessellateOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.PathTessellateOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.PathTessellateOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathTessellateOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/QuadPerEdgeAA.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.QuadPerEdgeAA.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.QuadPerEdgeAA.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/QuadPerEdgeAA.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/RegionOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.RegionOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.RegionOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/RegionOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/ShadowRRectOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.ShadowRRectOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.ShadowRRectOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/ShadowRRectOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathAtlasMgr.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.SmallPathAtlasMgr.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.SmallPathAtlasMgr.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathAtlasMgr.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.SmallPathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.SmallPathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathShapeData.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.SmallPathShapeData.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.SmallPathShapeData.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathShapeData.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SoftwarePathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.SoftwarePathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.SoftwarePathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SoftwarePathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/StrokeRectOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.StrokeRectOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.StrokeRectOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/StrokeRectOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/StrokeTessellateOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.StrokeTessellateOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.StrokeTessellateOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/StrokeTessellateOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TessellationPathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.TessellationPathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.TessellationPathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TessellationPathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TextureOp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.TextureOp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.TextureOp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TextureOp.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TriangulatingPathRenderer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.TriangulatingPathRenderer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/ops/gpu.TriangulatingPathRenderer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TriangulatingPathRenderer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/surface/SkSurface_Ganesh.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/surface/gpu.SkSurface_Ganesh.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/surface/gpu.SkSurface_Ganesh.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrPathTessellationShader.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/tessellate/gpu.GrPathTessellationShader.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/tessellate/gpu.GrPathTessellationShader.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrPathTessellationShader.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrStrokeTessellationShader.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/tessellate/gpu.GrStrokeTessellationShader.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/tessellate/gpu.GrStrokeTessellationShader.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrStrokeTessellationShader.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrTessellationShader.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/tessellate/gpu.GrTessellationShader.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/tessellate/gpu.GrTessellationShader.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrTessellationShader.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/PathTessellator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/tessellate/gpu.PathTessellator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/tessellate/gpu.PathTessellator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/PathTessellator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/StrokeTessellator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/tessellate/gpu.StrokeTessellator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/tessellate/gpu.StrokeTessellator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/StrokeTessellator.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/VertexChunkPatchAllocator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/text/GrAtlasManager.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/text/gpu.GrAtlasManager.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/text/gpu.GrAtlasManager.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/text/GrAtlasManager.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkImage_AndroidFactories.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/image/gpu.SkImage_AndroidFactories.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/image/gpu.SkImage_AndroidFactories.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/webgl/GrGLMakeNativeInterface_webgl.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/webgl/gpu.GrGLMakeNativeInterface_webgl.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/webgl/gpu.GrGLMakeNativeInterface_webgl.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAssembleGLESInterfaceAutogen.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAssembleGLESInterfaceAutogen.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAssembleGLESInterfaceAutogen.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAssembleGLInterfaceAutogen.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAssembleGLInterfaceAutogen.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAssembleGLInterfaceAutogen.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAssembleHelpers.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAssembleHelpers.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAssembleHelpers.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAssembleInterface.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAssembleInterface.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAssembleInterface.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAssembleWebGLInterfaceAutogen.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAssembleWebGLInterfaceAutogen.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAssembleWebGLInterfaceAutogen.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAttachment.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAttachment.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLAttachment.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAttachment.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLBuffer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLBuffer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLBuffer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLBuffer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLCaps.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLCaps.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLCaps.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLCaps.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLContext.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLContext.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLContext.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLContext.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLDefines_impl.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLExtensions.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLExtensions.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLExtensions.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLGLSL.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLGLSL.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLGLSL.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLGLSL.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLGpu.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLGpu.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLGpu.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLGpu.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLGpuProgramCache.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLGpuProgramCache.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLGpuProgramCache.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLInterfaceAutogen.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLInterfaceAutogen.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLInterfaceAutogen.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLOpsRenderPass.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLOpsRenderPass.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLOpsRenderPass.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLOpsRenderPass.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLProgram.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLProgram.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLProgram.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLProgram.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLProgramDataManager.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLProgramDataManager.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLProgramDataManager.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLProgramDataManager.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLRenderTarget.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLRenderTarget.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLRenderTarget.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLRenderTarget.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLSemaphore.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLSemaphore.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLSemaphore.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLSemaphore.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLTexture.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLTexture.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLTexture.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLTexture.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLTextureRenderTarget.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLTextureRenderTarget.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLTextureRenderTarget.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLTextureRenderTarget.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLTypesPriv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLTypesPriv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLTypesPriv.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLUniformHandler.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLUniformHandler.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLUniformHandler.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLUniformHandler.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLUtil.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLUtil.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLUtil.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLUtil.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLVaryingHandler.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLVertexArray.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLVertexArray.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/gpu.GrGLVertexArray.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLVertexArray.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/builders/GrGLProgramBuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/builders/gpu.GrGLProgramBuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/builders/gpu.GrGLProgramBuilder.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/builders/GrGLProgramBuilder.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/builders/GrGLShaderStringBuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/builders/gpu.GrGLShaderStringBuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/gl/builders/gpu.GrGLShaderStringBuilder.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/builders/GrGLShaderStringBuilder.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/gl/GrGLDefines.h" />
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/GrVkBackendContext.h" />
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/GrVkExtensions.h" />
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/GrVkMemoryAllocator.h" />
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/GrVkTypes.h" />
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrVkTypesPriv.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkBuffer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkBuffer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkBuffer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkBuffer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCaps.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkCaps.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkCaps.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCaps.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCommandBuffer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkCommandBuffer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkCommandBuffer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCommandBuffer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCommandPool.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkCommandPool.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkCommandPool.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCommandPool.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorPool.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkDescriptorPool.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkDescriptorPool.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorPool.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorSet.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkDescriptorSet.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkDescriptorSet.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorSet.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorSetManager.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkDescriptorSetManager.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkDescriptorSetManager.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorSetManager.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkFramebuffer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkFramebuffer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkFramebuffer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkFramebuffer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkGpu.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkGpu.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkGpu.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkGpu.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkImage.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkImage.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkImage.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkImage.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkImageLayout.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkImageView.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkImageView.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkImageView.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkImageView.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkMSAALoadManager.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkMSAALoadManager.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkMSAALoadManager.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkMSAALoadManager.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkManagedResource.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkOpsRenderPass.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkOpsRenderPass.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkOpsRenderPass.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkOpsRenderPass.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipeline.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkPipeline.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkPipeline.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipeline.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineState.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkPipelineState.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkPipelineState.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineState.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineStateBuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkPipelineStateBuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkPipelineStateBuilder.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineStateBuilder.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineStateCache.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkPipelineStateCache.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkPipelineStateCache.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineStateDataManager.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkPipelineStateDataManager.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkPipelineStateDataManager.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineStateDataManager.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkRenderPass.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkRenderPass.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkRenderPass.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkRenderPass.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkRenderTarget.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkRenderTarget.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkRenderTarget.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkRenderTarget.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkResourceProvider.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkResourceProvider.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkResourceProvider.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkResourceProvider.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSampler.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkSampler.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkSampler.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSampler.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSamplerYcbcrConversion.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkSamplerYcbcrConversion.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkSamplerYcbcrConversion.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSamplerYcbcrConversion.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSemaphore.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkSemaphore.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkSemaphore.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSemaphore.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkTexture.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkTexture.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkTexture.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkTexture.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkTextureRenderTarget.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkTextureRenderTarget.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkTextureRenderTarget.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkTextureRenderTarget.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkTypesPriv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkTypesPriv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkTypesPriv.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkUniformHandler.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkUniformHandler.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkUniformHandler.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkUniformHandler.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkUtil.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkUtil.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkUtil.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkUtil.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkVaryingHandler.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkVaryingHandler.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/ganesh/vk/gpu.GrVkVaryingHandler.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkVaryingHandler.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/gpu.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja -C $(OutDir) -tclean canvaskit/obj/third_party/skia/gpu.stamp" />
+  </Target>
+</Project>

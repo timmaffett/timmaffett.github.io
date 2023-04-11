@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{14289797-007B-0B77-12A7-811EEC08C310}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>sksg</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\canvaskit/obj/third_party/skia/modules/sksg/sksg.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../../../..;../../../../../../../../out/host_debug_unopt/canvaskit/gen;../../../../../../../../third_party/skia/modules/sksg/include;../../../../../../../../third_party/skia;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-strict-aliasing -fcolor-diagnostics -fvisibility-inlines-hidden -std=c++17 -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -fno-rtti -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_OPENSSL=1;_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS;_DEBUG;SK_GAMMA_APPLY_TO_A8;SK_TYPEFACE_FACTORY_FREETYPE;SK_GL;SK_ENABLE_DUMP_GPU;SK_VULKAN;SK_CODEC_DECODES_JPEG;SK_ENCODE_JPEG;SK_CODEC_DECODES_PNG;SK_ENCODE_PNG;SK_CODEC_DECODES_WEBP;SK_HAS_WUFFS_LIBRARY;SK_DISABLE_AAA;SK_LEGACY_IGNORE_DRAW_VERTICES_BLEND_WITH_NO_SHADER;SK_DISABLE_LEGACY_SHADERCONTEXT;SK_DISABLE_LOWP_RASTER_PIPELINE;SK_FORCE_RASTER_PIPELINE_BLITTER;SK_METAL_WAIT_UNTIL_SCHEDULED;SK_DISABLE_EFFECT_DESERIALIZATION;SK_ENABLE_SKSL;SK_ENABLE_PRECOMPILE;SKNX_NO_SIMD;SK_FORCE_AAA;SK_FORCE_8_BYTE_ALIGNMENT;SK_GANESH;SK_LEGACY_LAYER_BOUNDS_EXPANSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGClipEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGClipEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGClipEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGColorFilter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGColorFilter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGColorFilter.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGDraw.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGDraw.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGDraw.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGEffectNode.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGEffectNode.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGEffectNode.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGGeometryEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGGeometryEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGGeometryEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGGeometryNode.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGGeometryNode.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGGeometryNode.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGGradient.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGGradient.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGGradient.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGGroup.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGGroup.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGGroup.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGImage.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGImage.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGImage.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGInvalidationController.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGInvalidationController.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGInvalidationController.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGMaskEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGMaskEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGMaskEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGMerge.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGMerge.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGMerge.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGNode.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGNode.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGNode.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGNodePriv.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGOpacityEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGOpacityEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGOpacityEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGPaint.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGPaint.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGPaint.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGPath.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGPath.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGPath.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGPlane.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGPlane.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGPlane.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGRect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGRect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGRect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGRenderEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGRenderEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGRenderEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGRenderNode.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGRenderNode.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGRenderNode.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGScene.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGScene.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGScene.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGText.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGText.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGText.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGTransform.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGTransform.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/sksg/src/sksg.SkSGTransform.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGTransformPriv.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/sksg/sksg.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja -C $(OutDir) -tclean canvaskit/obj/third_party/skia/modules/sksg/sksg.stamp" />
+  </Target>
+</Project>

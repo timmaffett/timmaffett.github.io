@@ -1,0 +1,2998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include\private">
+      <UniqueIdentifier>{694F74F1-934E-94F8-7B8C-16B2A57A03E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{882A7C1D-17D6-E17D-2881-F3658AB049AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\private\base">
+      <UniqueIdentifier>{56BD6E23-EF36-E657-5EB1-8459EC116E28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\private\chromium">
+      <UniqueIdentifier>{680728DB-5130-8A27-6514-8F0A74056287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base">
+      <UniqueIdentifier>{D1B18317-D6F2-36BC-598B-58D0029825FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{AFD75FDB-0789-D3F8-5663-F4E6C06D9784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\image">
+      <UniqueIdentifier>{4F8CEDB4-A21C-AEA2-8995-96CD5A55D33D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lazy">
+      <UniqueIdentifier>{1D0151E1-C033-A1A0-BA6A-4D05CCAC6C0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\opts">
+      <UniqueIdentifier>{26518198-E05B-022E-B2F5-5A9D8C4F383C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\shaders">
+      <UniqueIdentifier>{15633EEB-6588-3975-4345-DC82A02CD2B7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\text">
+      <UniqueIdentifier>{3804D58C-1CC2-3DA2-5FF9-E8139A482587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\pathops">
+      <UniqueIdentifier>{A46682AE-B9D2-1D7C-053A-4DDD0275FA1E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{8FC2063E-4721-2C9C-FF62-6C19AE822741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils\mac">
+      <UniqueIdentifier>{54657238-8BB7-EFD2-3A48-C6BA813BF368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils\win">
+      <UniqueIdentifier>{B89E8FEE-4134-2787-FA57-534258B0E327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\effects">
+      <UniqueIdentifier>{2E771C6D-D5D7-7688-B01E-2CAA009B657C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\shaders\gradients">
+      <UniqueIdentifier>{A1286A88-2A2D-09D5-8278-53509E56570A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\effects\imagefilters">
+      <UniqueIdentifier>{43BFC556-5483-0CDC-F671-3DB98FAF7763}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\codec">
+      <UniqueIdentifier>{E4ACFA78-382F-1EE9-826D-BFA90457E100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\encode">
+      <UniqueIdentifier>{94B92C58-8F0A-8365-DBF9-83329B85C43F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\android">
+      <UniqueIdentifier>{E36F3901-7E9F-B828-2E48-9C594A78FE67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ports">
+      <UniqueIdentifier>{53D64102-7E15-4D31-9778-9926B4F6A6CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sfnt">
+      <UniqueIdentifier>{AA90FDD1-BCAD-9A79-0DED-E03C4CCFC069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\sksl">
+      <UniqueIdentifier>{E1D53B53-E5D6-161B-5AD4-C3312CDBDD85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sksl">
+      <UniqueIdentifier>{F6347FB6-4C9D-6A9B-FA83-09F4F2199FE1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sksl\analysis">
+      <UniqueIdentifier>{B1F4FB6E-867C-5C3A-3D64-4E457E373987}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sksl\codegen">
+      <UniqueIdentifier>{6FF96E43-DA6F-17D1-7A94-3A59DD485D71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sksl\dsl">
+      <UniqueIdentifier>{68243A17-A1D9-9757-2C14-D853259B7C67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sksl\dsl\priv">
+      <UniqueIdentifier>{86D6895F-F3B5-E00E-7C13-0004D5FC7C21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sksl\ir">
+      <UniqueIdentifier>{8C840217-05F2-9308-00AA-FCD47CD847CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sksl\tracing">
+      <UniqueIdentifier>{6E562299-5097-2A20-E3FC-22E673EE9312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sksl\transform">
+      <UniqueIdentifier>{361EAAD5-A869-4A40-3B0B-0F742F56FC7F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../third_party/skia/include/private/SkBitmaskEnum.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkChecksum.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkColorData.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkEncodedInfo.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkGainmapInfo.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkGainmapShader.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkIDChangeListener.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkOpts_spi.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkPathRef.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkShadowFlags.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkSpinlock.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkWeakRefCnt.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SingleOwner.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkAPI.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkAlign.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkAlignedStorage.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkAssert.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkAttributes.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkCPUTypes.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkContainers.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkDebug.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkDeque.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkFeatures.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkFixed.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkFloatBits.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkFloatingPoint.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkLoadUserConfig.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkMacros.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkMalloc.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkMath.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkMutex.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkNoncopyable.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkOnce.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkPathEnums.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkSafe32.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkSemaphore.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkSpan_impl.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkTArray.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkTDArray.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkTFitsIn.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkTLogic.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkTPin.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkTemplates.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkThreadAnnotations.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkThreadID.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkTo.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SkTypeTraits.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/chromium/SkChromeRemoteGlyphCache.h">
+      <Filter>include\private\chromium</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/chromium/Slug.h">
+      <Filter>include\private\chromium</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkASAN.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkArenaAlloc.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkArenaAlloc.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkArenaAllocList.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkAutoMalloc.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkBezierCurves.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkBezierCurves.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkBlockAllocator.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkBlockAllocator.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkBuffer.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkBuffer.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkContainers.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkCubics.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkCubics.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkDeque.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkEndian.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkFloatingPoint.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkHalf.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkHalf.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkLeanWindows.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkMSAN.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkMalloc.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkMathPriv.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkMathPriv.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkQuads.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkQuads.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkRandom.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkRectMemcpy.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkSafeMath.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkSafeMath.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkScopeExit.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkSemaphore.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkStringView.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkTBlockList.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkTDArray.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkTDPQueue.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkTInternalLList.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkTLazy.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkTSearch.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkTSearch.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkTSort.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkThreadID.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkUTF.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkUTF.h">
+      <Filter>src\base</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/base/SkUtils.cpp">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/base/SkUtils.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkVx.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/base/SkZip.h">
+      <Filter>src\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/Sk4px.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkAAClip.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkAAClip.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkATrace.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkATrace.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkAdvancedTypefaceMetrics.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkAlphaRuns.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkAnalyticEdge.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkAnalyticEdge.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkAnnotation.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkAnnotationKeys.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkAntiRun.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkAutoBlitterChoose.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkAutoPixmapStorage.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkAutoPixmapStorage.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBBHFactory.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBitmap.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBitmapCache.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkBitmapCache.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBitmapDevice.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkBitmapDevice.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBitmapProcState.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkBitmapProcState.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBitmapProcState_matrixProcs.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBlendMode.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBlendModeBlender.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkBlendModeBlender.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkBlendModePriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkBlenderBase.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkBlitBWMaskTemplate.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkBlitRow.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBlitRow_D32.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBlitter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkBlitter.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBlitter_A8.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkBlitter_A8.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBlitter_ARGB32.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBlitter_Sprite.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBlurMF.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBlurMask.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkBlurMask.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkCachedData.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkCachedData.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkCanvas.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkCanvasPriv.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkCanvasPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkCanvas_Raster.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkCapabilities.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkChromeRemoteGlyphCache.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkClipStack.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkClipStack.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkClipStackDevice.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkClipStackDevice.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkColor.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkColorFilter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkColorFilterBase.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkColorFilterPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkColorFilter_Matrix.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkColorSpace.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkColorSpacePriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkColorSpaceXformSteps.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkColorSpaceXformSteps.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkCompressedDataUtils.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkCompressedDataUtils.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkContourMeasure.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkConvertPixels.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkConvertPixels.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkCoreBlitters.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkCpu.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkCpu.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkCubicClipper.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkCubicClipper.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkCubicMap.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkData.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDataTable.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDebug.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkDebugUtils.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDeferredDisplayList.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkDeferredDisplayListPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDeferredDisplayListRecorder.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDescriptor.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkDescriptor.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDevice.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkDevice.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDistanceFieldGen.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkDistanceFieldGen.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDocument.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDraw.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkDraw.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDrawBase.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkDrawBase.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDrawLooper.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkDrawProcs.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDrawShadowInfo.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkDrawShadowInfo.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDraw_atlas.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDraw_text.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDraw_vertices.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkDrawable.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkEdge.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkEdge.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkEdgeBuilder.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkEdgeBuilder.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkEdgeClipper.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkEdgeClipper.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkEffectPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkEnumBitMask.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkEnumerate.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkExecutor.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkFDot6.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkFlattenable.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkFont.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkFontDescriptor.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkFontDescriptor.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkFontMetricsPriv.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkFontMetricsPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkFontMgr.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkFontMgrPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkFontPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkFontStream.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkFontStream.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkFont_serial.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkFuzzLogging.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkGaussFilter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkGaussFilter.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkGeometry.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkGeometry.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkGlobalInitialization_core.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkGlyph.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkGlyph.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkGlyphRunPainter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkGlyphRunPainter.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkGpuBlurUtils.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkGpuBlurUtils.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkGraphics.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkIDChangeListener.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkIPoint16.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkImageFilter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkImageFilterCache.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkImageFilterCache.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkImageFilterTypes.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkImageFilterTypes.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkImageFilter_Base.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkImageGenerator.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkImageInfo.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkImageInfoPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkImagePriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkLRUCache.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkLatticeIter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkLatticeIter.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkLineClipper.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkLineClipper.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkLocalMatrixImageFilter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkLocalMatrixImageFilter.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkM44.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMD5.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMD5.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMallocPixelRef.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMask.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMask.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMaskBlurFilter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMaskBlurFilter.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMaskCache.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMaskCache.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMaskFilter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMaskFilterBase.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMaskGamma.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMaskGamma.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMatrix.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMatrixInvert.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMatrixInvert.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkMatrixPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkMatrixProvider.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkMatrixUtils.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMesh.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMeshPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkMessageBus.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMipmap.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMipmap.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMipmapAccessor.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMipmapAccessor.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkMipmapBuilder.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkMipmapBuilder.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkModeColorFilter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkNextID.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkOSFile.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkOpts.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkOpts.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkOpts_erms.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkOverdrawCanvas.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPaint.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPaintDefaults.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPaintPriv.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPaintPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPath.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPathBuilder.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPathEffect.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPathEffectBase.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkPathMakers.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPathMeasure.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPathMeasurePriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkPathPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPathRef.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPathUtils.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPath_serial.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPicturePriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPixelRef.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPixelRefPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPixmap.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPixmapDraw.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPoint.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPoint3.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPointPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPromiseImageTexture.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPtrRecorder.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPtrRecorder.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkQuadClipper.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkQuadClipper.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRRect.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRRectPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRSXform.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRTree.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRTree.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRasterClip.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRasterClip.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkRasterClipStack.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRasterPipeline.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRasterPipeline.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRasterPipelineBlitter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRasterPipelineOpContexts.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkRasterPipelineOpList.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkReadBuffer.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkReadBuffer.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkReadPixelsRec.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkReadPixelsRec.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRecord.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRecord.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRecordDraw.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRecordDraw.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRecordOpts.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRecordOpts.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkRecordPattern.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRecords.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRecords.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRect.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRectPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRegion.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRegionPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRegion_path.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkResourceCache.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkResourceCache.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRuntimeEffect.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRuntimeEffectPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkSLTypeShared.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkSLTypeShared.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkSafeRange.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkSamplingPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkScalar.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkScaleToSides.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkScalerContext.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkScalerContext.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkScan.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkScan.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkScanPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkScan_AAAPath.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkScan_AntiPath.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkScan_Antihair.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkScan_Hairline.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkScan_Path.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkScan_SAAPath.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkSharedMutex.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkSharedMutex.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkSpecialImage.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkSpecialImage.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkSpecialSurface.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkSpecialSurface.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkSpinlock.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkSpriteBlitter.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkSpriteBlitter_ARGB32.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkStream.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkStreamPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkStrike.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkStrike.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkStrikeCache.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkStrikeCache.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkStrikeSpec.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkStrikeSpec.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkString.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkStringUtils.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkStringUtils.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkStroke.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkStroke.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkStrokeRec.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkStrokerPriv.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkStrokerPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkSurfaceCharacterization.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkSurfacePriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkSwizzle.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkSwizzlePriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkTDynamicHash.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkTHash.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkTMultiMap.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkTaskGroup.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkTaskGroup.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkTextBlob.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkTextBlobPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkTextBlobTrace.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkTextBlobTrace.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkTextFormatParams.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkTime.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkTraceEvent.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkTraceEventCommon.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkTypeface.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkTypefaceCache.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkTypefaceCache.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkTypeface_remote.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkTypeface_remote.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkUnPreMultiply.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkVM.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkVM.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkVMBlitter.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkVMBlitter.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkVM_fwd.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkValidationUtils.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkVertState.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkVertState.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkVertices.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkVerticesPriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkWriteBuffer.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkWriteBuffer.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkWritePixelsRec.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkWritePixelsRec.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkWriter32.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkWriter32.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkXfermode.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkXfermodeInterpretation.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkXfermodeInterpretation.h">
+      <Filter>src\core</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/core/SkXfermodePriv.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkXfermode_Raster.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkYUVAInfo.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkYUVAInfoLocation.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkYUVAPixmaps.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkYUVMath.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkYUVMath.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkYUVPlanesCache.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkYUVPlanesCache.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkImage.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkImage_Base.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/image/SkImage_Base.h">
+      <Filter>src\image</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkImage_Lazy.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/image/SkImage_Lazy.h">
+      <Filter>src\image</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkImage_LazyFactories.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkImage_Raster.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/image/SkImage_Raster.h">
+      <Filter>src\image</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkImage_RasterFactories.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkRescaleAndReadPixels.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/image/SkRescaleAndReadPixels.h">
+      <Filter>src\image</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkSurface.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkSurface_Base.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/image/SkSurface_Base.h">
+      <Filter>src\image</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkSurface_Null.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkSurface_Raster.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/image/SkSurface_Raster.h">
+      <Filter>src\image</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/lazy/SkDiscardableMemoryPool.cpp">
+      <Filter>src\lazy</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/lazy/SkDiscardableMemoryPool.h">
+      <Filter>src\lazy</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/opts/SkBitmapProcState_opts.h">
+      <Filter>src\opts</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/opts/SkBlitMask_opts.h">
+      <Filter>src\opts</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/opts/SkBlitRow_opts.h">
+      <Filter>src\opts</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/opts/SkChecksum_opts.h">
+      <Filter>src\opts</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/opts/SkRasterPipeline_opts.h">
+      <Filter>src\opts</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/opts/SkSwizzler_opts.h">
+      <Filter>src\opts</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/opts/SkUtils_opts.h">
+      <Filter>src\opts</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/opts/SkVM_opts.h">
+      <Filter>src\opts</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/opts/SkXfermode_opts.h">
+      <Filter>src\opts</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkBitmapProcShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/shaders/SkBitmapProcShader.h">
+      <Filter>src\shaders</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkColorFilterShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/shaders/SkColorFilterShader.h">
+      <Filter>src\shaders</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkColorShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkComposeShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkCoordClampShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkEmptyShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkGainmapShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkImageShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/shaders/SkImageShader.h">
+      <Filter>src\shaders</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkLocalMatrixShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/shaders/SkLocalMatrixShader.h">
+      <Filter>src\shaders</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkPerlinNoiseShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/shaders/SkShaderBase.h">
+      <Filter>src\shaders</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkTransformShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/shaders/SkTransformShader.h">
+      <Filter>src\shaders</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/GlyphRun.cpp">
+      <Filter>src\text</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/GlyphRun.h">
+      <Filter>src\text</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/StrikeForGPU.cpp">
+      <Filter>src\text</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/StrikeForGPU.h">
+      <Filter>src\text</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkAddIntersections.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkAddIntersections.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkDConicLineIntersection.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkDCubicLineIntersection.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkDCubicToQuads.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkDLineIntersection.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkDQuadLineIntersection.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkIntersectionHelper.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkIntersections.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkIntersections.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkLineParameters.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkOpAngle.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkOpAngle.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkOpBuilder.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkOpCoincidence.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkOpCoincidence.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkOpContour.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkOpContour.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkOpCubicHull.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkOpEdgeBuilder.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkOpEdgeBuilder.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkOpSegment.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkOpSegment.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkOpSpan.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkOpSpan.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsAsWinding.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsBounds.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsCommon.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsCommon.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsConic.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsConic.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsCubic.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsCubic.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsCurve.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsCurve.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsDebug.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsDebug.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsLine.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsLine.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsOp.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsPoint.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsQuad.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsQuad.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsRect.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsRect.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsSimplify.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsTCurve.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsTSect.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsTSect.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsTightBounds.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsTypes.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathOpsTypes.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathOpsWinding.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkPathWriter.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkPathWriter.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/pathops/SkReduceOrder.cpp">
+      <Filter>src\pathops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/pathops/SkReduceOrder.h">
+      <Filter>src\pathops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkBigPicture.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkBigPicture.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPicture.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPictureData.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPictureData.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPictureFlat.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPictureFlat.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPictureImageGenerator.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPicturePlayback.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPicturePlayback.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPictureRecord.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkPictureRecord.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkPictureRecorder.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRecordedDrawable.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRecordedDrawable.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/core/SkRecorder.cpp">
+      <Filter>src\core</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/core/SkRecorder.h">
+      <Filter>src\core</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/SkPictureShader.cpp">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkAnimCodecPlayer.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkBase64.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkBitSet.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/utils/SkBlitterTrace.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/utils/SkBlitterTraceCommon.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/utils/SkCallableTraits.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkCamera.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkCanvasStack.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkCanvasStack.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkCanvasStateUtils.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkCharToGlyphCache.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkCharToGlyphCache.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkClipStackUtils.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkClipStackUtils.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkCustomTypeface.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkCycles.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkDashPath.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkDashPathPriv.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkEventTracer.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkFloatToDecimal.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkFloatToDecimal.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/utils/SkFloatUtils.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkGaussianColorFilter.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkJSON.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkJSON.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkJSONWriter.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkJSONWriter.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkMatrix22.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkMatrix22.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkMultiPictureDocument.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkMultiPictureDocumentPriv.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkNWayCanvas.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkNullCanvas.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkOSPath.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkOSPath.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkOrderedFontMgr.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkPaintFilterCanvas.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkParse.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkParseColor.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkParsePath.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkPatchUtils.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkPatchUtils.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkPolyUtils.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkPolyUtils.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkShaderUtils.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkShaderUtils.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkShadowTessellator.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkShadowTessellator.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkShadowUtils.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkTestCanvas.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkTextUtils.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/SkVMVisualizer.cpp">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkVMVisualizer.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/utils/mac/SkCGBase.h">
+      <Filter>src\utils\mac</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/utils/mac/SkCGGeometry.h">
+      <Filter>src\utils\mac</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/mac/SkCTFont.cpp">
+      <Filter>src\utils\mac</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/mac/SkCTFont.h">
+      <Filter>src\utils\mac</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/mac/SkCreateCGImageRef.cpp">
+      <Filter>src\utils\mac</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/mac/SkUniqueCFRef.h">
+      <Filter>src\utils\mac</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/win/SkAutoCoInitialize.cpp">
+      <Filter>src\utils\win</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/win/SkAutoCoInitialize.h">
+      <Filter>src\utils\win</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/win/SkDWrite.cpp">
+      <Filter>src\utils\win</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/win/SkDWrite.h">
+      <Filter>src\utils\win</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/win/SkDWriteFontFileStream.cpp">
+      <Filter>src\utils\win</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/win/SkDWriteFontFileStream.h">
+      <Filter>src\utils\win</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/win/SkDWriteGeometrySink.cpp">
+      <Filter>src\utils\win</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/win/SkDWriteGeometrySink.h">
+      <Filter>src\utils\win</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/utils/win/SkDWriteNTDDI_VERSION.h">
+      <Filter>src\utils\win</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/win/SkHRESULT.cpp">
+      <Filter>src\utils\win</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/win/SkHRESULT.h">
+      <Filter>src\utils\win</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/win/SkIStream.cpp">
+      <Filter>src\utils\win</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/win/SkIStream.h">
+      <Filter>src\utils\win</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/utils/win/SkObjBase.h">
+      <Filter>src\utils\win</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/utils/win/SkTScopedComPtr.h">
+      <Filter>src\utils\win</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/utils/win/SkWGL.h">
+      <Filter>src\utils\win</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/utils/win/SkWGL_win.cpp">
+      <Filter>src\utils\win</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/utils/SkMultiPictureDocument.h">
+      <Filter>src\utils</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/Sk1DPathEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/Sk2DPathEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkBlenders.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkColorMatrix.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkColorMatrixFilter.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkCornerPathEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/effects/SkDashImpl.h">
+      <Filter>src\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkDashPathEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkDiscretePathEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkEmbossMask.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/effects/SkEmbossMask.h">
+      <Filter>src\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkEmbossMaskFilter.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/effects/SkEmbossMaskFilter.h">
+      <Filter>src\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkHighContrastFilter.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkLayerDrawLooper.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkLumaColorFilter.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/effects/SkOpPE.h">
+      <Filter>src\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkOpPathEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkOverdrawColorFilter.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkShaderMaskFilter.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkTableColorFilter.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkTableMaskFilter.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/effects/SkTrimPE.h">
+      <Filter>src\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/SkTrimPathEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/gradients/SkGradientShader.cpp">
+      <Filter>src\shaders\gradients</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/gradients/SkGradientShaderBase.cpp">
+      <Filter>src\shaders\gradients</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/shaders/gradients/SkGradientShaderBase.h">
+      <Filter>src\shaders\gradients</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/gradients/SkLinearGradient.cpp">
+      <Filter>src\shaders\gradients</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/shaders/gradients/SkLinearGradient.h">
+      <Filter>src\shaders\gradients</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/gradients/SkRadialGradient.cpp">
+      <Filter>src\shaders\gradients</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/gradients/SkSweepGradient.cpp">
+      <Filter>src\shaders\gradients</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/shaders/gradients/SkTwoPointConicalGradient.cpp">
+      <Filter>src\shaders\gradients</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkAlphaThresholdImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkArithmeticImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkBlendImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkBlurImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkColorFilterImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkComposeImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkCropImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkDisplacementMapImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkDropShadowImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkImageImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkLightingImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkMagnifierImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkMatrixConvolutionImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkMatrixTransformImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkMergeImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkMorphologyImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkPictureImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkRuntimeImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkShaderImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/effects/imagefilters/SkTileImageFilter.cpp">
+      <Filter>src\effects\imagefilters</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkCodec.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkCodecImageGenerator.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkCodecImageGenerator.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/codec/SkCodecPriv.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkColorTable.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkColorTable.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/codec/SkFrameHolder.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkMaskSwizzler.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkMaskSwizzler.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkMasks.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkMasks.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkPixmapUtils.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkPixmapUtils.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkSampler.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkSampler.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkSwizzler.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkSwizzler.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkBmpBaseCodec.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkBmpBaseCodec.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkBmpCodec.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkBmpCodec.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkBmpMaskCodec.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkBmpMaskCodec.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkBmpRLECodec.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkBmpRLECodec.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkBmpStandardCodec.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkBmpStandardCodec.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkWbmpCodec.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/codec/SkWbmpCodec.h">
+      <Filter>src\codec</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/encode/SkEncoder.cpp">
+      <Filter>src\encode</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/encode/SkICC.cpp">
+      <Filter>src\encode</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/encode/SkICCPriv.h">
+      <Filter>src\encode</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/encode/SkImageEncoder.cpp">
+      <Filter>src\encode</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/encode/SkImageEncoderFns.h">
+      <Filter>src\encode</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/encode/SkImageEncoderPriv.h">
+      <Filter>src\encode</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/android/SkAndroidFrameworkUtils.cpp">
+      <Filter>src\android</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/android/SkAnimatedImage.cpp">
+      <Filter>src\android</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkAndroidCodec.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkAndroidCodecAdapter.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkEncodedInfo.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkParseEncodedOrigin.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/codec/SkSampledCodec.cpp">
+      <Filter>src\codec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/ports/SkDiscardableMemory_none.cpp">
+      <Filter>src\ports</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/ports/SkGlobalInitialization_default.cpp">
+      <Filter>src\ports</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/ports/SkImageGenerator_skia.cpp">
+      <Filter>src\ports</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/ports/SkMemory_malloc.cpp">
+      <Filter>src\ports</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/ports/SkOSFile_stdio.cpp">
+      <Filter>src\ports</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sfnt/SkOTTable_name.cpp">
+      <Filter>src\sfnt</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sfnt/SkOTUtils.cpp">
+      <Filter>src\sfnt</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/include/private/SkSLDefines.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkSLIRNode.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkSLLayout.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkSLModifiers.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkSLProgramElement.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkSLProgramKind.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkSLSampleUsage.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkSLStatement.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkSLString.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/SkSLSymbol.h">
+      <Filter>include\private</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSL.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSLBlock.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSLCase.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSLCore.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSLExpression.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSLFunction.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSLLayout.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSLModifiers.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSLStatement.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSLType.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/DSLVar.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/SkSLDebugTrace.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/SkSLErrorReporter.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/SkSLOperator.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/SkSLPosition.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/sksl/SkSLVersion.h">
+      <Filter>include\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLAnalysis.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLAnalysis.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLBuiltinTypes.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLBuiltinTypes.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLCompiler.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLCompiler.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLConstantFolder.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLConstantFolder.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLContext.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLContext.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLErrorReporter.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLFileOutputStream.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLGLSL.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLInliner.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLInliner.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLIntrinsicList.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLIntrinsicList.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLLexer.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLLexer.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLMangler.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLMangler.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLMemoryLayout.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLMemoryPool.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLModifiersPool.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLModuleLoader.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLModuleLoader.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLOperator.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLOutputStream.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLOutputStream.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLParser.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLParser.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLPool.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLPool.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLPosition.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLProgramSettings.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLSampleUsage.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLString.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLStringStream.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLThreadContext.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLThreadContext.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/SkSLUtil.cpp">
+      <Filter>src\sksl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/SkSLUtil.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLCanExitWithoutReturningValue.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLCheckProgramStructure.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLFinalizationChecks.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLGetLoopControlFlowInfo.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLGetLoopUnrollInfo.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLGetReturnComplexity.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLHasSideEffects.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLIsConstantExpression.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLIsDynamicallyUniformExpression.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLIsSameExpressionTree.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLIsTrivialExpression.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLNoOpErrorReporter.h">
+      <Filter>src\sksl\analysis</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLProgramUsage.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLProgramUsage.h">
+      <Filter>src\sksl\analysis</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLProgramVisitor.h">
+      <Filter>src\sksl\analysis</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLReturnsInputAlpha.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLSwitchCaseContainsExit.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/analysis/SkSLSymbolTableStackBuilder.cpp">
+      <Filter>src\sksl\analysis</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLRasterPipelineBuilder.cpp">
+      <Filter>src\sksl\codegen</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLRasterPipelineBuilder.h">
+      <Filter>src\sksl\codegen</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLRasterPipelineCodeGenerator.cpp">
+      <Filter>src\sksl\codegen</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLRasterPipelineCodeGenerator.h">
+      <Filter>src\sksl\codegen</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLVMCodeGenerator.cpp">
+      <Filter>src\sksl\codegen</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLVMCodeGenerator.h">
+      <Filter>src\sksl\codegen</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/dsl/DSLBlock.cpp">
+      <Filter>src\sksl\dsl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/dsl/DSLCase.cpp">
+      <Filter>src\sksl\dsl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/dsl/DSLCore.cpp">
+      <Filter>src\sksl\dsl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/dsl/DSLExpression.cpp">
+      <Filter>src\sksl\dsl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/dsl/DSLFunction.cpp">
+      <Filter>src\sksl\dsl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/dsl/DSLLayout.cpp">
+      <Filter>src\sksl\dsl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/dsl/DSLStatement.cpp">
+      <Filter>src\sksl\dsl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/dsl/DSLType.cpp">
+      <Filter>src\sksl\dsl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/dsl/DSLVar.cpp">
+      <Filter>src\sksl\dsl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/dsl/priv/DSLWriter.cpp">
+      <Filter>src\sksl\dsl\priv</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/dsl/priv/DSLWriter.h">
+      <Filter>src\sksl\dsl\priv</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/dsl/priv/DSL_priv.h">
+      <Filter>src\sksl\dsl\priv</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLBinaryExpression.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLBinaryExpression.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLBlock.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLBlock.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLBreakStatement.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLChildCall.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLChildCall.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructor.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructor.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorArray.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorArray.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorArrayCast.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorArrayCast.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorCompound.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorCompound.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorCompoundCast.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorCompoundCast.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorDiagonalMatrix.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorDiagonalMatrix.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorMatrixResize.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorMatrixResize.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorScalarCast.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorScalarCast.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorSplat.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorSplat.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorStruct.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLConstructorStruct.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLContinueStatement.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLDiscardStatement.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLDiscardStatement.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLDoStatement.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLDoStatement.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLExpression.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLExpression.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLExpressionStatement.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLExpressionStatement.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLExtension.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLField.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLFieldAccess.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLFieldAccess.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLForStatement.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLForStatement.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLFunctionCall.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLFunctionCall.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLFunctionDeclaration.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLFunctionDeclaration.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLFunctionDefinition.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLFunctionDefinition.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLFunctionPrototype.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLFunctionReference.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLIfStatement.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLIfStatement.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLIndexExpression.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLIndexExpression.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLInterfaceBlock.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLInterfaceBlock.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLLayout.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLLiteral.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLLiteral.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLMethodReference.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLModifiers.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLModifiersDeclaration.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLNop.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLPoison.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLPostfixExpression.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLPostfixExpression.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLPrefixExpression.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLPrefixExpression.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLProgram.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLProgram.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLReturnStatement.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLSetting.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLSetting.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLStructDefinition.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLSwitchCase.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLSwitchStatement.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLSwitchStatement.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLSwizzle.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLSwizzle.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLSymbolTable.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLSymbolTable.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLTernaryExpression.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLTernaryExpression.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLType.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLType.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLTypeReference.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLTypeReference.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLVarDeclarations.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLVarDeclarations.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLVariable.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLVariable.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/ir/SkSLVariableReference.cpp">
+      <Filter>src\sksl\ir</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/ir/SkSLVariableReference.h">
+      <Filter>src\sksl\ir</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/spirv.h">
+      <Filter>src\sksl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/tracing/SkSLDebugTracePriv.cpp">
+      <Filter>src\sksl\tracing</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/tracing/SkSLDebugTracePriv.h">
+      <Filter>src\sksl\tracing</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/tracing/SkSLTraceHook.cpp">
+      <Filter>src\sksl\tracing</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/tracing/SkSLTraceHook.h">
+      <Filter>src\sksl\tracing</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLAddConstToVarModifiers.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLEliminateDeadFunctions.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLEliminateDeadGlobalVariables.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLEliminateDeadLocalVariables.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLEliminateEmptyStatements.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLEliminateUnreachableCode.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLFindAndDeclareBuiltinFunctions.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLFindAndDeclareBuiltinVariables.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/transform/SkSLProgramWriter.h">
+      <Filter>src\sksl\transform</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLRenamePrivateSymbols.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLReplaceConstVarsWithLiterals.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/transform/SkSLRewriteIndexedSwizzle.cpp">
+      <Filter>src\sksl\transform</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/transform/SkSLTransform.h">
+      <Filter>src\sksl\transform</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/ports/SkOSFile_posix.cpp">
+      <Filter>src\ports</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/ports/SkOSLibrary_posix.cpp">
+      <Filter>src\ports</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/ports/SkDebug_stdio.cpp">
+      <Filter>src\ports</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

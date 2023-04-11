@@ -1,0 +1,37 @@
+defines = -DFT2_BUILD_LIBRARY -DDARWIN_NO_CARBON -DFT_CONFIG_MODULES_H=<freetype-flutter-config/ftmodule.h> -DFT_CONFIG_OPTIONS_H=<freetype-flutter-config/ftoption.h> -DUSE_OPENSSL=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -D_DEBUG
+include_dirs = -I../.. -Icanvaskit/gen -I../../third_party/freetype2/include/freetype-flutter-config -I../../third_party/freetype2/include -I../../third_party/libpng -I../../third_party/zlib
+cflags = -fno-strict-aliasing -fcolor-diagnostics -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 -Wno-unused-function -Wno-unused-variable
+cflags_c =
+root_out_dir = canvaskit
+target_out_dir = canvaskit/obj/third_party/freetype2
+target_output_name = libfreetype2
+
+build canvaskit/obj/third_party/freetype2/src/autofit/libfreetype2.autofit.o: canvaskit_cc ../../third_party/freetype2/src/autofit/autofit.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftbase.o: canvaskit_cc ../../third_party/freetype2/src/base/ftbase.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftbbox.o: canvaskit_cc ../../third_party/freetype2/src/base/ftbbox.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftbdf.o: canvaskit_cc ../../third_party/freetype2/src/base/ftbdf.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftbitmap.o: canvaskit_cc ../../third_party/freetype2/src/base/ftbitmap.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftdebug.o: canvaskit_cc ../../third_party/freetype2/src/base/ftdebug.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftfstype.o: canvaskit_cc ../../third_party/freetype2/src/base/ftfstype.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftgasp.o: canvaskit_cc ../../third_party/freetype2/src/base/ftgasp.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftglyph.o: canvaskit_cc ../../third_party/freetype2/src/base/ftglyph.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftinit.o: canvaskit_cc ../../third_party/freetype2/src/base/ftinit.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftmm.o: canvaskit_cc ../../third_party/freetype2/src/base/ftmm.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftstroke.o: canvaskit_cc ../../third_party/freetype2/src/base/ftstroke.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftsystem.o: canvaskit_cc ../../third_party/freetype2/src/base/ftsystem.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.fttype1.o: canvaskit_cc ../../third_party/freetype2/src/base/fttype1.c
+build canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftsynth.o: canvaskit_cc ../../third_party/freetype2/src/base/ftsynth.c
+build canvaskit/obj/third_party/freetype2/src/gzip/libfreetype2.ftgzip.o: canvaskit_cc ../../third_party/freetype2/src/gzip/ftgzip.c
+build canvaskit/obj/third_party/freetype2/src/lzw/libfreetype2.ftlzw.o: canvaskit_cc ../../third_party/freetype2/src/lzw/ftlzw.c
+build canvaskit/obj/third_party/freetype2/src/psaux/libfreetype2.psaux.o: canvaskit_cc ../../third_party/freetype2/src/psaux/psaux.c
+build canvaskit/obj/third_party/freetype2/src/pshinter/libfreetype2.pshinter.o: canvaskit_cc ../../third_party/freetype2/src/pshinter/pshinter.c
+build canvaskit/obj/third_party/freetype2/src/psnames/libfreetype2.psnames.o: canvaskit_cc ../../third_party/freetype2/src/psnames/psnames.c
+build canvaskit/obj/third_party/freetype2/src/sfnt/libfreetype2.sfnt.o: canvaskit_cc ../../third_party/freetype2/src/sfnt/sfnt.c
+build canvaskit/obj/third_party/freetype2/src/smooth/libfreetype2.smooth.o: canvaskit_cc ../../third_party/freetype2/src/smooth/smooth.c
+build canvaskit/obj/third_party/freetype2/src/cff/libfreetype2.cff.o: canvaskit_cc ../../third_party/freetype2/src/cff/cff.c
+build canvaskit/obj/third_party/freetype2/src/truetype/libfreetype2.truetype.o: canvaskit_cc ../../third_party/freetype2/src/truetype/truetype.c
+
+build canvaskit/obj/third_party/freetype2/libfreetype2.a: canvaskit_alink canvaskit/obj/third_party/freetype2/src/autofit/libfreetype2.autofit.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftbase.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftbbox.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftbdf.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftbitmap.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftdebug.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftfstype.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftgasp.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftglyph.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftinit.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftmm.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftstroke.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftsystem.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.fttype1.o canvaskit/obj/third_party/freetype2/src/base/libfreetype2.ftsynth.o canvaskit/obj/third_party/freetype2/src/gzip/libfreetype2.ftgzip.o canvaskit/obj/third_party/freetype2/src/lzw/libfreetype2.ftlzw.o canvaskit/obj/third_party/freetype2/src/psaux/libfreetype2.psaux.o canvaskit/obj/third_party/freetype2/src/pshinter/libfreetype2.pshinter.o canvaskit/obj/third_party/freetype2/src/psnames/libfreetype2.psnames.o canvaskit/obj/third_party/freetype2/src/sfnt/libfreetype2.sfnt.o canvaskit/obj/third_party/freetype2/src/smooth/libfreetype2.smooth.o canvaskit/obj/third_party/freetype2/src/cff/libfreetype2.cff.o canvaskit/obj/third_party/freetype2/src/truetype/libfreetype2.truetype.o || canvaskit/obj/third_party/libpng/libpng.stamp canvaskit/obj/third_party/zlib/zlib.stamp
+  arflags =
+  output_extension = .a
+  output_dir = 

@@ -1,0 +1,40 @@
+defines = -DUSE_OPENSSL=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -D_DEBUG -DSK_ENABLE_DUMP_GPU -DSK_DISABLE_AAA -DSK_LEGACY_IGNORE_DRAW_VERTICES_BLEND_WITH_NO_SHADER -DSK_DISABLE_LEGACY_SHADERCONTEXT -DSK_DISABLE_LOWP_RASTER_PIPELINE -DSK_FORCE_RASTER_PIPELINE_BLITTER -DSK_METAL_WAIT_UNTIL_SCHEDULED -DSK_DISABLE_EFFECT_DESERIALIZATION -DSK_ENABLE_SKSL -DSK_ENABLE_PRECOMPILE -DSKNX_NO_SIMD -DSK_FORCE_AAA -DSK_FORCE_8_BYTE_ALIGNMENT -DSK_GANESH -DSK_LEGACY_LAYER_BOUNDS_EXPANSION -DSK_GAMMA_APPLY_TO_A8 -DSKIA_IMPLEMENTATION=1 -DSK_VULKAN
+include_dirs = -I../.. -Icanvaskit/gen -I../../third_party/skia
+cflags = -fno-strict-aliasing -fcolor-diagnostics -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2
+cflags_cc = -fvisibility-inlines-hidden -std=c++17 -fno-rtti
+root_out_dir = canvaskit
+target_out_dir = canvaskit/obj/third_party/skia
+target_output_name = gpu_shared
+
+build canvaskit/obj/third_party/skia/src/gpu/gpu_shared.AtlasTypes.o: canvaskit_cxx ../../third_party/skia/src/gpu/AtlasTypes.cpp
+build canvaskit/obj/third_party/skia/src/gpu/gpu_shared.Blend.o: canvaskit_cxx ../../third_party/skia/src/gpu/Blend.cpp
+build canvaskit/obj/third_party/skia/src/gpu/gpu_shared.DitherUtils.o: canvaskit_cxx ../../third_party/skia/src/gpu/DitherUtils.cpp
+build canvaskit/obj/third_party/skia/src/gpu/gpu_shared.RectanizerPow2.o: canvaskit_cxx ../../third_party/skia/src/gpu/RectanizerPow2.cpp
+build canvaskit/obj/third_party/skia/src/gpu/gpu_shared.RectanizerSkyline.o: canvaskit_cxx ../../third_party/skia/src/gpu/RectanizerSkyline.cpp
+build canvaskit/obj/third_party/skia/src/gpu/gpu_shared.ResourceKey.o: canvaskit_cxx ../../third_party/skia/src/gpu/ResourceKey.cpp
+build canvaskit/obj/third_party/skia/src/gpu/gpu_shared.ShaderErrorHandler.o: canvaskit_cxx ../../third_party/skia/src/gpu/ShaderErrorHandler.cpp
+build canvaskit/obj/third_party/skia/src/gpu/gpu_shared.Swizzle.o: canvaskit_cxx ../../third_party/skia/src/gpu/Swizzle.cpp
+build canvaskit/obj/third_party/skia/src/gpu/tessellate/gpu_shared.FixedCountBufferUtils.o: canvaskit_cxx ../../third_party/skia/src/gpu/tessellate/FixedCountBufferUtils.cpp
+build canvaskit/obj/third_party/skia/src/gpu/tessellate/gpu_shared.Tessellation.o: canvaskit_cxx ../../third_party/skia/src/gpu/tessellate/Tessellation.cpp
+build canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.DistanceFieldAdjustTable.o: canvaskit_cxx ../../third_party/skia/src/text/gpu/DistanceFieldAdjustTable.cpp
+build canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.GlyphVector.o: canvaskit_cxx ../../third_party/skia/src/text/gpu/GlyphVector.cpp
+build canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SDFMaskFilter.o: canvaskit_cxx ../../third_party/skia/src/text/gpu/SDFMaskFilter.cpp
+build canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SDFTControl.o: canvaskit_cxx ../../third_party/skia/src/text/gpu/SDFTControl.cpp
+build canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.Slug.o: canvaskit_cxx ../../third_party/skia/src/text/gpu/Slug.cpp
+build canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.StrikeCache.o: canvaskit_cxx ../../third_party/skia/src/text/gpu/StrikeCache.cpp
+build canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SubRunAllocator.o: canvaskit_cxx ../../third_party/skia/src/text/gpu/SubRunAllocator.cpp
+build canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SubRunContainer.o: canvaskit_cxx ../../third_party/skia/src/text/gpu/SubRunContainer.cpp
+build canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.TextBlob.o: canvaskit_cxx ../../third_party/skia/src/text/gpu/TextBlob.cpp
+build canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.TextBlobRedrawCoordinator.o: canvaskit_cxx ../../third_party/skia/src/text/gpu/TextBlobRedrawCoordinator.cpp
+build canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLGLSLCodeGenerator.o: canvaskit_cxx ../../third_party/skia/src/sksl/codegen/SkSLGLSLCodeGenerator.cpp
+build canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLMetalCodeGenerator.o: canvaskit_cxx ../../third_party/skia/src/sksl/codegen/SkSLMetalCodeGenerator.cpp
+build canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLPipelineStageCodeGenerator.o: canvaskit_cxx ../../third_party/skia/src/sksl/codegen/SkSLPipelineStageCodeGenerator.cpp
+build canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLSPIRVCodeGenerator.o: canvaskit_cxx ../../third_party/skia/src/sksl/codegen/SkSLSPIRVCodeGenerator.cpp
+build canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLSPIRVtoHLSL.o: canvaskit_cxx ../../third_party/skia/src/sksl/codegen/SkSLSPIRVtoHLSL.cpp
+build canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLWGSLCodeGenerator.o: canvaskit_cxx ../../third_party/skia/src/sksl/codegen/SkSLWGSLCodeGenerator.cpp
+build canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanAMDMemoryAllocator.o: canvaskit_cxx ../../third_party/skia/src/gpu/vk/VulkanAMDMemoryAllocator.cpp
+build canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanExtensions.o: canvaskit_cxx ../../third_party/skia/src/gpu/vk/VulkanExtensions.cpp
+build canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanInterface.o: canvaskit_cxx ../../third_party/skia/src/gpu/vk/VulkanInterface.cpp
+build canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanMemory.o: canvaskit_cxx ../../third_party/skia/src/gpu/vk/VulkanMemory.cpp
+
+build canvaskit/obj/third_party/skia/gpu_shared.stamp: canvaskit_stamp canvaskit/obj/third_party/skia/src/gpu/gpu_shared.AtlasTypes.o canvaskit/obj/third_party/skia/src/gpu/gpu_shared.Blend.o canvaskit/obj/third_party/skia/src/gpu/gpu_shared.DitherUtils.o canvaskit/obj/third_party/skia/src/gpu/gpu_shared.RectanizerPow2.o canvaskit/obj/third_party/skia/src/gpu/gpu_shared.RectanizerSkyline.o canvaskit/obj/third_party/skia/src/gpu/gpu_shared.ResourceKey.o canvaskit/obj/third_party/skia/src/gpu/gpu_shared.ShaderErrorHandler.o canvaskit/obj/third_party/skia/src/gpu/gpu_shared.Swizzle.o canvaskit/obj/third_party/skia/src/gpu/tessellate/gpu_shared.FixedCountBufferUtils.o canvaskit/obj/third_party/skia/src/gpu/tessellate/gpu_shared.Tessellation.o canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.DistanceFieldAdjustTable.o canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.GlyphVector.o canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SDFMaskFilter.o canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SDFTControl.o canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.Slug.o canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.StrikeCache.o canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SubRunAllocator.o canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SubRunContainer.o canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.TextBlob.o canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.TextBlobRedrawCoordinator.o canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLGLSLCodeGenerator.o canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLMetalCodeGenerator.o canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLPipelineStageCodeGenerator.o canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLSPIRVCodeGenerator.o canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLSPIRVtoHLSL.o canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLWGSLCodeGenerator.o canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanAMDMemoryAllocator.o canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanExtensions.o canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanInterface.o canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanMemory.o

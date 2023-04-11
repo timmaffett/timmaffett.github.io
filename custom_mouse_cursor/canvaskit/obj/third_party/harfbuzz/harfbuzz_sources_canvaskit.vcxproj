@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A86DCDB8-453D-A602-4581-4E17B5B00F0A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>harfbuzz_sources</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\canvaskit/obj/third_party/harfbuzz/harfbuzz_sources.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../..;../../../../../../out/host_debug_unopt/canvaskit/gen;../../../../../../third_party/harfbuzz/src;../../../../../../third_party/freetype2/include/freetype-flutter-config;../../../../../../third_party/freetype2/include;../../../../../../third_party/icu/source/common;../../../../../../third_party/icu/source/i18n;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-strict-aliasing -fcolor-diagnostics -fvisibility-inlines-hidden -std=c++17 -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -fno-rtti -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 -Wno-missing-field-initializers -Wno-unused-variable -Wno-sign-compare -Wno-unused-function -Wno-unused-variable %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_OPENSSL=1;_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS;_DEBUG;HAVE_OT;HAVE_ICU;HAVE_ICU_BUILTIN;HB_NO_VISIBILITY;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;U_STATIC_IMPLEMENTATION;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout-ankr-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout-bsln-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout-common.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout-feat-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout-just-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout-kerx-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout-morx-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout-opbd-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout-trak-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-aat-layout.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-aat-layout.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-layout.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-ltag-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-aat-map.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-aat-map.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-aat-map.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat-map.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-aat.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-algs.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-array.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-atomic.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-bimap.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-bit-page.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-bit-set-invertible.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-bit-set.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-blob.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-blob.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-blob.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-blob.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-blob.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-buffer-deserialize-json.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-buffer-deserialize-text-glyphs.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-buffer-deserialize-text-unicode.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-buffer-serialize.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-buffer-serialize.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-buffer-serialize.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-buffer-verify.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-buffer-verify.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-buffer-verify.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-buffer.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-buffer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-buffer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-buffer.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-buffer.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-cache.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-cff-interp-common.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-cff-interp-cs-common.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-cff-interp-dict-common.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-cff1-interp-cs.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-cff2-interp-cs.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-common.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-common.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-common.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-common.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-config.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-cplusplus.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-debug.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-deprecated.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-dispatch.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-draw.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-draw.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-draw.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-draw.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-draw.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-face-builder.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-face-builder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-face-builder.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-face.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-face.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-face.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-face.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-face.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-fallback-shape.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-fallback-shape.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-fallback-shape.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-font.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-font.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-font.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-font.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-font.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-iter.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-kern.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-limits.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-machinery.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-map.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-map.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-map.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-map.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-map.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-meta.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ms-feature-ranges.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-multimap.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-mutex.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-null.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-number-parser.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-number.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-number.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-number.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-number.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-object.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-open-file.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-open-type.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-cff-common.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-cff1-std-str.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-cff1-table.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-cff1-table.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-cff1-table.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-cff1-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-cff2-table.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-cff2-table.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-cff2-table.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-cff2-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-cmap-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-color.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-color.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-color.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-color.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-deprecated.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-face-table-list.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-face.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-face.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-face.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-face.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-font.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-font.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-font.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-font.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-gasp-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-glyf-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-hdmx-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-head-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-hhea-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-hmtx-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-kern-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-layout-base-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-layout-common.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-layout-gdef-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-layout-gpos-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-layout-gsub-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-layout-gsubgpos.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-layout-jstf-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-layout.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-layout.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-layout.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-layout.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-layout.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-map.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-map.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-map.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-map.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-math-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-math.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-math.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-math.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-math.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-maxp-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-meta-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-meta.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-meta.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-meta.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-meta.h" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-metrics.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-metrics.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-metrics.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-metrics.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-metrics.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-name-language-static.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-name-language.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-name-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-name.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-name.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-name.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-name.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-os2-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-os2-unicode-ranges.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-post-macroman.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-post-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shape-fallback.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shape-fallback.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shape-fallback.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shape-fallback.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shape-normalize.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shape-normalize.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shape-normalize.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shape-normalize.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shape.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shape.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shape.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shape.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shape.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-arabic-fallback.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-arabic-joining-list.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-arabic-pua.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-arabic-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-arabic-win1256.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-arabic.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-arabic.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-arabic.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-arabic.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-default.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-default.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-default.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-hangul.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-hangul.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-hangul.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-hebrew.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-hebrew.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-hebrew.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-indic-machine.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-indic-table.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-indic-table.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-indic-table.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-indic.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-indic.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-indic.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-indic.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-khmer-machine.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-khmer.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-khmer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-khmer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-myanmar-machine.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-myanmar.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-myanmar.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-myanmar.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-syllabic.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-syllabic.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-syllabic.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-syllabic.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-thai.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-thai.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-thai.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-use-machine.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-use-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-use.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-use.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-use.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-vowel-constraints.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-vowel-constraints.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-shaper-vowel-constraints.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper-vowel-constraints.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-shaper.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-stat-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-tag-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-tag.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-tag.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-tag.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-var-avar-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-var-common.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-var-cvar-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-var-fvar-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-var-gvar-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-var-hvar-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-var-mvar-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ot-var.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-var.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ot-var.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-var.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot-vorg-table.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ot.h" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-outline.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-outline.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-outline.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-outline.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-paint-extents.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-paint-extents.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-paint-extents.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-paint-extents.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-paint.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-paint.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-paint.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-paint.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-paint.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-pool.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-priority-queue.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-sanitize.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-serialize.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-set-digest.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-set.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-set.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-set.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-set.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-set.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-shape-plan.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-shape-plan.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-shape-plan.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-shape-plan.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-shape-plan.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-shape.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-shape.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-shape.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-shape.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-shaper-impl.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-shaper-list.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-shaper.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-shaper.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-shaper.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-shaper.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-static.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-static.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-static.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-string-array.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-style.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-style.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-style.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-style.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-ucd-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-ucd.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ucd.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-ucd.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-unicode-emoji-table.hh" />
+    <CustomBuild Include="../../../../../../third_party/harfbuzz/src/hb-unicode.cc">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-unicode.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/harfbuzz/src/harfbuzz_sources.hb-unicode.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-unicode.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-unicode.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-utf.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-vector.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb-version.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb.h" />
+    <None Include="../../../../../../third_party/harfbuzz/src/hb.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Color/CBDT/CBDT.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Color/COLR/COLR.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Color/CPAL/CPAL.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Color/sbix/sbix.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Color/svg/svg.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/composite-iter.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/CompositeGlyph.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/coord-setter.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/glyf-helpers.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/glyf.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/Glyph.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/GlyphHeader.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/loca.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/path-builder.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/SimpleGlyph.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/SubsetGlyph.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/glyf/VarCompositeGlyph.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/Common/Coverage.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/Common/CoverageFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/Common/CoverageFormat2.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/Common/RangeRecord.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GDEF/GDEF.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/Anchor.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/AnchorFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/AnchorFormat2.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/AnchorFormat3.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/AnchorMatrix.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/ChainContextPos.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/Common.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/ContextPos.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/CursivePos.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/CursivePosFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/ExtensionPos.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/GPOS.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/LigatureArray.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/MarkArray.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/MarkBasePos.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/MarkBasePosFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/MarkLigPos.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/MarkLigPosFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/MarkMarkPos.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/MarkMarkPosFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/MarkRecord.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/PairPos.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/PairPosFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/PairPosFormat2.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/PairSet.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/PairValueRecord.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/PosLookup.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/PosLookupSubTable.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/SinglePos.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/SinglePosFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/SinglePosFormat2.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GPOS/ValueFormat.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/AlternateSet.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/AlternateSubst.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/AlternateSubstFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/ChainContextSubst.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/Common.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/ContextSubst.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/ExtensionSubst.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/GSUB.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/Ligature.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/LigatureSet.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/LigatureSubst.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/LigatureSubstFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/MultipleSubst.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/MultipleSubstFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/ReverseChainSingleSubst.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/ReverseChainSingleSubstFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/Sequence.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/SingleSubst.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/SingleSubstFormat1.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/SingleSubstFormat2.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/SubstLookup.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/GSUB/SubstLookupSubTable.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/Layout/types.hh" />
+    <None Include="../../../../../../third_party/harfbuzz/src/OT/name/name.hh" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja -C $(OutDir)  canvaskit/obj/third_party/harfbuzz/harfbuzz_sources.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja -C $(OutDir) -tclean canvaskit/obj/third_party/harfbuzz/harfbuzz_sources.stamp" />
+  </Target>
+</Project>

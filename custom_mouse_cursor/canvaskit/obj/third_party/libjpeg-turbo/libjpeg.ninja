@@ -1,0 +1,57 @@
+defines = -DWITH_SIMD -DNO_GETENV -DUSE_OPENSSL=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -D_DEBUG
+include_dirs = -I../.. -Icanvaskit/gen -I../../third_party/libjpeg-turbo
+cflags = -fno-strict-aliasing -fcolor-diagnostics -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2
+cflags_c =
+root_out_dir = canvaskit
+target_out_dir = canvaskit/obj/third_party/libjpeg-turbo
+target_output_name = libjpeg
+
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcapimin.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcapimin.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcapistd.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcapistd.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jccoefct.o: canvaskit_cc ../../third_party/libjpeg-turbo/jccoefct.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jccolor.o: canvaskit_cc ../../third_party/libjpeg-turbo/jccolor.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcdctmgr.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcdctmgr.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jchuff.o: canvaskit_cc ../../third_party/libjpeg-turbo/jchuff.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcinit.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcinit.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcmainct.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcmainct.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcmarker.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcmarker.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcmaster.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcmaster.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcomapi.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcomapi.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcparam.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcparam.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcphuff.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcphuff.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcprepct.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcprepct.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcsample.o: canvaskit_cc ../../third_party/libjpeg-turbo/jcsample.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdapimin.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdapimin.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdapistd.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdapistd.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdatadst.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdatadst.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdatasrc.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdatasrc.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdcoefct.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdcoefct.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdcolor.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdcolor.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jddctmgr.o: canvaskit_cc ../../third_party/libjpeg-turbo/jddctmgr.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdhuff.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdhuff.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdinput.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdinput.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdmainct.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdmainct.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdmarker.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdmarker.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdmaster.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdmaster.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdmerge.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdmerge.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdphuff.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdphuff.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdpostct.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdpostct.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdsample.o: canvaskit_cc ../../third_party/libjpeg-turbo/jdsample.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jerror.o: canvaskit_cc ../../third_party/libjpeg-turbo/jerror.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jfdctflt.o: canvaskit_cc ../../third_party/libjpeg-turbo/jfdctflt.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jfdctfst.o: canvaskit_cc ../../third_party/libjpeg-turbo/jfdctfst.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jfdctint.o: canvaskit_cc ../../third_party/libjpeg-turbo/jfdctint.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jidctflt.o: canvaskit_cc ../../third_party/libjpeg-turbo/jidctflt.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jidctfst.o: canvaskit_cc ../../third_party/libjpeg-turbo/jidctfst.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jidctint.o: canvaskit_cc ../../third_party/libjpeg-turbo/jidctint.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jidctred.o: canvaskit_cc ../../third_party/libjpeg-turbo/jidctred.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jmemmgr.o: canvaskit_cc ../../third_party/libjpeg-turbo/jmemmgr.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jmemnobs.o: canvaskit_cc ../../third_party/libjpeg-turbo/jmemnobs.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jquant1.o: canvaskit_cc ../../third_party/libjpeg-turbo/jquant1.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jquant2.o: canvaskit_cc ../../third_party/libjpeg-turbo/jquant2.c
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jutils.o: canvaskit_cc ../../third_party/libjpeg-turbo/jutils.c
+
+build canvaskit/obj/third_party/libjpeg-turbo/libjpeg.a: canvaskit_alink canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcapimin.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcapistd.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jccoefct.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jccolor.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcdctmgr.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jchuff.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcinit.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcmainct.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcmarker.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcmaster.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcomapi.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcparam.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcphuff.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcprepct.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jcsample.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdapimin.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdapistd.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdatadst.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdatasrc.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdcoefct.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdcolor.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jddctmgr.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdhuff.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdinput.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdmainct.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdmarker.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdmaster.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdmerge.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdphuff.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdpostct.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jdsample.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jerror.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jfdctflt.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jfdctfst.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jfdctint.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jidctflt.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jidctfst.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jidctint.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jidctred.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jmemmgr.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jmemnobs.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jquant1.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jquant2.o canvaskit/obj/third_party/libjpeg-turbo/libjpeg.jutils.o || canvaskit/obj/third_party/libjpeg-turbo/libsimd.a
+  arflags =
+  output_extension = .a
+  output_dir = 

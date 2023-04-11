@@ -1,0 +1,14 @@
+defines = -DUSE_OPENSSL=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -D_DEBUG
+include_dirs = -I../.. -Icanvaskit/gen
+cflags = -std=c11 -fno-strict-aliasing -fcolor-diagnostics -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2
+cflags_cc = -fvisibility-inlines-hidden -std=c++17 -fno-rtti
+root_out_dir = canvaskit
+target_out_dir = canvaskit/obj/third_party/skia/modules/skcms
+target_output_name = libskcms
+
+build canvaskit/obj/third_party/skia/modules/skcms/libskcms.skcms.o: canvaskit_cxx ../../third_party/skia/modules/skcms/skcms.cc
+
+build canvaskit/obj/third_party/skia/modules/skcms/libskcms.a: canvaskit_alink canvaskit/obj/third_party/skia/modules/skcms/libskcms.skcms.o
+  arflags =
+  output_extension = .a
+  output_dir = 

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGClipEffect.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGColorFilter.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGDraw.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGEffectNode.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGGeometryEffect.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGGeometryNode.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGGradient.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGGroup.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGImage.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGInvalidationController.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGMaskEffect.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGMerge.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGNode.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGNodePriv.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGOpacityEffect.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGPaint.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGPath.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGPlane.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGRect.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGRenderEffect.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGRenderNode.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGScene.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGText.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGTransform.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/sksg/src/SkSGTransformPriv.h">
+      <Filter>src</Filter>
+    </None>
+  </ItemGroup>
+</Project>

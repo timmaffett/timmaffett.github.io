@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{49E2CE8E-75CC-C6BD-1B36-AF365289F761}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gpu_shared</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\canvaskit/obj/third_party/skia/gpu_shared.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../..;../../../../../../out/host_debug_unopt/canvaskit/gen;../../../../../../third_party/skia;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-strict-aliasing -fcolor-diagnostics -fvisibility-inlines-hidden -std=c++17 -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -fno-rtti -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_OPENSSL=1;_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS;_DEBUG;SK_ENABLE_DUMP_GPU;SK_DISABLE_AAA;SK_LEGACY_IGNORE_DRAW_VERTICES_BLEND_WITH_NO_SHADER;SK_DISABLE_LEGACY_SHADERCONTEXT;SK_DISABLE_LOWP_RASTER_PIPELINE;SK_FORCE_RASTER_PIPELINE_BLITTER;SK_METAL_WAIT_UNTIL_SCHEDULED;SK_DISABLE_EFFECT_DESERIALIZATION;SK_ENABLE_SKSL;SK_ENABLE_PRECOMPILE;SKNX_NO_SIMD;SK_FORCE_AAA;SK_FORCE_8_BYTE_ALIGNMENT;SK_GANESH;SK_LEGACY_LAYER_BOUNDS_EXPANSION;SK_GAMMA_APPLY_TO_A8;SKIA_IMPLEMENTATION=1;SK_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="../../../../../../third_party/skia/include/gpu/GpuTypes.h" />
+    <None Include="../../../../../../third_party/skia/include/gpu/MutableTextureState.h" />
+    <None Include="../../../../../../third_party/skia/include/gpu/ShaderErrorHandler.h" />
+    <None Include="../../../../../../third_party/skia/include/private/base/SingleOwner.h" />
+    <None Include="../../../../../../third_party/skia/include/private/chromium/Slug.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/AsyncReadTypes.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/AtlasTypes.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/gpu_shared.AtlasTypes.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/gpu_shared.AtlasTypes.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/AtlasTypes.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/Blend.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/gpu_shared.Blend.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/gpu_shared.Blend.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/Blend.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/BufferWriter.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/DitherUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/gpu_shared.DitherUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/gpu_shared.DitherUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/DitherUtils.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/GrAHardwareBufferUtils.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/GrRectanizer.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/KeyBuilder.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/MutableTextureStateRef.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/Rectanizer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/RectanizerPow2.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/gpu_shared.RectanizerPow2.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/gpu_shared.RectanizerPow2.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/RectanizerPow2.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/RectanizerSkyline.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/gpu_shared.RectanizerSkyline.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/gpu_shared.RectanizerSkyline.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/RectanizerSkyline.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/RefCntedCallback.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ResourceKey.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/gpu_shared.ResourceKey.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/gpu_shared.ResourceKey.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ResourceKey.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ShaderErrorHandler.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/gpu_shared.ShaderErrorHandler.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/gpu_shared.ShaderErrorHandler.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/SkBackingFit.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/SkRenderEngineAbortf.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/Swizzle.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/gpu_shared.Swizzle.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/gpu_shared.Swizzle.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/Swizzle.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/AffineMatrix.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/CullTest.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/tessellate/FixedCountBufferUtils.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/tessellate/gpu_shared.FixedCountBufferUtils.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/tessellate/gpu_shared.FixedCountBufferUtils.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/FixedCountBufferUtils.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/LinearTolerances.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/MiddleOutPolygonTriangulator.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/MidpointContourParser.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/PatchWriter.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/StrokeIterator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/tessellate/Tessellation.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/tessellate/gpu_shared.Tessellation.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/tessellate/gpu_shared.Tessellation.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/Tessellation.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/WangsFormula.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/DistanceFieldAdjustTable.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.DistanceFieldAdjustTable.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.DistanceFieldAdjustTable.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/DistanceFieldAdjustTable.h" />
+    <None Include="../../../../../../third_party/skia/src/text/gpu/Glyph.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/GlyphVector.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.GlyphVector.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.GlyphVector.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/GlyphVector.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/SDFMaskFilter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SDFMaskFilter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SDFMaskFilter.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/SDFMaskFilter.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/SDFTControl.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SDFTControl.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SDFTControl.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/SDFTControl.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/Slug.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.Slug.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.Slug.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/StrikeCache.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.StrikeCache.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.StrikeCache.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/StrikeCache.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/SubRunAllocator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SubRunAllocator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SubRunAllocator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/SubRunAllocator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/SubRunContainer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SubRunContainer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.SubRunContainer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/SubRunContainer.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/TextBlob.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.TextBlob.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.TextBlob.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/TextBlob.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/TextBlobRedrawCoordinator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.TextBlobRedrawCoordinator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/text/gpu/gpu_shared.TextBlobRedrawCoordinator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/TextBlobRedrawCoordinator.h" />
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLCodeGenerator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLGLSLCodeGenerator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLGLSLCodeGenerator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLGLSLCodeGenerator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLGLSLCodeGenerator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLMetalCodeGenerator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLMetalCodeGenerator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLMetalCodeGenerator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLMetalCodeGenerator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLPipelineStageCodeGenerator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLPipelineStageCodeGenerator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLPipelineStageCodeGenerator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLPipelineStageCodeGenerator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLSPIRVCodeGenerator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLSPIRVCodeGenerator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLSPIRVCodeGenerator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLSPIRVCodeGenerator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLSPIRVtoHLSL.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLSPIRVtoHLSL.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLSPIRVtoHLSL.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLSPIRVtoHLSL.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLWGSLCodeGenerator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLWGSLCodeGenerator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/sksl/codegen/gpu_shared.SkSLWGSLCodeGenerator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLWGSLCodeGenerator.h" />
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/VulkanBackendContext.h" />
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/VulkanExtensions.h" />
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/VulkanMemoryAllocator.h" />
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/VulkanTypes.h" />
+    <None Include="../../../../../../third_party/skia/include/private/gpu/vk/SkiaVulkan.h" />
+    <None Include="../../../../../../third_party/skia/include/private/gpu/vk/VulkanTypesPriv.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/vk/VulkanAMDMemoryAllocator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanAMDMemoryAllocator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanAMDMemoryAllocator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/vk/VulkanAMDMemoryAllocator.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/vk/VulkanExtensions.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanExtensions.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanExtensions.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/vk/VulkanInterface.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanInterface.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanInterface.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/vk/VulkanInterface.h" />
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/vk/VulkanMemory.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanMemory.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/src/gpu/vk/gpu_shared.VulkanMemory.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/vk/VulkanMemory.h" />
+    <None Include="../../../../../../third_party/skia/src/gpu/vk/VulkanUtilsPriv.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/gpu_shared.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja -C $(OutDir) -tclean canvaskit/obj/third_party/skia/gpu_shared.stamp" />
+  </Target>
+</Project>

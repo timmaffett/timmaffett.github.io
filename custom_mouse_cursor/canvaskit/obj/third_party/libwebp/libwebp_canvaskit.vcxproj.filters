@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src\dec">
+      <UniqueIdentifier>{DA404B87-D175-0EF7-D26F-B92354C6F4AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\demux">
+      <UniqueIdentifier>{B5DC9C03-CE31-DD3C-A4DD-931978E91480}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dsp">
+      <UniqueIdentifier>{74273C41-84F9-22EC-999B-0CAA1C0B7D19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\enc">
+      <UniqueIdentifier>{556D297B-0F5B-6FB2-205B-AEA8E0464FB2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mux">
+      <UniqueIdentifier>{C636CA56-515A-5DB9-71A0-19297A283DF9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{8FC2063E-4721-2C9C-FF62-6C19AE822741}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dec/alpha_dec.c">
+      <Filter>src\dec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dec/buffer_dec.c">
+      <Filter>src\dec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dec/frame_dec.c">
+      <Filter>src\dec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dec/idec_dec.c">
+      <Filter>src\dec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dec/io_dec.c">
+      <Filter>src\dec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dec/quant_dec.c">
+      <Filter>src\dec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dec/tree_dec.c">
+      <Filter>src\dec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dec/vp8_dec.c">
+      <Filter>src\dec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dec/vp8l_dec.c">
+      <Filter>src\dec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dec/webp_dec.c">
+      <Filter>src\dec</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/demux/anim_decode.c">
+      <Filter>src\demux</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/demux/demux.c">
+      <Filter>src\demux</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/alpha_processing.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/alpha_processing_mips_dsp_r2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/alpha_processing_neon.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/alpha_processing_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/cost.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/cost_mips32.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/cost_mips_dsp_r2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/cost_neon.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/cost_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/cpu.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/dec.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/dec_clip_tables.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/dec_mips32.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/dec_mips_dsp_r2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/dec_msa.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/dec_neon.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/dec_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/enc.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/enc_mips32.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/enc_mips_dsp_r2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/enc_msa.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/enc_neon.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/enc_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/filters.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/filters_mips_dsp_r2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/filters_msa.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/filters_neon.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/filters_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless_enc.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless_enc_mips32.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless_enc_mips_dsp_r2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless_enc_msa.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless_enc_neon.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless_enc_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless_mips_dsp_r2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless_msa.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless_neon.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/lossless_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/rescaler.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/rescaler_mips32.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/rescaler_mips_dsp_r2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/rescaler_msa.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/rescaler_neon.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/rescaler_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/ssim.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/ssim_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/upsampling.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/upsampling_mips_dsp_r2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/upsampling_msa.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/upsampling_neon.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/upsampling_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/yuv.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/yuv_mips32.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/yuv_mips_dsp_r2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/yuv_neon.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/dsp/yuv_sse2.c">
+      <Filter>src\dsp</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/alpha_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/analysis_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/backward_references_cost_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/backward_references_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/config_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/cost_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/filter_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/frame_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/histogram_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/iterator_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/near_lossless_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/picture_csp_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/picture_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/picture_psnr_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/picture_rescale_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/picture_tools_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/predictor_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/quant_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/syntax_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/token_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/tree_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/vp8l_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/enc/webp_enc.c">
+      <Filter>src\enc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/mux/anim_encode.c">
+      <Filter>src\mux</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/mux/muxedit.c">
+      <Filter>src\mux</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/mux/muxinternal.c">
+      <Filter>src\mux</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/mux/muxread.c">
+      <Filter>src\mux</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/bit_reader_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/bit_writer_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/color_cache_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/filters_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/huffman_encode_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/huffman_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/quant_levels_dec_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/quant_levels_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/random_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/rescaler_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/thread_utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/libwebp/src/utils/utils.c">
+      <Filter>src\utils</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

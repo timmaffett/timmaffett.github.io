@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\animator">
+      <UniqueIdentifier>{989E42A0-83D6-77BE-D931-281D38F5076C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\effects">
+      <UniqueIdentifier>{2E771C6D-D5D7-7688-B01E-2CAA009B657C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\layers">
+      <UniqueIdentifier>{922EC3FE-3338-5700-2247-E4C8031B0FE1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\layers\shapelayer">
+      <UniqueIdentifier>{514814F3-A658-B0B7-90C5-37FB1E1CF276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\text">
+      <UniqueIdentifier>{3804D58C-1CC2-3DA2-5FF9-E8139A482587}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/Adapter.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/BlendModes.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Camera.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/Camera.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Composition.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/Composition.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Layer.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/Layer.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Path.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Skottie.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/SkottieJson.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/SkottieJson.h">
+      <Filter>src</Filter>
+    </None>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/SkottiePriv.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/SkottieProperty.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/SkottieValue.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Transform.cpp">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/Transform.h">
+      <Filter>src</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/Animator.cpp">
+      <Filter>src\animator</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/Animator.h">
+      <Filter>src\animator</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/KeyframeAnimator.cpp">
+      <Filter>src\animator</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/KeyframeAnimator.h">
+      <Filter>src\animator</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/ScalarKeyframeAnimator.cpp">
+      <Filter>src\animator</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/ShapeKeyframeAnimator.cpp">
+      <Filter>src\animator</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/TextKeyframeAnimator.cpp">
+      <Filter>src\animator</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/Vec2KeyframeAnimator.cpp">
+      <Filter>src\animator</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/VectorKeyframeAnimator.cpp">
+      <Filter>src\animator</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/VectorKeyframeAnimator.h">
+      <Filter>src\animator</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/BlackAndWhiteEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/BrightnessContrastEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/BulgeEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/CCTonerEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/CornerPinEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/DirectionalBlur.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/DisplacementMapEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/DropShadowEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/Effects.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/Effects.h">
+      <Filter>src\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/FillEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/FractalNoiseEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/GaussianBlurEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/GlowStyles.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/GradientEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/HueSaturationEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/InvertEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/LevelsEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/LinearWipeEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/MotionBlurEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/MotionBlurEffect.h">
+      <Filter>src\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/MotionTileEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/RadialWipeEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/ShadowStyles.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/SharpenEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/ShiftChannelsEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/SkSLEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/SphereEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/ThresholdEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/TintEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/TransformEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/TritoneEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/VenetianBlindsEffect.cpp">
+      <Filter>src\effects</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/AudioLayer.cpp">
+      <Filter>src\layers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/FootageLayer.cpp">
+      <Filter>src\layers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/NullLayer.cpp">
+      <Filter>src\layers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/PrecompLayer.cpp">
+      <Filter>src\layers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/SolidLayer.cpp">
+      <Filter>src\layers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/TextLayer.cpp">
+      <Filter>src\layers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/Ellipse.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/FillStroke.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/Gradient.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/MergePaths.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/OffsetPaths.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/Polystar.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/PuckerBloat.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/Rectangle.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/Repeater.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/RoundCorners.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/ShapeLayer.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/ShapeLayer.h">
+      <Filter>src\layers\shapelayer</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/TrimPaths.cpp">
+      <Filter>src\layers\shapelayer</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/Font.cpp">
+      <Filter>src\text</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/Font.h">
+      <Filter>src\text</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/RangeSelector.cpp">
+      <Filter>src\text</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/RangeSelector.h">
+      <Filter>src\text</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/SkottieShaper.cpp">
+      <Filter>src\text</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/SkottieShaper.h">
+      <Filter>src\text</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextAdapter.cpp">
+      <Filter>src\text</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextAdapter.h">
+      <Filter>src\text</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextAnimator.cpp">
+      <Filter>src\text</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextAnimator.h">
+      <Filter>src\text</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextValue.cpp">
+      <Filter>src\text</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextValue.h">
+      <Filter>src\text</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{89871C23-FAEF-2053-99C9-81892C79C5DA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>skparagraph</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\canvaskit/obj/third_party/skia/modules/skparagraph/skparagraph.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../../../..;../../../../../../../../out/host_debug_unopt/canvaskit/gen;../../../../../../../../third_party/skia/modules/skparagraph/include;../../../../../../../../third_party/skia/modules/skparagraph/utils;../../../../../../../../third_party/skia;../../../../../../../../third_party/skia/modules/skshaper/include;../../../../../../../../third_party/skia/modules/skunicode/include;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-strict-aliasing -fcolor-diagnostics -fvisibility-inlines-hidden -std=c++17 -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -fno-rtti -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_OPENSSL=1;_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS;_DEBUG;SK_ENABLE_PARAGRAPH;SK_TYPEFACE_FACTORY_FREETYPE;SK_GL;SK_ENABLE_DUMP_GPU;SK_VULKAN;SK_CODEC_DECODES_JPEG;SK_ENCODE_JPEG;SK_CODEC_DECODES_PNG;SK_ENCODE_PNG;SK_CODEC_DECODES_WEBP;SK_HAS_WUFFS_LIBRARY;SK_DISABLE_AAA;SK_LEGACY_IGNORE_DRAW_VERTICES_BLEND_WITH_NO_SHADER;SK_DISABLE_LEGACY_SHADERCONTEXT;SK_DISABLE_LOWP_RASTER_PIPELINE;SK_FORCE_RASTER_PIPELINE_BLITTER;SK_METAL_WAIT_UNTIL_SCHEDULED;SK_DISABLE_EFFECT_DESERIALIZATION;SK_ENABLE_SKSL;SK_ENABLE_PRECOMPILE;SKNX_NO_SIMD;SK_FORCE_AAA;SK_FORCE_8_BYTE_ALIGNMENT;SK_GANESH;SK_LEGACY_LAYER_BOUNDS_EXPANSION;SK_SHAPER_HARFBUZZ_AVAILABLE;SK_UNICODE_AVAILABLE;SK_UNICODE_ICU_IMPLEMENTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/Decorations.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.Decorations.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.Decorations.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skparagraph/src/Decorations.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/FontArguments.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.FontArguments.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.FontArguments.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/FontCollection.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.FontCollection.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.FontCollection.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skparagraph/src/Iterators.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/OneLineShaper.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.OneLineShaper.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.OneLineShaper.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skparagraph/src/OneLineShaper.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/ParagraphBuilderImpl.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.ParagraphBuilderImpl.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.ParagraphBuilderImpl.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skparagraph/src/ParagraphBuilderImpl.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/ParagraphCache.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.ParagraphCache.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.ParagraphCache.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/ParagraphImpl.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.ParagraphImpl.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.ParagraphImpl.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skparagraph/src/ParagraphImpl.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/ParagraphPainterImpl.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.ParagraphPainterImpl.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.ParagraphPainterImpl.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skparagraph/src/ParagraphPainterImpl.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/ParagraphStyle.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.ParagraphStyle.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.ParagraphStyle.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/Run.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.Run.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.Run.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skparagraph/src/Run.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/TextLine.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.TextLine.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.TextLine.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skparagraph/src/TextLine.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/TextShadow.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.TextShadow.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.TextShadow.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/TextStyle.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.TextStyle.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.TextStyle.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/TextWrapper.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.TextWrapper.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.TextWrapper.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skparagraph/src/TextWrapper.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/src/TypefaceFontProvider.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.TypefaceFontProvider.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/src/skparagraph.TypefaceFontProvider.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skparagraph/utils/TestFontCollection.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/utils/skparagraph.TestFontCollection.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skparagraph/utils/skparagraph.TestFontCollection.o</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skparagraph/skparagraph.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja -C $(OutDir) -tclean canvaskit/obj/third_party/skia/modules/skparagraph/skparagraph.stamp" />
+  </Target>
+</Project>

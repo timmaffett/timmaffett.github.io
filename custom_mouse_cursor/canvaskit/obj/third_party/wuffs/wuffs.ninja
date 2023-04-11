@@ -1,0 +1,11 @@
+defines = -DWUFFS_IMPLEMENTATION -DWUFFS_CONFIG__MODULES -DWUFFS_CONFIG__MODULE__BASE -DWUFFS_CONFIG__MODULE__GIF -DWUFFS_CONFIG__MODULE__LZW -DUSE_OPENSSL=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -D_DEBUG
+include_dirs = -I../.. -Icanvaskit/gen -I../../third_party/wuffs/release/c
+cflags = -fno-strict-aliasing -fcolor-diagnostics -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 -Wno-unused-function -Wno-c++11-narrowing
+cflags_c =
+root_out_dir = canvaskit
+target_out_dir = canvaskit/obj/third_party/wuffs
+target_output_name = wuffs
+
+build canvaskit/obj/third_party/wuffs/release/c/wuffs.wuffs-v0.3.o: canvaskit_cc ../../third_party/wuffs/release/c/wuffs-v0.3.c
+
+build canvaskit/obj/third_party/wuffs/wuffs.stamp: canvaskit_stamp canvaskit/obj/third_party/wuffs/release/c/wuffs.wuffs-v0.3.o

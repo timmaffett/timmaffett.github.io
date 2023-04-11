@@ -1,0 +1,8 @@
+defines = -DUSE_OPENSSL=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -D_DEBUG
+include_dirs = -I../.. -Icanvaskit/gen
+root_out_dir = canvaskit
+target_out_dir = canvaskit/obj/third_party/skia
+target_output_name = sse42
+
+
+build canvaskit/obj/third_party/skia/sse42.stamp: canvaskit_stamp

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup />
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../third_party/libpng/png.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngerror.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngget.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngmem.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngpread.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngread.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngrio.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngrtran.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngrutil.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngset.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngtrans.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngwio.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngwrite.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngwtran.c" />
+    <CustomBuild Include="../../../../../../third_party/libpng/pngwutil.c" />
+  </ItemGroup>
+</Project>

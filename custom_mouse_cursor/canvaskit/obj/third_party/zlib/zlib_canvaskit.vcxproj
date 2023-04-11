@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1ED092ED-D7A9-4D29-BD31-3EF8380B4CD1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>zlib</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\canvaskit/obj/third_party/zlib/zlib.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../..;../../../../../../out/host_debug_unopt/canvaskit/gen;../../../../../../third_party/zlib;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-strict-aliasing -fcolor-diagnostics -fvisibility-inlines-hidden -std=c++17 -fno-rtti -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 -Wno-newline-eof -Wno-typedef-redefinition -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -Wno-newline-eof %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>CPU_NO_SIMD;USE_OPENSSL=1;_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS;_DEBUG;ZLIB_IMPLEMENTATION;ZLIB_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../third_party/zlib/adler32.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.adler32.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.adler32.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/chromeconf.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/compress.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.compress.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.compress.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/contrib/optimizations/insert_string.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/cpu_features.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.cpu_features.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.cpu_features.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/cpu_features.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/crc32.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.crc32.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.crc32.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/crc32.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/deflate.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.deflate.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.deflate.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/deflate.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/gzclose.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.gzclose.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.gzclose.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/gzguts.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/gzlib.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.gzlib.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.gzlib.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/zlib/gzread.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.gzread.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.gzread.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/zlib/gzwrite.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.gzwrite.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.gzwrite.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/zlib/infback.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.infback.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.infback.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/zlib/inffast.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.inffast.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.inffast.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/inffast.h" />
+    <None Include="../../../../../../third_party/zlib/inffixed.h" />
+    <None Include="../../../../../../third_party/zlib/inflate.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/inftrees.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.inftrees.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.inftrees.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/inftrees.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/trees.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.trees.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.trees.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/trees.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/uncompr.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.uncompr.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.uncompr.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/zconf.h" />
+    <None Include="../../../../../../third_party/zlib/zlib.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/zutil.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.zutil.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.zutil.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/zlib/zutil.h" />
+    <CustomBuild Include="../../../../../../third_party/zlib/inflate.c">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/chrome_zlib.inflate.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/zlib/chrome_zlib.inflate.o</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja -C $(OutDir)  canvaskit/obj/third_party/zlib/zlib.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja -C $(OutDir) -tclean canvaskit/obj/third_party/zlib/zlib.stamp" />
+  </Target>
+</Project>

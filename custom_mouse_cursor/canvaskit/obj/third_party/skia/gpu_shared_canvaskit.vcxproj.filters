@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include\gpu">
+      <UniqueIdentifier>{CBE1FA0F-8207-8EBF-1A1D-3A165834599A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{882A7C1D-17D6-E17D-2881-F3658AB049AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\private\base">
+      <UniqueIdentifier>{56BD6E23-EF36-E657-5EB1-8459EC116E28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\private">
+      <UniqueIdentifier>{694F74F1-934E-94F8-7B8C-16B2A57A03E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\private\chromium">
+      <UniqueIdentifier>{680728DB-5130-8A27-6514-8F0A74056287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu">
+      <UniqueIdentifier>{8555E70F-0BEA-BB31-F7F2-6963E093D756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\tessellate">
+      <UniqueIdentifier>{1710114A-4855-7EB1-BB7A-D8B75CF96B89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\text\gpu">
+      <UniqueIdentifier>{3C169A69-2CC3-BD49-F623-83FACA2197F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\text">
+      <UniqueIdentifier>{3804D58C-1CC2-3DA2-5FF9-E8139A482587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sksl\codegen">
+      <UniqueIdentifier>{6FF96E43-DA6F-17D1-7A94-3A59DD485D71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sksl">
+      <UniqueIdentifier>{F6347FB6-4C9D-6A9B-FA83-09F4F2199FE1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\gpu\vk">
+      <UniqueIdentifier>{8A4CD761-410A-D72E-018A-7C81673AC0C7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\private\gpu\vk">
+      <UniqueIdentifier>{4C8AEA80-61D6-0113-C540-779678BFCFD5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\private\gpu">
+      <UniqueIdentifier>{5F90A3BC-EEBF-5E28-4223-5AA4F0E06FEB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\vk">
+      <UniqueIdentifier>{BD4D83EE-9468-2212-C4B9-5AA877D5AEE1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../third_party/skia/include/gpu/GpuTypes.h">
+      <Filter>include\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/gpu/MutableTextureState.h">
+      <Filter>include\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/gpu/ShaderErrorHandler.h">
+      <Filter>include\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/base/SingleOwner.h">
+      <Filter>include\private\base</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/chromium/Slug.h">
+      <Filter>include\private\chromium</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/AsyncReadTypes.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/AtlasTypes.cpp">
+      <Filter>src\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/AtlasTypes.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/Blend.cpp">
+      <Filter>src\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/Blend.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/BufferWriter.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/DitherUtils.cpp">
+      <Filter>src\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/DitherUtils.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/GrAHardwareBufferUtils.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/GrRectanizer.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/KeyBuilder.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/MutableTextureStateRef.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/Rectanizer.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/RectanizerPow2.cpp">
+      <Filter>src\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/RectanizerPow2.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/RectanizerSkyline.cpp">
+      <Filter>src\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/RectanizerSkyline.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/RefCntedCallback.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ResourceKey.cpp">
+      <Filter>src\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ResourceKey.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ShaderErrorHandler.cpp">
+      <Filter>src\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/SkBackingFit.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/SkRenderEngineAbortf.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/Swizzle.cpp">
+      <Filter>src\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/Swizzle.h">
+      <Filter>src\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/AffineMatrix.h">
+      <Filter>src\gpu\tessellate</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/CullTest.h">
+      <Filter>src\gpu\tessellate</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/tessellate/FixedCountBufferUtils.cpp">
+      <Filter>src\gpu\tessellate</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/FixedCountBufferUtils.h">
+      <Filter>src\gpu\tessellate</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/LinearTolerances.h">
+      <Filter>src\gpu\tessellate</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/MiddleOutPolygonTriangulator.h">
+      <Filter>src\gpu\tessellate</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/MidpointContourParser.h">
+      <Filter>src\gpu\tessellate</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/PatchWriter.h">
+      <Filter>src\gpu\tessellate</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/StrokeIterator.h">
+      <Filter>src\gpu\tessellate</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/tessellate/Tessellation.cpp">
+      <Filter>src\gpu\tessellate</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/Tessellation.h">
+      <Filter>src\gpu\tessellate</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/tessellate/WangsFormula.h">
+      <Filter>src\gpu\tessellate</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/DistanceFieldAdjustTable.cpp">
+      <Filter>src\text\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/DistanceFieldAdjustTable.h">
+      <Filter>src\text\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/Glyph.h">
+      <Filter>src\text\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/GlyphVector.cpp">
+      <Filter>src\text\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/GlyphVector.h">
+      <Filter>src\text\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/SDFMaskFilter.cpp">
+      <Filter>src\text\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/SDFMaskFilter.h">
+      <Filter>src\text\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/SDFTControl.cpp">
+      <Filter>src\text\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/SDFTControl.h">
+      <Filter>src\text\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/Slug.cpp">
+      <Filter>src\text\gpu</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/StrikeCache.cpp">
+      <Filter>src\text\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/StrikeCache.h">
+      <Filter>src\text\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/SubRunAllocator.cpp">
+      <Filter>src\text\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/SubRunAllocator.h">
+      <Filter>src\text\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/SubRunContainer.cpp">
+      <Filter>src\text\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/SubRunContainer.h">
+      <Filter>src\text\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/TextBlob.cpp">
+      <Filter>src\text\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/TextBlob.h">
+      <Filter>src\text\gpu</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/text/gpu/TextBlobRedrawCoordinator.cpp">
+      <Filter>src\text\gpu</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/text/gpu/TextBlobRedrawCoordinator.h">
+      <Filter>src\text\gpu</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLCodeGenerator.h">
+      <Filter>src\sksl\codegen</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLGLSLCodeGenerator.cpp">
+      <Filter>src\sksl\codegen</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLGLSLCodeGenerator.h">
+      <Filter>src\sksl\codegen</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLMetalCodeGenerator.cpp">
+      <Filter>src\sksl\codegen</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLMetalCodeGenerator.h">
+      <Filter>src\sksl\codegen</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLPipelineStageCodeGenerator.cpp">
+      <Filter>src\sksl\codegen</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLPipelineStageCodeGenerator.h">
+      <Filter>src\sksl\codegen</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLSPIRVCodeGenerator.cpp">
+      <Filter>src\sksl\codegen</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLSPIRVCodeGenerator.h">
+      <Filter>src\sksl\codegen</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLSPIRVtoHLSL.cpp">
+      <Filter>src\sksl\codegen</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLSPIRVtoHLSL.h">
+      <Filter>src\sksl\codegen</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLWGSLCodeGenerator.cpp">
+      <Filter>src\sksl\codegen</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/sksl/codegen/SkSLWGSLCodeGenerator.h">
+      <Filter>src\sksl\codegen</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/VulkanBackendContext.h">
+      <Filter>include\gpu\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/VulkanExtensions.h">
+      <Filter>include\gpu\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/VulkanMemoryAllocator.h">
+      <Filter>include\gpu\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/VulkanTypes.h">
+      <Filter>include\gpu\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/gpu/vk/SkiaVulkan.h">
+      <Filter>include\private\gpu\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/gpu/vk/VulkanTypesPriv.h">
+      <Filter>include\private\gpu\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/vk/VulkanAMDMemoryAllocator.cpp">
+      <Filter>src\gpu\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/vk/VulkanAMDMemoryAllocator.h">
+      <Filter>src\gpu\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/vk/VulkanExtensions.cpp">
+      <Filter>src\gpu\vk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/vk/VulkanInterface.cpp">
+      <Filter>src\gpu\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/vk/VulkanInterface.h">
+      <Filter>src\gpu\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/vk/VulkanMemory.cpp">
+      <Filter>src\gpu\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/vk/VulkanMemory.h">
+      <Filter>src\gpu\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/vk/VulkanUtilsPriv.h">
+      <Filter>src\gpu\vk</Filter>
+    </None>
+  </ItemGroup>
+</Project>

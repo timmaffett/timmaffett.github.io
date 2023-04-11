@@ -1,0 +1,1747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include\private\gpu\ganesh">
+      <UniqueIdentifier>{39D21231-4D34-0843-6EFD-40631DEB8247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\private\gpu">
+      <UniqueIdentifier>{5F90A3BC-EEBF-5E28-4223-5AA4F0E06FEB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\private">
+      <UniqueIdentifier>{694F74F1-934E-94F8-7B8C-16B2A57A03E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{882A7C1D-17D6-E17D-2881-F3658AB049AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh">
+      <UniqueIdentifier>{B875A9B6-029A-BDFE-40BD-49E4C66AE18F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu">
+      <UniqueIdentifier>{8555E70F-0BEA-BB31-F7F2-6963E093D756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\effects">
+      <UniqueIdentifier>{169C3534-8F38-4C29-A2F1-590A048A4E76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\geometry">
+      <UniqueIdentifier>{D1534B60-24E3-E7E6-9489-1D81FE53EE82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\glsl">
+      <UniqueIdentifier>{52290073-AA4A-0E2F-AF5A-1BD34584DACE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\gradients">
+      <UniqueIdentifier>{E9874923-FC1B-FB37-5827-F1EF0CFC2EE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\image">
+      <UniqueIdentifier>{8F8B47CF-22B2-9D51-49BE-B76635E9C1E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\mock">
+      <UniqueIdentifier>{C2CF063C-3EEB-0174-8712-22702EDAAB13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\ops">
+      <UniqueIdentifier>{3C2BEECF-2B99-CC15-C2C5-6D59705FE5CB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\surface">
+      <UniqueIdentifier>{901C36B7-8157-DC29-7DEE-5EBE53FD6DEB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\tessellate">
+      <UniqueIdentifier>{71B5DC64-9A45-09E2-8B7A-C4A23A8F15D3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\text">
+      <UniqueIdentifier>{CCD4BC1D-F82F-1639-2D64-1DFD5504D794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\image">
+      <UniqueIdentifier>{4F8CEDB4-A21C-AEA2-8995-96CD5A55D33D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\gl\webgl">
+      <UniqueIdentifier>{B0111219-7841-5C55-0566-41C6CA1358D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\gl">
+      <UniqueIdentifier>{D66A9089-28F7-52A3-C969-6C2C9D049F7C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\gl\builders">
+      <UniqueIdentifier>{7409CA3F-7408-7E2B-AD5E-70E39B3D55EE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\gl">
+      <UniqueIdentifier>{2E7DE6C7-CC66-2E5A-7A1C-5DB1BAE71739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\gpu\vk">
+      <UniqueIdentifier>{8A4CD761-410A-D72E-018A-7C81673AC0C7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\gpu">
+      <UniqueIdentifier>{CBE1FA0F-8207-8EBF-1A1D-3A165834599A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gpu\ganesh\vk">
+      <UniqueIdentifier>{A82CE225-C61F-F2CB-9E46-EB6F71F8A60E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrContext_Base.h">
+      <Filter>include\private\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrGLTypesPriv.h">
+      <Filter>include\private\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrImageContext.h">
+      <Filter>include\private\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrMockTypesPriv.h">
+      <Filter>include\private\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrMtlTypesPriv.h">
+      <Filter>include\private\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrTypesPriv.h">
+      <Filter>include\private\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ClipStack.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ClipStack.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/Device.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/Device_drawTexture.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/Device_v1.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAHardwareBufferImageGenerator.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAHardwareBufferImageGenerator.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAHardwareBufferUtils.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAHardwareBufferUtils_impl.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAppliedClip.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAttachment.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAttachment.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAuditTrail.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAuditTrail.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrAutoLocaleSetter.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendSemaphore.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendSurface.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendTextureImageGenerator.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendTextureImageGenerator.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendUtils.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBackendUtils.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBaseContextPriv.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBlurUtils.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBlurUtils.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBuffer.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferAllocPool.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferAllocPool.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferTransferRenderTask.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferTransferRenderTask.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferUpdateRenderTask.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrBufferUpdateRenderTask.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrCaps.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrCaps.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrClientMappedBufferManager.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrClientMappedBufferManager.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrClip.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrColor.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrColorInfo.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrColorInfo.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrColorSpaceXform.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrColorSpaceXform.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrContextThreadSafeProxy.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrContextThreadSafeProxyPriv.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrContext_Base.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrCopyRenderTask.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrCopyRenderTask.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrCpuBuffer.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDDLContext.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDDLTask.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDDLTask.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDataUtils.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDataUtils.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDefaultGeoProcFactory.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDefaultGeoProcFactory.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDeferredProxyUploader.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDeferredUpload.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDirectContext.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDirectContextPriv.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDirectContextPriv.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDistanceFieldGenFromVector.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDistanceFieldGenFromVector.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawIndirectCommand.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawOpAtlas.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawOpAtlas.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawOpTest.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawOpTest.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawingManager.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDrawingManager.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDriverBugWorkarounds.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDstProxyView.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDynamicAtlas.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrDynamicAtlas.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrEagerVertexAllocator.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrEagerVertexAllocator.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFPArgs.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFinishCallbacks.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFinishCallbacks.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFixedClip.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFixedClip.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFragmentProcessor.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrFragmentProcessor.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGeometryProcessor.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGeometryProcessor.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpu.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpu.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuBuffer.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuBuffer.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuResource.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuResource.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuResourceCacheAccess.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrGpuResourcePriv.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrHashMapWithCache.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrImageContext.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrImageContextPriv.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrImageInfo.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrImageInfo.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrManagedResource.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrManagedResource.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrMemoryPool.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrMemoryPool.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrMeshDrawTarget.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrMeshDrawTarget.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrNativeRect.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrNonAtomicRef.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOnFlushResourceProvider.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOnFlushResourceProvider.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOpFlushState.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOpFlushState.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOpsRenderPass.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOpsRenderPass.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrOpsTypes.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPaint.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPaint.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPersistentCacheUtils.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPersistentCacheUtils.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPipeline.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPipeline.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrPixmap.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessor.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessor.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorAnalysis.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorAnalysis.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorSet.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorSet.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorUnitTest.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProcessorUnitTest.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProgramDesc.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProgramDesc.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProgramInfo.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProgramInfo.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProxyProvider.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrProxyProvider.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRecordingContext.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRecordingContextPriv.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRecordingContextPriv.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRefCnt.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTarget.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTarget.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTargetProxy.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTargetProxy.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTask.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTask.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTaskCluster.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRenderTaskCluster.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceAllocator.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceAllocator.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceCache.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceCache.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceHandle.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceProvider.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceProvider.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrResourceProviderPriv.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRingBuffer.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrRingBuffer.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSPIRVUniformHandler.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSPIRVUniformHandler.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSPIRVVaryingHandler.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSPIRVVaryingHandler.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSWMaskHelper.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSWMaskHelper.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSamplerState.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrScissorState.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSemaphore.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrShaderCaps.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrShaderCaps.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrShaderVar.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrShaderVar.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSimpleMesh.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStagingBufferManager.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStagingBufferManager.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStencilSettings.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStencilSettings.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStyle.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrStyle.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurface.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurface.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceInfo.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceProxy.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceProxy.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceProxyPriv.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceProxyView.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrSurfaceProxyView.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTTopoSort.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTestUtils.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTestUtils.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTexture.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTexture.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureProxy.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureProxy.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureProxyCacheAccess.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureProxyPriv.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureRenderTargetProxy.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureRenderTargetProxy.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureResolveManager.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureResolveRenderTask.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTextureResolveRenderTask.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrThreadSafeCache.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrThreadSafeCache.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrThreadSafePipelineBuilder.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrThreadSafePipelineBuilder.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTracing.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTransferFromRenderTask.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrTransferFromRenderTask.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrUniformDataManager.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrUniformDataManager.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrUserStencilSettings.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrUtil.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrUtil.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrVertexChunkArray.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrVertexChunkArray.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWaitRenderTask.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWaitRenderTask.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWindowRectangles.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWindowRectsState.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWritePixelsRenderTask.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrWritePixelsRenderTask.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrXferProcessor.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrXferProcessor.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrYUVABackendTextures.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/GrYUVATextureProxies.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/GrYUVATextureProxies.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/PathRenderer.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/PathRenderer.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/PathRendererChain.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/PathRendererChain.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/SkGr.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/SkGr.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/StencilClip.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/StencilMaskHelper.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/StencilMaskHelper.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceContext.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceContext.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceDrawContext.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceDrawContext.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceFillContext.cpp">
+      <Filter>src\gpu\ganesh</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/SurfaceFillContext.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/TestFormatColorTypeCombination.h">
+      <Filter>src\gpu\ganesh</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrAtlasedShaderHelpers.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBezierEffect.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBezierEffect.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBicubicEffect.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBicubicEffect.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBitmapTextGeoProc.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBitmapTextGeoProc.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBlendFragmentProcessor.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrBlendFragmentProcessor.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrConvexPolyEffect.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrConvexPolyEffect.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrCoverageSetOpXP.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrCoverageSetOpXP.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrCustomXfermode.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrCustomXfermode.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrDisableColorXP.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrDisableColorXP.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrDistanceFieldGeoProc.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrDistanceFieldGeoProc.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrGaussianConvolutionFragmentProcessor.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrGaussianConvolutionFragmentProcessor.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrMatrixConvolutionEffect.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrMatrixConvolutionEffect.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrMatrixEffect.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrMatrixEffect.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrModulateAtlasCoverageEffect.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrModulateAtlasCoverageEffect.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrOvalEffect.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrOvalEffect.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrPorterDuffXferProcessor.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrPorterDuffXferProcessor.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrRRectEffect.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrRRectEffect.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrShadowGeoProc.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrShadowGeoProc.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrSkSLFP.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrSkSLFP.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrTextureEffect.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrTextureEffect.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrYUVtoRGBEffect.cpp">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/effects/GrYUVtoRGBEffect.h">
+      <Filter>src\gpu\ganesh\effects</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrAAConvexTessellator.cpp">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrAAConvexTessellator.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrAATriangulator.cpp">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrAATriangulator.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrInnerFanTriangulator.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrPathUtils.cpp">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrPathUtils.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrQuad.cpp">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrQuad.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrQuadBuffer.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrQuadUtils.cpp">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrQuadUtils.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrRect.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrShape.cpp">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrShape.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrStyledShape.cpp">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrStyledShape.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrTriangulator.cpp">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/geometry/GrTriangulator.h">
+      <Filter>src\gpu\ganesh\geometry</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLBlend.cpp">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLBlend.h">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLColorSpaceXformHelper.h">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLFragmentShaderBuilder.cpp">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLFragmentShaderBuilder.h">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLProgramBuilder.cpp">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLProgramBuilder.h">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLProgramDataManager.cpp">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLProgramDataManager.h">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLShaderBuilder.cpp">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLShaderBuilder.h">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLUniformHandler.cpp">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLUniformHandler.h">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLVarying.cpp">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLVarying.h">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLVertexGeoBuilder.cpp">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/glsl/GrGLSLVertexGeoBuilder.h">
+      <Filter>src\gpu\ganesh\glsl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gradients/GrGradientBitmapCache.cpp">
+      <Filter>src\gpu\ganesh\gradients</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gradients/GrGradientBitmapCache.h">
+      <Filter>src\gpu\ganesh\gradients</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gradients/GrGradientShader.cpp">
+      <Filter>src\gpu\ganesh\gradients</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gradients/GrGradientShader.h">
+      <Filter>src\gpu\ganesh\gradients</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/GrImageUtils.cpp">
+      <Filter>src\gpu\ganesh\image</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/image/GrImageUtils.h">
+      <Filter>src\gpu\ganesh\image</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/GrPinnableImage.cpp">
+      <Filter>src\gpu\ganesh\image</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_Ganesh.cpp">
+      <Filter>src\gpu\ganesh\image</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_Ganesh.h">
+      <Filter>src\gpu\ganesh\image</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_GaneshBase.cpp">
+      <Filter>src\gpu\ganesh\image</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_GaneshBase.h">
+      <Filter>src\gpu\ganesh\image</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_GaneshFactories.cpp">
+      <Filter>src\gpu\ganesh\image</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_GaneshYUVA.cpp">
+      <Filter>src\gpu\ganesh\image</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/image/SkImage_GaneshYUVA.h">
+      <Filter>src\gpu\ganesh\image</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockAttachment.h">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockBuffer.h">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockCaps.cpp">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockCaps.h">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockGpu.cpp">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockGpu.h">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockOpsRenderPass.h">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockRenderTask.h">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockSurfaceProxy.h">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockTexture.h">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/mock/GrMockTypes.cpp">
+      <Filter>src\gpu\ganesh\mock</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AAConvexPathRenderer.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AAConvexPathRenderer.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AAHairLinePathRenderer.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AAHairLinePathRenderer.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AALinearizingConvexPathRenderer.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AALinearizingConvexPathRenderer.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasInstancedHelper.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasInstancedHelper.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasPathRenderer.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasPathRenderer.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasRenderTask.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasRenderTask.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasTextOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/AtlasTextOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/ClearOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/ClearOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DashLinePathRenderer.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DashLinePathRenderer.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DashOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DashOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DefaultPathRenderer.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DefaultPathRenderer.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawAtlasOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawAtlasOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawAtlasPathOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawAtlasPathOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawMeshOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawMeshOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawableOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/DrawableOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/FillPathFlags.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/FillRRectOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/FillRRectOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/FillRectOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/FillRectOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrDrawOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrMeshDrawOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrMeshDrawOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrOvalOpFactory.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrOvalOpFactory.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrPathStencilSettings.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrSimpleMeshDrawOpHelper.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrSimpleMeshDrawOpHelper.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrSimpleMeshDrawOpHelperWithStencil.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/GrSimpleMeshDrawOpHelperWithStencil.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/LatticeOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/LatticeOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/OpsTask.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/OpsTask.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathInnerTriangulateOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathInnerTriangulateOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathStencilCoverOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathStencilCoverOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathTessellateOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/PathTessellateOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/QuadPerEdgeAA.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/QuadPerEdgeAA.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/RegionOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/RegionOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/ShadowRRectOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/ShadowRRectOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathAtlasMgr.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathAtlasMgr.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathRenderer.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathRenderer.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathShapeData.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SmallPathShapeData.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SoftwarePathRenderer.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/SoftwarePathRenderer.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/StrokeRectOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/StrokeRectOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/StrokeTessellateOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/StrokeTessellateOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TessellationPathRenderer.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TessellationPathRenderer.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TextureOp.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TextureOp.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TriangulatingPathRenderer.cpp">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/ops/TriangulatingPathRenderer.h">
+      <Filter>src\gpu\ganesh\ops</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/surface/SkSurface_Ganesh.cpp">
+      <Filter>src\gpu\ganesh\surface</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrPathTessellationShader.cpp">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrPathTessellationShader.h">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrStrokeTessellationShader.cpp">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrStrokeTessellationShader.h">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrTessellationShader.cpp">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/GrTessellationShader.h">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/PathTessellator.cpp">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/PathTessellator.h">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/StrokeTessellator.cpp">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/StrokeTessellator.h">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/tessellate/VertexChunkPatchAllocator.h">
+      <Filter>src\gpu\ganesh\tessellate</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/text/GrAtlasManager.cpp">
+      <Filter>src\gpu\ganesh\text</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/text/GrAtlasManager.h">
+      <Filter>src\gpu\ganesh\text</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/image/SkImage_AndroidFactories.cpp">
+      <Filter>src\image</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/webgl/GrGLMakeNativeInterface_webgl.cpp">
+      <Filter>src\gpu\ganesh\gl\webgl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAssembleGLESInterfaceAutogen.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAssembleGLInterfaceAutogen.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAssembleHelpers.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAssembleInterface.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAssembleWebGLInterfaceAutogen.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAttachment.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLAttachment.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLBuffer.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLBuffer.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLCaps.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLCaps.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLContext.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLContext.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLDefines_impl.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLExtensions.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLGLSL.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLGLSL.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLGpu.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLGpu.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLGpuProgramCache.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLInterfaceAutogen.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLOpsRenderPass.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLOpsRenderPass.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLProgram.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLProgram.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLProgramDataManager.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLProgramDataManager.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLRenderTarget.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLRenderTarget.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLSemaphore.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLSemaphore.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLTexture.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLTexture.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLTextureRenderTarget.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLTextureRenderTarget.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLTypesPriv.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLUniformHandler.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLUniformHandler.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLUtil.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLUtil.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLVaryingHandler.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLVertexArray.cpp">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/GrGLVertexArray.h">
+      <Filter>src\gpu\ganesh\gl</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/builders/GrGLProgramBuilder.cpp">
+      <Filter>src\gpu\ganesh\gl\builders</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/builders/GrGLProgramBuilder.h">
+      <Filter>src\gpu\ganesh\gl\builders</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/builders/GrGLShaderStringBuilder.cpp">
+      <Filter>src\gpu\ganesh\gl\builders</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/gl/builders/GrGLShaderStringBuilder.h">
+      <Filter>src\gpu\ganesh\gl\builders</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/gl/GrGLDefines.h">
+      <Filter>src\gpu\gl</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/GrVkBackendContext.h">
+      <Filter>include\gpu\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/GrVkExtensions.h">
+      <Filter>include\gpu\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/GrVkMemoryAllocator.h">
+      <Filter>include\gpu\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/gpu/vk/GrVkTypes.h">
+      <Filter>include\gpu\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/include/private/gpu/ganesh/GrVkTypesPriv.h">
+      <Filter>include\private\gpu\ganesh</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkBuffer.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkBuffer.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCaps.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCaps.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCommandBuffer.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCommandBuffer.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCommandPool.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkCommandPool.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorPool.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorPool.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorSet.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorSet.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorSetManager.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkDescriptorSetManager.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkFramebuffer.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkFramebuffer.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkGpu.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkGpu.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkImage.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkImage.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkImageLayout.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkImageView.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkImageView.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkMSAALoadManager.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkMSAALoadManager.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkManagedResource.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkOpsRenderPass.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkOpsRenderPass.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipeline.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipeline.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineState.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineState.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineStateBuilder.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineStateBuilder.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineStateCache.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineStateDataManager.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkPipelineStateDataManager.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkRenderPass.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkRenderPass.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkRenderTarget.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkRenderTarget.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkResourceProvider.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkResourceProvider.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSampler.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSampler.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSamplerYcbcrConversion.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSamplerYcbcrConversion.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSemaphore.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkSemaphore.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkTexture.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkTexture.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkTextureRenderTarget.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkTextureRenderTarget.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkTypesPriv.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkUniformHandler.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkUniformHandler.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkUtil.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkUtil.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+    <CustomBuild Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkVaryingHandler.cpp">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/skia/src/gpu/ganesh/vk/GrVkVaryingHandler.h">
+      <Filter>src\gpu\ganesh\vk</Filter>
+    </None>
+  </ItemGroup>
+</Project>

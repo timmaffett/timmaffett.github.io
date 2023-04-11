@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..\..\..\..\third_party\skia\modules\skottie\utils">
+      <UniqueIdentifier>{F47B30D9-0AC8-8953-F51D-8E88938A8BC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\third_party\skia\modules\skottie">
+      <UniqueIdentifier>{D4040D0B-70A2-3A5E-C4B6-F7A06437F68F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\third_party\skia\modules">
+      <UniqueIdentifier>{01670E73-4B31-0EC8-1F52-5E21230F1929}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\third_party\skia">
+      <UniqueIdentifier>{09E104ED-0694-B9EA-B699-06E1FF80FBF6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\third_party">
+      <UniqueIdentifier>{CFB45AC2-1068-5005-B71A-B5E095ADC2A2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..">
+      <UniqueIdentifier>{36E3B87A-920E-1155-B061-16E13847C0A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{BC2D405D-5A7E-241B-15FC-441581082017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{A8A4AA46-5437-4AB8-6540-F14ED994B38E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{78245A82-158D-7D20-54A6-7C428D0A7B36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\third_party\skia\modules\skresources\src">
+      <UniqueIdentifier>{E7B6DC09-4101-9616-EFE5-ED640BBCBC60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\third_party\skia\modules\skresources">
+      <UniqueIdentifier>{54CB89E0-6CAC-135F-116E-E02BACFB2DB1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\out\host_debug_unopt\canvaskit\modules\canvaskit\fonts">
+      <UniqueIdentifier>{4AD12DC1-E3D3-A70C-4B80-D4FCC9AC23B9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\out\host_debug_unopt\canvaskit\modules\canvaskit">
+      <UniqueIdentifier>{3F292694-2956-6C5A-1E18-A242FB7E6B25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\out\host_debug_unopt\canvaskit\modules">
+      <UniqueIdentifier>{F69F41B7-EB55-8807-D77C-00557561295A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\out\host_debug_unopt\canvaskit">
+      <UniqueIdentifier>{CA94FD25-B357-A29E-4BB7-0757035A7FC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\out\host_debug_unopt">
+      <UniqueIdentifier>{D00AE9B1-DA4D-27A7-41C7-96F2D1925E65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\..\out">
+      <UniqueIdentifier>{7878106B-612D-B2DA-F872-7905717EA629}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../../../../../../third_party/skia/modules/canvaskit/WasmCommon.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/canvaskit/canvaskit_bindings.cpp" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/canvaskit/paragraph_bindings.cpp" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/canvaskit/paragraph_bindings_gen.cpp" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/utils/SkottieUtils.cpp">
+      <Filter>..\..\..\..\third_party\skia\modules\skottie\utils</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/canvaskit/skottie_bindings.cpp" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skresources/src/SkResources.cpp">
+      <Filter>..\..\..\..\third_party\skia\modules\skresources\src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../out/host_debug_unopt/canvaskit/modules/canvaskit/fonts/NotoMono-Regular.ttf.ninja.cpp">
+      <Filter>..\..\..\..\out\host_debug_unopt\canvaskit\modules\canvaskit\fonts</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

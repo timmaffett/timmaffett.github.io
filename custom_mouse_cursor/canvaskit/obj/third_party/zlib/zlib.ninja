@@ -1,0 +1,26 @@
+defines = -DCPU_NO_SIMD -DUSE_OPENSSL=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -D_DEBUG -DZLIB_IMPLEMENTATION -DZLIB_DEBUG
+include_dirs = -I../.. -Icanvaskit/gen -I../../third_party/zlib
+cflags = -fno-strict-aliasing -fcolor-diagnostics -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 -Wno-newline-eof -Wno-typedef-redefinition -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct
+cflags_c =
+root_out_dir = canvaskit
+target_out_dir = canvaskit/obj/third_party/zlib
+target_output_name = chrome_zlib
+
+build canvaskit/obj/third_party/zlib/chrome_zlib.adler32.o: canvaskit_cc ../../third_party/zlib/adler32.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.compress.o: canvaskit_cc ../../third_party/zlib/compress.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.cpu_features.o: canvaskit_cc ../../third_party/zlib/cpu_features.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.crc32.o: canvaskit_cc ../../third_party/zlib/crc32.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.deflate.o: canvaskit_cc ../../third_party/zlib/deflate.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.gzclose.o: canvaskit_cc ../../third_party/zlib/gzclose.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.gzlib.o: canvaskit_cc ../../third_party/zlib/gzlib.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.gzread.o: canvaskit_cc ../../third_party/zlib/gzread.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.gzwrite.o: canvaskit_cc ../../third_party/zlib/gzwrite.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.infback.o: canvaskit_cc ../../third_party/zlib/infback.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.inffast.o: canvaskit_cc ../../third_party/zlib/inffast.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.inftrees.o: canvaskit_cc ../../third_party/zlib/inftrees.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.trees.o: canvaskit_cc ../../third_party/zlib/trees.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.uncompr.o: canvaskit_cc ../../third_party/zlib/uncompr.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.zutil.o: canvaskit_cc ../../third_party/zlib/zutil.c
+build canvaskit/obj/third_party/zlib/chrome_zlib.inflate.o: canvaskit_cc ../../third_party/zlib/inflate.c
+
+build canvaskit/obj/third_party/zlib/zlib.stamp: canvaskit_stamp canvaskit/obj/third_party/zlib/chrome_zlib.adler32.o canvaskit/obj/third_party/zlib/chrome_zlib.compress.o canvaskit/obj/third_party/zlib/chrome_zlib.cpu_features.o canvaskit/obj/third_party/zlib/chrome_zlib.crc32.o canvaskit/obj/third_party/zlib/chrome_zlib.deflate.o canvaskit/obj/third_party/zlib/chrome_zlib.gzclose.o canvaskit/obj/third_party/zlib/chrome_zlib.gzlib.o canvaskit/obj/third_party/zlib/chrome_zlib.gzread.o canvaskit/obj/third_party/zlib/chrome_zlib.gzwrite.o canvaskit/obj/third_party/zlib/chrome_zlib.infback.o canvaskit/obj/third_party/zlib/chrome_zlib.inffast.o canvaskit/obj/third_party/zlib/chrome_zlib.inftrees.o canvaskit/obj/third_party/zlib/chrome_zlib.trees.o canvaskit/obj/third_party/zlib/chrome_zlib.uncompr.o canvaskit/obj/third_party/zlib/chrome_zlib.zutil.o canvaskit/obj/third_party/zlib/chrome_zlib.inflate.o

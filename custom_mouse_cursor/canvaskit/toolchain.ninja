@@ -1,0 +1,125 @@
+rule canvaskit_copy
+  command = ln -f ${in} ${out} 2>/dev/null || (rm -rf ${out} && cp -af ${in} ${out})
+  description = COPY ${in} ${out}
+rule canvaskit_stamp
+  command = touch ${out}
+  description = STAMP ${out}
+rule canvaskit_cxx
+  command = c:/src/build_flutter/engine/src/buildtools/emsdk/upstream/emscripten/em++ --em-config c:/src/build_flutter/engine/src/buildtools/emsdk/.emscripten -MD -MF ${out}.d ${defines} ${include_dirs} ${cflags} ${cflags_cc}   -c ${in} -o ${out}
+  description = CXX ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule canvaskit_cc
+  command = c:/src/build_flutter/engine/src/buildtools/emsdk/upstream/emscripten/emcc --em-config c:/src/build_flutter/engine/src/buildtools/emsdk/.emscripten -MD -MF ${out}.d ${defines} ${include_dirs} ${cflags} ${cflags_c}  -c ${in} -o ${out}
+  description = CC ${out}
+  depfile = ${out}.d
+  deps = gcc
+rule canvaskit_link
+  command = touch ${root_out_dir}/${target_output_name}.worker.js && c:/src/build_flutter/engine/src/buildtools/emsdk/upstream/emscripten/em++ --em-config c:/src/build_flutter/engine/src/buildtools/emsdk/.emscripten ${ldflags}  -o ${root_out_dir}/${target_output_name}${output_extension}  -Wl,--start-group @${root_out_dir}/${target_output_name}${output_extension}.rsp ${solibs} -Wl,--end-group  ${libs} 
+  description = LINK ${root_out_dir}/${target_output_name}${output_extension}
+  rspfile = ${root_out_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = ${in}
+rule canvaskit_solink
+  command = touch ${root_out_dir}/${target_output_name}.worker.js && c:/src/build_flutter/engine/src/buildtools/emsdk/upstream/emscripten/em++ --em-config c:/src/build_flutter/engine/src/buildtools/emsdk/.emscripten -shared ${ldflags}  -o ${root_out_dir}/${target_output_name}${output_extension} -Wl,--build-id=sha1 -Wl,-soname=${target_output_name}${output_extension} @${root_out_dir}/${target_output_name}${output_extension}.rsp && { readelf -d ${root_out_dir}/${target_output_name}${output_extension} | grep SONAME ; nm -gD -f posix ${root_out_dir}/${target_output_name}${output_extension} | cut -f1-2 -d' '; } > ${root_out_dir}/${target_output_name}${output_extension}.tmp && if ! cmp -s ${root_out_dir}/${target_output_name}${output_extension}.tmp ${root_out_dir}/${target_output_name}${output_extension}.TOC; then mv ${root_out_dir}/${target_output_name}${output_extension}.tmp ${root_out_dir}/${target_output_name}${output_extension}.TOC; fi
+  description = SOLINK ${root_out_dir}/${target_output_name}${output_extension}
+  rspfile = ${root_out_dir}/${target_output_name}${output_extension}.rsp
+  rspfile_content = -Wl,--whole-archive ${in} ${solibs} -Wl,--no-whole-archive  ${libs} 
+  restat = 1
+rule canvaskit_alink
+  command = rm -f ${out} && c:/src/build_flutter/engine/src/buildtools/emsdk/upstream/emscripten/emar --em-config c:/src/build_flutter/engine/src/buildtools/emsdk/.emscripten rcs ${out} @${out}.rsp
+  description = AR ${out}
+  rspfile = ${out}.rsp
+  rspfile_content = ${in}
+rule canvaskit_asm
+  command = c:/src/build_flutter/engine/src/buildtools/emsdk/upstream/emscripten/emcc --em-config c:/src/build_flutter/engine/src/buildtools/emsdk/.emscripten -MD -MF ${out}.d ${defines} ${include_dirs} ${asmflags} ${cflags} ${cflags_c}  -c ${in} -o ${out}
+  description = ASM ${out}
+  depfile = ${out}.d
+  deps = gcc
+
+subninja canvaskit/obj/third_party/freetype2/freetype2.ninja
+subninja canvaskit/obj/third_party/harfbuzz/harfbuzz.ninja
+subninja canvaskit/obj/third_party/harfbuzz/harfbuzz_sources.ninja
+build canvaskit/icudtl.dat: canvaskit_copy ../../third_party/icu/flutter/icudtl.dat
+
+build canvaskit/obj/third_party/icu/copy_icudata.stamp: canvaskit_stamp canvaskit/icudtl.dat
+build canvaskit/obj/third_party/icu/icu.stamp: canvaskit_stamp canvaskit/obj/third_party/icu/icui18n.stamp canvaskit/obj/third_party/icu/icuuc.stamp
+build canvaskit/obj/third_party/icu/icudata.stamp: canvaskit_stamp canvaskit/obj/third_party/icu/copy_icudata.stamp
+subninja canvaskit/obj/third_party/icu/icui18n.ninja
+build canvaskit/obj/third_party/icu/icuuc.stamp: canvaskit_stamp canvaskit/obj/third_party/icu/icuuc_private.stamp
+subninja canvaskit/obj/third_party/icu/icuuc_private.ninja
+subninja canvaskit/obj/third_party/icu/icuuc_public.ninja
+subninja canvaskit/obj/third_party/libjpeg-turbo/libjpeg.ninja
+subninja canvaskit/obj/third_party/libjpeg-turbo/simd.ninja
+subninja canvaskit/obj/third_party/libpng/libpng.ninja
+subninja canvaskit/obj/third_party/libwebp/libwebp.ninja
+subninja canvaskit/obj/third_party/libwebp/libwebp_sse41.ninja
+subninja canvaskit/obj/third_party/skia/android_utils.ninja
+subninja canvaskit/obj/third_party/skia/avif.ninja
+subninja canvaskit/obj/third_party/skia/avx.ninja
+build canvaskit/obj/third_party/skia/compile_sksl_glsl_nosettings_tests.stamp: canvaskit_stamp
+build canvaskit/obj/third_party/skia/compile_sksl_glsl_tests.stamp: canvaskit_stamp
+build canvaskit/obj/third_party/skia/compile_sksl_metal_tests.stamp: canvaskit_stamp
+build canvaskit/obj/third_party/skia/compile_sksl_skrp_tests.stamp: canvaskit_stamp
+build canvaskit/obj/third_party/skia/compile_sksl_skvm_tests.stamp: canvaskit_stamp
+build canvaskit/obj/third_party/skia/compile_sksl_spirv_tests.stamp: canvaskit_stamp
+subninja canvaskit/obj/third_party/skia/crc32.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_FontConfigInterface.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_android.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_custom.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_custom_directory.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_custom_embedded.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_custom_embedded_factory.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_custom_empty.ninja
+build canvaskit/obj/third_party/skia/fontmgr_factory.stamp: canvaskit_stamp canvaskit/obj/third_party/skia/fontmgr_custom_embedded_factory.stamp
+subninja canvaskit/obj/third_party/skia/fontmgr_fontconfig.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_fuchsia.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_mac_ct.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_win.ninja
+subninja canvaskit/obj/third_party/skia/fontmgr_win_gdi.ninja
+subninja canvaskit/obj/third_party/skia/gpu.ninja
+subninja canvaskit/obj/third_party/skia/gpu_shared.ninja
+subninja canvaskit/obj/third_party/skia/graphite.ninja
+subninja canvaskit/obj/third_party/skia/heif.ninja
+subninja canvaskit/obj/third_party/skia/hsw.ninja
+subninja canvaskit/obj/third_party/skia/jpeg_decode.ninja
+subninja canvaskit/obj/third_party/skia/jpeg_encode.ninja
+subninja canvaskit/obj/third_party/skia/jpegxl_decode.ninja
+build canvaskit/obj/third_party/skia/minify_sksl.stamp: canvaskit_stamp
+subninja canvaskit/obj/third_party/skia/ndk_images.ninja
+subninja canvaskit/obj/third_party/skia/pdf.ninja
+subninja canvaskit/obj/third_party/skia/piet.ninja
+subninja canvaskit/obj/third_party/skia/png_decode.ninja
+subninja canvaskit/obj/third_party/skia/png_encode.ninja
+subninja canvaskit/obj/third_party/skia/raw.ninja
+build canvaskit/obj/third_party/skia/run_sksllex.stamp: canvaskit_stamp
+subninja canvaskit/obj/third_party/skia/skia.ninja
+subninja canvaskit/obj/third_party/skia/skvm_jit.ninja
+subninja canvaskit/obj/third_party/skia/skx.ninja
+subninja canvaskit/obj/third_party/skia/sse42.ninja
+subninja canvaskit/obj/third_party/skia/ssse3.ninja
+subninja canvaskit/obj/third_party/skia/typeface_freetype.ninja
+subninja canvaskit/obj/third_party/skia/webp_decode.ninja
+subninja canvaskit/obj/third_party/skia/webp_encode.ninja
+subninja canvaskit/obj/third_party/skia/wuffs.ninja
+subninja canvaskit/obj/third_party/skia/xml.ninja
+subninja canvaskit/obj/third_party/skia/xps.ninja
+build canvaskit/obj/third_party/skia/experimental/ffmpeg/video_decoder.stamp: canvaskit_stamp
+build canvaskit/obj/third_party/skia/modules/canvaskit/canvaskit.stamp: canvaskit_stamp canvaskit/canvaskit.js
+subninja canvaskit/obj/third_party/skia/modules/canvaskit/canvaskit_js.ninja
+rule __third_party_skia_modules_canvaskit_create_notomono_cpp___flutter_third_party_canvaskit_canvaskit__rule
+  command = C$:/Users/Tim/.vpython-root/7ea929/Scripts/python.exe ../../third_party/skia/tools/embed_resources.py --name=SK_EMBEDDED_FONTS --input c$:/src/build_flutter/engine/src/third_party/skia/modules/canvaskit/fonts/NotoMono-Regular.ttf --output c$:/src/build_flutter/engine/src/out/host_debug_unopt/canvaskit/modules/canvaskit/fonts/NotoMono-Regular.ttf.ninja.cpp --align=4
+  description = ACTION //third_party/skia/modules/canvaskit:create_notomono_cpp(//flutter/third_party/canvaskit:canvaskit)
+  restat = 1
+
+build canvaskit/modules/canvaskit/fonts/NotoMono-Regular.ttf.ninja.cpp: __third_party_skia_modules_canvaskit_create_notomono_cpp___flutter_third_party_canvaskit_canvaskit__rule | ../../third_party/skia/tools/embed_resources.py ../../third_party/skia/modules/canvaskit/fonts/NotoMono-Regular.ttf
+
+build canvaskit/obj/third_party/skia/modules/canvaskit/create_notomono_cpp.stamp: canvaskit_stamp canvaskit/modules/canvaskit/fonts/NotoMono-Regular.ttf.ninja.cpp
+subninja canvaskit/obj/third_party/skia/modules/skcms/skcms.ninja
+subninja canvaskit/obj/third_party/skia/modules/skottie/skottie.ninja
+subninja canvaskit/obj/third_party/skia/modules/skparagraph/skparagraph.ninja
+subninja canvaskit/obj/third_party/skia/modules/skresources/skresources.ninja
+subninja canvaskit/obj/third_party/skia/modules/sksg/sksg.ninja
+subninja canvaskit/obj/third_party/skia/modules/skshaper/skshaper.ninja
+subninja canvaskit/obj/third_party/skia/modules/skunicode/skunicode.ninja
+subninja canvaskit/obj/third_party/wuffs/wuffs.ninja
+subninja canvaskit/obj/third_party/zlib/zlib.ninja

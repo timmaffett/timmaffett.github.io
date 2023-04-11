@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0D9FE5EA-E9D4-7616-F411-934B2C736B17}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>icuuc_private</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\canvaskit/obj/third_party/icu/icuuc_private.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../..;../../../../../../out/host_debug_unopt/canvaskit/gen;../../../../../../third_party/icu/source/common;../../../../../../third_party/icu/source/i18n;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-strict-aliasing -fcolor-diagnostics -fvisibility-inlines-hidden -std=c++17 -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 -Wno-newline-eof -Wno-typedef-redefinition -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -Wno-newline-eof -Wno-parentheses -Wno-unused-function -Wno-unused-variable -Wno-ambiguous-reversed-operator -Wno-deprecated-declarations %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>U_COMMON_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;USE_OPENSSL=1;_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS;_DEBUG;HAVE_DLOPEN=0;UCONFIG_ONLY_HTML_CONVERSION=1;UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0;U_CHARSET_IS_UTF8=1;__i386__;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;U_STATIC_IMPLEMENTATION;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/appendable.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.appendable.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.appendable.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/bmpset.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.bmpset.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.bmpset.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/bmpset.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/brkeng.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.brkeng.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.brkeng.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/brkeng.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/brkiter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.brkiter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.brkiter.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/bytesinkutil.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.bytesinkutil.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.bytesinkutil.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/bytesinkutil.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/bytestream.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.bytestream.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.bytestream.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/bytestriebuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.bytestriebuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.bytestriebuilder.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/bytestrie.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.bytestrie.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.bytestrie.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/bytestrieiterator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.bytestrieiterator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.bytestrieiterator.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/caniter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.caniter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.caniter.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/capi_helper.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/characterproperties.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.characterproperties.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.characterproperties.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/chariter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.chariter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.chariter.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/charstr.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.charstr.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.charstr.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/charstr.h" />
+    <None Include="../../../../../../third_party/icu/source/common/charstrmap.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/cmemory.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.cmemory.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.cmemory.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/cmemory.h" />
+    <None Include="../../../../../../third_party/icu/source/common/cpputils.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/cstr.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.cstr.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.cstr.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/cstr.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/cstring.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.cstring.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.cstring.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/cstring.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/cwchar.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.cwchar.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.cwchar.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/cwchar.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/dictbe.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.dictbe.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.dictbe.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/dictbe.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/dictionarydata.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.dictionarydata.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.dictionarydata.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/dictionarydata.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/dtintrv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.dtintrv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.dtintrv.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/edits.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.edits.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.edits.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/emojiprops.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.emojiprops.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.emojiprops.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/emojiprops.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/errorcode.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.errorcode.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.errorcode.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/filteredbrk.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.filteredbrk.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.filteredbrk.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/filterednormalizer2.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.filterednormalizer2.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.filterednormalizer2.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/hash.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/icudataver.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.icudataver.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.icudataver.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/icuplug.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.icuplug.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.icuplug.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/icuplugimp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/loadednormalizer2impl.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.loadednormalizer2impl.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.loadednormalizer2impl.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/localebuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.localebuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.localebuilder.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/localefallback_data.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/localematcher.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.localematcher.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.localematcher.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/localeprioritylist.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.localeprioritylist.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.localeprioritylist.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/localeprioritylist.h" />
+    <None Include="../../../../../../third_party/icu/source/common/localsvc.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/locavailable.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.locavailable.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.locavailable.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/locbased.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.locbased.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.locbased.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/locbased.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/locdispnames.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.locdispnames.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.locdispnames.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/locdistance.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.locdistance.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.locdistance.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/locdistance.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/locdspnm.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.locdspnm.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.locdspnm.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/locid.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.locid.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.locid.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/loclikely.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.loclikely.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.loclikely.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/loclikelysubtags.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.loclikelysubtags.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.loclikelysubtags.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/loclikelysubtags.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/locmap.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.locmap.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.locmap.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/locmap.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/locresdata.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.locresdata.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.locresdata.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/locutil.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.locutil.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.locutil.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/locutil.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/lsr.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.lsr.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.lsr.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/lsr.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/lstmbe.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.lstmbe.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.lstmbe.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/lstmbe.h" />
+    <None Include="../../../../../../third_party/icu/source/common/messageimpl.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/messagepattern.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.messagepattern.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.messagepattern.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/msvcres.h" />
+    <None Include="../../../../../../third_party/icu/source/common/mutex.h" />
+    <None Include="../../../../../../third_party/icu/source/common/norm2allmodes.h" />
+    <None Include="../../../../../../third_party/icu/source/common/norm2_nfc_data.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/normalizer2.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.normalizer2.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.normalizer2.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/normalizer2impl.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.normalizer2impl.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.normalizer2impl.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/normalizer2impl.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/normlzr.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.normlzr.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.normlzr.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/parsepos.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.parsepos.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.parsepos.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/patternprops.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.patternprops.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.patternprops.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/patternprops.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/pluralmap.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.pluralmap.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.pluralmap.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/pluralmap.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/propname.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.propname.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.propname.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/propname_data.h" />
+    <None Include="../../../../../../third_party/icu/source/common/propname.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/propsvec.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.propsvec.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.propsvec.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/propsvec.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/punycode.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.punycode.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.punycode.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/punycode.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/putil.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.putil.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.putil.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/putilimp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/rbbi_cache.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.rbbi_cache.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.rbbi_cache.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/rbbi_cache.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/rbbi.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.rbbi.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.rbbi.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/rbbidata.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.rbbidata.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.rbbidata.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/rbbidata.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/rbbinode.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.rbbinode.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.rbbinode.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/rbbinode.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/rbbirb.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.rbbirb.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.rbbirb.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/rbbirb.h" />
+    <None Include="../../../../../../third_party/icu/source/common/rbbirpt.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/rbbiscan.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.rbbiscan.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.rbbiscan.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/rbbiscan.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/rbbisetb.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.rbbisetb.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.rbbisetb.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/rbbisetb.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/rbbistbl.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.rbbistbl.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.rbbistbl.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/rbbitblb.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.rbbitblb.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.rbbitblb.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/rbbitblb.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/resbund_cnv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.resbund_cnv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.resbund_cnv.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/resbund.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.resbund.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.resbund.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/resource.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.resource.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.resource.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/resource.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/restrace.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.restrace.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.restrace.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/restrace.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ruleiter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ruleiter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ruleiter.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ruleiter.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/schriter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.schriter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.schriter.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/serv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.serv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.serv.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/serv.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/servlk.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.servlk.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.servlk.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/servlkf.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.servlkf.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.servlkf.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/servloc.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/servls.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.servls.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.servls.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/servnotf.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.servnotf.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.servnotf.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/servnotf.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/servrbf.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.servrbf.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.servrbf.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/servslkf.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.servslkf.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.servslkf.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/sharedobject.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.sharedobject.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.sharedobject.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/sharedobject.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/simpleformatter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.simpleformatter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.simpleformatter.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/sprpimpl.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/static_unicode_sets.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.static_unicode_sets.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.static_unicode_sets.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/static_unicode_sets.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/stringpiece.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.stringpiece.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.stringpiece.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/stringtriebuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.stringtriebuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.stringtriebuilder.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uarrsort.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uarrsort.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uarrsort.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uarrsort.h" />
+    <None Include="../../../../../../third_party/icu/source/common/uassert.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ubidi.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ubidi.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ubidi.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ubidiimp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ubidiln.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ubidiln.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ubidiln.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ubidi_props.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ubidi_props.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ubidi_props.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ubidi_props_data.h" />
+    <None Include="../../../../../../third_party/icu/source/common/ubidi_props.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ubiditransform.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ubiditransform.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ubiditransform.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ubidiwrt.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ubidiwrt.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ubidiwrt.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ubrk.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ubrk.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ubrk.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ubrkimpl.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucase.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucase.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucase.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucase.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucasemap.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucasemap.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucasemap.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucasemap_imp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucasemap_titlecase_brkiter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucasemap_titlecase_brkiter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucasemap_titlecase_brkiter.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucase_props_data.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucat.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucat.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucat.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uchar.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uchar.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uchar.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uchar_props_data.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucharstriebuilder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucharstriebuilder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucharstriebuilder.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucharstrie.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucharstrie.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucharstrie.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucharstrieiterator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucharstrieiterator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucharstrieiterator.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uchriter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uchriter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uchriter.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucln_cmn.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucln_cmn.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucln_cmn.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucln_cmn.h" />
+    <None Include="../../../../../../third_party/icu/source/common/ucln.h" />
+    <None Include="../../../../../../third_party/icu/source/common/ucln_imp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucmndata.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucmndata.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucmndata.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucmndata.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv2022.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv2022.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv2022.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_bld.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_bld.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_bld.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucnv_bld.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnvbocu.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnvbocu.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnvbocu.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_cb.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_cb.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_cb.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_cnv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_cnv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_cnv.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucnv_cnv.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_ct.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_ct.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_ct.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnvdisp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnvdisp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnvdisp.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_err.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_err.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_err.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_ext.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_ext.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_ext.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucnv_ext.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnvhz.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnvhz.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnvhz.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucnv_imp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_io.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_io.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_io.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucnv_io.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnvisci.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnvisci.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnvisci.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnvlat1.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnvlat1.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnvlat1.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_lmb.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_lmb.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_lmb.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnvmbcs.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnvmbcs.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnvmbcs.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucnvmbcs.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnvscsu.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnvscsu.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnvscsu.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnvsel.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnvsel.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnvsel.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_set.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_set.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_set.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_u16.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_u16.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_u16.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_u32.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_u32.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_u32.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_u7.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_u7.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_u7.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucnv_u8.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_u8.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucnv_u8.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucol_data.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucol_swp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucol_swp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucol_swp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucol_swp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucptrie.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucptrie.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucptrie.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucptrie_impl.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ucurr.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ucurr.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ucurr.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ucurrimp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/udata.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.udata.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.udata.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/udatamem.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.udatamem.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.udatamem.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/udatamem.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/udataswp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.udataswp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.udataswp.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/udataswp.h" />
+    <None Include="../../../../../../third_party/icu/source/common/uelement.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uenum.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uenum.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uenum.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uenumimp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uhash.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uhash.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uhash.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uhash.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uhash_us.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uhash_us.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uhash_us.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uidna.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uidna.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uidna.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uinit.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uinit.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uinit.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uinvchar.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uinvchar.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uinvchar.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uinvchar.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uiter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uiter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uiter.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ulayout_props.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ulist.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ulist.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ulist.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ulist.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uloc.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uloc.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uloc.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ulocimp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uloc_keytype.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uloc_keytype.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uloc_keytype.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uloc_tag.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uloc_tag.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uloc_tag.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/umapfile.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.umapfile.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.umapfile.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/umapfile.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/umath.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.umath.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.umath.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/umutablecptrie.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.umutablecptrie.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.umutablecptrie.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/umutex.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.umutex.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.umutex.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/umutex.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unames.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unames.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unames.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unifiedcache.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unifiedcache.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unifiedcache.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/unifiedcache.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unifilt.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unifilt.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unifilt.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unifunct.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unifunct.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unifunct.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uniquecharstr.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uniset_closure.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uniset_closure.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uniset_closure.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uniset.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uniset.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uniset.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uniset_props.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uniset_props.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uniset_props.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unisetspan.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unisetspan.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unisetspan.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/unisetspan.h" />
+    <None Include="../../../../../../third_party/icu/source/common/unistrappender.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unistr_case.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unistr_case.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unistr_case.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unistr_case_locale.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unistr_case_locale.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unistr_case_locale.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unistr_cnv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unistr_cnv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unistr_cnv.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unistr.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unistr.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unistr.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unistr_props.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unistr_props.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unistr_props.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unistr_titlecase_brkiter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unistr_titlecase_brkiter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unistr_titlecase_brkiter.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unormcmp.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unormcmp.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unormcmp.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/unorm.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.unorm.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.unorm.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/unormimp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uobject.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uobject.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uobject.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uposixdefs.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uprops.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uprops.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uprops.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uprops.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uresbund.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uresbund.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uresbund.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ures_cnv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ures_cnv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ures_cnv.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uresdata.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uresdata.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uresdata.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uresdata.h" />
+    <None Include="../../../../../../third_party/icu/source/common/uresimp.h" />
+    <None Include="../../../../../../third_party/icu/source/common/ureslocs.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/usc_impl.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.usc_impl.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.usc_impl.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/usc_impl.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uscript.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uscript.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uscript.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uscript_props.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uscript_props.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uscript_props.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uset.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uset.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uset.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uset_imp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/usetiter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.usetiter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.usetiter.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uset_props.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uset_props.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uset_props.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ushape.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ushape.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ushape.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/usprep.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.usprep.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.usprep.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ustack.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ustack.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ustack.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ustrcase.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ustrcase.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ustrcase.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ustrcase_locale.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ustrcase_locale.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ustrcase_locale.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ustr_cnv.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ustr_cnv.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ustr_cnv.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ustr_cnv.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ustrenum.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ustrenum.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ustrenum.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ustrenum.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ustrfmt.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ustrfmt.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ustrfmt.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/ustrfmt.h" />
+    <None Include="../../../../../../third_party/icu/source/common/ustr_imp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ustring.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ustring.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ustring.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ustr_titlecase_brkiter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ustr_titlecase_brkiter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ustr_titlecase_brkiter.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ustrtrns.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ustrtrns.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ustrtrns.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/ustr_wcs.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.ustr_wcs.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.ustr_wcs.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/utext.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.utext.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.utext.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/utf_impl.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.utf_impl.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.utf_impl.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/util.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.util.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.util.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/util.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/util_props.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.util_props.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.util_props.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/utrace.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.utrace.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.utrace.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/utracimp.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/utrie2_builder.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.utrie2_builder.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.utrie2_builder.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/utrie2.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.utrie2.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.utrie2.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/utrie2.h" />
+    <None Include="../../../../../../third_party/icu/source/common/utrie2_impl.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/utrie.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.utrie.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.utrie.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/utrie.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/utrie_swap.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.utrie_swap.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.utrie_swap.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uts46.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uts46.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uts46.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/utypeinfo.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/utypes.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.utypes.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.utypes.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uvector.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uvector.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uvector.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uvector.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uvectr32.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uvectr32.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uvectr32.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uvectr32.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/uvectr64.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.uvectr64.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.uvectr64.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/uvectr64.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/common/wintz.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/common/icuuc.wintz.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/common/icuuc.wintz.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../third_party/icu/source/common/wintz.h" />
+    <CustomBuild Include="../../../../../../third_party/icu/source/stubdata/stubdata.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/source/stubdata/icuuc.stubdata.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/icu/source/stubdata/icuuc.stubdata.o</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja -C $(OutDir)  canvaskit/obj/third_party/icu/icuuc_private.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja -C $(OutDir) -tclean canvaskit/obj/third_party/icu/icuuc_private.stamp" />
+  </Target>
+</Project>

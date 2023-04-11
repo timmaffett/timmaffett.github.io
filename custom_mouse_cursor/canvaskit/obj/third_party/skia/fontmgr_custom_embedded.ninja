@@ -1,0 +1,11 @@
+defines = -DUSE_OPENSSL=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS -D_DEBUG -DSK_ENABLE_DUMP_GPU -DSK_DISABLE_AAA -DSK_LEGACY_IGNORE_DRAW_VERTICES_BLEND_WITH_NO_SHADER -DSK_DISABLE_LEGACY_SHADERCONTEXT -DSK_DISABLE_LOWP_RASTER_PIPELINE -DSK_FORCE_RASTER_PIPELINE_BLITTER -DSK_METAL_WAIT_UNTIL_SCHEDULED -DSK_DISABLE_EFFECT_DESERIALIZATION -DSK_ENABLE_SKSL -DSK_ENABLE_PRECOMPILE -DSKNX_NO_SIMD -DSK_FORCE_AAA -DSK_FORCE_8_BYTE_ALIGNMENT -DSK_GANESH -DSK_LEGACY_LAYER_BOUNDS_EXPANSION -DSK_GAMMA_APPLY_TO_A8 -DSKIA_IMPLEMENTATION=1 -DSK_TYPEFACE_FACTORY_FREETYPE
+include_dirs = -I../.. -Icanvaskit/gen -I../../third_party/skia
+cflags = -fno-strict-aliasing -fcolor-diagnostics -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2
+cflags_cc = -fvisibility-inlines-hidden -std=c++17 -fno-rtti
+root_out_dir = canvaskit
+target_out_dir = canvaskit/obj/third_party/skia
+target_output_name = fontmgr_custom_embedded
+
+build canvaskit/obj/third_party/skia/src/ports/fontmgr_custom_embedded.SkFontMgr_custom_embedded.o: canvaskit_cxx ../../third_party/skia/src/ports/SkFontMgr_custom_embedded.cpp
+
+build canvaskit/obj/third_party/skia/fontmgr_custom_embedded.stamp: canvaskit_stamp canvaskit/obj/third_party/skia/src/ports/fontmgr_custom_embedded.SkFontMgr_custom_embedded.o || canvaskit/obj/third_party/skia/fontmgr_custom.stamp canvaskit/obj/third_party/skia/typeface_freetype.stamp canvaskit/obj/third_party/freetype2/libfreetype2.a canvaskit/obj/third_party/libpng/libpng.stamp canvaskit/obj/third_party/zlib/zlib.stamp

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GN|Win32">
+      <Configuration>GN</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C4253002-2C9E-88B6-CA2B-936317607356}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>skottie</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\canvaskit/obj/third_party/skia/modules/skottie/skottie.stamp</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../../../..;../../../../../../../../out/host_debug_unopt/canvaskit/gen;../../../../../../../../third_party/skia/modules/skottie/include;../../../../../../../../third_party/skia;../../../../../../../../third_party/skia/modules/skresources/include;../../../../../../../../third_party/skia/modules/sksg/include;../../../../../../../../third_party/skia/modules/skshaper/include;../../../../../../../../third_party/skia/modules/skunicode/include;C:\Program Files (x86)\Windows Kits\10\Include\10\shared;C:\Program Files (x86)\Windows Kits\10\Include\10\um;C:\Program Files (x86)\Windows Kits\10\Include\10\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fno-strict-aliasing -fcolor-diagnostics -fvisibility-inlines-hidden -std=c++17 -Wendif-labels -Werror -Wno-missing-field-initializers -Wno-unused-parameter -Wno-shift-negative-value -Wno-unused-function -Wno-unused-variable -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-deprecated-copy -Wno-psabi -Wno-non-c-typedef-for-linkage -Wno-range-loop-construct -fno-rtti -Wstring-conversion -Wnewline-eof -O0 -gsource-map -g2 %(AdditionalOptions)</AdditionalOptions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>USE_OPENSSL=1;_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS;_DEBUG;SK_GAMMA_APPLY_TO_A8;SK_ENABLE_SKOTTIE;SK_TYPEFACE_FACTORY_FREETYPE;SK_GL;SK_ENABLE_DUMP_GPU;SK_VULKAN;SK_CODEC_DECODES_JPEG;SK_ENCODE_JPEG;SK_CODEC_DECODES_PNG;SK_ENCODE_PNG;SK_CODEC_DECODES_WEBP;SK_HAS_WUFFS_LIBRARY;SK_DISABLE_AAA;SK_LEGACY_IGNORE_DRAW_VERTICES_BLEND_WITH_NO_SHADER;SK_DISABLE_LEGACY_SHADERCONTEXT;SK_DISABLE_LOWP_RASTER_PIPELINE;SK_FORCE_RASTER_PIPELINE_BLITTER;SK_METAL_WAIT_UNTIL_SCHEDULED;SK_DISABLE_EFFECT_DESERIALIZATION;SK_ENABLE_SKSL;SK_ENABLE_PRECOMPILE;SKNX_NO_SIMD;SK_FORCE_AAA;SK_FORCE_8_BYTE_ALIGNMENT;SK_GANESH;SK_LEGACY_LAYER_BOUNDS_EXPANSION;SK_SHAPER_HARFBUZZ_AVAILABLE;SK_UNICODE_AVAILABLE;SK_UNICODE_ICU_IMPLEMENTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/Adapter.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/BlendModes.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/skottie.BlendModes.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/skottie.BlendModes.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Camera.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Camera.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Camera.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/Camera.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Composition.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Composition.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Composition.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/Composition.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Layer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Layer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Layer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/Layer.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Path.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Path.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Path.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Skottie.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Skottie.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Skottie.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/SkottieJson.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/skottie.SkottieJson.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/skottie.SkottieJson.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/SkottieJson.h" />
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/SkottiePriv.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/SkottieProperty.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/skottie.SkottieProperty.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/skottie.SkottieProperty.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/SkottieValue.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/Transform.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Transform.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/skottie.Transform.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/Transform.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/Animator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.Animator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.Animator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/Animator.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/KeyframeAnimator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.KeyframeAnimator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.KeyframeAnimator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/KeyframeAnimator.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/ScalarKeyframeAnimator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.ScalarKeyframeAnimator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.ScalarKeyframeAnimator.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/ShapeKeyframeAnimator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.ShapeKeyframeAnimator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.ShapeKeyframeAnimator.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/TextKeyframeAnimator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.TextKeyframeAnimator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.TextKeyframeAnimator.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/Vec2KeyframeAnimator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.Vec2KeyframeAnimator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.Vec2KeyframeAnimator.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/VectorKeyframeAnimator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.VectorKeyframeAnimator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/animator/skottie.VectorKeyframeAnimator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/animator/VectorKeyframeAnimator.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/BlackAndWhiteEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.BlackAndWhiteEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.BlackAndWhiteEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/BrightnessContrastEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.BrightnessContrastEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.BrightnessContrastEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/BulgeEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.BulgeEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.BulgeEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/CCTonerEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.CCTonerEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.CCTonerEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/CornerPinEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.CornerPinEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.CornerPinEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/DirectionalBlur.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.DirectionalBlur.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.DirectionalBlur.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/DisplacementMapEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.DisplacementMapEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.DisplacementMapEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/DropShadowEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.DropShadowEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.DropShadowEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/Effects.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.Effects.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.Effects.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/Effects.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/FillEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.FillEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.FillEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/FractalNoiseEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.FractalNoiseEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.FractalNoiseEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/GaussianBlurEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.GaussianBlurEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.GaussianBlurEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/GlowStyles.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.GlowStyles.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.GlowStyles.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/GradientEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.GradientEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.GradientEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/HueSaturationEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.HueSaturationEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.HueSaturationEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/InvertEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.InvertEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.InvertEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/LevelsEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.LevelsEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.LevelsEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/LinearWipeEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.LinearWipeEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.LinearWipeEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/MotionBlurEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.MotionBlurEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.MotionBlurEffect.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/MotionBlurEffect.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/MotionTileEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.MotionTileEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.MotionTileEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/RadialWipeEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.RadialWipeEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.RadialWipeEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/ShadowStyles.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.ShadowStyles.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.ShadowStyles.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/SharpenEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.SharpenEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.SharpenEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/ShiftChannelsEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.ShiftChannelsEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.ShiftChannelsEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/SkSLEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.SkSLEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.SkSLEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/SphereEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.SphereEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.SphereEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/ThresholdEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.ThresholdEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.ThresholdEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/TintEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.TintEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.TintEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/TransformEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.TransformEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.TransformEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/TritoneEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.TritoneEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.TritoneEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/effects/VenetianBlindsEffect.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.VenetianBlindsEffect.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/effects/skottie.VenetianBlindsEffect.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/AudioLayer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.AudioLayer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.AudioLayer.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/FootageLayer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.FootageLayer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.FootageLayer.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/NullLayer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.NullLayer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.NullLayer.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/PrecompLayer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.PrecompLayer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.PrecompLayer.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/SolidLayer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.SolidLayer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.SolidLayer.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/TextLayer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.TextLayer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/skottie.TextLayer.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/Ellipse.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.Ellipse.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.Ellipse.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/FillStroke.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.FillStroke.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.FillStroke.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/Gradient.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.Gradient.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.Gradient.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/MergePaths.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.MergePaths.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.MergePaths.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/OffsetPaths.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.OffsetPaths.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.OffsetPaths.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/Polystar.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.Polystar.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.Polystar.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/PuckerBloat.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.PuckerBloat.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.PuckerBloat.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/Rectangle.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.Rectangle.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.Rectangle.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/Repeater.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.Repeater.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.Repeater.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/RoundCorners.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.RoundCorners.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.RoundCorners.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/ShapeLayer.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.ShapeLayer.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.ShapeLayer.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/ShapeLayer.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/layers/shapelayer/TrimPaths.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.TrimPaths.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/layers/shapelayer/skottie.TrimPaths.o</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/Font.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.Font.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.Font.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/Font.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/RangeSelector.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.RangeSelector.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.RangeSelector.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/RangeSelector.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/SkottieShaper.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.SkottieShaper.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.SkottieShaper.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/SkottieShaper.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextAdapter.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.TextAdapter.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.TextAdapter.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextAdapter.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextAnimator.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.TextAnimator.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.TextAnimator.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextAnimator.h" />
+    <CustomBuild Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextValue.cpp">
+      <Command>call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.TextValue.o</Command>
+      <Outputs>$(OutDir)canvaskit/obj/third_party/skia/modules/skottie/src/text/skottie.TextValue.o</Outputs>
+    </CustomBuild>
+    <None Include="../../../../../../../../third_party/skia/modules/skottie/src/text/TextValue.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <Target Name="Build">
+    <Exec Command="call ninja -C $(OutDir)  canvaskit/obj/third_party/skia/modules/skottie/skottie.stamp" />
+  </Target>
+  <Target Name="Clean">
+    <Exec Command="call ninja -C $(OutDir) -tclean canvaskit/obj/third_party/skia/modules/skottie/skottie.stamp" />
+  </Target>
+</Project>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src\autofit">
+      <UniqueIdentifier>{3FAA3FDE-9E74-604A-8855-2AA6D26B0458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{C5D85D62-2D1F-BBD0-3190-3BB2E70B1772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base">
+      <UniqueIdentifier>{D1B18317-D6F2-36BC-598B-58D0029825FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gzip">
+      <UniqueIdentifier>{30B5C37B-7793-9F81-F054-81B247E05D7B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lzw">
+      <UniqueIdentifier>{C9FC0DF4-2355-8225-8B38-10BE7F7BE911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\psaux">
+      <UniqueIdentifier>{0475CAE7-3045-B389-D3E5-C272C6E3F7E4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\pshinter">
+      <UniqueIdentifier>{5DD34424-7E7D-EC62-3FAC-D610807BB597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\psnames">
+      <UniqueIdentifier>{036EB97C-CFCA-5530-B595-632720439B34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sfnt">
+      <UniqueIdentifier>{AA90FDD1-BCAD-9A79-0DED-E03C4CCFC069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\smooth">
+      <UniqueIdentifier>{664EACD8-DDE9-AC61-E4A4-0DF6C5A9C204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\cff">
+      <UniqueIdentifier>{2DCC0711-4C84-513D-10E4-FEA191191660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\truetype">
+      <UniqueIdentifier>{D5DADCC9-A769-3A31-FE44-9BF1D5B30F36}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/autofit/autofit.c">
+      <Filter>src\autofit</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftbase.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftbbox.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftbdf.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftbitmap.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftdebug.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftfstype.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftgasp.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftglyph.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftinit.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftmm.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftstroke.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftsystem.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/fttype1.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/base/ftsynth.c">
+      <Filter>src\base</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/gzip/ftgzip.c">
+      <Filter>src\gzip</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/lzw/ftlzw.c">
+      <Filter>src\lzw</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/psaux/psaux.c">
+      <Filter>src\psaux</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/pshinter/pshinter.c">
+      <Filter>src\pshinter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/psnames/psnames.c">
+      <Filter>src\psnames</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/sfnt/sfnt.c">
+      <Filter>src\sfnt</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/smooth/smooth.c">
+      <Filter>src\smooth</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/cff/cff.c">
+      <Filter>src\cff</Filter>
+    </CustomBuild>
+    <CustomBuild Include="../../../../../../third_party/freetype2/src/truetype/truetype.c">
+      <Filter>src\truetype</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
