@@ -5,10 +5,8 @@ homepage: https://github.com/timmaffett/smart_packages
 publish_to: none
 environment:
   sdk: '>=2.19.0 <4.0.0'
+
 dependencies:
-  build_runner: ^2.0.0
-  build_web_compilers: ^3.0.0
-  lints: ^2.0.1
   smart_arrays_base: #^3.0.0
     path: ../../smart_arrays_base  
   smart_arrays_dbstore: #^3.0.0
@@ -16,7 +14,7 @@ dependencies:
   smart_arrays_plot_polyline: #^3.0.0
     path: ../../smart_arrays_plot_polyline
 
-
-
-
-
+dev-dependencies:
+  build_runner: ^2.0.0
+  build_web_compilers: ^3.0.0
+  lints: ^2.0.1

@@ -2532,16 +2532,19 @@
       return matrix[row];
     },
     Array2D_getMinMax(matrix) {
-      var ymin, ymin_index_col, ymin_index_row, ymax, ymax_index_col, ymax_index_row, i, temp, ymax0,
+      var ymin, ymin_index_col, ymin_index_row, ymax, ymax_index_col, ymax_index_row, i, t1, temp, ymin0, ymax0,
         nrows = matrix.length;
       for (ymin = 17976931348623157e292, ymin_index_col = -1, ymin_index_row = -1, ymax = -17976931348623157e292, ymax_index_col = -1, ymax_index_row = -1, i = 0; i < nrows; ++i) {
-        temp = A.Array1D_getMin(matrix[i]);
-        ymax0 = temp[0];
-        if (ymax0 < ymin) {
+        t1 = matrix[i];
+        temp = A.Array1D_getMin(t1);
+        ymin0 = temp[0];
+        if (ymin0 < ymin) {
           ymin_index_col = A._asInt(temp[1]);
           ymin_index_row = i;
-          ymin = ymax0;
+          ymin = ymin0;
         }
+        temp = A.Array1D_getMax(t1);
+        ymax0 = temp[0];
         if (ymax0 > ymax) {
           ymax_index_col = A._asInt(temp[1]);
           ymax_index_row = i;
@@ -2620,6 +2623,17 @@
     },
     throwLateFieldADI(fieldName) {
       A.throwExpressionWithWrapper(new A.LateError("Field '" + fieldName + "' has been assigned during initialization."), new Error());
+    },
+    Array1D_getMax(array) {
+      var t1, max_value, max_index, i, max_value0;
+      for (t1 = array.length, max_value = -17976931348623157e292, max_index = -1, i = 0; i < t1; ++i) {
+        max_value0 = array[i];
+        if (max_value0 > max_value) {
+          max_index = i;
+          max_value = max_value0;
+        }
+      }
+      return [max_value, max_index];
     },
     Array1D_getMin(array) {
       var t1, min_value, min_index, i, min_value0;
@@ -3295,7 +3309,12 @@
       return t1.charCodeAt(0) == 0 ? t1 : t1;
     }
   };
-  A.MinMax.prototype = {};
+  A.MinMax.prototype = {
+    toString$0(_) {
+      var _this = this;
+      return "MinMax( minValue:" + A.S(_this.minValue) + " maxValue:" + A.S(_this.maxValue) + " minValueIndexCol:" + _this.minValueIndexCol + " minValueIndexRow:" + _this.minValueIndexRow + " maxValueIndexCol:" + _this.maxValueIndexCol + " maxValueIndexRow:" + _this.maxValueIndexRow + " )";
+    }
+  };
   (function aliases() {
     var _ = J.LegacyJavaScriptObject.prototype;
     _.super$LegacyJavaScriptObject$toString = _.toString$0;

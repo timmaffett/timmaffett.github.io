@@ -3906,6 +3906,9 @@
     },
     __NamedNodeMap_JavaScriptObject_ListMixin_ImmutableListMixin: function __NamedNodeMap_JavaScriptObject_ListMixin_ImmutableListMixin() {
     },
+    log(x) {
+      return Math.log(x);
+    },
     Rectangle$(left, $top, width, height, $T) {
       var t1, t2;
       if (width < 0)
@@ -9311,7 +9314,8 @@
   A.LorentzGauss.prototype = {
     LorentzGauss$fromPars$6(a, c, w, m, fGauss, fLorentz) {
       var t1, t2, t3, i, t4, i0, t5, _this = this;
-      _this.__LorentzGauss_fGauss_A = 1.20411998264;
+      fGauss = $.$get$LorentzGauss_FGAUSS();
+      _this.__LorentzGauss_fGauss_A = fGauss;
       _this.__LorentzGauss_fLorentz_A = 4;
       _this.dim = 2;
       _this.set$__LorentzGauss_pars_A(type$.List_double._as(A.List_List$filled(7, 0, type$.double)));
@@ -9905,6 +9909,7 @@
     _lazyFinal($, "MarkerLines_MARKER_DEFAULT_ATTRIBUTES", "$get$MarkerLines_MARKER_DEFAULT_ATTRIBUTES", () => A.LinkedHashMap_LinkedHashMap$_literal([B.MarA_0, "12", B.MarA_1, "4", B.MarA_3, "red", B.MarA_4, "DarkCyan", B.MarA_2, "DarkRed"], type$.MarA, type$.String));
     _lazyFinal($, "PlotLayoutSVG_LAYOUT_DEFAULT_ATTRIBUTES", "$get$PlotLayoutSVG_LAYOUT_DEFAULT_ATTRIBUTES", () => A.LinkedHashMap_LinkedHashMap$_literal([B.LayA_0, "70", B.LayA_1, "80", B.LayA_2, "15", B.LayA_3, "0", B.LayA_4, "darkgreen", B.LayA_5, "1", B.LayA_6, "darkgreen", B.LayA_7, "0"], type$.LayA, type$.String));
     _lazyFinal($, "POLYLINE_DEFAULT_ATTRIBUTES", "$get$POLYLINE_DEFAULT_ATTRIBUTES", () => A.LinkedHashMap_LinkedHashMap$_literal([B.PyA_2, "1024", B.PyA_3, "true", B.PyA_4, "false", B.PyA_5, "16", B.PyA_6, "12", B.PyA_8, "16", B.PyA_13, "null", B.PyA_15, "16", B.PyA_16, "false", B.PyA_17, "true", B.PyA_18, "blue", B.PyA_19, "1", B.PyA_20, "2", B.PyA_21, "1.0", B.PyA_22, "0", B.PyA_23, "0.0", B.PyA_24, "1", B.PyA_26, "0", B.PyA_27, "0", B.PyA_28, "0.9", B.PyA_29, "0.9"], type$.PyA, type$.String));
+    _lazyFinal($, "LorentzGauss_FGAUSS", "$get$LorentzGauss_FGAUSS", () => 4 * A.log(2));
   })();
   (function nativeSupport() {
     !function() {

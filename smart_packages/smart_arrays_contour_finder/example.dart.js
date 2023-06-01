@@ -2916,25 +2916,34 @@
     _CssStyleDeclaration_JavaScriptObject_CssStyleDeclarationBase: function _CssStyleDeclaration_JavaScriptObject_CssStyleDeclarationBase() {
     },
     Array2D_getMinMax(matrix) {
-      var ymin, ymax, i, temp, ymax0,
+      var ymin, ymin_index_col, ymin_index_row, ymax, ymax_index_col, ymax_index_row, i, temp, ymin0, ymax0,
         nrows = matrix.length;
-      for (ymin = 17976931348623157e292, ymax = -17976931348623157e292, i = 0; i < nrows; ++i) {
+      for (ymin = 17976931348623157e292, ymin_index_col = -1, ymin_index_row = -1, ymax = -17976931348623157e292, ymax_index_col = -1, ymax_index_row = -1, i = 0; i < nrows; ++i) {
         temp = A.Array1D_getMin(matrix[i]);
-        ymax0 = temp[0];
-        if (ymax0 < ymin) {
-          A._asInt(temp[1]);
-          ymin = ymax0;
+        ymin0 = temp[0];
+        if (ymin0 < ymin) {
+          ymin_index_col = A._asInt(temp[1]);
+          ymin_index_row = i;
+          ymin = ymin0;
         }
+        temp = A.Array1D_getMax(matrix[i]);
+        ymax0 = temp[0];
         if (ymax0 > ymax) {
-          A._asInt(temp[1]);
+          ymax_index_col = A._asInt(temp[1]);
+          ymax_index_row = i;
           ymax = ymax0;
         }
       }
-      return new A.MinMax(ymin, ymax);
+      return new A.MinMax(ymin, ymax, ymin_index_col, ymax_index_col, ymin_index_row, ymax_index_row);
     },
-    MinMax: function MinMax(t0, t1) {
-      this.minValue = t0;
-      this.maxValue = t1;
+    MinMax: function MinMax(t0, t1, t2, t3, t4, t5) {
+      var _ = this;
+      _.minValue = t0;
+      _.maxValue = t1;
+      _.minValueIndexCol = t2;
+      _.maxValueIndexCol = t3;
+      _.minValueIndexRow = t4;
+      _.maxValueIndexRow = t5;
     },
     ContourFinder: function ContourFinder(t0, t1, t2, t3, t4) {
       var _ = this;
@@ -3027,6 +3036,17 @@
     throwLateFieldADI(fieldName) {
       A.throwExpressionWithWrapper(new A.LateError("Field '" + fieldName + "' has been assigned during initialization."), new Error());
     },
+    Array1D_getMax(array) {
+      var t1, max_value, max_index, i, max_value0;
+      for (t1 = array.length, max_value = -17976931348623157e292, max_index = -1, i = 0; i < t1; ++i) {
+        max_value0 = array[i];
+        if (max_value0 > max_value) {
+          max_index = i;
+          max_value = max_value0;
+        }
+      }
+      return [max_value, max_index];
+    },
     Array1D_getMin(array) {
       var t1, min_value, min_index, i, min_value0;
       for (t1 = array.length, min_value = 17976931348623157e292, min_index = -1, i = 0; i < t1; ++i) {
@@ -3039,53 +3059,59 @@
       return [min_value, min_index];
     },
     main() {
-      var t1, minmax, levelDelta, levels, i, t2, t3, t4, sctr, t5, t6, t7, t8, t9,
+      var t1, minmax, t2, levelDelta, levels, i, contourCanvas, t3, sctr, t4, t5, t6,
         _s8_ = "absolute",
         _s11_ = "transparent",
         lg2D = new A.LorentzGaussMatrix();
       lg2D.LorentzGaussMatrix$6($.rows_cols, $.amplitudes, $.centers, $.lineWidths, $.mixingFactors, null);
       t1 = lg2D.__LorentzGaussMatrix__matrix_A;
       t1 === $ && A.throwLateFieldNI("_matrix");
-      minmax = A.Array2D_getMinMax(t1);
-      t1 = minmax.minValue;
-      levelDelta = Math.abs(minmax.maxValue - t1) / 15;
+      A.print("matrix = " + A.S(t1));
+      t1 = lg2D.__LorentzGaussMatrix__xColCoord_A;
+      t1 === $ && A.throwLateFieldNI("_xColCoord");
+      A.print("xColCoordinates = " + A.S(t1));
+      t1 = lg2D.__LorentzGaussMatrix__yRowCoord_A;
+      t1 === $ && A.throwLateFieldNI("_yRowCoord");
+      A.print("yRowCoordinates = " + A.S(t1));
+      minmax = A.Array2D_getMinMax(lg2D.__LorentzGaussMatrix__matrix_A);
+      A.print("minmax = " + minmax.toString$0(0));
+      t1 = minmax.maxValue;
+      t2 = minmax.minValue;
+      levelDelta = Math.abs(t1 - t2) / 15;
+      A.print("   minmax.maxValue=" + A.S(t1) + " - minmax.minValue=" + A.S(t2) + " levelDelta=" + A.S(levelDelta) + "  ");
       levels = new Float64Array(16);
-      for (i = 0; i < 16; ++i)
-        levels[i] = (t1 + i * levelDelta) * 0.98;
-      t1 = document.getElementById("contour_canvas");
+      for (i = 0; i < 16; ++i) {
+        levels[i] = (t2 + i * levelDelta) * 0.98;
+        A.printString("  levels[" + i + "] = " + A.S(levels[i]) + " ");
+      }
+      A.print("levels = " + A.S(levels) + " ");
+      contourCanvas = type$.CanvasElement._as(document.querySelector("#contour_canvas"));
+      t1 = contourCanvas.style;
+      t1.position = _s8_;
+      t1.backgroundColor = _s11_;
+      t1 = contourCanvas.width;
       t1.toString;
-      type$.CanvasElement._as(t1);
-      t2 = t1.style;
-      t2.position = _s8_;
-      t2.backgroundColor = _s11_;
-      t2 = t1.width;
+      t2 = contourCanvas.height;
       t2.toString;
-      t3 = t1.height;
-      t3.toString;
-      t4 = A.LinkedHashMap_LinkedHashMap$_literal([B.CtourA_1, "rgb(0, 0, 255)", B.CtourA_2, "rgb(255, 0, 255)", B.CtourA_3, "true"], type$.CtourA, type$.String);
-      sctr = new A.SimpleContourRenderer(t1, t2, t3, 0, 0, t4);
-      sctr.set$__SimpleContourRenderer_attr_A(type$.Map_CtourA_String._as(t4));
-      t2 = t1.style;
-      t2.position = _s8_;
-      t2.backgroundColor = _s11_;
-      t1 = B.CanvasElement_methods.getContext$1(t1, "2d");
+      t3 = A.LinkedHashMap_LinkedHashMap$_literal([B.CtourA_1, "rgb(0, 0, 255)", B.CtourA_2, "rgb(255, 0, 255)", B.CtourA_3, "true"], type$.CtourA, type$.String);
+      sctr = new A.SimpleContourRenderer(contourCanvas, t1, t2, 0, 0, t3);
+      sctr.set$__SimpleContourRenderer_attr_A(type$.Map_CtourA_String._as(t3));
+      t1 = contourCanvas.style;
+      t1.position = _s8_;
+      t1.backgroundColor = _s11_;
+      t1 = B.CanvasElement_methods.getContext$1(contourCanvas, "2d");
       t1.toString;
       sctr.__SimpleContourRenderer_c2d_A = type$.CanvasRenderingContext2D._as(t1);
-      t1 = type$.double;
-      t2 = A.List_List$filled(5, 0, t1);
-      t3 = A.List_List$filled(5, 0, type$.int);
-      t4 = A.List_List$filled(5, 0, t1);
-      t1 = A.List_List$filled(5, 0, t1);
+      t1 = type$.JSArray_double;
+      t2 = A._setArrayType([0, 0, 0, 0, 0, 0], t1);
+      t3 = A._setArrayType([0, 0, 0, 0, 0, 0], type$.JSArray_int);
+      t4 = A._setArrayType([0, 0, 0, 0, 0, 0], t1);
+      t1 = A._setArrayType([0, 0, 0, 0, 0, 0], t1);
       t5 = lg2D.__LorentzGaussMatrix__matrix_A;
       t6 = t5.length;
       if (0 >= t6)
         return A.ioore(t5, 0);
-      t7 = t5[0];
-      t8 = lg2D.__LorentzGaussMatrix__yRowCoord_A;
-      t8 === $ && A.throwLateFieldNI("_yRowCoord");
-      t9 = lg2D.__LorentzGaussMatrix__xColCoord_A;
-      t9 === $ && A.throwLateFieldNI("_xColCoord");
-      new A.ContourFinder(t2, t3, t4, t1, sctr).findContour$9(t5, 0, t6 - 1, 0, t7.length - 1, t8, t9, 16, levels);
+      new A.ContourFinder(t2, t3, t4, t1, sctr).findContour$9(t5, 0, t6 - 1, 0, t5[0].length - 1, lg2D.__LorentzGaussMatrix__yRowCoord_A, lg2D.__LorentzGaussMatrix__xColCoord_A, 16, levels);
     }
   },
   J = {
@@ -4214,7 +4240,12 @@
     }
   };
   A._CssStyleDeclaration_JavaScriptObject_CssStyleDeclarationBase.prototype = {};
-  A.MinMax.prototype = {};
+  A.MinMax.prototype = {
+    toString$0(_) {
+      var _this = this;
+      return "MinMax( minValue:" + A.S(_this.minValue) + " maxValue:" + A.S(_this.maxValue) + " minValueIndexCol:" + _this.minValueIndexCol + " minValueIndexRow:" + _this.minValueIndexRow + " maxValueIndexCol:" + _this.maxValueIndexCol + " maxValueIndexRow:" + _this.maxValueIndexRow + " )";
+    }
+  };
   A.ContourFinder.prototype = {
     findContour$9(d, ilb, iub, jlb, jub, x, y, nc, z) {
       var im, jm, t1, t2, castab, j, t3, t4, t5, t6, t7, t8, t9, t10, t11, x1, x2, y1, y2, t12, i, t13, t14, t15, temp1, i0, t16, t17, dmin, dmax, k, m, m3, case_value, _this = this;
@@ -4314,8 +4345,6 @@
                   if (!(t14 >= 0 && t14 < 3))
                     return A.ioore(t13, t14);
                   t14 = t13[t14];
-                  if (!(m3 < 5))
-                    return A.ioore(t5, m3);
                   t13 = t5[m3] + 1;
                   if (!(t13 >= 0 && t13 < 3))
                     return A.ioore(t14, t13);
@@ -4389,11 +4418,11 @@
     xsect$2(p1, p2) {
       var t2, t3, t4,
         t1 = this.h;
-      if (!(p2 < 5))
+      if (!(p2 < 6))
         return A.ioore(t1, p2);
       t2 = t1[p2];
       t3 = this.xh;
-      if (!(p1 < 5))
+      if (!(p1 < 6))
         return A.ioore(t3, p1);
       t4 = t3[p1];
       t1 = t1[p1];
@@ -4402,11 +4431,11 @@
     ysect$2(p1, p2) {
       var t2, t3, t4,
         t1 = this.h;
-      if (!(p2 < 5))
+      if (!(p2 < 6))
         return A.ioore(t1, p2);
       t2 = t1[p2];
       t3 = this.yh;
-      if (!(p1 < 5))
+      if (!(p1 < 6))
         return A.ioore(t3, p1);
       t4 = t3[p1];
       t1 = t1[p1];
@@ -4437,9 +4466,8 @@
         return B.JSNumber_methods.round$0(t3) + t2;
     },
     drawContourLine$6(startX, startY, endX, endY, contourLevel, levelNumber) {
-      var t1, x1, x2, y1, y2, colors, _this = this;
-      A.print("drawContourLine  startX=" + A.S(startX) + " startY=" + A.S(startY) + " endX=" + A.S(endX) + "  endY=" + A.S(endY));
-      t1 = _this.__SimpleContourRenderer_attr_A;
+      var x1, x2, y1, y2, colors, _this = this,
+        t1 = _this.__SimpleContourRenderer_attr_A;
       t1 === $ && A.throwLateFieldNI("attr");
       if (J.$eq$(t1.$index(0, B.CtourA_3), "true")) {
         x1 = _this.xToScreen$1(startY);
@@ -4452,7 +4480,6 @@
         y1 = _this.yToScreen$1(1 - startY);
         y2 = _this.yToScreen$1(1 - endY);
       }
-      A.print("attr[CtourA.ROTATE]=" + A.S(_this.__SimpleContourRenderer_attr_A.$index(0, B.CtourA_3)) + "  x1=" + x1 + " y1=" + y1 + " x2=" + x2 + "  y2=" + y2);
       if (x1 === x2 && y1 === y2)
         return;
       t1 = _this.last_x1;
@@ -4494,7 +4521,8 @@
   A.LorentzGauss.prototype = {
     LorentzGauss$fromPars$6(a, c, w, m, fGauss, fLorentz) {
       var t1, t2, t3, i, t4, i0, t5, _this = this;
-      _this.__LorentzGauss_fGauss_A = 1.20411998264;
+      fGauss = $.$get$LorentzGauss_FGAUSS();
+      _this.__LorentzGauss_fGauss_A = fGauss;
       _this.__LorentzGauss_fLorentz_A = 4;
       _this.dim = 2;
       _this.set$__LorentzGauss_pars_A(type$.List_double._as(A.List_List$filled(7, 0, type$.double)));
@@ -4887,6 +4915,7 @@
         return e.message;
       }
     }()));
+    _lazyFinal($, "LorentzGauss_FGAUSS", "$get$LorentzGauss_FGAUSS", () => 4 * Math.log(2));
   })();
   (function nativeSupport() {
     !function() {

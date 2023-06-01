@@ -4530,24 +4530,26 @@
     _AudioParamMap_JavaScriptObject_MapMixin: function _AudioParamMap_JavaScriptObject_MapMixin() {
     },
     Array2D_getMinMax(matrix) {
-      var ymin, ymin_index_row, ymax, ymax_index_row, i, temp, ymax0,
+      var ymin, ymin_index_col, ymin_index_row, ymax, ymax_index_col, ymax_index_row, i, temp, ymin0, ymax0,
         t1 = J.getInterceptor$asx(matrix),
         nrows = t1.get$length(matrix);
-      for (ymin = 17976931348623157e292, ymin_index_row = -1, ymax = -17976931348623157e292, ymax_index_row = -1, i = 0; i < nrows; ++i) {
+      for (ymin = 17976931348623157e292, ymin_index_col = -1, ymin_index_row = -1, ymax = -17976931348623157e292, ymax_index_col = -1, ymax_index_row = -1, i = 0; i < nrows; ++i) {
         temp = A.Array1D_getMin(t1.$index(matrix, i));
-        ymax0 = temp[0];
-        if (ymax0 < ymin) {
-          A._asInt(temp[1]);
+        ymin0 = temp[0];
+        if (ymin0 < ymin) {
+          ymin_index_col = A._asInt(temp[1]);
           ymin_index_row = i;
-          ymin = ymax0;
+          ymin = ymin0;
         }
+        temp = A.Array1D_getMax(t1.$index(matrix, i));
+        ymax0 = temp[0];
         if (ymax0 > ymax) {
-          A._asInt(temp[1]);
+          ymax_index_col = A._asInt(temp[1]);
           ymax_index_row = i;
           ymax = ymax0;
         }
       }
-      return new A.MinMax(ymin, ymax, ymin_index_row, ymax_index_row);
+      return new A.MinMax(ymin, ymax, ymin_index_col, ymax_index_col, ymin_index_row, ymax_index_row);
     },
     Array2D_appendRows(rows, matrix) {
       var t1;
@@ -4569,12 +4571,14 @@
         }
       return result;
     },
-    MinMax: function MinMax(t0, t1, t2, t3) {
+    MinMax: function MinMax(t0, t1, t2, t3, t4, t5) {
       var _ = this;
       _.minValue = t0;
       _.maxValue = t1;
-      _.minValueIndexRow = t2;
-      _.maxValueIndexRow = t3;
+      _.minValueIndexCol = t2;
+      _.maxValueIndexCol = t3;
+      _.minValueIndexRow = t4;
+      _.maxValueIndexRow = t5;
     },
     DSKey$(datasetName, projectName, dataType) {
       var t1 = new A.DSKey();
@@ -10835,7 +10839,12 @@
     }
   };
   A._AudioParamMap_JavaScriptObject_MapMixin.prototype = {};
-  A.MinMax.prototype = {};
+  A.MinMax.prototype = {
+    toString$0(_) {
+      var _this = this;
+      return "MinMax( minValue:" + A.S(_this.minValue) + " maxValue:" + A.S(_this.maxValue) + " minValueIndexCol:" + _this.minValueIndexCol + " minValueIndexRow:" + _this.minValueIndexRow + " maxValueIndexCol:" + _this.maxValueIndexCol + " maxValueIndexRow:" + _this.maxValueIndexRow + " )";
+    }
+  };
   A.DSKey.prototype = {
     _init$3(datasetName, projectName, dataType) {
       this.__DSKey__datasetName_A = B.JSString_methods.trim$0(datasetName);

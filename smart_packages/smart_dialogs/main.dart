@@ -2,7 +2,7 @@
 // code is governed by a BSD-style license that can be found in the LICENSE file.
 //
 // To execute this example, visit the following page:
-//   https://smart.specpad.bplaced.net/smart_dialogs/example.html
+//   https://timmaffett.github.io/smart_packages/smart_dialogs/example.html
 
 import 'package:smart_dialogs/smart_dialogs.dart';
 

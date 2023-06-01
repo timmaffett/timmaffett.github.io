@@ -13,14 +13,27 @@ main() {
   LorentzGaussMatrix lg2D = LorentzGaussMatrix(
       rows_cols, amplitudes, centers, lineWidths, mixingFactors);
 
+print('matrix = ${lg2D.matrix}');
+print('xColCoordinates = ${lg2D.xColCoordinates}');
+print('yRowCoordinates = ${lg2D.yRowCoordinates}');
+
   // Compute equally spaced contour levels from the matrix's min/max values
   final int NLEVELS = 16;
   MinMax minmax = Array2D.getMinMax(lg2D.matrix);
+
+print('minmax = $minmax');
+
   double levelDelta = (minmax.maxValue - minmax.minValue).abs() / (NLEVELS - 1);
+
+    print('   minmax.maxValue=${minmax.maxValue} - minmax.minValue=${minmax.minValue} levelDelta=$levelDelta  ');
+
   Float64List levels = Float64List(NLEVELS);
   for (int i = 0; i < NLEVELS; i++) {
     levels[i] = (minmax.minValue + i * levelDelta) * 0.98;
+    print('  levels[$i] = ${levels[i]} ');
   }
+
+print('levels = $levels ');
 
   // construct a ContourFinder to find the contours and draw them using
   // the specified contour renderer
@@ -72,7 +85,17 @@ List<List<double>> mixingFactors = [
 /// magenta, positive ones in blue.
 SimpleContourRenderer createSimpleContourRenderer() {
   /// Sets up the graphics 2D context to which drawing will be performed.
-  CanvasElement contourCanvas = document.getElementById("contour_canvas")! as CanvasElement;
+ /*  Element? ccel = document.getElementById("contour_canvas");
+
+
+  if(ccel==null) {
+    throw("Element named 'contour_canvas' not found in html page");
+  }
+  CanvasElement contourCanvas = ccel as CanvasElement; // cast
+ */
+  CanvasElement contourCanvas = querySelector("#contour_canvas") as CanvasElement;
+
+
   contourCanvas.style
     ..position = "absolute"
     ..backgroundColor = "transparent";
