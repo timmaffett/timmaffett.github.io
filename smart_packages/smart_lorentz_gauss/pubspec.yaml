@@ -1,0 +1,13 @@
+name: smart_lorentz_gauss_example
+version: "3.0.0"
+description: Example for Provides functionalities to compute mixed Lorentz-Gauss line shapes, also called n-dimensional Pseudo-Voigt function.
+homepage: https://github.com/timmaffett/smart_packages
+publish_to: none
+environment:
+  sdk: '>=2.19.0 <4.0.0'
+dependencies:
+  build_runner: ^2.0.0
+  build_web_compilers: ^3.0.0
+  lints: ^2.0.1
+  smart_arrays_plot_polyline: #^3.0.0
+    path: ../../smart_arrays_plot_polyline

@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* hide scrollbars because we resize the contents when the window gets resized */
+    /* Note: If we would decide to display scrollbars, then layout calculation in class SpecPad */
+    /*  would require to account for the scrollbar width when calculation width/height attributes! */
+    overflow-x:hidden;
+    overflow-y:hidden;
+    
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.2em;
+}
+
+#app_div {
+    display: table;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;    
+     -webkit-user-select: none;
+}
+
+
+#plot_div {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
