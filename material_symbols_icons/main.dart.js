@@ -40869,7 +40869,7 @@ if(s.$2(a,k)>0){j.b[b]=k
 b=p}}j.b[b]=a}}
 A.Hi.prototype={
 N(a){var s="Material Symbols Icons For Flutter",r=A.ak1(null,"Roboto",B.vd,B.ej,!0)
-return new A.wp(new A.wB(s,"(v2.661 fonts w/ "+$.arW+" icons)",null),s,r,null)}}
+return new A.wp(new A.wB(s,"(v2.662 fonts w/ "+$.arW+" icons)",null),s,r,null)}}
 A.wB.prototype={
 ai(){var s=t.up
 return new A.AQ(A.Jb(),A.c([],t.G1),A.c([],t.s),B.fu,A.c([0,1],s),A.c([100,200,300,400,500,600,700],s),A.c([0.25,0,200],s),A.c([20,24,40,48],s),B.j)}}
