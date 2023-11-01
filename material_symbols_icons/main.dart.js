@@ -41434,7 +41434,7 @@ if(s.$2(a,k)>0){j.b[b]=k
 b=p}}j.b[b]=a}}
 A.HJ.prototype={
 M(a){var s="Material Symbols Icons For Flutter",r=A.zg(null,"Roboto",B.vy,B.ei,!0)
-return new A.wC(new A.wO(s,"(v2.671 fonts w/ "+$.atF+" icons)",null),s,r,null)}}
+return new A.wC(new A.wO(s,"(v2.706 fonts w/ "+$.atF+" icons)",null),s,r,null)}}
 A.wO.prototype={
 ah(){var s=t.up
 return new A.Bc(A.JB(),A.c([],t.G1),A.c([],t.s),B.fs,A.c([0,1],s),A.c([100,200,300,400,500,600,700],s),A.c([0.25,0,200],s),A.c([20,24,40,48],s),B.j)}}
