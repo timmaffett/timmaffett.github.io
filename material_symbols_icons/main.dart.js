@@ -36907,7 +36907,7 @@ b=o}}s[b]=a}}
 A.Im.prototype={
 N(a){return new A.xv(A.aq(["/",new A.a4s()],t.N,t.Ab),"/","Material Symbols Icons For Flutter",A.t7(null,null,"Roboto",B.vW,B.hS,!0),!1,null)}}
 A.a4s.prototype={
-$1(a){return new A.oa("Material Symbols Icons For Flutter","(v2.800 fonts, released November 22, 2024 w/ "+$.avg+" icons)",null)},
+$1(a){return new A.oa("Material Symbols Icons For Flutter","(v2.801 fonts, released December 5, 2024 w/ "+$.avg+" icons)",null)},
 $S:451}
 A.oa.prototype={
 al(){var s=t.n
