@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="generator" content="made with love by dartdoc 5.1.0">
   <meta name="description" content="chalkdart API docs, for the Dart programming language.">
   <title>chalkdart - Dart API docs</title>
 
@@ -12,22 +11,18 @@
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
   
   <link rel="stylesheet" href="static-assets/github.css?v1">
   <link rel="stylesheet" href="static-assets/styles.css?v1">
   <link rel="icon" href="static-assets/favicon.png?v1">
-
   
 </head>
 
-
-<body data-base-href="" data-using-base-href="false">
-
+<body data-base-href="" data-using-base-href="false" class="light-theme">
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
-  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="https://github.com/timmaffett/chalkdart">chalkdart package</a></li>
   </ol>
@@ -35,37 +30,59 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
 </header>
-
 <main>
-
-
   <div id="dartdoc-main-content" class="main-content">
       
 <section class="desc markdown">
-  <img src="https://raw.githubusercontent.com/timmaffett/chalkdart/master/media/ChalkDart.png" width="100%">
-<h5 id="vscode-debug-console">vscode debug console</h5><img src="https://github.com/timmaffett/chalkdart/raw/master/media/ABasic.png" width="100%">
-<h5 id="windows-terminal">windows terminal</h5><img src="https://github.com/timmaffett/chalkdart/raw/master/media/AChalkDart2.png" width="100%">
+  <h1 id="chalkdart-share-on-twitterhttpsimgshieldsiotwitterurlhttpshieldsiosvgstylesocialhttpstwittercomintenttweettextdartchalk20pluginurlhttpsgithubcomtimmaffettchalkdarthashtagsflutterdartdartlangconsole-share-on-facebookhttpsimgshieldsiobadgeshare-facebook-bluesvglongcachetruestyleflatcolorb234267b2httpswwwfacebookcomsharersharerphpuhttps3agithubcomtimmaffettchalkdart">Chalk'Dart <a href="https://twitter.com/intent/tweet?text=Dart%25Chalk%20plugin!&amp;url=https://github.com/timmaffett/chalkdart&amp;hashtags=flutter,dart,dartlang,console"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" alt="Share on Twitter"></a> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//github.com/timmaffett/chalkdart"><img src="https://img.shields.io/badge/share-facebook-blue.svg?longCache=true&amp;style=flat&amp;colorB=%234267b2" alt="Share on Facebook"></a></h1>
+<img src="https://raw.githubusercontent.com/timmaffett/chalkdart/master/media/ChalkDart.png" width="100%">
+<p><a href="https://pub.dartlang.org/packages/chalkdart"><img src="https://img.shields.io/pub/v/chalkdart.svg" alt="Pub"></a>
+<a href="https://flutterawesome.com/console-terminal-text-coloring-and-styling-library-for-dart"><img src="https://img.shields.io/badge/Awesome-Flutter-blue.svg?longCache=true&amp;style=flat-square" alt="Awesome Flutter"></a>
+<a href="/LICENSE"><img src="https://img.shields.io/badge/License-BSD%203.0-blue.svg" alt="License"></a>
+<a href="https://github.com/timmaffett/chalkdart/graphs/contributors"><img src="https://img.shields.io/github/contributors/timmaffett/chalkdart" alt="GitHub contributors"></a>
+<a href="https://github.com/timmaffett/chalkdart"><img src="https://img.shields.io/github/forks/timmaffett/chalkdart" alt="GitHub forks"></a>
+<a href="https://github.com/timmaffett/chalkdart"><img src="https://img.shields.io/github/stars/timmaffett/chalkdart?" alt="GitHub stars"></a></p>
+<h5 id="vscode-debug-console">vscode debug console</h5>
+<img src="https://github.com/timmaffett/chalkdart/raw/master/media/ABasic.png" width="100%">
+<h5 id="windows-terminal">windows terminal</h5>
+<img src="https://github.com/timmaffett/chalkdart/raw/master/media/AChalkDart2.png" width="100%">
 <h2 id="consoleterminal-text-coloring-and-styling-library-for-dart">Console/Terminal text coloring and styling library for Dart</h2>
 <h3 id="terminal-string-styling-done-right">'Terminal string styling done right'</h3>
-<p>I created this for my Dart/Flutter development logging almost 2 years ago now, and I have finally taken the time to clean it up and get it released as a package.
-In the mean time I added full ANSI support to the Visual Studio Code debugging console as well as just finishing full ANSI support for the Dart-Pad console as well.  You can use this within your VSCode debugger to enable colorful, styled logging today. 😊</p>
-<p>Check out <code>example/chalkdart_example.dart</code> for some cool examples of what it is capable of.</p>
+<p>I created this for my Dart/Flutter development logging back in 2020, and in 2022 I finally took the time to clean it up and get it released as a package.
+In the mean time I added full ANSI support to the Visual Studio Code debugging console and the Dart-Pad console as well.  You can use any of the ANSI capabilities of this package within your VSCode debugger to enable colorful, styled logging today. 😊</p>
+<p>Check out <code>example/chalkdart_example.dart</code> for some cool examples of what it is capable of.
+Check out <code>example/chalkdart_string_example.dart</code> for some cool examples of what it is capable of using the Chalk String extension classes.</p>
 <p>If you have used the Chalk.js package within the npm/node.js environment you know how nice and easy it makes text coloring and styling! This ChalkDart version can be used essentially exactly as the js version.</p>
+<h2 id="full-api-dart-docs-can-be-found-herehttpstimmaffettgithubiochalkdart_docsindexhtml">Full Api Dart Docs can be found <a href="https://timmaffett.github.io/chalkdart_docs/index.html">here</a></h2>
+<p><a href="https://timmaffett.github.io/chalkdart_docs/index.html">ChalkDart API Documentation</a></p>
 <h2 id="features-and-bugs">Features and bugs</h2>
 <p>Please file feature requests and bugs at the <a href="https://github.com/timmaffett/chalkdart/issues">issue tracker</a>.</p>
 <h2 id="highlights">Highlights</h2>
 <ul>
 <li>Expressive API</li>
+<li>Optional String extension classes which allow use of the Chalk methods directly on Strings</li>
 <li>Highly performant</li>
 <li>Ability to nest styles</li>
 <li>Supports dynamic argument list and automatically handles printing Maps, Lists, Iterables and Function closures</li>
 <li><a href="#256-and-truecolor-color-support">256/Truecolor color support</a></li>
 <li>All standard X11/CSS/SVG colors can be accessed for by name.</li>
 <li>Ignores Auto-detected ANSI color support/as common Dart/Flutter IDE's report this incorrectly.</li>
-<li>Not an extentension of the <code>String</code> class.</li>
+<li>Ability to use with or without additional extension of the <code>String</code> class.</li>
 <li>Clean and focused</li>
 <li>Actively maintained</li>
+<li>Popup documentation within VSCode supports previews of colors.</li>
 </ul>
 <h2 id="install">Install</h2>
 <pre class="language-console"><code class="language-console">$ dart pub add chalkdart
@@ -74,6 +91,22 @@ In the mean time I added full ANSI support to the Visual Studio Code debugging c
 <pre class="language-dart"><code class="language-dart">import 'package:chalkdart/chalk.dart';
 
 print(chalk.yellow.onBlue('Hello world!'));
+</code></pre>
+<p>Any amount of nesting of colors/styles is fully supported:</p>
+<pre class="language-dart"><code class="language-dart">
+var kind = 'beautiful';
+print(chalk.yellow.onBlue('Hello ${chalk.blue.onGreen.bold(kind)} world!'));
+
+</code></pre>
+<p>or using the Chalk String extensions:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:chalkdart/chalkstrings.dart';
+
+print('Hello world!'.yellow.onBlue);
+
+// nested colors and styling are supported
+var kind = 'beautiful';
+print('Hello ${kind.blue.onGreen.bold} world!'.yellow.onBlue);
+
 </code></pre>
 <p>Chalk comes with an easy to use composable API where you just chain and nest the styles you want.</p>
 <pre class="language-dart"><code class="language-dart">import 'package:chalkdart/chalk.dart';
@@ -116,6 +149,44 @@ print(chalk.keyword('orange')('Yay for orange colored text!'));
 print(chalk.rgb(123, 45, 67).underline('Underlined reddish color'));
 print(chalk.hex('#DEADED').bold('Bold gray!'));
 </code></pre>
+<p>Alternately using the Chalk String extensions:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:chalkdart/chalkstrings.dart';
+//(or include import 'package:chalkdart/chalkstrings_x11.dart'; for use of all x11 colors)
+
+// Combine styled and normal strings
+print('Hello'.blue + ' World' + '!'.red);
+
+// Compose multiple styles using the chainable API
+print('Hello world!'.blue.onRed.bold);
+
+// Nest styles
+print(('Hello' + 'world'.underline.bgBlue + '!').red);
+
+// Nest styles of the same type even (color, underline, background)
+print(('I am a green line ' +
+     'with a blue substring'.blue.underline.bold +
+     ' that becomes green again!').green
+);
+
+// use in multiline string with interpolation
+print('''
+      CPU: ${'90%'.red}
+      RAM: ${'40%'.green}
+      DISK: ${'70%'.yellow}
+   ''');
+
+// or with inline calcs
+print('''
+CPU: ${cpu.totalPercent.toString().red}%
+RAM: ${(ram.used / ram.total * 100).toString().green}%
+DISK: ${(disk.used / disk.total * 100).toString().rgb(255,131,0)}%
+''');
+
+// Use RGB colors in debug console or terminals that support it.
+print('Yay for orange colored text!'.keyword('orange'));
+print('Underlined reddish color'.rgb(123, 45, 67).underline);
+print('Bold gray!'.hex('#DEADED').bold);
+</code></pre>
 <p>Easily define your own themes:</p>
 <pre class="language-dart"><code class="language-dart">import 'package:chalkdart/chalk.dart';
 
@@ -127,8 +198,12 @@ print(warning('Warning!'));
 </code></pre>
 <pre class="language-dart"><code class="language-dart">const name = 'Tim Maffett';
 print(chalk.green('Hello $name'));
+//=&gt; 'Hello Tim Maffett'
+
+//or using String extensions
+print('Hello $name'.green);
+//=&gt; 'Hello Tim Maffett'
 </code></pre>
-<p>//=&gt;<span style="color:#00bc00;"> 'Hello Tim Maffett'</span></p>
 <h2 id="api">API</h2>
 <h3 id="chalkstylestylestring-string">chalk.<code>&lt;style&gt;[.&lt;style&gt;...](string, [string...])</code></h3>
 <p>Example: <code>chalk.red.bold.underline('Hello', 'world');</code></p>
@@ -256,9 +331,8 @@ chalk.color.my2ndfavorite('This is my 2nd favorite color');
 <pre class="language-dart"><code class="language-dart">chalk.keyword('myfavorite)('Using the keyword() method');
 chalk.color.my2ndfavorite('This is my 2nd favorite color');
 </code></pre>
-<p>or import the X11 extension methods to get proper methods for each of the X11/CSS/SVG color names.  With that you get code completion for available colors as well as compile time checking of color names.</p>
+<p>There are also extension methods for each of the X11/CSS/SVG color names.  With that you get code completion for available colors as well as compile time checking of color names.</p>
 <pre class="language-dart"><code class="language-dart">import 'package:chalkdart/chalk.dart';
-import 'package:chalkdart/chalk_x11.dart'; // get methods for x11/css/svg color name keywords
 
 chalk.cornflowerBlue.onLimeGreen('Hey there!);
 
@@ -279,15 +353,41 @@ Note dart determines VSCode debug console and Android Studio debug console do no
 // this version is provided for users of the JS version of Chalk
 var chalkWithLevel0 = chalk.Instance(level: 0);
 </code></pre>
-<table><thead><tr><th style="text-align: center;">Level</th><th style="text-align: left;">Description</th></tr></thead><tbody><tr><td style="text-align: center;"><code>0</code></td><td style="text-align: left;">All colors disabled</td></tr><tr><td style="text-align: center;"><code>1</code></td><td style="text-align: left;">Basic color support (16 colors)</td></tr><tr><td style="text-align: center;"><code>2</code></td><td style="text-align: left;">256 color support</td></tr><tr><td style="text-align: center;"><code>3</code></td><td style="text-align: left;">Truecolor support (16 million colors)</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">Level</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>0</code></td>
+<td align="left">All colors disabled</td>
+</tr>
+<tr>
+<td align="center"><code>1</code></td>
+<td align="left">Basic color support (16 colors)</td>
+</tr>
+<tr>
+<td align="center"><code>2</code></td>
+<td align="left">256 color support</td>
+</tr>
+<tr>
+<td align="center"><code>3</code></td>
+<td align="left">Truecolor support (16 million colors)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="ide-support">IDE Support</h2>
-<p>The terminals and debug consoles in current versions of both Android Studio, IntelliJ and 
+<p>The terminals and debug consoles in current versions of both Android Studio, IntelliJ and
 Visual Studio Code support 24bit/16M color ansi codes and most attributes.  However, they
 both report that they DO NOT support ANSI codes.  For this reason Chalk'Dart defaults to
 supporting full level 3 (24 bit) ANSI codes.</p>
 <h2 id="vscode">VSCode</h2>
 <p>It is possible to set the fonts that VSCode uses in the debug console.  More information can be found <a href="vscode.md">here</a>.</p>
-<h2 id="ansi-color-codes-for-ansi-and-onansi">ANSI Color Codes for .ansi() and .onAnsi()</h2><table style="font-size: 8px;">
+<h2 id="ansi-color-codes-for-ansi-and-onansi">ANSI Color Codes for .ansi() and .onAnsi()</h2>
+<table style="font-size: 8px;">
 <tbody>
 <tr>
 <th colspan="36" style="font-size:16px;text-align: center">256 Color Mode ANSI Color Codes for use with chalk.ansi() and chalk.onAnsi()</th>
@@ -299,7 +399,8 @@ supporting full level 3 (24 bit) ANSI codes.</p>
 </td></tr>
 <tr>
 <td colspan="36">
-<table style="width:100%;text-align:center;font-weight:bold;"><tbody><tr>
+<table style="width:100%;text-align:center;font-weight:bold;">
+<tbody><tr>
 <td style="color:#ffffff;background:#000000;" title="#000000">&nbsp;0&nbsp;
 </td>
 <td style="color:#ffffff;background:#800000;" title="#800000">&nbsp;1&nbsp;
@@ -775,12 +876,14 @@ supporting full level 3 (24 bit) ANSI codes.</p>
 <td style="color:#000000;background:#ffffd7;" title="#ffffd7">230
 </td>
 <td style="color:#000000;background:#ffffff;" title="#ffffff">231
-</td></tr><tr>
+</td></tr>
+<tr>
 <td colspan="36" style="font-size: 12px;text-align:center;">Grayscale colors
 </td></tr>
 <tr>
 <td colspan="36">
-<table style="width:100%;text-align:center;font-weight:bold;"><tbody><tr>
+<table style="width:100%;text-align:center;font-weight:bold;">
+<tbody><tr>
 <td style="color:#ffffff;background:#080808;" title="#080808">232
 </td>
 <td style="color:#ffffff;background:#121212;" title="#121212">233
@@ -831,7 +934,8 @@ supporting full level 3 (24 bit) ANSI codes.</p>
 </td></tr></tbody></table>
 </td></tr></tbody></table>
 <h2 id="x11csssvg-colors">X11/CSS/SVG Colors</h2>
-<p>This is reference table of the X11/CSS/SVG foreground/background colors and the method names to access them.</p><link rel="preconnect" href="https://fonts.gstatic.com">
+<p>This is reference table of the X11/CSS/SVG foreground/background colors and the method names to access them.</p>
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
@@ -936,7 +1040,8 @@ whitesmoke;
 font-weight: normal;
 font: 1.1em monospace;
 }
-</style><p></p><script type="text/javascript">
+</style><p></p>
+<script type="text/javascript">
 
 var sortedAnsiIn = false;
 
@@ -1073,7 +1178,8 @@ sorter = indexer(rows);
 
 var sorter = [];
 
-</script><table class="colortable" style="border-style:none;
+</script>
+<table class="colortable" style="border-style:none;
   width:90%;text-align:center;font-weight:bold; border-collapse: separate;">
 <thead>
 <tr><th style="font-size: 150%;" colspan="2">Chalk X11/CSS/SVG Color Style Methods
@@ -1091,11 +1197,13 @@ var sorter = [];
 </tr>
 <tr>
 <th id="luminSort" colspan="2"><a href="javascript:sort('lumin');">Brightness sort</a></th>
-</tr><tr style="border-bottom: grey solid 2px;">
+</tr>
+<tr style="border-bottom: grey solid 2px;">
 <th>Method name to set as forground color</th><th>Method name to set as background color</th>
 </tr>
 </thead>
-<tbody id="x11colors"><tr class="light">
+<tbody id="x11colors">
+<tr class="light">
 <td title="0xF0F8FF rgb(240,248,255) hsl(208,100,97)" style="outline:solid aliceblue 1px;  border: solid aliceblue 7px;color: aliceblue;background-color: aliceblue;"><span>.aliceBlue</span></td>
 <td title="0xF0F8FF rgb(240,248,255) hsl(208,100,97)" style="outline:solid aliceblue 1px;border:solid aliceblue thick;background-color: aliceblue;">.onAliceBlue</td>
 </tr><tr>
@@ -1771,8 +1879,10 @@ From dart web code you can use <code>window.console.log(...)</code> to log messa
 <li><a href="https://github.com/timmaffett">Tim Maffett</a></li>
 </ul>
 <h2 id="other-examples">Other examples</h2>
-<h5 id="charts-from-chalkdart_exampledart-output-to-windows-terminal">Charts from chalkdart_example.dart output to windows terminal</h5><img src="https://github.com/timmaffett/chalkdart/raw/master/media/Ansi0.png" width="100%">
-<img src="https://github.com/timmaffett/chalkdart/raw/master/media/Ansi1.png" width="100%"><img src="https://github.com/timmaffett/chalkdart/raw/master/media/AWindowsTerminal.png" width="100%">
+<h5 id="charts-from-chalkdart_exampledart-output-to-windows-terminal">Charts from chalkdart_example.dart output to windows terminal</h5>
+<img src="https://github.com/timmaffett/chalkdart/raw/master/media/Ansi0.png" width="100%">
+<img src="https://github.com/timmaffett/chalkdart/raw/master/media/Ansi1.png" width="100%">
+<img src="https://github.com/timmaffett/chalkdart/raw/master/media/AWindowsTerminal.png" width="100%">
 <img src="https://github.com/timmaffett/chalkdart/raw/master/media/AChalkDart2_chart2.png" width="100%">
 </section>
 
@@ -1781,21 +1891,42 @@ From dart web code you can use <code>window.console.log(...)</code> to log messa
           <h2>Libraries</h2>
         <dl>
           <dt id="chalk">
-  <span class="name"><a href="chalk/chalk-library.html">chalk</a></span> 
+  <span class="name"><a href="chalk/">chalk</a></span> 
 
 </dt>
-<dd>// ChalkDart library
+<dd>
 </dd>
 
           <dt id="chalk_x11">
-  <span class="name"><a href="chalk_x11/chalk_x11-library.html">chalk_x11</a></span> 
+  <span class="name"><a href="chalk_x11/">chalk_x11</a></span> 
 
 </dt>
-<dd>Add all of the standard SVG/CSS/X11 colors to chalkdart
+<dd>
+</dd>
+
+          <dt id="chalkdart">
+  <span class="name"><a href="chalkdart/">chalkdart</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="chalkstrings">
+  <span class="name"><a href="chalkstrings/">chalkstrings</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="chalkstrings_x11">
+  <span class="name"><a href="chalkstrings_x11/">chalkstrings_x11</a></span> 
+
+</dt>
+<dd>
 </dd>
 
           <dt id="colorutils">
-  <span class="name"><a href="colorutils/colorutils-library.html">colorutils</a></span> 
+  <span class="name"><a href="colorutils/">colorutils</a></span> 
 
 </dt>
 <dd>
@@ -1803,53 +1934,45 @@ From dart web code you can use <code>window.console.log(...)</code> to log messa
 
         </dl>
       </section>
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="https://github.com/timmaffett/chalkdart">chalkdart package</a></li>
+    <li><a href="https://github.com/timmaffett/chalkdart">chalkdart package</a></li>
 </ol>
-
 
     <h5 class="hidden-xs"><span class="package-name">chalkdart</span> <span class="package-kind">package</span></h5>
     <ol>
       <li class="section-title">Libraries</li>
-      <li><a href="chalk/chalk-library.html">chalk</a></li>
-      <li><a href="chalk_x11/chalk_x11-library.html">chalk_x11</a></li>
-      <li><a href="colorutils/colorutils-library.html">colorutils</a></li>
+      <li><a href="chalk/">chalk</a></li>
+      <li><a href="chalk_x11/">chalk_x11</a></li>
+      <li><a href="chalkdart/">chalkdart</a></li>
+      <li><a href="chalkstrings/">chalkstrings</a></li>
+      <li><a href="chalkstrings_x11/">chalkstrings_x11</a></li>
+      <li><a href="colorutils/">colorutils</a></li>
 </ol>
 
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div>
-
 </main>
-
 <footer>
   <span class="no-break">
     chalkdart
-      2.0.8
+      2.3.0
   </span>
-
   
 </footer>
-
 
 
 <script src="static-assets/highlight.pack.js?v1"></script>
 <script src="static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 
